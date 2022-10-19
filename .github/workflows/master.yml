@@ -2,10 +2,10 @@ on:
   push:
     branches:
       - master
-name: 🚀 Deploy website on push
+name: 🦩🦩🦩 Deploy flamingo file updates on push
 jobs:
   web-deploy:
-    name: 🎉 Deploy
+    name: 🦩🎉 Deploy
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code

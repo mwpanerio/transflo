@@ -29,8 +29,7 @@ var FX = ( function( FX, $ ) {
 	})
 
     $( () => {
-        // TODO: Add Modules needed for build. Remove unused modules
-        // NOTE: Code that is specific to one page or block should not be added in global.js. This file is reserved for javascript that must load on each page.
+		FX.MobileMenu.init();
 	})
 	
 	
@@ -116,6 +115,15 @@ var FX = ( function( FX, $ ) {
 				$('.desktop-menu__phone, .js-search-toggle, .desktop-menu__search').toggleClass('js-search-active');
                 $('.desktop-menu__search input[name="s"]').focus();
 			});
+
+			$(".masthead__tiles__col").click(function () {
+				$(this).toggleClass('active')
+			})
+
+			$(".active > .popup-cross").click(function () {
+				$(".masthead__tiles__col").removeClass('active')
+			})
+
 			
 			/* ubermenu hack to force-show a Ubermenu submenu. Delete prior to launch */
 			// setInterval(function() {
@@ -155,7 +163,7 @@ var FX = ( function( FX, $ ) {
 	 */
 	FX.MobileMenu = {
 		init() {
-			$('.nav-primary li.menu-item-has-children > a').after('<span class="sub-menu-toggle icon-arrow-down hidden-md-up"></span>');
+			$('.nav-primary li.menu-item-has-children > a').after('<span class="sub-menu-toggle icon-down"></span>');
 
 			$('.sub-menu-toggle' ).click( () => {
 				var $this = $(this),

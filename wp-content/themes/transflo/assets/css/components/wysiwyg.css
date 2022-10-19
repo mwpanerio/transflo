@@ -8,11 +8,228 @@
 \*------------------------------------*/
 
 .wysiwyg { 
-/* TODO: Update styling to match prototypes */
+    position: relative;
 }
 
 .bg-white {
     background: #ffffff;
 }
 
-/* TODO: Add additional background colors */
+.bg-gray {
+    background: #EFF2F4;
+    color: #333333;
+}
+
+.example-btn .btn {
+    margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+
+    .example-btn br {
+        display: none;
+    }
+
+    .example-btn .btn {
+        margin-bottom: 0;
+        margin-right: 20px;
+    }
+}
+
+
+
+.progress,
+.progress-1  {
+    display: block;
+    width: 232px;
+    height: 6px;
+    border-radius: 99px;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    background-image: linear-gradient(to right, #DA1F2C, #DA1F2C);
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    transition: background-size .4s ease-in-out;
+    margin: 0 auto;
+}
+  
+@media (min-width: 1200px) {
+    .masthead__right .progress,
+    .masthead__right .progress-1 {
+        display: none;
+    }
+}
+
+
+/* table */
+
+.table-structure {
+    padding: 0 20px;
+    position: relative;
+    color: #333333;
+}
+
+.table-structure table {
+    border-collapse: collapse;
+    width: 872px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.10);
+    overflow: hidden;
+}
+
+.table-structure table thead {
+    background-color: #2474BB;
+    color: #FFFFFF;
+}
+
+.table-structure table thead tr th {
+    padding: 15px 25px;
+    text-align: left;
+    font-size: 16px;
+    font-family: 'avenir_next_lt_probold';
+    font-weight: normal;
+    border: none;
+    color: #ffffff;
+}
+
+.table-structure table tbody tr {
+    background-color: #EFF2F4;
+}
+
+.table-structure table tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+.table-structure table tbody tr td,
+.table-structure table tbody tr th {
+    padding: 12px 20px 12px 25px;
+    text-align: left;
+    font-size: 15px;
+    font-family: 'avenir_next_lt_proregular';
+    font-weight: normal;
+    color: #333333;
+    line-height: 1.4em;
+    vertical-align: top;
+}
+
+.table-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #DA1F2C #EFF2F4;
+    border-radius: 20px;
+    position: relative;
+    padding-bottom: 30px;
+    overflow-x: auto;
+    margin-right: -50px;
+    margin-left: -20px;
+    
+}
+
+.table-scroll::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    padding-bottom: 30px;
+    border-radius: 99px;
+    display: block;
+    margin-left: 20px;
+}
+
+.table-scroll::-webkit-scrollbar-track {
+    background-clip: content-box;
+    border: 15px solid #EFF2F4;
+    border-radius: 99px;
+    margin-left: 20px;
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+    background-color: #DA1F2C;
+    border-radius: 99px;
+    margin-left: 20px;
+}
+
+.table-scroll::-webkit-scrollbar-thumb:hover {
+    background-color: #EFF2F4;
+    border-radius: 99px;
+}
+
+.table-scroll::-webkit-scrollbar-corner, 
+.table-scroll::-webkit-scrollbar-track {
+    background-color: #EFF2F4;
+    border-radius: 99px;
+}
+
+@media (min-width: 768px) {
+    .table-structure table {
+        width: 910px;
+    }
+
+    .table-scroll {
+        margin-right: -80px;
+    }
+
+    .table-structure table thead tr th {
+        padding: 18px 25px;
+        font-size: 17px;
+    }
+    
+    .table-structure table tbody tr td,
+    .table-structure table tbody tr th {
+        padding: 16px 20px 16px 25px;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .table-scroll {
+        padding-bottom: 0;
+        overflow-x: visible;
+        margin-right: 0px;
+        margin-left: 0px;
+        margin-top: 15px;
+    }
+
+    .table-structure {
+        padding: 0 0;
+    }    
+
+    .table-structure table {
+        width: 100%;
+    }
+
+    .table-structure table thead tr th {
+        padding: 17px 35px;
+        font-size: 18px;
+    }
+    
+    .table-structure table tbody tr td,
+    .table-structure table tbody tr th {
+        padding: 20px 14px;
+        font-size: 17px;
+    }
+
+    .table-structure table tbody tr th {
+        width: 276px;
+        padding-right: 0;
+        padding-left: 35px;
+    }
+
+    .table-structure table tbody tr td:last-child {
+        width: 370px;
+        padding-right: 30px;
+    }
+
+    .table-structure table tbody tr td:nth-child(2) {
+        width: 288px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

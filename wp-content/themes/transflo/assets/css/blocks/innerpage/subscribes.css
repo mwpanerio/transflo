@@ -1,0 +1,73 @@
+.subscribe {
+    background-color: #8D99AE;
+    border-radius: 20px;
+    padding: 30px 30px 25px 30px;
+}
+
+.subscribe h3 {
+    font-size: 20px;
+    color: #fff;
+    padding-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .subscribe {
+        padding: 40px 50px 30px 50px;
+    }
+    
+    .subscribe h3 {
+        font-size: 28px;
+    }
+
+    .subscribe__wrap {
+        display: flex;
+        margin: 0 -10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .subscribe__box {
+        width: 50%;
+        padding: 0 10px;
+    }
+
+    .subscribe__box--big {
+        width: calc(100% - 146px);
+    }
+
+    .subscribe__button {
+        width: 146px;
+        padding: 0 10px;
+    }
+
+    .subscribe__wrap .form-col .btn {
+        margin: 0;
+    }
+    
+}
+
+@media (min-width: 1200px) {
+    .subscribe h3 {
+        font-size: 30px;
+    }
+
+    .subscribe__box,
+    .subscribe__box--big {
+        width: 332px;
+    }
+
+    .subscribe__button {
+        width: 155px;
+    }
+
+    .subscribe {
+        padding: 40px 0 40px 0;
+    }
+}
+
+@media (min-width: 1366px) {
+    .subscribe__box,
+    .subscribe__box--big {
+        width: 342px;
+    }
+}

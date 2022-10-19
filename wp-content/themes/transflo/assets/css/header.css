@@ -15,37 +15,290 @@
  */
 
 .page-header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #FFFFFF;
+    z-index: 999;
+    padding: 15px 0;
+    transition: all .5s;
+    border-bottom: 1px solid rgba(141, 153, 174, 0.3);
+    border-top: 3px solid #2474BB;
 }
 
-@media( min-width: 1025px ) {
-    .page-header--sticky {
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
+.mobile-fixed-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #2474BB;
+    padding: 8px 0;
+}
+
+.fixed-nav-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fixed-btn .btn {
+    padding: 10px 45px 10px 19px;
+}
+
+.toggle-menu {
+    font-size: 12px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-family: 'avenir_next_lt_prodemi';
+    cursor: pointer;
+    line-height: 1em;
+    text-align: center;
+    font-weight: normal;
+}
+
+.toggle-menu i {
+    font-size: 32px;
+    display: block;
+    line-height: 1em;
+    font-family: 'icomoon';
+    font-weight: normal;
+}
+
+.logo {
+    max-width: 166px;
+    float: left;
+    margin-top: 6px;
+}
+
+.header-right {
+    float: right;
+}
+
+.js-search-toggle i {
+    font-size: 18px;
+    color: #8D99AE;
+    cursor: pointer;
+    line-height: 1em;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #EFF2F4;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.js-search-toggle span {
+    font-size: 12px;
+    color: #8D99AE;
+    cursor: pointer;
+    line-height: 1em;
+    text-transform: uppercase;
+    font-family: 'avenir_next_lt_prodemi';
+    margin: 0;
+    display: none;
+}
+
+.desktop-menu__search {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    display: none;
+}
+
+.desktop-menu__search.js-search-active {
+    display: block;
+}
+
+.desktop-menu__search::before {
+    position: absolute;
+    content: '';
+    top: 0%;
+    right: 0;
+    background-color: #8D99AE;
+    height: 100%;
+    width: 22px;
+}
+
+.desktop-menu_wrap {
+    background-color: #8D99AE;
+    padding: 12px 0 12px 15px;
+    border-radius: 50px 0 0 50px;
+    position: relative;
+    max-width: 457px;
+    float: right;
+    width: 100%;
+}
+
+.desktop-menu_wrap button {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    width: 36px;
+    height: 36px;
+    background-color: #2474BB;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.desktop-menu_wrap input {
+    padding: 0 55px 0 15px;
+}
+
+.js-search-toggle.js-search-active i::before {
+    content: '\e908';
+}
+
+@media (min-width: 768px) {
+    .page-header {
+        position: fixed;
+        padding: 13px 0;
+        border-top: 4px solid #2474BB;
     }
-}
-
-/* Fix sticky header position for when admin bar visible
-   TODO: Uncomment if design has sticky header */
-
-/* .admin-bar .page-header {
-    top: 32px;
-}
-
-@media screen and (max-width: 1200px) {
-    .admin-bar .page-header {
-        top: 0;
+    
+    .logo {
+        max-width: 200px;
+        margin-top: 8px;
     }
-} */
+
+    .js-search-toggle {
+        float: left;
+        text-align: center;
+        margin: 5px 28px 0;
+    }
+
+    .js-search-toggle i {
+        font-size: 20px;
+        color: #8D99AE;
+        width: auto;
+        height: auto;
+        border-radius: 0;
+        background: transparent;
+        display: block;
+    }
+
+    .js-search-toggle span {
+        display: block;
+        padding-top: 7px;
+    }
+
+    .toggle-menu {
+        color: #000000;
+        float: left;
+    }
+
+    .header-btn {
+        float: left;
+    }
+
+    .desktop-menu__search::before {
+        width: 52px;
+    }
+
+}
+@media (min-width: 1200px) {
+    .page-header {
+        padding: 18px 0 20px;
+    }
+    
+    .logo {
+        max-width: 260px;
+        margin-top: 6px;
+    }
+
+    .js-search-toggle {
+        float: right;
+        text-align: center;
+        margin: 20px 40px 0 20px;
+    }
+
+    .js-search-toggle i {
+        font-size: 18px;
+    }
+
+    .js-search-toggle i:hover {
+        color: #2474BB;
+    }
+
+    .js-search-toggle span {
+        display: none;
+    }
+
+    .header-btn {
+        float: right;
+    }
+
+    .desktop-menu_wrap {
+        background-color: #8D99AE;
+        padding: 12px 0 12px 15px;
+        border-radius: 50px 0 0 50px;
+        position: relative;
+        max-width: 437px;
+        float: right;
+        width: 100%;
+    }
+    
+    .desktop-menu_wrap button {
+        right: 15px;
+        top: 22px;
+    }
+
+    .desktop-menu_wrap input {
+        padding: 0 60px 0 25px;
+    }
+
+}
+
+@media (min-width: 1366px) {
+    .logo {
+        max-width: 275px;
+    }
+
+    .desktop-menu__search::before {
+        width: 400px;
+    }
+    
+
+}
+
+@media (min-width: 1920px) {
+
+    .desktop-menu__search::before {
+        width: 25%;
+    }
+    
+}
+
+@media (min-width: 2500px) {
+
+    .desktop-menu__search::before {
+        width: 35%;
+    }
+    
+}
+
+@media (min-width: 3200px) {
+
+    .desktop-menu__search::before {
+        width: 40%;
+    }
+    
+}
+
 
 @media (-webkit-min-device-pixel-ratio: 2) and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) and (max-width: 1024px) {
 
 	/* TODO: Add Retina-specific logo here - see instructions https://webpagefx.mangoapps.com/mlink/wiki/NjA3Nzg */
 
 }
-
-
-
 
 /**
  * Navigation
@@ -54,61 +307,96 @@
 
 /* General Styling */
 
+.nav-primary {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    z-index: 9;
+}
+
 .nav-primary ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.nav-primary li {
+.page-header .nav-primary li {
     cursor: pointer;
     position: relative;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-primary li:before,
 .nav-primary li:after {
-    display: none; /* hide any custom bullet styling */
+    display: none; 
 }
 
 .nav-primary a {
     display: block;
     text-decoration: none;
+    font-size: 18px;
+    font-weight: normal;
+    color: #000000;
+    font-family: 'avenir_next_lt_proregular';
+    padding: 0 0;
+    border: none;
+    background: transparent;
 }
 
-
-/* 1st Level */
-
-.nav-primary > .menu > li {
-    display: inline-block;
-}
-
-
-/* Sub Menus */
-
-.nav-primary .sub-menu {
-    display: none;
+.sub-menu-toggle {
     position: absolute;
-    top: 100%;
-    left: 0;
-    max-width: 250px; /* adjust to match width of submenu prototype */
-}
-
-.nav-primary li:hover > .sub-menu {
-    display: block;
-}
-
-.nav-primary .sub-menu li {
-    display: block;
+    right: 0;
+    top: 12px;
+    font-size: 10px;
+    font-weight: normal;
+    color: #2474BB;
 }
 
 
-/* 3rd Level Sub Menus */
+@media (min-width: 1200px) {
+    .nav-primary {
+        display: block;
+        padding: 12px 0 0 0;
+        float: right;
+    }
 
-.nav-primary .sub-menu .sub-menu {
-    top: 0;
-    left: 100%;
+    .nav-primary ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .page-header .nav-primary li {
+        cursor: pointer;
+        position: relative;
+        margin: 0;
+        padding: 0 15px;
+    }
+
+    .page-header .nav-primary li.menu-item-has-children a {
+        padding-right: 18px;
+    }
+
+    .sub-menu-toggle {
+        right: 20px;
+    }
+
+    .nav-primary a:hover {
+        color: #2474BB;
+    }
+
 }
 
+@media (min-width: 1366px) {
+    .page-header .nav-primary li {
+        padding: 0 20px;
+    }
+
+
+}
 
 
 /**
@@ -161,12 +449,6 @@
     z-index: 9;
 }
 
-@media only screen and (min-width: 768px) {
-  .page-header {
-      z-index: 2000;
-      position: relative;
-  }
-}
 
 @media only screen and (min-width: 1024px) {
   .ubermenu > ul > li > a {
@@ -278,53 +560,176 @@ body.menu-is-active:after {
  * Masthead
  */
 
-.masthead {
+.masthead--innerpage {
+    padding: 0 0;
+    color: #333333;
+    background: #EFF2F4; 
+    position: relative;
+}
+
+.masthead--innerpage h1 {
+    color: #000000;
+}
+
+.right-image {
+    width: 100%;
+    height: 200px;
+}
+
+.right-image-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.right-image img {
+    display: block;
+}
+
+.left-text-wrapper {
+    padding: 40px 22px 50px;
+    color: #333333;
+}
+
+.left-text-wrapper p {
+    font-size: 15px;
+    line-height: 1.6em;
 }
 
 
+ @media (min-width: 768px) {
+    .masthead {
+        margin-top: 80px;
+    }
 
+    .right-image {
+        height: 400px;
+    }
+
+    .left-text-wrapper {
+        padding: 50px 52px 60px;
+    }
+    
+    .left-text-wrapper p {
+        font-size: 17px;
+        line-height: 1.52em;
+        padding-bottom: 25px;
+    }
+ }
+
+ @media (min-width: 1200px) {
+    .masthead {
+        margin-top: 99px;
+    }
+
+    .left-text-right-image,
+    .masthead--innerpage {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .right-image {
+        width: 43.7%;
+        height: auto;
+    }
+
+    .right-image img {
+        position: absolute;
+        top: 0;
+    }
+
+    .left-text {
+        width: 56.3%;
+    }
+  
+    .left-text-wrapper {
+        padding: 80px 80px 90px 16px;
+        max-width: 796px;
+        float: right;
+    }
+
+    .left-text-wrapper p {
+        font-size: 18px;
+        padding-bottom: 50px;
+    }
+
+ }
+
+ @media (min-width: 1366px) {
+    .left-text-wrapper {
+        padding: 82px 113px 94px 16px;
+    }
+
+
+ }
 
 /**
  * Breadcrumbs
  */
 
+ .back-top-page {
+    padding-bottom: 3px;
+ }
+
+ .back-top-page a {
+    font-size: 14px;
+    color: #2474BB;
+    border: none;
+    background: transparent;
+    font-family: 'avenir_next_lt_prodemi';
+    line-height: 1em;
+}
+
+.back-top-page a i {
+    vertical-align: middle;
+    padding: 0 3px 3px 0;
+    font-size: 9px;
+    color: #8D99AE;
+}
+
+.breadcrumbs {
+    margin-bottom: 14px;
+}
+
+.breadcrumbs ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
 .breadcrumbs li {
     list-style-type: none;
-    display: inline-block;
-    margin-right: 3px;
-    font-size: 0;
-    margin-bottom: 0;
+    font-size: 16px;
+    color: #000000;
+    line-height: 1em;
+    margin: 0;
+    padding: 0 11px;
+    font-family: 'avenir_next_lt_prodemi';
+    border-left: 1px solid #8D99AE;
+}
+
+.breadcrumbs li:first-child {
+    padding-left: 0;
+    border-left: none;
+}
+
+.breadcrumbs li::before {
+    display: none;
 }
 
 .breadcrumbs a {
     text-decoration: none;
-    font-size: 16px
+    color: #2474BB;
+    border: none;
+    background: transparent;
+    font-family: 'avenir_next_lt_prodemi';
 }
 
-.breadcrumbs li :not(:nth-last-child(2)), 
-.breadcrumbs li :after {
-    display: none;
-    visibility: hidden;
-    content: none;
+@media (min-width: 1200px) {
+    .breadcrumbs a:hover {
+        color: #000000;
+    }
 }
 
-.breadcrumbs li a:before {
-    content: "< Go to ";
-}
-
-@media (min-width: 767px) {
-    .breadcrumbs li a:before {
-        content: none;
-    }
-    
-    .breadcrumbs li :not(:nth-last-child(2)), 
-    .breadcrumbs li :after {
-        display: inline-block;
-        visibility: visible;
-        content: initial
-    }
-    
-    .breadcrumbs li {
-        font-size: 16px;
-    }
-}

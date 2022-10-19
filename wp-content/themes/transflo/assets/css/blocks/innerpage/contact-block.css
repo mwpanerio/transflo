@@ -1,0 +1,240 @@
+.contact-item {
+    margin: 15px 0
+}
+
+.contact-column {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px 20px;
+    border-radius: 20px;
+    height: 100%;
+    color: #333333;
+}
+
+.contact-map {
+    width: 100%;
+    height: 230px;
+    margin-bottom: 25px;
+}
+
+.contact-map img {
+    display: block;
+    border-radius: 10px;
+}
+
+.contact-info {
+    padding: 0 10px;
+}
+
+.contact-info__col {
+    padding-bottom: 24px;
+}
+
+.contact-info__col:last-child {
+    padding-bottom: 0;
+}
+
+.contact-info p,
+.contact-column--support p {
+    position: relative;
+    padding: 0 0 4px 28px;
+    color: #333333;
+}
+
+.contact-info p span,
+.contact-column--support span {
+    display: block;
+}
+
+.contact-info p a,
+.contact-column--support p a {
+    color: #2474BB;
+}
+
+.contact-info p i,
+.contact-column--support p img,
+.contact-column--support p i {
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    color: #8D99AE;
+}
+
+.contact-info p i.icon-email,
+.contact-column--support p i.icon-email {
+    font-size: 16px;
+}
+
+.get-directions {
+    padding-left: 28px;
+}
+
+.contact-column h3 {
+    color: #000000;
+    padding-bottom: 16px;
+}
+
+.contact-column--support p {
+    padding-bottom: 10px;
+}
+
+.support-btns {
+    margin-top: 5px;
+}
+
+.support-btns .btn {
+    margin-bottom: 20px;
+}
+
+.contact-column__top p {
+    padding: 0 0 20px 0;
+}
+
+.schedule-list-col {
+    margin-bottom: 20px;
+}
+
+.schedule-list-col a {
+    background: #EFF2F4;
+    width: 100%;
+    height: 90px;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.schedule-image {
+    width: 70px;
+    height: 100%;
+}
+
+.schedule-image img {
+    border-radius: 10px;
+}
+
+.schedule-info {
+    width: calc(100% - 70px);
+    padding-left: 15px;
+    padding-right: 30px;
+    position: relative;
+    font-size: 18px;
+    color: #000000;
+    font-family: 'avenir_next_lt_probold';
+    text-transform: uppercase;
+    line-height: 1.2em;
+    letter-spacing: 0.03em;
+}
+
+.schedule-info i {
+    font-size: 24px;
+    color: #2474BB;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.call {
+    padding: 10px 0 20px;
+}
+
+@media (min-width: 768px) { 
+    .schedule-list {
+        box-sizing: border-box;
+        display: flex;
+        flex: 0 1 auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-right: -10px;
+        margin-left: -10px;
+        justify-content: center;
+    }
+      
+    .schedule-list-col {
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        flex-basis: auto;
+        padding-right: 0;
+        padding-left: 0;
+        margin: 10px 10px;
+        width: calc(50% - 20px);
+    }
+
+}
+
+@media (min-width: 1200px) { 
+    .contact-info p, 
+    .contact-column--support p {
+        font-size: 17px;
+    }
+
+    .contact-info {
+        padding: 0 0;
+    }
+
+    .contact-column__top p {
+        font-size: 18px;
+    }
+
+    .contact-column--support {
+        padding: 30px 30px 10px;
+    }
+
+    .contact-column--schedule {
+        padding: 30px 40px 30px;
+    }
+
+    .contact-column h3 {
+        font-size: 30px;
+        padding-bottom: 15px;
+    }
+
+    .call {
+        padding: 16px 0 20px;
+    }
+
+    .schedule-list-col a:hover {
+        background: #2474BB;
+    }
+
+    .schedule-list-col a:hover .schedule-info,
+    .schedule-list-col a:hover .schedule-info i {
+        color: #fff;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

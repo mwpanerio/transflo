@@ -15,22 +15,17 @@
  */
 
  :root {
-    --section-margins: 60px; /* TODO: Update margins to match prototypes - This variable is used for margin/padding utility classes in global.css: https://webpagefx.mangoapps.com/msc/NjAyNDg1Xzg2MzE4NTg
-    /* --- Other Examples ---
-    --border-color: #e3e3e3;
-    --border: 1px solid var(--border-color);
-    --drop-shadow: 0px 1px 30px rgb(0 0 0 / 9%);
-    */
+    --section-margins: 60px;
 }
 
 @media (min-width: 768px) {
     :root {
-        --section-margins: 80px; /* TODO: Update margins to match prototypes. */
+        --section-margins: 80px;
     }
 }
 
 @media (min-width: 1025px) {
     :root {
-        --section-margins: 100px; /* TODO: Update margins to match prototypes. */
+        --section-margins: 100px;
     }
 }

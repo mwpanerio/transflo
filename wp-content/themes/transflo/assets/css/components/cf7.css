@@ -8,36 +8,55 @@
 \*------------------------------------*/
 
 
-/* Default Radio/Checkbox Style (if using CF7) */
-.wpcf7-radio .wpcf7-list-item,
-.wpcf7-checkbox .wpcf7-list-item {
-    display: inline-block;
-    margin-right: 15px;
-    margin-bottom: 10px;
-    /* incase items go to 2 lines */
-}
-
-.wpcf7-radio .wpcf7-list-item-label,
-.wpcf7-checkbox .wpcf7-list-item-label {
-    margin-left: 5px;
-}
-
-/* CF7 Validation (Remove if not using CF7) */
-
-/* Individual field error messages */
 .wpcf7-not-valid-tip {
-
+    display: block;
+    color: #DA1F2C !important;
+    font-size: 11px;
+    position: relative;
+    font-weight: normal;
+    padding-top: 5px;
+    text-align: right;
+    text-transform: uppercase;
+    font-family: 'avenir_next_lt_prodemi';
 }
 
-/* Entire form error message */
-.wpcf7-response-output {
-
+.wpcf7-not-valid-label {
+  color: #DA1F2C !important;
 }
 
-/* Styling for fields that have errors */
+.wpcf7-not-valid-tip:before {
+    content: '\e90c';
+    font-family: 'icomoon';
+    position: absolute;
+    right: 15px;
+    top: -45px;
+    color: #DA1F2C;
+    text-align: center;
+    font-weight: normal;
+    font-size: 26px;
+} 
+
 select.wpcf7-not-valid,
 textarea.wpcf7-not-valid,
 input.wpcf7-not-valid,
 .wpcf7-not-valid .choices {
-    
+    border: 1px solid #DA1F2C !important;
+    outline: none;
+    padding-right: 50px;
+    background-color: #fff;
+}
+
+
+@media (min-width: 1200px) {
+  .wpcf7-not-valid-tip {
+      font-size: 12px;
+  }
+
+  .wpcf7-not-valid-tip:before {
+      right: 20px;
+      top: -50px;;
+      font-size: 30px;
+  } 
+
+
 }

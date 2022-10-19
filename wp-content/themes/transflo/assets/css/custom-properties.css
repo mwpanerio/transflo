@@ -1,0 +1,36 @@
+/*------------------------------------*\
+    
+    CSS Custom Properties (aka CSS Variables)
+ 
+    Custom properties are entities defined by CSS authors that contain specific values to be reused throughout a document
+    Example usage: brand colors, common margins, drop-shadows, border styles, and more!
+    
+    Visit the CSS Custom Properties guru card for more info: https://app.getguru.com/card/ceE54p4i/CSS-Custom-Properties-AKA-CSS-Variables 
+
+\*------------------------------------*/
+
+
+/**
+ * Global Variables (Optional - Remove anything that's not being used)
+ */
+
+ :root {
+    --section-margins: 60px; /* TODO: Update margins to match prototypes - This variable is used for margin/padding utility classes in global.css: https://webpagefx.mangoapps.com/msc/NjAyNDg1Xzg2MzE4NTg
+    /* --- Other Examples ---
+    --border-color: #e3e3e3;
+    --border: 1px solid var(--border-color);
+    --drop-shadow: 0px 1px 30px rgb(0 0 0 / 9%);
+    */
+}
+
+@media (min-width: 768px) {
+    :root {
+        --section-margins: 80px; /* TODO: Update margins to match prototypes. */
+    }
+}
+
+@media (min-width: 1025px) {
+    :root {
+        --section-margins: 100px; /* TODO: Update margins to match prototypes. */
+    }
+}

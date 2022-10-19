@@ -1,0 +1,414 @@
+/* Global CSS */
+
+/**
+ * CONTENTS
+ *
+ * BASE
+ * Media.................WP specific img aligns and iframe styling.
+ * Typography............@fontfaces, base text and vertical rhythm setup.
+ *
+ * COMPONENTS
+ * Margin/Padding........Utility Margin/Padding Classes
+ * Clearfix..............Properly clear floats.
+ *
+ * Objects
+ * Icons.................Icon Elements.
+ * Buttons...............Button elements.
+ * Tables................Table Styles.
+ * Forms.................Form Elements.
+ * Pagination............Pagination.
+ *
+ */
+
+
+
+/*------------------------------------*\
+    BASE
+\*------------------------------------*/
+
+
+/**
+ * Media
+ *
+ * These selectors are hard cast because they are only used
+ * by wordpress wyswyg when adding images to content
+ */
+
+.wp-caption.alignright,
+.wp-caption.alignleft,
+.wp-caption.aligncenter {
+    display: table;
+}
+
+.wp-caption.alignright,
+.wp-caption.alignleft,
+.wp-caption.alignnone,
+.wp-caption.aligncenter {
+    margin: 0;
+    width: auto !important;
+    /* to overwrite inline widths */
+}
+
+img.alignright,
+.wp-caption.alignright,
+img.alignleft,
+.wp-caption.alignleft {
+    height: auto;
+    max-width: 50%;
+}
+
+img.alignnone,
+.wp-caption.alignnone img,
+img.aligncenter,
+.wp-caption.aligncenter img {
+    height: auto;
+    max-width: 100%;
+}
+
+img.alignnone,
+.wp-caption.alignnone,
+img.aligncenter,
+.wp-caption.aligncenter {
+    margin: 0 0 22px 0;
+}
+
+img.alignright,
+.wp-caption.alignright {
+    float: right;
+    margin: 0 0 22px 30px;
+}
+
+img.alignleft,
+.wp-caption.alignleft {
+    float: left;
+    margin: 0 30px 22px 0;
+}
+
+img.aligncenter,
+.wp-caption.aligncenter img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-caption.aligncenter {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-caption-text {
+    caption-side: bottom;
+    display: table-caption;
+}
+
+iframe,
+img {
+    max-width: 100%;
+}
+
+/* Fade-in for lazyloaded images */
+.will-lazyload {
+    opacity: 0;
+    transition: opacity .25 linear;
+}
+
+.will-lazyload.lazyloaded {
+    opacity: 1;
+}
+
+
+
+/**
+  * Typography
+  */
+
+/*
+  - Please set up line-heights in ems
+  - Set up typography styling based on styles found in .xd file under Assets > Character Styles
+  */
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5 {}
+
+h1, .h1 {}
+
+h2, .h2 {}
+
+h3, .h3 {}
+
+h4, .h4 {}
+
+@media (min-width: 768px) {
+    h1, .h1 {}
+
+    h2, .h2 {}
+
+    h3, .h3 {}
+
+    h4, .h4 {}
+}
+
+@media (min-width: 1025px) {
+    h1, .h1 {}
+
+    h2, .h2 {}
+
+    h3, .h3 {}
+
+    h4, .h4 {}
+}
+
+p, ul, ol {}
+
+.page-content ul,
+.page-content ol {
+    /* fix for bulleted lists not wrapping around images correctly in Wordpress */
+    width: auto;
+    overflow: hidden;
+    padding-left: 15px;
+}
+
+.page-content ul {
+    list-style-type: none;
+}
+
+ol {
+    padding-left: 25px;
+}
+
+ol li {
+    counter-increment: list;
+    position: relative;
+    list-style-type: none;
+}
+
+ol li:before {
+    content: counter(list) ".";
+    position: absolute;
+    left: 0;
+}
+
+ul li {
+}
+
+ul li:before {
+}
+
+hr {}
+
+a {
+    word-break: break-word;
+    /* force link text to overflow when too long for container */
+}
+
+a:hover {}
+
+
+
+/*------------------------------------*\
+    COMPONENTS
+\*------------------------------------*/
+
+
+
+
+/**
+ * Utility Margin/Padding Classes
+ *
+ * TODO: Update the --margins variable in custom-properties.css to match prototypes margins 
+ */
+
+/* Used on outer-most section container so section margins collapse */
+.section-margins {
+    margin-top: var(--section-margins);
+    margin-bottom: var(--section-margins);
+}
+
+/* Used only for sections with colored backgrounds */
+.section-padding {
+    padding-top: var(--section-margins);
+    padding-bottom: var(--section-margins);
+}
+
+
+
+
+/**
+* Clearfix
+* Apply clearing without adding additional markup
+*/
+
+.clearfix::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+
+
+
+/*--------------------------------------------------------------*\
+     OBJECTS
+     Objects are independent generic stylibf classes or UI peices.
+     All styles for objects should be self contained.
+ 
+     e.g. an object shouldn't rely on trump helpers to apply padding etc.
+ \*--------------------------------------------------------------*/
+
+
+/**
+ * Buttons
+ */
+
+.btn {}
+
+.btn:hover {}
+
+.btn-secondary {}
+
+.btn-secondary:hover {}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.btn+.btn {
+    margin-top: 5px;
+    /* Add margin-top when 2 buttons are next to each other */
+}
+
+@media (min-width: 600px) {
+
+    .btn+.btn {
+        margin-top: 0;
+        margin-left: 5px;
+    }
+
+}
+
+
+
+/**
+ * Icons
+ */
+
+/* add icon code here */
+
+
+
+/**
+ * Forms
+ */
+
+label {}
+
+select {}
+
+textarea {}
+
+/* Removes default webkit form styling */
+input:not([type="radio"]):not([type="checkbox"]),
+button,
+textarea {
+    -webkit-appearance: none;
+}
+
+input:active,
+textarea:active,
+select:active,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    /* Removes blue border on focus */
+    border: 1px solid #ccc;
+    /* TODO: Please add a branded border for active and focus */
+}
+
+/* default text input style */
+[type="text"],
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="url"],
+[type="week"],
+[type="date"] {}
+
+/* Removes inconsistent padding from Firefox buttons */
+button::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border: none;
+    padding: 0;
+}
+
+
+/* Hide reCaptcha badge */
+.grecaptcha-badge {
+    visibility: hidden;
+}
+
+
+
+
+/**
+ * Pagination
+ */
+
+.wp-pagenavi {
+    margin-top: 50px;
+}
+
+.wp-pagenavi .pages {
+    border: 0;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.wp-pagenavi span.current,
+.wp-pagenavi .page,
+.wp-pagenavi .nextpostslink,
+.wp-pagenavi .previouspostslink {
+    border: 1px solid #ddd;
+    display: inline-block;
+    padding: 6px 11px;
+}
+
+.wp-pagenavi span.current {
+    background-color: #ddd;
+    border-color: #ddd;
+}
+
+@media (min-width: 1025px) {
+
+    .wp-pagenavi {
+        margin-top: 70px;
+    }
+
+}
+
+
+
+/**
+ * Sticky Sidebar
+ */
+
+@media(min-width: 1025px) {
+    .sticky-sidebar {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 125px;
+        /* TODO: update to match how far down page when sidebar should stick */
+    }
+}

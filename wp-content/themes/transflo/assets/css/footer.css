@@ -1,0 +1,11 @@
+/*------------------------------------*\
+    
+    Page Footer CSS
+
+    Page footer...........The main page footer.
+
+\*------------------------------------*/
+
+.page-footer {
+    margin-top: auto; /* used to affix footer at bottom of page */
+}

@@ -1,0 +1,330 @@
+/*------------------------------------*\
+    
+    Header CSS
+ 
+    eg: Header, Navigation, Ubermenu, Masthead 
+    Page head.............The main page header.
+    Navigation............Navigation elements + Ubermenu.
+    Masthead..............Page title/image/slideshow header block.
+    Breadcrumbs...........Breadcrumbs navigation typically near the masthead/page heading
+
+\*------------------------------------*/
+
+/**
+ * Page-head
+ */
+
+.page-header {
+}
+
+@media( min-width: 1025px ) {
+    .page-header--sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+    }
+}
+
+/* Fix sticky header position for when admin bar visible
+   TODO: Uncomment if design has sticky header */
+
+/* .admin-bar .page-header {
+    top: 32px;
+}
+
+@media screen and (max-width: 1200px) {
+    .admin-bar .page-header {
+        top: 0;
+    }
+} */
+
+@media (-webkit-min-device-pixel-ratio: 2) and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) and (max-width: 1024px) {
+
+	/* TODO: Add Retina-specific logo here - see instructions https://webpagefx.mangoapps.com/mlink/wiki/NjA3Nzg */
+
+}
+
+
+
+
+/**
+ * Navigation
+ */
+
+
+/* General Styling */
+
+.nav-primary ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-primary li {
+    cursor: pointer;
+    position: relative;
+}
+
+.nav-primary li:before,
+.nav-primary li:after {
+    display: none; /* hide any custom bullet styling */
+}
+
+.nav-primary a {
+    display: block;
+    text-decoration: none;
+}
+
+
+/* 1st Level */
+
+.nav-primary > .menu > li {
+    display: inline-block;
+}
+
+
+/* Sub Menus */
+
+.nav-primary .sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    max-width: 250px; /* adjust to match width of submenu prototype */
+}
+
+.nav-primary li:hover > .sub-menu {
+    display: block;
+}
+
+.nav-primary .sub-menu li {
+    display: block;
+}
+
+
+/* 3rd Level Sub Menus */
+
+.nav-primary .sub-menu .sub-menu {
+    top: 0;
+    left: 100%;
+}
+
+
+
+/**
+ * Ubermenu Styling (Starter CSS - Generally no editing needed)
+ */
+@media only screen and (max-width: 1024px) {
+  /* forces mobile menu to push other menu items down when open instead of the sub-menu overlapping other menu items */
+  .ubermenu .ubermenu-item .ubermenu-submenu-drop {
+      position: relative !important;
+  }
+
+  .ubermenu-responsive.ubermenu {
+      margin: 0;
+      position: fixed;
+      width: 100%;
+      z-index: 900;
+      background: #f0f0f0;
+  }
+
+  .ubermenu .ubermenu-item {
+      position: relative !important;
+  }
+
+  /* styles the sub-menu indicator on mobile and tablet */
+  .ubermenu-sub-indicator {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 20px;
+      z-index: 900;
+  }
+
+  .ubermenu-responsive-toggle {
+      float: right;
+  }
+}
+
+.ubermenu-responsive-toggle i { /* controls styling of mobile menu toggle */
+    display: block; 
+    font-size: 30px;
+    margin: 0 !important;
+}
+
+.ubermenu-sub-indicator-close {
+    display: none !important;
+}
+
+.mobile-menu {
+    position:  relative;
+    z-index: 9;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-header {
+      z-index: 2000;
+      position: relative;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .ubermenu > ul > li > a {
+      padding-top: 40px !important; /* controls top level menu items on desktop size */
+      padding-bottom: 40px !important;
+      display: block;
+  }
+}
+
+.ubermenu-responsive.ubermenu {
+    top: 80px;
+    left: 0;
+    max-height: 500px !important;
+    overflow-x: scroll !important;
+    z-index: 2000;
+}
+
+.desktop-menu .ubermenu-responsive-toggle {
+    display: none;
+    z-index: 2000;
+    position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+  .ubermenu-responsive.ubermenu {
+      top: 174px; /* controls position of responsive menu on tablet size */
+      bottom: auto;
+      max-height: auto !important;
+      overflow-x: inherit !important;
+  }
+
+  .sticky-bar {
+      display: none;
+  }
+
+  .desktop-menu {
+      display: inline-block;
+  }
+
+  .desktop-menu .ubermenu-responsive-toggle {
+      display: block;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+    .desktop-menu .ubermenu-responsive-toggle {
+        display: none;
+    }
+
+    .ubermenu-responsive.ubermenu {
+        top: auto; 
+    }
+}
+
+/* controls sticky bar menu icon and overlay on mobile */
+.sticky-bar .menu-is-active .fa-bars:before {
+    content: 'X'; /* TODO: change this to be an icon from the icon font on the site */
+}
+
+body:after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba( 0, 0, 0, .25 );
+    z-index: -1000;
+}
+
+body.menu-is-active:after {
+    z-index: 1000;
+    display: block;
+}
+
+@media( max-width: 1024px ) {
+    .sticky-bar {
+        z-index: 2000 !important;
+    }
+}
+
+/* Modern IPhone Fixes */
+@media screen and (width: 375px) and (height: 813px) {
+	
+	.sticky-bar {
+		/* ^ TODO: change classname to match mobile sticky bar class */
+		
+		/* prevents 'home indicator' overlap */
+		padding-bottom: 34px; 
+		
+		/* prevents content from being cut off in screen rounded corners */
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+}
+
+
+
+
+/**
+ * Ubermenu Styling - Custom Styles
+ */
+
+
+
+
+/**
+ * Masthead
+ */
+
+.masthead {
+}
+
+
+
+
+/**
+ * Breadcrumbs
+ */
+
+.breadcrumbs li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 3px;
+    font-size: 0;
+    margin-bottom: 0;
+}
+
+.breadcrumbs a {
+    text-decoration: none;
+    font-size: 16px
+}
+
+.breadcrumbs li :not(:nth-last-child(2)), 
+.breadcrumbs li :after {
+    display: none;
+    visibility: hidden;
+    content: none;
+}
+
+.breadcrumbs li a:before {
+    content: "< Go to ";
+}
+
+@media (min-width: 767px) {
+    .breadcrumbs li a:before {
+        content: none;
+    }
+    
+    .breadcrumbs li :not(:nth-last-child(2)), 
+    .breadcrumbs li :after {
+        display: inline-block;
+        visibility: visible;
+        content: initial
+    }
+    
+    .breadcrumbs li {
+        font-size: 16px;
+    }
+}

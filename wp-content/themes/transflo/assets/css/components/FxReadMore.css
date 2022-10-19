@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    
+    Hide/Show Text Area - Global styling for all hide/show text
+
+    This method is CSS heavy and light on JS, which is important for good SEO and CWV results
+    Find the code snippet here: https://webfxcodelibrary.webpagefxstage.com/#intermediate_cssshowhidetext
+
+\*------------------------------------*/
+
+/* if you are having issues with clamping in safari, see this fix: https://app.getguru.com/card/c48ay5ri/CSS-lineclamp-in-latest-Safari- */
+.read-more {
+	display: block;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: var( --readMoreLines );
+	overflow: hidden;
+	word-break: break-all;
+}
+
+.read-more--toggle,
+.read-more--cta {
+    margin-top: 1.2rem; /* Adjust to match site design */
+}
+
+/* fix - display: -webkit-box; prevents margins from collapsing */
+.read-more__content p {
+    margin-top: 0;
+}

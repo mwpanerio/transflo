@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    
+    WebFX WYSIWYG Customizations - Global styling for all ACF WYSIWYG's
+
+    Add custom WYSIWYG styling to this file if it should be applied to all ACF WYSIWYG's on the site
+    Otherwise, put your block-specific styles in individual block stylesheets
+
+\*------------------------------------*/
+
+.wysiwyg { 
+/* TODO: Update styling to match prototypes */
+}
+
+.bg-white {
+    background: #ffffff;
+}
+
+/* TODO: Add additional background colors */

@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    
+    Contained Image + Text Block Customizations - Global Styling
+
+    The styles you add to this file will be applied to the 'Contained Image + Text' block. 
+    If there is any reasons why you would need to style them separately,
+    please create a block-specific stylesheet for it (don't forget to register that block-specific stylesheet in acf-start-blocks.php)
+
+\*------------------------------------*/
+
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image-text .flex-row {
+    align-items: center
+}

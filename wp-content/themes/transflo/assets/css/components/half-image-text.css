@@ -1,0 +1,78 @@
+/*------------------------------------*\
+    
+    Half & Half Image + Text Block Customizations - Global Styling
+
+    The styles you add to this file will be applied to the 'Half & Half Image + Text' block. 
+    If there is any reasons why you would need to style this separately,
+    please create a block-specific stylesheet for it (don't forget to register that block-specific stylesheet in acf-start-blocks.php)
+
+\*------------------------------------*/
+
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.half-and-half-image, 
+.half-and-half-text {
+    position: relative;
+    flex: 0 0 100%;
+}
+
+.half-and-half-image img {
+    height: 100%;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    -o-object-fit: cover;
+}
+
+.half-and-half-text {
+    padding: 50px 20px;
+}
+
+.half-and-half-text.right {
+    margin-right: auto;
+}
+
+.half-and-half-text.left {
+    margin-left: auto;
+}
+
+.half-and-half.white-bg {
+    background-color: #ffffff;
+}
+
+.half-and-half.gray-bg {
+    background-color: #f7f7f7;
+}
+    
+@media (min-width: 1025px) {
+    
+    .half-and-half-image, 
+    .half-and-half-text {
+        position: relative;
+        flex: 0 0 50%;
+    }
+    
+    .half-and-half-image img {
+        position: absolute;
+    }
+    
+    .half-and-half-text {
+        padding: var(--margins) 50px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .half-and-half-text {
+        padding: var(--margins) 80px;
+    }
+}
+
+@media (min-width: 1800px) {
+    .half-and-half-text {
+        padding: var(--margins) 150px;
+    }
+}

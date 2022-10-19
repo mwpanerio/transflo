@@ -1,0 +1,65 @@
+/*------------------------------------*\
+    
+    WebFX Slick Customizations - Global styling for all slider/carousels
+
+    Add custom slider styling to this file if it should be applied to all slick sliders on the site
+    Otherwise, put your slider-specific styles in individual block stylesheets
+
+\*------------------------------------*/
+
+
+/* Preloader affect for your slider */
+
+ /* Add class 'slider-has-preloader' to slider to show  */
+.slider-has-preloader:not(.slick-initialized) {
+    position: relative;
+}
+
+.slider-has-preloader:not(.slick-initialized) > .fx-slide {
+    opacity: 0;
+}
+
+.slider-has-preloader:not(.slick-initialized):before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d( -50%, -50%, 0 );
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid;
+    border-color: transparent #AF231C;
+    animation: 1s sliderLoad infinite linear;
+}
+
+@keyframes sliderLoad {
+    0% {
+        transform: translate3d( -50%, -50%, 0 ) rotateZ( 0 );
+    }
+
+    100% {
+        transform: translate3d( -50%, -50%, 0 ) rotateZ( 360deg );
+    }    
+}
+
+
+
+/* Only show the 1st slide while your slider is loading - Utility Classes
+NOTE: Add the .fx-slider class to the wrapper that is holding your entire slider.
+NOTE: Add the .fx-slide class to the wrapper of each individual slide.
+Guru: https://app.getguru.com/card/ixR67EpT/Slick-Slider
+*/
+
+.fx-slider .fx-slide {
+    display: none;
+}
+
+.fx-slider .fx-slide:first-child {
+    display: block;
+}
+
+.fx-slider.slick-initialized .fx-slide {
+    display: block;
+}

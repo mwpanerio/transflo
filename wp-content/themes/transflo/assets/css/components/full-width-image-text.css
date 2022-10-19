@@ -1,0 +1,101 @@
+/*------------------------------------*\
+    
+    Full-Width Image + Text Block Customizations - Global Styling
+
+    The styles you add to this file will be applied to the 'Full-Width Image + Text' block. 
+    If there is any reasons why you would need to style this separately,
+    please create a block-specific stylesheet for it (don't forget to register that block-specific stylesheet in acf-starter-blocks.php)
+
+\*------------------------------------*/
+
+.full-width-image-text {
+    position: relative;
+    min-height: 400px;
+    background-color: var(--blue); /* TODO: Please update the background color */
+}
+
+.full-width-image-text__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    z-index: 1;
+    display: none;
+}
+
+.full-width-image-text__content {
+    padding: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.full-width-image-text__headline {
+    margin-top: 0;
+}
+
+.full-width-image-text__description :last-child {
+    margin-bottom: 0;
+}
+
+.full-width-image-text__content {
+    padding: 30px 20px;
+}
+
+@media (min-width: 768px) {
+    .full-width-image-text__content {
+        padding: 50px;
+    }
+
+    .full-width-image-text__img {
+        display: block;
+    }
+}
+
+@media (min-width: 1025px) {
+    .full-width-image-text__content {
+        padding: 100px 70px;
+    }
+}
+
+
+/* Full-Width Image + Text - Direct Text Overlay */
+.full-width-image-text--direct-overlay .full-width-image-text__content {
+    padding: 0 20px;
+}
+
+.full-width-image-text--direct-overlay .full-width-image-text__content {
+    padding: 0 20px;
+}
+
+.full-width-image-text--direct-overlay .full-width-image-text__headline,
+.full-width-image-text--direct-overlay .full-width-image-text__description p {
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    /* Overlay Color */
+    .full-width-image-text--direct-overlay:before {
+        content: '';
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .75;
+        background-color: #021A3C; /* TODO: Please update the background color */
+        display: block;
+    }
+}
+
+
+/* Full-Width Image + Text - Text Box Overlay */
+.full-width-image-text--box-overlay .full-width-image-text__content {
+    background-color: #fff;
+    border-radius: 4px; 
+    box-shadow: 0 1px 30px 0 rgb(0 0 0 / 10%); 
+}

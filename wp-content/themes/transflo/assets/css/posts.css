@@ -1,0 +1,265 @@
+/*------------------------------------*\
+    
+    Posts CSS
+ 
+    Posts.................Post content for loop on blog homepage, category, search page, archives, etc.
+    Sidebar...............Sidebar elements.
+
+\*------------------------------------*/
+
+
+.post-item {
+    border-top: 1px solid #ddd;
+    padding-top: 30px;
+    margin-top: 30px;
+}
+
+.post-item:first-of-type {
+    border-top: 0;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.post-item__heading a {
+    text-decoration: none;
+}
+
+.post-item .btn,
+.post-item .btn-primary {
+    margin-top: 30px;
+}
+
+.post-item__meta {
+    font-size: .8em;
+}
+
+
+@media (min-width: 1025px) {
+
+    .post-item {
+        padding-top: 50px;
+        margin-top: 50px;
+    }
+
+}
+
+
+/**
+ * Sidebar
+ */
+
+/* Blog Sidebar */
+
+.blog .page-sidebar .widget {
+	margin-bottom: 50px;
+}
+
+
+
+/**
+* FX Load More
+*/
+
+/* Load More Progress Bar */
+.load-more__progress {
+    margin-top: 15px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 10px;
+    border: 0;
+    border-radius: 0;
+    min-width: 250px;
+}
+progress::-webkit-progress-bar,
+progress::-webkit-progress-value,
+progress::-moz-progress-bar {
+    height: 10px;
+    border: 0;
+    border-radius: 0; 
+}
+progress::-webkit-progress-bar {
+    background-color: #ddd;
+}
+progress::-webkit-progress-value {
+    background-color: #4a4a4a; /* TODO: Please add a branded background color for progress bar value */
+}
+
+/* Loading Indicator */
+.is-loading:before  {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: 5px solid;
+    border-color: #E3E3E3 #E3E3E3 transparent;
+    border-radius: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-animation: simpleSpin 1.5s linear infinite;
+    animation: simpleSpin 1.5s linear infinite;
+}
+
+/* Load More Button */
+.load-more__btn {
+    border: 0;
+    display: block;
+    margin-top: 20px;
+}
+
+.load-more__btn.is-loading {
+    position: relative;
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.load-more__btn.is-loading:before {
+    width: 20px;
+    height: 20px;
+}
+
+.load-more__btn.is-disabled {
+    cursor: not-allowed;
+    background-color: #4a4a4a;
+}
+
+/* Placeholder Space */
+.placeholder-block {
+    position: relative;
+    display: flex;
+}
+
+.placeholder-block__inner {
+    flex-grow: 1;
+    background-color: #fafafa;
+}
+
+.placeholder-block.is-loading:before {
+    width: 50px;
+    height: 50px;
+}
+
+@-webkit-keyframes simpleSpin {
+    0% {
+        -webkit-transform: translate(-50%, -50%) rotateZ(0deg);
+        transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+
+    100% {
+        -webkit-transform: translate(-50%, -50%) rotateZ(360deg);
+        transform: translate(-50%, -50%) rotateZ(360deg);
+    }
+}
+
+@keyframes simpleSpin {
+    0% {
+        -webkit-transform: translate(-50%, -50%) rotateZ(0deg);
+        transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+
+    100% {
+        -webkit-transform: translate(-50%, -50%) rotateZ(360deg);
+        transform: translate(-50%, -50%) rotateZ(360deg);
+    }
+}
+
+/* Single Post Pagination */
+.post-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.btn-post-pagination {
+    background:  #dadada;
+    font-size:  15px;
+    padding:  10px 20px;
+    color:  #747474;
+    position: relative;
+}
+
+.post-pagination-text {
+    display: none;
+}
+
+.btn-post-pagination:hover {
+    background:  #ebebeb;
+}
+
+.btn-post-pagination strong {
+    display: block;
+    font-size: 12px;
+}
+
+.btn-previous-post,
+.btn-next-post {
+    max-width:  48%;
+    flex:  0 0 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align:  center;
+}
+
+.btn-previous-post {
+    padding-left:  40px;
+}
+
+.btn-next-post {
+    padding-right:  40px;
+}
+
+.mobile-arrow:after {
+    content: '';
+    display: block;
+    width: 0; 
+    height: 0; 
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid #747474;
+}
+
+.mobile-arrow {
+    position: absolute;
+}
+
+.btn-previous-post .mobile-arrow {
+    left:  19px;
+}
+
+.btn-next-post .mobile-arrow {
+    right:  19px;
+}
+
+.btn-previous-post .mobile-arrow:after { 
+    transform:  rotate(180deg);
+}
+
+@media (min-width: 768px) {
+    .post-pagination-text {
+        display: block;
+    }
+
+    .btn-previous-post,
+    .btn-next-post {
+        text-align:  inherit;
+    }
+}
+
+
+/* Search Results */
+.search-result {
+    text-decoration: none;
+}
+
+.search-result__title {
+    margin-bottom: 16px;
+}
+
+.search-result__excerpt {
+    margin-bottom: 20px;
+}
+

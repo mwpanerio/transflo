@@ -171,24 +171,24 @@ img {
   */
 @font-face {
   font-family: 'avenir_next_lt_probold';
-  src: url('../fonts/avenirnextltpro-bold.woff2') format('woff2'),
-        url('../fonts/avenirnextltpro-bold.woff') format('woff');
+  src: url('/wp-content/themes/transflo/assets/fonts/avenirnextltpro-bold.woff2') format('woff2'),
+        url('/wp-content/themes/transflo/assets/fonts/avenirnextltpro-bold.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
     font-family: 'avenir_next_lt_prodemi';
-    src: url('../fonts/avenirnextltpro-demi.woff2') format('woff2'),
-         url('../fonts/avenirnextltpro-demi.woff') format('woff');
+    src: url('/wp-content/themes/transflo/assets/fonts/avenirnextltpro-demi.woff2') format('woff2'),
+         url('/wp-content/themes/transflo/assets/fonts/avenirnextltpro-demi.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'avenir_next_lt_proregular';
-    src: url('../fonts/avenirnextltpro-regular.woff2') format('woff2'),
-         url('../fonts/avenirnextltpro-regular.woff') format('woff');
+    src: url('/wp-content/themes/transflo/assets/fonts/avenirnextltpro-regular.woff2') format('woff2'),
+         url('/wp-content/themes/transflo/assets/fonts/avenirnextltpro-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -485,7 +485,7 @@ blockquote:after {
   bottom: -2px;
   height: 4px;
   width: 200px;
-  background: url(../img/border.jpg) 0 0 no-repeat;
+  background: url(/wp-content/themes/transflo/assets/img/border.jpg) 0 0 no-repeat;
   background-size: 100% 100%;
   transform: translate(-50%, 0);
 }
@@ -704,11 +704,11 @@ blockquote:after {
 
  @font-face {
     font-family: 'icomoon';
-    src:  url('../icons/icomoon.eot?sqwrly');
-    src:  url('../icons/icomoon.eot?sqwrly#iefix') format('embedded-opentype'),
-      url('../icons/icomoon.ttf?sqwrly') format('truetype'),
-      url('../icons/icomoon.woff?sqwrly') format('woff'),
-      url('../icons/icomoon.svg?sqwrly#icomoon') format('svg');
+    src:  url('/wp-content/themes/transflo/assets/icons/icomoon.eot?sqwrly');
+    src:  url('/wp-content/themes/transflo/assets/icons/icomoon.eot?sqwrly#iefix') format('embedded-opentype'),
+      url('/wp-content/themes/transflo/assets/icons/icomoon.ttf?sqwrly') format('truetype'),
+      url('/wp-content/themes/transflo/assets/icons/icomoon.woff?sqwrly') format('woff'),
+      url('/wp-content/themes/transflo/assets/icons/icomoon.svg?sqwrly#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;

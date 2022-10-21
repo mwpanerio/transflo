@@ -35,7 +35,7 @@
 .image-button__title {
     padding: 0;
     font-size: 18px;
-    color: #000000;
+    color: var(--color-black);
     letter-spacing: 0.03em;
     text-transform: uppercase;
 }
@@ -97,13 +97,13 @@
     
     .image-button__title {
         font-size:20px;
-        color: #FFFFFF;
+        color: var(--color-white);
         letter-spacing: 0.05em;
     }
     
     .image-button__arrow {
         font-size: 20px;
-        color: #FFFFFF;
+        color: var(--color-white);
         position: absolute;
         right: 0;
         bottom: 0;

@@ -100,7 +100,7 @@
 }
 
 .masthead__slider-col {
-    background: #FFFFFF;
+    background: var(--color-white);
     border-radius: 10px;
     padding: 10px;
     display: flex;
@@ -121,7 +121,7 @@
 .masthead__slider-info {
     width: calc(100% - 80px);
     padding-left: 15px;
-    color: #000000;
+    color: var(--color-black);
     position: relative;
     height: 97px;
 }
@@ -129,7 +129,7 @@
 .masthead__slider-info h3 {
     font-size: 16px;
     padding: 0;
-    color: #000000;
+    color: var(--color-black);
 }
 
 .masthead__slider-link {
@@ -388,7 +388,7 @@
 
 .masthead__tiles__info h4 {
     padding: 0;
-    color: #FFFFFF;
+    color: var(--color-white);
     font-size: 17px;
 }
 
@@ -403,7 +403,7 @@
 }
 
 .image-buttons__popup__column {
-    background: #FFFFFF;
+    background: var(--color-white);
     border-radius: 10px;
     padding: 20px;
     position: relative;

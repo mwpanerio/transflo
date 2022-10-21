@@ -14,7 +14,7 @@
     *:before,
     *:after {
         background: transparent !important;
-        color: #000 !important;
+        color: var(--color-black) !important;
         box-shadow: none !important;
         filter: none !important;
         -webkit-filter: none !important;

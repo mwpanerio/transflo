@@ -27,7 +27,7 @@
     height: 40px;
     border-radius: 50%;
     background: #2474BB;
-    color: #fff;
+    color: var(--color-white);
     font-size: 20px;
     font-weight: normal;
     display: flex;
@@ -70,7 +70,7 @@
     }
 
     .social-media-links ul li a:hover {
-        color: #FFFFFF;
+        color: var(--color-white);
         background: #164670;
     }
 }

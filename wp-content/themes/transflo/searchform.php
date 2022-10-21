@@ -5,11 +5,6 @@
  */
 ?>
 <form action="/" method="get">
-    <p>
-        <label for="s">Search</label>
-        <input type="text" name="s" id="s" value="<?php echo get_search_query( true ); ?>" data-swplive="true" /> <!-- data-swplive="true" enables SearchWP Live Search -->
-    </p>
-    <p>
-        <button type="submit">Search</button>
-    </p>
+    <input type="text" placeholder="What can we help you find?" name="s" id="s" value="<?php echo get_search_query( true ); ?>" data-swplive="true">
+    <button type="submit"><i class="icon-search"></i></button>
 </form>

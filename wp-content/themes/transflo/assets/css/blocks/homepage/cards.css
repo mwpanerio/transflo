@@ -12,7 +12,7 @@
     justify-content: space-between;
     text-decoration: none;
     height: 100%;
-    background: #FFFFFF;
+    background: var(--color-white);
     transition: transform .2s linear;
     border-radius: 20px;
     color: #333333;
@@ -57,7 +57,7 @@
     right: 0;
     top: -23px;
     background: #2474BB;
-    color: #FFFFFF;
+    color: var(--color-white);
     font-size: 16px;
     line-height: 1em;
     padding: 15px 13px 15px 17px;
@@ -79,7 +79,7 @@
 .card__title {
     margin-top: 0;
     font-size: 19px;
-    color: #000000;
+    color: var(--color-black);
     line-height: 1.35em;
 }
 
@@ -100,7 +100,7 @@
 
 .card__icon span {
     font-size: 18px;
-    color: #FFFFFF;
+    color: var(--color-white);
     letter-spacing: 0.02em;
     font-family: 'avenir_next_lt_prodemi';
     vertical-align: middle;
@@ -181,7 +181,7 @@
     }
 
     .cards--inner .card:hover {
-        background: #FFFFFF;
+        background: var(--color-white);
         transform: scale(1.04);
     }
 

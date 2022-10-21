@@ -83,7 +83,7 @@ Guru: https://app.getguru.com/card/ixR67EpT/Slick-Slider
     z-index: 9;
     text-align: center;
     color: #8D99AE;
-    background-color: #FFFFFF;
+    background-color: var(--color-white);
     border-radius: 50%;
 }
 
@@ -119,7 +119,7 @@ Guru: https://app.getguru.com/card/ixR67EpT/Slick-Slider
 .slick-arrow:hover,
 .slick-arrow:focus {
     border: 1px solid #2474BB;
-    color: #FFFFFF;
+    color: var(--color-white);
     background-color: #2474BB;
 }
 

@@ -19,7 +19,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background: #FFFFFF;
+    background: var(--color-white);
     z-index: 999;
     padding: 15px 0;
     transition: all .5s;
@@ -49,7 +49,7 @@
 
 .toggle-menu {
     font-size: 12px;
-    color: #FFFFFF;
+    color: var(--color-white);
     text-transform: uppercase;
     font-family: 'avenir_next_lt_prodemi';
     cursor: pointer;
@@ -191,7 +191,7 @@
     }
 
     .toggle-menu {
-        color: #000000;
+        color: var(--color-black);
         float: left;
     }
 
@@ -338,7 +338,7 @@
     text-decoration: none;
     font-size: 18px;
     font-weight: normal;
-    color: #000000;
+    color: var(--color-black);
     font-family: 'avenir_next_lt_proregular';
     padding: 0 0;
     border: none;
@@ -568,7 +568,7 @@ body.menu-is-active:after {
 }
 
 .masthead--innerpage h1 {
-    color: #000000;
+    color: var(--color-black);
 }
 
 .right-image {
@@ -702,7 +702,7 @@ body.menu-is-active:after {
 .breadcrumbs li {
     list-style-type: none;
     font-size: 16px;
-    color: #000000;
+    color: var(--color-black);
     line-height: 1em;
     margin: 0;
     padding: 0 11px;
@@ -729,7 +729,7 @@ body.menu-is-active:after {
 
 @media (min-width: 1200px) {
     .breadcrumbs a:hover {
-        color: #000000;
+        color: var(--color-black);
     }
 }
 

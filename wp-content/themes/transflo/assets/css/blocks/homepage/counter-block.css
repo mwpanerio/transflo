@@ -7,7 +7,7 @@
     background: #2474BB;
     border-radius: 20px;
     padding: 30px;
-    color: #fff;
+    color: var(--color-white);
 }
 
 .counter-bar ul {
@@ -37,7 +37,7 @@
 .counter-bar h2 {
     padding: 0 0 0;
     font-size: 46px;
-    color: #FFFFFF;
+    color: var(--color-white);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,7 +48,7 @@
 }
 
 .counter-block--white .counter-bar {
-    background: #FFFFFF;
+    background: var(--color-white);
     border-radius: 0;
     padding: 0;
     color: #8D99AE;

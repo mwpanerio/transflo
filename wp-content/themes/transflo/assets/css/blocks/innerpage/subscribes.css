@@ -6,7 +6,7 @@
 
 .subscribe h3 {
     font-size: 20px;
-    color: #fff;
+    color: var(--color-white);
     padding-bottom: 20px;
 }
 

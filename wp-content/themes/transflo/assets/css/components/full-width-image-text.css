@@ -72,7 +72,7 @@
 
 .full-width-image-text--direct-overlay .full-width-image-text__headline,
 .full-width-image-text--direct-overlay .full-width-image-text__description p {
-    color: #fff;
+    color: var(--color-white);
 }
 
 @media (min-width: 768px) {
@@ -95,7 +95,7 @@
 
 /* Full-Width Image + Text - Text Box Overlay */
 .full-width-image-text--box-overlay .full-width-image-text__content {
-    background-color: #fff;
+    background-color: var(--color-white);
     border-radius: 4px; 
     box-shadow: 0 1px 30px 0 rgb(0 0 0 / 10%); 
 }

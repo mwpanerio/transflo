@@ -41,7 +41,7 @@ a.nt_edit_link {
 
 .semantic_ui .ui.striped.table>tr:nth-child(2n),
 .semantic_ui .ui.striped.table tbody tr:nth-child(2n) {
-    background-color: #fff !important;
+    background-color: var(--color-white) !important;
 
 }
 

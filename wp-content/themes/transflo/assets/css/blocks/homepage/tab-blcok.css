@@ -37,10 +37,10 @@
 
 .tab-content {
     margin: 25px 22px 30px 0;
-    background: #000000;
+    background: var(--color-black);
     border-radius: 20px;
     padding: 30px 30px 35px;
-    color: #FFFFFF;
+    color: var(--color-white);
 }
 
 .stars {
@@ -86,7 +86,7 @@
     font-family: 'avenir_next_lt_proregular';
     line-height: 1.2em;
     padding: 0 0;
-    color: #FFFFFF;
+    color: var(--color-white);
     display: block;
 }
 
@@ -105,7 +105,7 @@
 }
 
 .js-tab-menu .slick-slide.slick-current.slick-active .tab-column {
-    color: #000000;
+    color: var(--color-black);
 }
 
 .tab-wrap .tab-column {
@@ -129,7 +129,7 @@
     font-weight: normal;
     padding-bottom: 18px;
     line-height: 1.3em;
-    color: #000000;
+    color: var(--color-black);
 }
 
 .tab-content__image {

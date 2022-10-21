@@ -30,7 +30,7 @@
 
 .resp-sharing-button__link {
     text-decoration: none;
-    color: #fff;
+    color: var(--color-white);
     margin: 0.5em
 }
 
@@ -59,14 +59,14 @@
 
 /* Non solid icons get a stroke */
 .resp-sharing-button__icon {
-    stroke: #fff;
+    stroke: var(--color-white);
     fill: none
 }
 
 /* Solid icons get a fill */
 .resp-sharing-button__icon--solid,
 .resp-sharing-button__icon--solidcircle {
-    fill: #fff;
+    fill: var(--color-white);
     stroke: none
 }
 

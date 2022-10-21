@@ -1,54 +1,80 @@
-        <footer id="page-footer" class="page-footer">
+        <?php
+            // gets contact information set in Theme Settings
+            $address    = fx_get_client_address();
+            $email      = fx_get_client_email( true );
+            $phone      = fx_get_client_phone_number();
+            $phone_link = fx_get_client_phone_number( true );
+            $logo_id    = fx_get_client_logo_image_id(); 
+            $home_url   = get_home_url();
+        ?>
 
-            <div class="footer-contact-info">
-                <?php
-                    // gets contact information set in Theme Settings
-                    $address    = fx_get_client_address();
-                    $email      = fx_get_client_email( true );
-                    $phone      = fx_get_client_phone_number();
-                    $phone_link = fx_get_client_phone_number( true );
-                ?>
-
-                <h5 class="footer__headline">Contact Us</h5>
-
-                <?php if( !empty( $address ) ): ?>
-                    <address class="footer-contact__address">
-                        <?php echo $address; ?>
-                    </address>
-                <?php endif; ?>
-
-                <?php if( !empty( $email ) ): ?>
-                    <div class="footer-contact__email">
-                        Email: <a href="<?php echo esc_url( sprintf( 'mailto:%s', $email ) ); ?>"><?php echo $email; ?></a>
+        <footer class="page-footer">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="footer-wrap">
+                        <div class="footer-logo-column">
+                            <div class="footer-logo">
+                                <a href="<?php echo esc_url( $home_url ); ?>">
+                                    <?php echo fx_get_image_tag( $logo_id, '' ); ?>
+                                </a>
+                            </div>
+                            <div class="footer-social-media">
+                                <ul>
+                                    <li><a href="#"><i class="icon-facebook"></i></a></li>
+                                    <li><a href="#"><i class="icon-twitter"></i></a></li>
+                                    <li><a href="#"><i class="icon-youtube"></i></a></li>
+                                    <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-contact-column">
+                            <h4>Get in touch</h4>
+                            <?php if( !empty( $address ) ): ?>
+                                <p>
+                                    <i class="icon-location"></i><?php echo str_replace(['<p>', '</p>'], '', $address); ?>
+                                </p>
+                            <?php endif; ?>
+                            <p><i class=" icon-directions"></i> <a href="https://maps.google.com/maps?q=<?php echo strip_tags($address); ?>" target="_blank">Get Directions</a></p>
+                        </div>
+                        <div class="footer-quick-links">
+                            <h4>Quick Links</h4>
+                            <?php
+                                // Output the footer navigation
+                                wp_nav_menu(
+                                    [
+                                        'menu'           => 'Footer Menu',
+                                    ]
+                                );
+                            ?>
+                        </div>
                     </div>
-                <?php endif; ?>
-
-                <?php if( !empty( $phone ) ): ?>
-                    <div class="footer-contact__phone">
-                        Call: <a href="<?php echo esc_url( sprintf( 'tel:%s', $phone_link ) ); ?>"><?php echo $phone; ?></a>
-                    </div>
-                <?php endif; ?>
+                </div>
             </div>
-            
-            <?php
-                // Output the footer navigation
-                wp_nav_menu(
-                    [
-                        'container'         => 'nav',
-                        'container_class'   => 'footer-navigation',
-                        'depth'             => 1,
-                        'theme_location'    => 'footer_menu',
-                    ]
-                );
-            ?>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="footer-bottom__wrap">
+                        <div class="footer-secondary-menu">
+                            <ul>
+                                <?php while(have_rows('helper_links', 'option')): the_row(); ?>
+                                    <?php if($link = get_sub_field('link')): ?>
+                                    <li>
+                                        <a href="<?php echo $link['url']; ?>"<?php echo $link['target'] ? ' target="' . $link['target'] . '"': '';?>>
+                                            <?php echo $link['title']; ?>
+                                        </a>
+                                    </li>
+                                    <?php endif; ?>
+                                <?php endwhile; ?>
+                                <li>Copyright © <?php echo the_date('Y')?>. All Rights Reserved.</li>
+                            </ul>
+                        </div>
+                        <div class="back-top-btn">
+                            <a href="#top">Back to Top <i class="icon-button-up"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fixed-item hidden-md-down"><img src="/wp-content/themes/transflo/assets/img/fixed-item.png" alt="" class="img-responsive"></div>
         </footer>
-		
-        <!-- Back To Top Icon area
-        <button class="back-to-top js-back-to-top" type="button">
-            <span class="back-to-top__label">Back to top</span>
-            <i class="icon-arrow-up"></i>
-        </button>
-        -->
 
         <?php wp_footer(); ?>
     </body>

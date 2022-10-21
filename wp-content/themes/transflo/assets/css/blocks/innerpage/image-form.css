@@ -24,7 +24,7 @@
 }
 
 .half-img-form__text h2 {
-    color: #000000;
+    color: var(--color-black);
 }
 
 @media (min-width: 768px) {

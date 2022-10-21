@@ -31,7 +31,7 @@
 
 .image-text__text h2,
 .image-text__text h3 {
-    color: #000;
+    color: var(--color-black);
 }
 
 .image-text__text h4 {

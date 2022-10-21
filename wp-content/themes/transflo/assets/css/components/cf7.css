@@ -43,7 +43,7 @@ input.wpcf7-not-valid,
     border: 1px solid #DA1F2C !important;
     outline: none;
     padding-right: 50px;
-    background-color: #fff;
+    background-color: var(--color-white);
 }
 
 

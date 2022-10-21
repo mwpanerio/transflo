@@ -40,18 +40,18 @@
     position: relative;
     z-index: 2;
     border-radius: 20px;
-    color: #FFFFFF;
+    color: var(--color-white);
     padding: 25px 22px 30px;
     text-align: center;
 }
 
 .cta--image .cta-wrap h2 {
-    color: #FFFFFF;
+    color: var(--color-white);
     padding-bottom: 12px;
 }
 
 .cta--image .cta-wrap p {
-    color: #FFFFFF;
+    color: var(--color-white);
     padding-bottom: 25px;
 }
 

@@ -41,7 +41,7 @@
 }
 
 .half-and-half.white-bg {
-    background-color: #ffffff;
+    background-color: var(--color-white);
 }
 
 .half-and-half.gray-bg {

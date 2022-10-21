@@ -16,6 +16,14 @@
 
  :root {
     --section-margins: 60px;
+
+    --color-primary: #2474BB;
+    --color-secondary: #DA1F2C;
+    --color-tertiary: #8D99AE;
+
+    --color-offwhite: #EFF2F4;
+    --color-white: #fff;
+    --color-black: #000;
 }
 
 @media (min-width: 768px) {

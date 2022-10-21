@@ -38,7 +38,7 @@
 
 .tab-accordion__tab.is-active,
 .tab-accordion__panel__toggle.is-active {
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid var(--color-white);
 }
 
 .tab-accordion__panel__toggle.is-active {
@@ -52,14 +52,14 @@
 .tab-accordion__panel__toggle:hover,
 .tab-accordion__panel__toggle:focus {
     color: inherit;
-    background: #fff;
+    background: var(--color-white);
     text-decoration: none;
 }
 
 .tab-accordion__tab:focus:not(:focus-visible),
 .tab-accordion__panel__toggle:focus:not(:focus-visible) {
     border: 1px solid #ddd;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid var(--color-white);
 }
 
 .tab-accordion__panel__content {

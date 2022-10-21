@@ -12,7 +12,7 @@
 }
 
 .bg-white {
-    background: #ffffff;
+    background: var(--color-white);
 }
 
 .bg-gray {
@@ -45,7 +45,7 @@
     height: 6px;
     border-radius: 99px;
     overflow: hidden;
-    background-color: #FFFFFF;
+    background-color: var(--color-white);
     background-image: linear-gradient(to right, #DA1F2C, #DA1F2C);
     background-repeat: no-repeat;
     background-size: 0 100%;
@@ -80,7 +80,7 @@
 
 .table-structure table thead {
     background-color: #2474BB;
-    color: #FFFFFF;
+    color: var(--color-white);
 }
 
 .table-structure table thead tr th {
@@ -90,7 +90,7 @@
     font-family: 'avenir_next_lt_probold';
     font-weight: normal;
     border: none;
-    color: #ffffff;
+    color: var(--color-white);
 }
 
 .table-structure table tbody tr {
@@ -98,7 +98,7 @@
 }
 
 .table-structure table tbody tr:nth-child(odd) {
-    background-color: #fff;
+    background-color: var(--color-white);
 }
 
 .table-structure table tbody tr td,

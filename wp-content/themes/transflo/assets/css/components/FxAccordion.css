@@ -24,13 +24,13 @@
 .fxa-accordion__panel__toggle:hover,
 .fxa-accordion__panel__toggle:focus {
     color: inherit;
-    background: #fff;
+    background: var(--color-white);
     text-decoration: none;
 }
 
 .fxa-accordion__panel.is-expanded .fxa-accordion__panel__toggle {
     border-radius: 4px 4px 0 0;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid var(--color-white);
 }
 
 .fxa-accordion__panel .fxa-accordion__panel__toggle:after {

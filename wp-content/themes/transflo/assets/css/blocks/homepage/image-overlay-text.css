@@ -14,7 +14,7 @@
 
 .image-overlay-text__column {
     color: #fff;
-    background: #000000;
+    background: var(--color-black);
     padding: 30px 30px 40px;
     border-radius: 0 0 20px 20px;
     position: relative;
@@ -28,7 +28,7 @@
 }
 
 .image-overlay-text__column .btn-secondary {
-    border-color: #FFFFFF;
+    border-color: var(--color-white);
     background: transparent;
     color: #fff;
 }

@@ -151,7 +151,48 @@ fx_register_block(
         'css'           => 'homepage/masthead-slider.css',
         'css_deps'      => [ 'fx_slick' ],
         'js'            => 'homepage/masthead-slider.js',
+        'js_deps'       => [ 'fx_slick', 'fx_masthead_slider_2' ],
+        'category'      => 'fx-homepage-blocks',
+    ]
+);
+
+fx_register_block(
+    [
+        'name'          => 'homepage-counter-section',
+        'title'         => 'Homepage - Counter Section',
+        'template'      => 'homepage/counter.php',
+        'description'   => 'Slider block for the homepage masthead.',
+        'css'           => 'homepage/counter-block.css',
+        'js'            => 'homepage/counter.js',
+        'js_deps'       => [ 'fx_odometter' ],
+        'category'      => 'fx-homepage-blocks',
+    ]
+);
+
+fx_register_block(
+    [
+        'name'          => 'homepage-products-section',
+        'title'         => 'Homepage - Products Section',
+        'template'      => 'homepage/products-section.php',
+        'description'   => 'Slider block for the homepage masthead.',
+        'css'           => 'homepage/products.css',
+        'css_deps'      => [ 'fx_slick' ],
+        'js'            => 'homepage/products-slider.js',
         'js_deps'       => [ 'fx_slick' ],
+        'category'      => 'fx-homepage-blocks',
+    ]
+);
+
+fx_register_block(
+    [
+        'name'          => 'homepage-testimonial-section',
+        'title'         => 'Homepage - Testimonial Section',
+        'template'      => 'homepage/testimonial-section.php',
+        'description'   => 'Slider block for the homepage masthead.',
+        'css'           => 'homepage/tab-block.css',
+        'css_deps'      => [ 'fx_slick' ],
+        'js'            => 'homepage/tab.js',
+        'js_deps'       => [ 'fx_slick', 'fx_odometter' ],
         'category'      => 'fx-homepage-blocks',
     ]
 );

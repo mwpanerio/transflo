@@ -217,7 +217,7 @@ h6,
     padding: 0;
     font-family: 'avenir_next_lt_probold';
     font-weight: normal;
-    color: #000000;
+    color: var(--color-black);
 }
   
 h2, 
@@ -408,7 +408,7 @@ ol li:before {
     background: #8D99AE;
     text-align: center;
     font-size: 14px;
-    color: #FFFFFF;
+    color: var(--color-white);
     font-family: 'avenir_next_lt_prodemi';
 }
 
@@ -607,7 +607,7 @@ blockquote:after {
   font-family: 'avenir_next_lt_prodemi';
   font-weight: normal;
   text-decoration: none;
-  color: #FFFFFF;
+  color: var(--color-white);
   padding: 13px 45px 13px 19px;
   border-radius: 99px;
   border: 1px solid transparent;
@@ -631,7 +631,7 @@ blockquote:after {
 
 .btn-secondary {
   color: #2474BB;
-  background: #FFFFFF;
+  background: var(--color-white);
   border: 1px solid #8D99AE;
 }
 
@@ -680,18 +680,18 @@ blockquote:after {
 
   .btn:hover,
   .btn-primary:hover {
-      color: #FFFFFF;
+      color: var(--color-white);
       background: #164670;
   }
 
   .btn-secondary:hover {
-      color: #FFFFFF;
+      color: var(--color-white);
       background: #2474BB;
       border: 1px solid #8D99AE;
   }
 
   .btn-tertiary:hover {
-      color: #FFFFFF;
+      color: var(--color-white);
       background: #83131A;
   }
 }
@@ -902,7 +902,7 @@ select:focus {
 [type="week"],
 [type="date"] {
   width: 100%;
-  background-color: #FFFFFF;
+  background-color: var(--color-white);
   padding: 15px 25px 0 25px;
   height: 50px;
   color: #333333;

@@ -9,8 +9,10 @@
  */
 
 $template = [
-	['acf/homepage-masthead-slider'], // TODO remove if not using slider. Otherwise, delete this comment.
-    // TODO add additional blocks here and delete this comment
+	['acf/homepage-masthead-slider'],
+    ['acf/homepage-counter-section'],
+    ['acf/homepage-products-section'],
+    ['acf/homepage-testimonial-section'],
 ];
 
 ?>

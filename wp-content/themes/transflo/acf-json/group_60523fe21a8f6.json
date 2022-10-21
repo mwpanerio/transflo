@@ -337,170 +337,222 @@
             ]
         },
         {
-                "key": "field_62d702b2e6e39",
-                "label": "Search",
-                "name": "search",
-                "type": "group",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "layout": "block",
-                "sub_fields": [
-                    {
-                        "key": "field_62d702cbe6e3a",
-                        "label": "Show\/Hide",
-                        "name": "showhidesearch",
-                        "type": "select",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "choices": {
-                            "show": "Show",
-                            "hide": "Hide"
-                        },
-                        "default_value": "hide",
-                        "allow_null": 0,
-                        "multiple": 0,
-                        "ui": 0,
-                        "return_format": "value",
-                        "ajax": 0,
-                        "placeholder": ""
-                    },
-                    {
-                        "key": "field_62d70313e6e3b",
-                        "label": "Text in Search Bar",
-                        "name": "text_in_search_bar",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "Try searching our site",
-                        "placeholder": "",
-                        "prepend": "",
-                        "append": "",
-                        "maxlength": ""
-                    }
-                ]
+            "key": "field_62d702b2e6e39",
+            "label": "Search",
+            "name": "search",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
             },
-            {
-                "key": "field_62d70346e6e3d",
-                "label": "Contact Form",
-                "name": "contact_form",
-                "type": "group",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_62d702cbe6e3a",
+                    "label": "Show\/Hide",
+                    "name": "showhidesearch",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "show": "Show",
+                        "hide": "Hide"
+                    },
+                    "default_value": "hide",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
                 },
-                "layout": "block",
-                "sub_fields": [
-                    {
-                        "key": "field_62d70377e6e3e",
-                        "label": "Show\/Hide",
-                        "name": "showhidecontact",
-                        "type": "select",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "choices": {
-                            "show": "Show",
-                            "hide": "Hide"
-                        },
-                        "default_value": "hide",
-                        "allow_null": 0,
-                        "multiple": 0,
-                        "ui": 0,
-                        "return_format": "value",
-                        "ajax": 0,
-                        "placeholder": ""
+                {
+                    "key": "field_62d70313e6e3b",
+                    "label": "Text in Search Bar",
+                    "name": "text_in_search_bar",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
                     },
-                    {
-                        "key": "field_62d703ace6e3f",
-                        "label": "Text before Contact Button",
-                        "name": "text_before_contact_button",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "Still can't find what you're looking for?",
-                        "placeholder": "",
-                        "prepend": "",
-                        "append": "",
-                        "maxlength": ""
+                    "default_value": "Try searching our site",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_62d70346e6e3d",
+            "label": "Contact Form",
+            "name": "contact_form",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_62d70377e6e3e",
+                    "label": "Show\/Hide",
+                    "name": "showhidecontact",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
                     },
-                    {
-                        "key": "field_62d703sdfsde6e3f",
-                        "label": "Text in Contact Button",
-                        "name": "text_in_contact_button",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "Contact Us!",
-                        "placeholder": "",
-                        "prepend": "",
-                        "append": "",
-                        "maxlength": ""
+                    "choices": {
+                        "show": "Show",
+                        "hide": "Hide"
                     },
-                    {
-                        "key": "field_62d703d9e6e40",
-                        "label": "Contact Form Link",
-                        "name": "contact_form_link",
-                        "type": "url",
-                        "instructions": "",
-                        "required": 1,
-                        "conditional_logic": [
-                            [
-                                {
-                                    "field": "field_62d70377e6e3e",
-                                    "operator": "==",
-                                    "value": "show"
-                                }
-                            ]
-                        ],
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "placeholder": ""
-                    }
-                ]
-            }
+                    "default_value": "hide",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_62d703ace6e3f",
+                    "label": "Text before Contact Button",
+                    "name": "text_before_contact_button",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Still can't find what you're looking for?",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_62d703sdfsde6e3f",
+                    "label": "Text in Contact Button",
+                    "name": "text_in_contact_button",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Contact Us!",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_62d703d9e6e40",
+                    "label": "Contact Form Link",
+                    "name": "contact_form_link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_62d70377e6e3e",
+                                "operator": "==",
+                                "value": "show"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_6352b3b024035",
+            "label": "Helper Links",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6352b3b424036",
+            "label": "Helper Links",
+            "name": "helper_links",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_6352b3b924037",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                }
+            ]
+        }
     ],
     "location": [
         [
@@ -519,5 +571,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1618869164
+    "show_in_rest": 0,
+    "modified": 1666364349
 }

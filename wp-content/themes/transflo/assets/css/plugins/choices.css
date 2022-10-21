@@ -58,7 +58,7 @@
     width: 100%;
     padding: 10px;
     border-bottom: 1px solid #dddddd;
-    background-color: #ffffff;
+    background-color: var(--color-white);
     margin: 0;
 }
 
@@ -214,7 +214,7 @@
     margin-bottom: 3.75px;
     background-color: #00bcd4;
     border: 1px solid #00a5bb;
-    color: #ffffff;
+    color: var(--color-white);
     word-break: break-all;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -244,7 +244,7 @@
     z-index: 1;
     position: absolute;
     width: 100%;
-    background-color: #ffffff;
+    background-color: var(--color-white);
     border: 1px solid #dddddd;
     top: 100%;
     margin-top: -1px;

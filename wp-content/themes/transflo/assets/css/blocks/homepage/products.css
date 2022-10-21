@@ -44,7 +44,7 @@
 
 .products__descrition h3 {
     font-size: 20px;
-    color: #000000;
+    color: var(--color-black);
     padding-bottom: 8px;
 }
 
@@ -289,7 +289,7 @@
     }
 
     a.products__link:hover .btn {
-        color: #FFFFFF;
+        color: var(--color-white);
         background: #2474BB;
         border: 1px solid #8D99AE;
     }

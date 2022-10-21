@@ -27,6 +27,10 @@
     border-top: 3px solid #2474BB;
 }
 
+.admin-bar .page-header {
+    top: auto;
+}
+
 .mobile-fixed-nav {
     position: fixed;
     bottom: 0;

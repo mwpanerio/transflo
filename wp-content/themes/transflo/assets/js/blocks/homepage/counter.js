@@ -20,12 +20,12 @@ var FX = ( function( FX, $ ) {
 							i = 0;
 							$('.odometer').each(function() {
 								arr[i++] = $(this).attr('data-count');;
-								odometer.innerText = arr[0]; //here odometer is *id* of first number
-								odometer1.innerText = arr[1];
-								odometer2.innerText = arr[2];
-								odometer3.innerText = arr[3]; 
-								odometer4.innerText = arr[4]; 
-								odometer5.innerText = arr[5]; 
+								// odometer.innerText = arr[0]; //here odometer is *id* of first number
+								// odometer1.innerText = arr[1];
+								// odometer2.innerText = arr[2];
+								// odometer3.innerText = arr[3]; 
+								// odometer4.innerText = arr[4]; 
+								// odometer5.innerText = arr[5]; 
 							});
 							flag = false;
 						}

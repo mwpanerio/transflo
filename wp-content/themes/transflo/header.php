@@ -30,13 +30,14 @@
                 <div class="js-search-toggle"><i class="icon-search"></i> <span>Search</span></div>
                 <div class="toggle-menu hidden-xs-down hidden-lg"><i class="icon-menu"></i> Menu</div>
                 <nav class="nav-primary">
-                    <ul class="clearfix">
-                        <li class="menu-item-has-children"><a href="#">Solutions</a></li>
-                        <li class="menu-item-has-children"><a href="#">Products</a></li>
-                        <li class="menu-item-has-children"><a href="#">Resources</a></li>
-                        <li class="menu-item-has-children"><a href="#">About</a></li>
-                        <li><a href="#">Customer Support</a></li>
-                    </ul>
+                    <?php
+                        // Output the header navigation
+                        wp_nav_menu(
+                            [
+                                'menu'           => 'Header Menu',
+                            ]
+                        );
+                    ?>
                 </nav>
             </div>
         </div>

@@ -459,10 +459,6 @@
     display: none;
 }
 
-.active .image-buttons__popup {
-    display: block;
-}
-
 
 @media (min-width: 768px) {
     .masthead__right__column1 {

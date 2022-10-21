@@ -290,6 +290,14 @@ function fx_theme_scripts() {
             'preload'       => true,
         ]
     );
+
+    fx_assets_add_script(
+        [
+            'handle'        => 'fx_masthead_slider_2',
+            'src'           => $theme_url . '/assets/js/blocks/homepage/masthead-slider2.js',
+            'dependencies'  => [ 'fx_slick' ]
+        ]
+    );   
     
 
     /**
@@ -364,6 +372,14 @@ function fx_theme_scripts() {
         ]
     );  
         
+    // Script for "Counter Odometer" block sections
+    fx_assets_add_script(
+        [
+            'handle'        => 'fx_odometter',
+            'src'           => $theme_url . '/assets/js/plugins/odometer.js',
+            'dependencies'  => [ 'jquery' ],
+        ]
+    );
     
     /**
      * Plugin-specific JS

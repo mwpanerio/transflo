@@ -116,12 +116,19 @@ var FX = ( function( FX, $ ) {
                 $('.desktop-menu__search input[name="s"]').focus();
 			});
 
-			$(".masthead__tiles__col").click(function () {
-				$(this).toggleClass('active')
+			$(".masthead__tiles__col").on('click', function () {
+				const $this = $(this);
+
+				$this.addClass('is-active');
+				$this.find('.image-buttons__popup').slideDown();
+				$this.find('.image-buttons__popup__column').addClass('is-active');
 			})
 
-			$(".active > .popup-cross").click(function () {
-				$(".masthead__tiles__col").removeClass('active')
+			$(".popup-cross").on('click', function () {
+				
+				$(".masthead__tiles__col").removeClass('is-active');
+				$('.image-buttons__popup').removeClass('is-active').slideUp();
+				$('.image-buttons__popup__column').removeClass('is-active').slideUp();
 			})
 
 			

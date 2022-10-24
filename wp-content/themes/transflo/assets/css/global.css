@@ -678,6 +678,10 @@ blockquote:after {
     font-size: 20px;
   }
 
+  .btn:hover {
+    padding-right: 59px;
+  }
+
   .btn:hover,
   .btn-primary:hover {
       color: var(--color-white);

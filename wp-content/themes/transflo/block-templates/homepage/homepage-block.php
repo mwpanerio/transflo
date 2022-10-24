@@ -12,7 +12,10 @@ $template = [
 	['acf/homepage-masthead-slider'],
     ['acf/homepage-counter-section'],
     ['acf/homepage-products-section'],
+    ['acf/general-image-button'],
     ['acf/homepage-testimonial-section'],
+    ['acf/homepage-latest-news-and-resources'],
+    ['acf/homepage-image-overlay-text'],
 ];
 
 ?>

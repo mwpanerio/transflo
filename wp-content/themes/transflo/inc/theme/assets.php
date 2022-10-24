@@ -233,6 +233,13 @@ function fx_theme_styles() {
             'src'       => $theme_url . '/assets/css/plugins/choices.css',
         ]
     );
+
+    fx_assets_add_stylesheet(
+        [
+            'handle'        => 'fx_odometter_styles',
+            'src'           => $theme_url . '/assets/css/plugins/odometer.css',
+        ]
+    );
     
     // TODO: remove if not using ninja tables.
     fx_assets_add_stylesheet(
@@ -377,7 +384,14 @@ function fx_theme_scripts() {
         [
             'handle'        => 'fx_odometter',
             'src'           => $theme_url . '/assets/js/plugins/odometer.js',
-            'dependencies'  => [ 'jquery' ],
+        ]
+    );
+
+    // Script for "GSAP" block sections
+    fx_assets_add_script(
+        [
+            'handle'        => 'fx_gsap',
+            'src'           => $theme_url . '/assets/js/plugins/gsap.min.js',
         ]
     );
     

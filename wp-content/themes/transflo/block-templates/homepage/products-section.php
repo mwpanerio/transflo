@@ -2,22 +2,39 @@
     <div class="container">
         <div class="products__top-content">
             <div class="products__heading">
-                <h5>Our Products</h5>
-                <h2>A Fully Integrated Suite of Products</h2>
+                <?php if($subheading = get_field('subheading')): ?>
+                <h5><?php echo $subheading; ?></h5>
+                <?php endif; ?>
+                <?php if($main_title = get_field('main_title')): ?>
+                <h2><?php echo $main_title; ?></h2>
+                <?php endif; ?>
             </div>
+            <?php if($button = get_field('button')): ?>
             <div class="products__btns hidden-md-down">
-                <a href="#" class="btn btn-primary">View All Products</a>
+                <a href="<?php echo $button['url']; ?>" class="btn btn-primary"<?php echo $button['target'] ? ' target="' . $button['target'] . '"': ''; ?>>
+                    <?php echo $button['title']; ?>
+                </a>
             </div>
+            <?php endif; ?>
         </div>
         <div class="products__listings">
             <div class="js-products-slider fx-slider">
+                <?php while(have_rows('product_slider')): the_row(); ?>
                 <div class="products-items fx-slide">
-                    <a href="#" class="products__link">
+                    <a href="<?php echo get_sub_field('button')['link']; ?>" class="products__link"<?php echo get_sub_field('button')['target'] ? ' target="' . get_sub_field('button')['target'] . '"': ''; ?>>
                         <div class="products__info-top">
-                            <div class="products__image"><img src="../wp-content/themes/transflo/assets/img/products-image-1.png" alt="" class="object-fit"></div>
+                            <div class="products__image">
+                                <?php if($image = get_sub_field('image')): ?>
+                                    <?php echo fx_get_image_tag($image, 'object-fit'); ?>
+                                <?php endif; ?>
+                            </div>
                             <div class="products__descrition">
-                                <h3>Transflo Mobile+</h3>
-                                <p>Tools for Driver & Fleets</p>
+                                <?php if($title = get_sub_field('title')): ?>
+                                <h3><?php echo $title; ?></h3>
+                                <?php endif; ?>
+                                <?php if($description = get_sub_field('description')): ?>
+                                <p><?php echo $description; ?></p>
+                                <?php endif; ?>
                             </div>
                         </div>
                         <div class="products__info-bottom">
@@ -25,109 +42,16 @@
                         </div>
                     </a>
                 </div>
-                <div class="products-items fx-slide">
-                    <a href="#" class="products__link">
-                        <div class="products__info-top">
-                            <div class="products__image"><img src="../wp-content/themes/transflo/assets/img/ELDTelematics.png" alt="" class="img-responsive"></div>
-                            <div class="products__descrition">
-                                <h3>Telematics & ELD</h3>
-                                <p>HOS Compliance & Telematics</p>
-                            </div>
-                        </div>
-                        <div class="products__info-bottom">
-                            <span class="btn btn-secondary">Learn More</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="products-items fx-slide">
-                    <a href="#" class="products__link">
-                        <div class="products__info-top">
-                            <div class="products__image"><img src="../wp-content/themes/transflo/assets/img/Unite.png" alt="" class="img-responsive"></div>
-                            <div class="products__descrition">
-                                <h3>Unite</h3>
-                                <p>Paperless Load Management (eBOL/ePOD)</p>
-                            </div>
-                        </div>
-                        <div class="products__info-bottom">
-                            <span class="btn btn-secondary">Learn More</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="products-items fx-slide">
-                    <a href="#" class="products__link">
-                        <div class="products__info-top">
-                            <div class="products__image"><img src="../wp-content/themes/transflo/assets/img/Velocity.png" alt="" class="img-responsive"></div>
-                            <div class="products__descrition">
-                                <h3>Velocity</h3>
-                                <p>Full Broker Suite with Digital Load Offers, Visibility & Document Management</p>
-                            </div>
-                        </div>
-                        <div class="products__info-bottom">
-                            <span class="btn btn-secondary">Learn More</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="products-items fx-slide">
-                    <a href="#" class="products__link">
-                        <div class="products__info-top">
-                            <div class="products__image"><img src="../wp-content/themes/transflo/assets/img/products-image-1.png" alt="" class="object-fit"></div>
-                            <div class="products__descrition">
-                                <h3>Transflo Mobile+</h3>
-                                <p>Tools for Driver & Fleets</p>
-                            </div>
-                        </div>
-                        <div class="products__info-bottom">
-                            <span class="btn btn-secondary">Learn More</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="products-items fx-slide">
-                    <a href="#" class="products__link">
-                        <div class="products__info-top">
-                            <div class="products__image"><img src="../wp-content/themes/transflo/assets/img/ELDTelematics.png" alt="" class="img-responsive"></div>
-                            <div class="products__descrition">
-                                <h3>Telematics & ELD</h3>
-                                <p>HOS Compliance & Telematics</p>
-                            </div>
-                        </div>
-                        <div class="products__info-bottom">
-                            <span class="btn btn-secondary">Learn More</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="products-items fx-slide">
-                    <a href="#" class="products__link">
-                        <div class="products__info-top">
-                            <div class="products__image"><img src="../wp-content/themes/transflo/assets/img/Unite.png" alt="" class="img-responsive"></div>
-                            <div class="products__descrition">
-                                <h3>Unite</h3>
-                                <p>Paperless Load Management (eBOL/ePOD)</p>
-                            </div>
-                        </div>
-                        <div class="products__info-bottom">
-                            <span class="btn btn-secondary">Learn More</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="products-items fx-slide">
-                    <a href="#" class="products__link">
-                        <div class="products__info-top">
-                            <div class="products__image"><img src="../wp-content/themes/transflo/assets/img/Velocity.png" alt="" class="img-responsive"></div>
-                            <div class="products__descrition">
-                                <h3>Velocity</h3>
-                                <p>Full Broker Suite with Digital Load Offers, Visibility & Document Management</p>
-                            </div>
-                        </div>
-                        <div class="products__info-bottom">
-                            <span class="btn btn-secondary">Learn More</span>
-                        </div>
-                    </a>
-                </div>
+                <?php endwhile; ?>
             </div>
             <div class="progress-products-item" role="progressbar" aria-valuemin="0" aria-valuemax="100" ></div>
         </div>
+        <?php if($button = get_field('button')): ?>
         <div class="products__btns hidden-lg">
-            <a href="#" class="btn btn-primary">View All Products</a>
+            <a href="<?php echo $button['url']; ?>" class="btn btn-primary"<?php echo $button['target'] ? ' target="' . $button['target'] . '"': ''; ?>>
+                <?php echo $button['title']; ?>
+            </a>
         </div>
+        <?php endif; ?>
     </div>
 </section>

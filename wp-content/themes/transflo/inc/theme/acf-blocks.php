@@ -69,10 +69,21 @@ fx_add_block_category( 'FX General Blocks', 'fx-general-blocks' );
 fx_register_block(
     [
         'name'          => 'wysiwyg',
-        'title'         => 'WYSIWYG',
+        'title'         => 'General - WYSIWYG',
         'template'      => 'general/wysiwyg.php',
         'description'   => 'A basic "What you see is what you get" editor.',
         'css_deps'      => [ 'fx_wysiwyg' ],
+        'post_types'    => [],
+    ]
+);
+
+fx_register_block(
+    [
+        'name'          => 'general-image-button',
+        'title'         => 'General - Image Button',
+        'template'      => 'general/image-button.php',
+        'description'   => 'Slider block for the homepage masthead.',
+        'css'           => 'general/image-button.css',
         'post_types'    => [],
     ]
 );
@@ -145,13 +156,13 @@ fx_register_block(
 fx_register_block(
     [
         'name'          => 'homepage-masthead-slider',
-        'title'         => 'Homepage - Masthead Slider',
-        'template'      => 'homepage/masthead-slider.php',
+        'title'         => 'Homepage - Masthead Section',
+        'template'      => 'homepage/masthead-section.php',
         'description'   => 'Slider block for the homepage masthead.',
         'css'           => 'homepage/masthead-slider.css',
         'css_deps'      => [ 'fx_slick' ],
         'js'            => 'homepage/masthead-slider.js',
-        'js_deps'       => [ 'fx_slick', 'fx_masthead_slider_2' ],
+        'js_deps'       => [ 'fx_slick', 'fx_masthead_slider_2', 'fx_gsap' ],
         'category'      => 'fx-homepage-blocks',
     ]
 );
@@ -163,6 +174,7 @@ fx_register_block(
         'template'      => 'homepage/counter.php',
         'description'   => 'Slider block for the homepage masthead.',
         'css'           => 'homepage/counter-block.css',
+        'css_deps'      => [ 'fx_odometter_styles' ],
         'js'            => 'homepage/counter.js',
         'js_deps'       => [ 'fx_odometter' ],
         'category'      => 'fx-homepage-blocks',
@@ -192,7 +204,31 @@ fx_register_block(
         'css'           => 'homepage/tab-block.css',
         'css_deps'      => [ 'fx_slick' ],
         'js'            => 'homepage/tab.js',
-        'js_deps'       => [ 'fx_slick', 'fx_odometter' ],
+        'js_deps'       => [ 'fx_slick' ],
+        'category'      => 'fx-homepage-blocks',
+    ]
+);
+
+fx_register_block(
+    [
+        'name'          => 'homepage-latest-news-and-resources',
+        'title'         => 'Homepage - Latest News & Resources Section',
+        'template'      => 'homepage/latest-news-and-resources.php',
+        'description'   => 'Slider block for the homepage masthead.',
+        'css'           => 'homepage/cards.css',
+        'css_deps'      => [ 'fx_wysiwyg' ],
+        'category'      => 'fx-homepage-blocks',
+    ]
+);
+
+fx_register_block(
+    [
+        'name'          => 'homepage-image-overlay-text',
+        'title'         => 'Homepage - Image Overlay ',
+        'template'      => 'homepage/image-overlay-text.php',
+        'description'   => 'Slider block for the homepage masthead.',
+        'css'           => 'homepage/image-overlay-text.css',
+        'css_deps'      => [ 'fx_wysiwyg' ],
         'category'      => 'fx-homepage-blocks',
     ]
 );

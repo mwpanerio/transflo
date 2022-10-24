@@ -18,14 +18,9 @@ var FX = ( function( FX, $ ) {
 							/* FOR number counter(odometer)  */
 							var arr = [],
 							i = 0;
-							$('.odometer').each(function() {
-								arr[i++] = $(this).attr('data-count');;
-								// odometer.innerText = arr[0]; //here odometer is *id* of first number
-								// odometer1.innerText = arr[1];
-								// odometer2.innerText = arr[2];
-								// odometer3.innerText = arr[3]; 
-								// odometer4.innerText = arr[4]; 
-								// odometer5.innerText = arr[5]; 
+							$(this).find('.odometer').each(function() {
+								arr[i++] = $(this).attr('data-count');
+								$(this).html($(this).attr('data-count'));
 							});
 							flag = false;
 						}
@@ -42,7 +37,6 @@ var FX = ( function( FX, $ ) {
 				var viewportBottom = viewportTop + $(window).height();
 			
 				return elementBottom > viewportTop && elementTop < viewportBottom;
-				console.log(elementBottom > viewportTop && elementTop < viewportBottom);
 			};
 			
 			

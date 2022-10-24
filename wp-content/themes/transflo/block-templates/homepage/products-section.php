@@ -21,7 +21,7 @@
             <div class="js-products-slider fx-slider">
                 <?php while(have_rows('product_slider')): the_row(); ?>
                 <div class="products-items fx-slide">
-                    <a href="<?php echo get_sub_field('button')['link']; ?>" class="products__link"<?php echo get_sub_field('button')['target'] ? ' target="' . get_sub_field('button')['target'] . '"': ''; ?>>
+                    <a href="<?php echo get_sub_field('button')['url']; ?>" class="products__link"<?php echo get_sub_field('button')['target'] ? ' target="' . get_sub_field('button')['target'] . '"': ''; ?>>
                         <div class="products__info-top">
                             <div class="products__image">
                                 <?php if($image = get_sub_field('image')): ?>

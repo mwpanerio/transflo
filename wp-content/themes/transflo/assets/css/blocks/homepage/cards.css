@@ -113,6 +113,10 @@
     vertical-align: middle;
 }
 
+.cards-flex {
+    justify-content: center;
+}
+
 @media (min-width: 768px) {
     .card-flex {
         display: flex;

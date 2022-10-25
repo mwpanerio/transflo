@@ -223,11 +223,11 @@ fx_register_block(
 
 fx_register_block(
     [
-        'name'          => 'homepage-image-overlay-text',
-        'title'         => 'Homepage - Image Overlay ',
-        'template'      => 'homepage/image-overlay-text.php',
+        'name'          => 'homepage-half-image-cta',
+        'title'         => 'Homepage - Half Image + CTA ',
+        'template'      => 'homepage/half-image-cta.php',
         'description'   => 'Slider block for the homepage masthead.',
-        'css'           => 'homepage/image-overlay-text.css',
+        'css'           => 'homepage/half-image-cta.css',
         'css_deps'      => [ 'fx_wysiwyg' ],
         'category'      => 'fx-homepage-blocks',
     ]

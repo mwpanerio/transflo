@@ -68,6 +68,9 @@ var FX = ( function( FX, $ ) {
 
 			this.$slider.on('beforeChange', function() {
 				$('.js-masthead__slider2').addClass('is-animating');
+
+				$('.slider-nav__prev').slideUp();
+				$('.slider-nav__next').slideUp();
 			})
 
 			this.$slider.on('afterChange', function() {
@@ -75,8 +78,8 @@ var FX = ( function( FX, $ ) {
 				const $nextText = $('.js-masthead__slider2').find('.slick-active').next().text();
 				$('.js-masthead__slider2').removeClass('is-animating');
 
-				$('.slider-nav__prev').text($prevText);
-				$('.slider-nav__next').text($nextText);
+				$('.slider-nav__prev').text($prevText).slideDown();
+				$('.slider-nav__next').text($nextText).slideDown();
 			})
 
 			var $slider = $('.js-masthead__slider2');

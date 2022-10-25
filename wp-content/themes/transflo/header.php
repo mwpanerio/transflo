@@ -30,14 +30,7 @@
                 <div class="js-search-toggle"><i class="icon-search"></i> <span>Search</span></div>
                 <div class="toggle-menu hidden-xs-down hidden-lg"><i class="icon-menu"></i> Menu</div>
                 <nav class="nav-primary">
-                    <?php
-                        // Output the header navigation
-                        wp_nav_menu(
-                            [
-                                'menu'           => 'Header Menu',
-                            ]
-                        );
-                    ?>
+                    <?php ubermenu( 'main' , array( 'menu' => 3 ) ); ?>
                 </nav>
             </div>
         </div>

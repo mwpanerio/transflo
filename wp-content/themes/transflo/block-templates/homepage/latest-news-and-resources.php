@@ -30,7 +30,21 @@
                         </div>
                     </div>
                     <div class="card__bottom">
-                        <p>King brings 20 years of financial technology experience to the role. This includes almost 10 years at Visa, in product management and fintech partnership positions, and … </p>
+                        <?php
+                            $post = get_post($posts_to_display_item);
+                            $blocks = parse_blocks( $post->post_content );
+
+                            foreach ( $blocks as $block ) {
+                            if ( 'acf/wysiwyg' === $block['blockName'] ) {
+                                    if(isset($block["attrs"]["data"]["content"])) {
+                                        $excerpt = strip_tags(trim($block["attrs"]["data"]["content"]));
+                                    }
+                                    break;
+                                }
+                            }
+
+                            echo $excerpt;
+                        ?>
                     </div>
                 </a>
             </div>

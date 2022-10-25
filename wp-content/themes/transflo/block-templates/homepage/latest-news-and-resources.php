@@ -21,7 +21,7 @@
                 <a class="card card--link" href="<?php echo get_the_permalink($posts_to_display_item); ?>">
                     <div class="card__top">
                         <div class="card__img-wrap">
-                            <?php echo fx_get_image_tag(get_post_thumbnail_id($posts_to_display_item), 'card__img object-fit'); ?>
+                            <?php echo fx_get_image_tag(get_field('featured_image', $posts_to_display_item), 'card__img object-fit'); ?>
                         </div>
                         <div class="card__details">
                             <div class="card__icon"> <span>Read More</span><i class="icon-button-right"></i></div>

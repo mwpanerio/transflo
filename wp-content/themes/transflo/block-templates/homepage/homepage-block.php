@@ -15,7 +15,7 @@ $template = [
     ['acf/general-image-button'],
     ['acf/homepage-testimonial-section'],
     ['acf/homepage-latest-news-and-resources'],
-    ['acf/homepage-image-overlay-text'],
+    ['acf/homepage-half-image-cta'],
 ];
 
 ?>

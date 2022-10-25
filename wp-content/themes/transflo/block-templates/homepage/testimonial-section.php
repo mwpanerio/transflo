@@ -3,31 +3,34 @@
         <div class="testimonials__top-content text-center">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1">
-                    <h5>Testimonials</h5>
-                    <h2>Trusted by the Top Freight Professionals</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <?php if($subheading = get_field('subheading')): ?>
+                    <h5><?php echo $subheading; ?></h5>
+                    <?php endif; ?>
+                    <?php if($title = get_field('title')): ?>
+                    <h2><?php echo $title; ?></h2>
+                    <?php endif; ?>
+                    <?php if($description = get_field('description')): ?>
+                    <?php echo $description; ?>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
         <div class="testimonials__wrap">
             <div class="js-tab-menu fx-slider">
+                <?php
+                    $testimonial_to_posts = get_field('testimonial_to_posts');
+
+                    foreach($testimonial_to_posts as $testimonial_to_post):
+                ?>
                 <div class="tab-menu-item fx-slide">
                     <div class="tab-column">
-                        <img src="../wp-content/themes/transflo/assets/img/Bowman_Logo.png" alt="" class="img-responsive">  
+                        <?php echo fx_get_image_tag(get_field('logo', $testimonial_to_post), 'img-responsive'); ?>
                     </div>
                 </div>
-                <div class="tab-menu-item fx-slide">
-                    <div class="tab-column">
-                        <img src="../wp-content/themes/transflo/assets/img/testimonials-logo02.png" alt="" class="img-responsive">  
-                    </div>
-                </div>
-                <div class="tab-menu-item fx-slide">
-                    <div class="tab-column">
-                        <img src="../wp-content/themes/transflo/assets/img/redwood-logo.png" alt="" class="img-responsive">  
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
             <div class="js-tab-for fx-slider">
+                <?php foreach($testimonial_to_posts as $testimonial_to_post): ?>
                 <div class="tab-content-item fx-slide">
                     <div class="tab-content">
                         <div class="testimonials__info">
@@ -40,86 +43,51 @@
                                     <li><i class="icon-star"></i></li>
                                 </ul>
                             </div>
-                            <p>“Transflo’s mobile platform is exactly the forward-looking solution that we needed. Not only have we improved our back-office process, we are also an employer of choice. Drivers know Transflo and want to work with a fleet that uses Transflo.”</p>
-                            <span class="testimonials-author">Brady Myers</span>
-                            <span class="testimonials-author-position">Director of IT</span>
+                            <?php echo get_field('testimonial_content', $testimonial_to_post); ?>
+                            <span class="testimonials-author"><?php echo get_field('client_name', $testimonial_to_post); ?></span>
+                            <span class="testimonials-author-position"><?php echo get_field('location', $testimonial_to_post); ?></span>
                         </div>
                         <div class="testimonials__image hidden-md-down">
-                            <img src="../wp-content/themes/transflo/assets/img/testimonials-image.png" alt="" class="img-responsive">  
+                            <?php echo fx_get_image_tag(get_post_thumbnail_id($testimonial_to_post), 'img-responsive'); ?>
                         </div>
                     </div>
                 </div>
-                <div class="tab-content-item fx-slide">
-                    <div class="tab-content">
-                        <div class="testimonials__info">
-                            <div class="stars">
-                                <ul>
-                                    <li><i class="icon-star"></i></li>
-                                    <li><i class="icon-star"></i></li>
-                                    <li><i class="icon-star"></i></li>
-                                    <li><i class="icon-star"></i></li>
-                                    <li><i class="icon-star"></i></li>
-                                </ul>
-                            </div>
-                            <p>“Transflo’s mobile platform is exactly the forward-looking solution that we needed. Not only have we improved our back-office process, we are also an employer of choice. Drivers know Transflo and want to work with a fleet that uses Transflo.”</p>
-                            <span class="testimonials-author">Brady</span>
-                            <span class="testimonials-author-position">Director of IT</span>
-                        </div>
-                        <div class="testimonials__image hidden-md-down">
-                            <img src="../wp-content/themes/transflo/assets/img/testimonials-image.png" alt="" class="img-responsive">  
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-content-item fx-slide">
-                    <div class="tab-content">
-                        <div class="testimonials__info">
-                            <div class="stars">
-                                <ul>
-                                    <li><i class="icon-star"></i></li>
-                                    <li><i class="icon-star"></i></li>
-                                    <li><i class="icon-star"></i></li>
-                                    <li><i class="icon-star"></i></li>
-                                    <li><i class="icon-star"></i></li>
-                                </ul>
-                            </div>
-                            <p>“Transflo’s mobile platform is exactly the forward-looking solution that we needed. Not only have we improved our back-office process, we are also an employer of choice. Drivers know Transflo and want to work with a fleet that uses Transflo.”</p>
-                            <span class="testimonials-author">Brady Myers</span>
-                            <span class="testimonials-author-position">Director of IT</span>
-                        </div>
-                        <div class="testimonials__image hidden-md-down">
-                            <img src="../wp-content/themes/transflo/assets/img/testimonials-image.png" alt="" class="img-responsive">  
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
+    <?php while(have_rows('stats_counter')): the_row(); ?>
     <div class="counter-block counter-block--white" id="counter">
         <div class="container">            
             <div class="counter-bar text-center number-counter-section">
                 <ul class="counter-item">
+                    <?php while(have_rows('first_stats')): the_row(); ?>
                     <li>
                         <div class="counter-bttn">
-                            <h2>><span class="odometer" id="odometer3" data-count="65000">00000</span></h2>
-                            
-                            <p>Fleets across the US & Canada use Transflo</p>
-                            
+                            <h2>><span class="odometer" id="odometer3" data-count="<?php echo get_sub_field('number_of_fleets'); ?>">00000</span></h2>
+                            <p><?php echo get_sub_field('label'); ?></p>
                         </div>
                     </li>
+                    <?php endwhile; ?>
+                    <?php while(have_rows('second_stats')): the_row(); ?>
                     <li>
                         <div class="counter-bttn">
-                            <h2><span class="odometer" id="odometer4" data-count="81">00</span>%</h2>
-                            <p>of the top 250 Carriers choose Transflo</p>
+                            <h2><span class="odometer" id="odometer4" data-count="<?php echo get_sub_field('percentage'); ?>">00</span>%</h2>
+                            <p><?php echo get_sub_field('label'); ?></p>
                         </div>
                     </li>
+                    <?php endwhile; ?>
+                    <?php while(have_rows('third_stats')): the_row(); ?>
                     <li>
                         <div class="counter-bttn">
-                            <h2><span class="odometer" id="odometer5" data-count="8">0</span>/10</h2>
-                            <p>Brokers choose Transflo</p>
+                            <h2><span class="odometer" id="odometer5" data-count="<?php echo get_sub_field('out_of_ten_score'); ?>">0</span>/10</h2>
+                            <p><?php echo get_sub_field('label'); ?></p>
                         </div>
                     </li>
+                    <?php endwhile; ?>
                 </ul>
             </div>
         </div>
     </div>
+    <?php endwhile; ?>
 </section>

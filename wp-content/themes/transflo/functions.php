@@ -59,6 +59,7 @@ require_once $theme_path . '/inc/theme/acf-blocks.php';
  * Each shortcode should be a separate file in the /inc/shortcodes directory
  */
 // TODO include shortcode files here (if applicable)
+require_once $theme_path . '/inc/theme/shortcodes.php';
 
 /**
  * Include classes

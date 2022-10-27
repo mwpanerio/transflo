@@ -216,7 +216,9 @@ fx_register_block(
         'template'      => 'homepage/latest-news-and-resources.php',
         'description'   => 'Slider block for the homepage masthead.',
         'css'           => 'homepage/cards.css',
-        'css_deps'      => [ 'fx_wysiwyg' ],
+        'css_deps'      => [ 'fx_wysiwyg',  'fx_slick' ],
+        'js'            => 'homepage/cards-slider.js',
+        'js_deps'       => [ 'fx_slick' ],
         'category'      => 'fx-homepage-blocks',
     ]
 );

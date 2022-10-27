@@ -26,7 +26,7 @@
                 </a>
             </div>
             <div class="header-right">
-                <div class="header-btn hidden-xs-down"><a href="<?php echo get_the_permalink(23); ?>" class="btn btn-tertiary">Contact Us</a></div>
+                <div class="header-btn hidden-xs-down"><a href="<?php echo get_the_permalink(23); ?>" class="btn btn--contact btn-tertiary">Contact Us</a></div>
                 <div class="js-search-toggle"><i class="icon-search"></i> <span>Search</span></div>
                 <div class="toggle-menu hidden-xs-down hidden-lg">
                     <span>
@@ -44,7 +44,7 @@
             <div class="container">
                 <div class="fixed-nav-wrap">
                     <div class="fixed-btn">
-                        <a href="<?php echo get_the_permalink(23); ?>" class="btn btn-tertiary">Contact Us</a>
+                        <a href="<?php echo get_the_permalink(23); ?>" class="btn btn--contact btn-tertiary">Contact Us</a>
                     </div>
                     <div class="toggle-menu">
                         <span>

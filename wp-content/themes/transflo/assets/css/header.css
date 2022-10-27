@@ -557,6 +557,26 @@ img.logo {
       padding-top: 40px !important; /* controls top level menu items on desktop size */
       padding-bottom: 40px !important;
       display: block;
+      position: relative;
+  }
+
+  .ubermenu > ul > li > a:before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-primary);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .ubermenu > ul > li.ubermenu-active > a:before {
+    transform: scaleX(1);
+    transform-origin: left;
   }
 }
 

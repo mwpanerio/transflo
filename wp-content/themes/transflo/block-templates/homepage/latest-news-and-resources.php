@@ -11,7 +11,7 @@
             <?php echo $description; ?>
             <?php endif; ?>
         </div>
-        <div class="row cards-flex">
+        <div class="row cards-flex js-cards-slider">
             <?php
                 $posts_to_display = get_field('posts_to_display');
 

@@ -105,7 +105,11 @@
     font-family: 'avenir_next_lt_prodemi';
     vertical-align: middle;
     padding-right: 15px;
-    display: none;
+    display: inline-block;
+    margin-right: -112px;
+    opacity: 0;
+    transition: margin 0.3s ease-in-out,
+                opacity 0.3s ease-in-out;
 }
 
 .card__icon i {
@@ -181,12 +185,13 @@
     }
 
     .card:hover {
-        background: #F1FAFE;
-    }
-
-    .cards--inner .card:hover {
         background: var(--color-white);
         transform: scale(1.04);
+    }
+
+    .card:hover .card__icon span {
+        margin-right: 0;
+        opacity: 1;
     }
 
     .card:hover .card__icon {
@@ -200,5 +205,50 @@
 
     .card-item {
         margin-bottom: 40px;
+    }
+}
+
+.cards-flex .slick-list .card-item {
+    padding: 25px 20px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1199px) {
+    .card {
+        transform: scale(1);
+        transition: transform 0.45s ease-in-out;
+    }
+
+    .cards-flex {
+        display: flex;
+        margin-bottom: 30px;
+    }
+
+    .cards-flex .slick-list .card-item {
+        margin-bottom: 0;
+    }
+
+    .is-animating .card {
+        transform: scale(0.7);
+    }
+
+    .cards-flex .slick-arrow {
+        position: relative;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        margin: 0 10px;
+    }
+
+    .cards-flex .slick-list {
+        order: 0;
+    }
+
+    .cards-flex .slick-prev {
+        order: 1;
+    }
+
+    .cards-flex .slick-next {
+        order: 2;
     }
 }

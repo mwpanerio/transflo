@@ -633,7 +633,8 @@ img.logo {
         opacity: 0;
     }
 
-    .nav-primary .ubermenu-responsive.ubermenu-mobile-accordion:not(.ubermenu-mobile-modal):not(.ubermenu-in-transition):not(.ubermenu-responsive-collapse) {
+    .nav-primary .ubermenu-responsive.ubermenu-mobile-accordion:not(.ubermenu-mobile-modal):not(.ubermenu-in-transition):not(.ubermenu-responsive-collapse),
+    .nav-primary .ubermenu-responsive {
         max-height: calc(100vh - 90px) !important;
         overflow: scroll !important;
     }
@@ -693,7 +694,8 @@ img.logo {
         top: auto;
     }
 
-    .nav-primary .ubermenu-responsive.ubermenu-mobile-accordion:not(.ubermenu-mobile-modal):not(.ubermenu-in-transition):not(.ubermenu-responsive-collapse) {
+    .nav-primary .ubermenu-responsive.ubermenu-mobile-accordion:not(.ubermenu-mobile-modal):not(.ubermenu-in-transition):not(.ubermenu-responsive-collapse),
+    .nav-primary .ubermenu-responsive {
         max-height: calc(100vh - 60px) !important;
         overflow: scroll !important;
     }

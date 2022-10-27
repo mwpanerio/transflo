@@ -11,7 +11,7 @@
             </div>
             <?php if($button = get_field('button')): ?>
             <div class="image-buttons__all-btn hidden-md-down">
-                <a href="<?php echo $button['url']; ?>" class="btn btn-primary"<?php echo $button['target'] ? ' target="' . $button['target'] . '"': ''; ?>>
+                <a href="<?php echo $button['url']; ?>" class="btn btn-secondary"<?php echo $button['target'] ? ' target="' . $button['target'] . '"': ''; ?>>
                     <?php echo $button['title']; ?>
                 </a>
             </div>
@@ -39,7 +39,7 @@
 
         <?php if($button = get_field('button')): ?>
         <div class="image-buttons__all-btn hidden-lg">
-            <a href="<?php echo $button['url']; ?>" class="btn btn-primary"<?php echo $button['target'] ? ' target="' . $button['target'] . '"': ''; ?>>
+            <a href="<?php echo $button['url']; ?>" class="btn btn-secondary"<?php echo $button['target'] ? ' target="' . $button['target'] . '"': ''; ?>>
                 <?php echo $button['title']; ?>
             </a>
         </div>

@@ -546,6 +546,12 @@ img.logo {
     }
 }
 
+@media (max-width: 767px) {
+    .ubermenu > ul > li > a {
+        padding-left: 22px !important;
+    }
+}
+
 @media only screen and (min-width: 1200px) {
   .ubermenu > ul > li > a {
       padding-top: 40px !important; /* controls top level menu items on desktop size */

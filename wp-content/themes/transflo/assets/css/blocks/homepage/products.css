@@ -17,14 +17,19 @@
     font-family: 'avenir_next_lt_proregular';
     padding: 20px;
     width: 280px;
+    position: relative;
 }
 
 .products__info-bottom {
     padding: 0 0 10px 10px;
+    position: relative;
+    z-index: 2;
 }
 
 .products__info-top {
     padding-bottom: 20px;
+    position: relative;
+    z-index: 2;
 }
 
 .products__image {

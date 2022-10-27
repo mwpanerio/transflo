@@ -13,12 +13,20 @@ var FX = ( function( FX, $ ) {
 			if( this.$slider.length ) {
 				this.applySlick()
 			}
+
+			this.$slider.on('beforeChange', function() {
+				$('.js-products-slider').addClass('is-animating');
+			})
+
+			this.$slider.on('afterChange', function() {
+				$('.js-products-slider').removeClass('is-animating');
+			})
 		},
 
 		applySlick() {
             this.$slider.slick( {
 				infinite: true,
-				speed: 300,
+				speed: 600,
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				variableWidth: true,

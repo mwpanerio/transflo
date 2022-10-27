@@ -116,6 +116,14 @@ var FX = ( function( FX, $ ) {
                 $('.desktop-menu__search input[name="s"]').focus();
 			});
 
+			$('.toggle-menu').on('click', function() {
+				const $this = $(this);
+
+				$('.toggle-menu').toggleClass('is-active');
+				$('button.ubermenu-responsive-toggle').click();
+				$('.nav-primary').stop().slideToggle();
+			})
+
 			const $thisTimelineMax = new TimelineMax({ paused : true });
 			
 			$thisTimelineMax
@@ -204,16 +212,7 @@ var FX = ( function( FX, $ ) {
 	 */
 	FX.MobileMenu = {
 		init() {
-			$('.nav-primary li.menu-item-has-children > a').after('<span class="sub-menu-toggle icon-down"></span>');
-
-			$('.sub-menu-toggle' ).click( () => {
-				var $this = $(this),
-					$parent = $this.closest( 'li' ),
-					$wrap = $parent.find( '> .sub-menu' );
-
-				$wrap.toggleClass('js-toggled');
-				$this.toggleClass('js-toggled');
-			});
+			$('.nav-primary li.ubermenu-item-has-children > a').append('<span class="icon-button-down hidden-lg"></span>');
 		}
 	};
 

@@ -16,10 +16,12 @@ var FX = ( function( FX, $ ) {
 				fade: true,
 				autoplay: true,
 				autoplaySpeed: 2000,
-				asNavFor: '.js-tab-menu'
+				asNavFor: '.js-tab-menu',
+				infinite: false,
 			});
 
 			$('.js-tab-menu').slick({
+				infinite: false,
 				slidesToShow: 3,
 				slidesToScroll: 1,
 				asNavFor: '.js-tab-for',

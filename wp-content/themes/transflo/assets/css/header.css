@@ -948,7 +948,7 @@ body:after {
         padding: 0 0;
     }
 
-    .page-header .container {
+    .page-header > .container {
         display: flex;
         flex-wrap: wrap;
         align-items: center;

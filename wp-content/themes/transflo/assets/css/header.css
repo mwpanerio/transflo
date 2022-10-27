@@ -538,7 +538,7 @@ img.logo {
 
 @media (max-width: 1199px) {
     .ubermenu > ul > li > a {
-        padding-left: 22px !important;
+        padding-left: 55px !important;
     }
 
     .ubermenu > ul > li:not(:last-child) {
@@ -631,6 +631,7 @@ img.logo {
     .nav-primary .ubermenu-sub-indicators .ubermenu-has-submenu-drop>.ubermenu-target>.ubermenu-sub-indicator {
         margin-top: -30px;
         opacity: 0;
+        right: 46px;
     }
 
     .nav-primary .ubermenu-responsive.ubermenu-mobile-accordion:not(.ubermenu-mobile-modal):not(.ubermenu-in-transition):not(.ubermenu-responsive-collapse),
@@ -656,7 +657,7 @@ img.logo {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        right: 26px;
+        right: 60px;
         transition: transform 0.3s ease-in-out;
     }
 
@@ -692,6 +693,14 @@ img.logo {
 
     .admin-bar .nav-primary {
         top: auto;
+    }
+
+    .nav-primary .ubermenu > ul > li > a .icon-button-down {
+        right: 26px;
+    }
+
+    .nav-primary .ubermenu-sub-indicators .ubermenu-has-submenu-drop>.ubermenu-target>.ubermenu-sub-indicator {
+        right: 10px;
     }
 
     .nav-primary .ubermenu-responsive.ubermenu-mobile-accordion:not(.ubermenu-mobile-modal):not(.ubermenu-in-transition):not(.ubermenu-responsive-collapse),

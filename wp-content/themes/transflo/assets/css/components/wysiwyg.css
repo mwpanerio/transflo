@@ -17,7 +17,7 @@
 
 .bg-gray {
     background: #EFF2F4;
-    color: #333333;
+    color: var(--color-text-default);
 }
 
 .example-btn .btn {
@@ -66,7 +66,7 @@
 .table-structure {
     padding: 0 20px;
     position: relative;
-    color: #333333;
+    color: var(--color-text-default);
 }
 
 .table-structure table {
@@ -108,7 +108,7 @@
     font-size: 15px;
     font-family: 'avenir_next_lt_proregular';
     font-weight: normal;
-    color: #333333;
+    color: var(--color-text-default);
     line-height: 1.4em;
     vertical-align: top;
 }

@@ -7,7 +7,7 @@
     padding: 20px 20px;
     border-radius: 20px;
     height: 100%;
-    color: #333333;
+    color: var(--color-text-default);
 }
 
 .contact-map {
@@ -37,7 +37,7 @@
 .contact-column--support p {
     position: relative;
     padding: 0 0 4px 28px;
-    color: #333333;
+    color: var(--color-text-default);
 }
 
 .contact-info p span,

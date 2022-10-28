@@ -790,7 +790,7 @@ body:after {
 
 .masthead--innerpage {
     padding: 0 0;
-    color: #333333;
+    color: var(--color-text-default);
     background: #EFF2F4; 
     position: relative;
 }
@@ -816,7 +816,7 @@ body:after {
 
 .left-text-wrapper {
     padding: 40px 22px 50px;
-    color: #333333;
+    color: var(--color-text-default);
 }
 
 .left-text-wrapper p {
@@ -929,13 +929,12 @@ body:after {
 
 .breadcrumbs li {
     list-style-type: none;
-    font-size: 16px;
     color: var(--color-black);
-    line-height: 1em;
     margin: 0;
     padding: 0 11px;
     font-family: 'avenir_next_lt_prodemi';
     border-left: 1px solid #8D99AE;
+    font-size: 0;
 }
 
 .breadcrumbs li:first-child {
@@ -945,6 +944,12 @@ body:after {
 
 .breadcrumbs li::before {
     display: none;
+}
+
+.breadcrumbs a,
+.breadcrumbs span {
+    font-size: 16px;
+    line-height: 1em;
 }
 
 .breadcrumbs a {
@@ -959,6 +964,17 @@ body:after {
     .breadcrumbs a:hover {
         color: var(--color-black);
     }
+}
+
+.breadcrumbs a {
+    display: inline-block;
+    padding-right: 11px;
+    border-right: 1px solid #8D99AE;
+}
+
+.breadcrumbs span {
+    padding-left: 11px;
+    display: inline-block;
 }
 
 

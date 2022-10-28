@@ -96,7 +96,7 @@
     height: 0;
     width: 0;
     border-style: solid;
-    border-color: #333333 transparent transparent transparent;
+    border-color: var(--color-text-default) transparent transparent transparent;
     border-width: 5px;
     position: absolute;
     right: 11.5px;
@@ -106,7 +106,7 @@
 }
 
 .choices[data-type*='select-one'].is-open:after {
-    border-color: transparent transparent #333333 transparent;
+    border-color: transparent transparent var(--color-text-default) transparent;
     margin-top: -7.5px;
 }
 

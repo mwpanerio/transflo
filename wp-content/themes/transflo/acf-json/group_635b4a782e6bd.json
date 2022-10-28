@@ -1,9 +1,9 @@
 {
-    "key": "group_6356a5cdc82bb",
-    "title": "[Block] Homepage - Products Section",
+    "key": "group_635b4a782e6bd",
+    "title": "[Block] Innerpage - Benefits Section",
     "fields": [
         {
-            "key": "field_6356a609dd7ec",
+            "key": "field_635b4abcc3a67",
             "label": "Subheading",
             "name": "subheading",
             "type": "text",
@@ -22,9 +22,9 @@
             "maxlength": ""
         },
         {
-            "key": "field_6356a610dd7ed",
-            "label": "Main Title",
-            "name": "main_title",
+            "key": "field_635b4adcc3a68",
+            "label": "Title",
+            "name": "title",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -41,10 +41,10 @@
             "maxlength": ""
         },
         {
-            "key": "field_6356a615dd7ee",
-            "label": "Button",
-            "name": "button",
-            "type": "link",
+            "key": "field_635b4ae4c3a69",
+            "label": "Description",
+            "name": "description",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -53,12 +53,66 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array"
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         },
         {
-            "key": "field_6356a61edd7ef",
-            "label": "Product Slider",
-            "name": "product_slider",
+            "key": "field_635b4fe3e3052",
+            "label": "How do you want your benefits section look?",
+            "name": "benefits_section_look",
+            "type": "select",
+            "instructions": "<strong>Look #1:<\/strong> <a href=\"https:\/\/webpagefx.mangoapps.com\/msc\/OTkzNDgxXzEwNjI2ODM4\" target=\"_blank\"> Check screenshot <\/a> <br>\r\n<strong>Look #2: <\/strong> <a href=\"https:\/\/webpagefx.mangoapps.com\/msc\/OTkzNDgyXzEwNjI2ODM5\" target=\"_blank\"> Check screenshot <\/a><\/strong>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "look-1": "Look #1",
+                "look-2": "Look #2"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_635b4fb3e3051",
+            "label": "Benefits Column Per Row",
+            "name": "benefits_column_per_row",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "3": "3 Column",
+                "4": "4 Column"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_635b4aeac3a6a",
+            "label": "Benefits Item",
+            "name": "benefits_item",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -75,7 +129,7 @@
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_6356a625dd7f0",
+                    "key": "field_635b4f89c3a6b",
                     "label": "Image",
                     "name": "image",
                     "type": "image",
@@ -99,29 +153,10 @@
                     "mime_types": ""
                 },
                 {
-                    "key": "field_6356a62edd7f1",
-                    "label": "Title",
-                    "name": "title",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_6356a636dd7f2",
+                    "key": "field_635b4f99c3a6c",
                     "label": "Description",
                     "name": "description",
-                    "type": "textarea",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -131,25 +166,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "new_lines": ""
-                },
-                {
-                    "key": "field_6356a63bdd7f3",
-                    "label": "Button",
-                    "name": "button",
-                    "type": "link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array"
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
                 }
             ]
         }
@@ -159,14 +179,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/homepage-products-section"
-            }
-        ],
-        [
-            {
-                "param": "block",
-                "operator": "==",
-                "value": "acf\/innerpage-products-section"
+                "value": "acf\/innerpage-benefits-section"
             }
         ]
     ],
@@ -179,5 +192,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1666963843
+    "modified": 1666929254
 }

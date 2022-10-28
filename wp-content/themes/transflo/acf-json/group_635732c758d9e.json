@@ -1,6 +1,6 @@
 {
     "key": "group_635732c758d9e",
-    "title": "[Block] Homepage - Testimonial Section with Stats Counter",
+    "title": "[Block] General - Testimonial Section with Stats Counter",
     "fields": [
         {
             "key": "field_63573313a8ee0",
@@ -276,6 +276,13 @@
                 "operator": "==",
                 "value": "acf\/homepage-testimonial-section"
             }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/innerpage-testimonial-with-statistics"
+            }
         ]
     ],
     "menu_order": 0,
@@ -287,5 +294,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1666659391
+    "modified": 1666956557
 }

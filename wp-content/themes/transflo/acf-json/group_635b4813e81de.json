@@ -1,11 +1,11 @@
 {
-    "key": "group_6081c8167cfcb",
-    "title": "[Block] Wysiwyg",
+    "key": "group_635b4813e81de",
+    "title": "[Block] Innerpage - Half Image \/ Half Form",
     "fields": [
         {
-            "key": "field_635b40cd3affa",
-            "label": "Background Type",
-            "name": "background_type",
+            "key": "field_635b482111702",
+            "label": "Image Position",
+            "name": "image_position",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -16,8 +16,8 @@
                 "id": ""
             },
             "choices": {
-                "bg-white": "White Background",
-                "bg-gray": "Gray Background"
+                "left": "Left",
+                "right": "Right"
             },
             "default_value": false,
             "allow_null": 0,
@@ -28,15 +28,39 @@
             "placeholder": ""
         },
         {
-            "key": "field_6081c82a4512c",
-            "label": "Content",
-            "name": "content",
+            "key": "field_635b486d11703",
+            "label": "Image",
+            "name": "image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_635b487511704",
+            "label": "Form Content",
+            "name": "form_content",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -52,7 +76,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/wysiwyg"
+                "value": "acf\/innerpage-half-image-form"
             }
         ]
     ],
@@ -65,5 +89,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1666924776
+    "modified": 1666926722
 }

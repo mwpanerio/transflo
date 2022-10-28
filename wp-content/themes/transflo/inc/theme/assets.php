@@ -240,6 +240,20 @@ function fx_theme_styles() {
             'src'           => $theme_url . '/assets/css/plugins/odometer.css',
         ]
     );
+
+    fx_assets_add_stylesheet(
+        [
+            'handle'        => 'fx_lightbox_plugin',
+            'src'           => $theme_url . '/assets/css/plugins/lightbox.css',
+        ]
+    );
+
+    fx_assets_add_stylesheet(
+        [
+            'handle'    => 'fx_counter_block',
+            'src'       => $theme_url . '/assets/css/blocks/homepage/counter-block.css',
+        ]
+    );
     
     // TODO: remove if not using ninja tables.
     fx_assets_add_stylesheet(
@@ -303,6 +317,14 @@ function fx_theme_scripts() {
             'handle'        => 'fx_masthead_slider_2',
             'src'           => $theme_url . '/assets/js/blocks/homepage/masthead-slider2.js',
             'dependencies'  => [ 'fx_slick' ]
+        ]
+    );   
+
+    fx_assets_add_script(
+        [
+            'handle'        => 'fx_counter_script',
+            'src'           => $theme_url . '/assets/js/blocks/homepage/counter.js',
+            'dependencies'  => [ 'fx_odometter' ]
         ]
     );   
     
@@ -392,6 +414,14 @@ function fx_theme_scripts() {
         [
             'handle'        => 'fx_gsap',
             'src'           => $theme_url . '/assets/js/plugins/gsap.min.js',
+        ]
+    );
+
+    // Script for "Lightbox" block sections
+    fx_assets_add_script(
+        [
+            'handle'        => 'fx_lightbox',
+            'src'           => $theme_url . '/assets/js/plugins/lightbox.js',
         ]
     );
     

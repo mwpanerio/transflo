@@ -1,4 +1,4 @@
-<section class="image-buttons push-lg-top">
+<section class="image-buttons<?php echo is_front_page() ? ' push-lg-top': ' section-padding'; ?>">
     <div class="container">
         <div class="image-buttons__top-content">
             <div class="image-buttons__heading">

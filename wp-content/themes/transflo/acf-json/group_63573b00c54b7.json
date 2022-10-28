@@ -1,6 +1,6 @@
 {
     "key": "group_63573b00c54b7",
-    "title": "[Block] Homepage - Latest News & Resources",
+    "title": "[Block] General - Latest News & Resources",
     "fields": [
         {
             "key": "field_63573b22fafb5",
@@ -109,6 +109,13 @@
                 "operator": "==",
                 "value": "acf\/homepage-latest-news-and-resources"
             }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/innerpage-blog-preview"
+            }
         ]
     ],
     "menu_order": 0,
@@ -120,5 +127,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1666661391
+    "modified": 1666956607
 }

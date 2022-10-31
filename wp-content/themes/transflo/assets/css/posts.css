@@ -68,9 +68,17 @@
     appearance: none;
     height: 10px;
     border: 0;
-    border-radius: 0;
+    border-radius: 10px;
+    overflow: hidden;
     min-width: 250px;
 }
+
+@media (min-width: 768px) {
+    .load-more__progress {
+        min-width: 300px;
+    }
+}
+
 progress::-webkit-progress-bar,
 progress::-webkit-progress-value,
 progress::-moz-progress-bar {
@@ -79,14 +87,16 @@ progress::-moz-progress-bar {
     border-radius: 0; 
 }
 progress::-webkit-progress-bar {
-    background-color: #ddd;
+    background-color: var(--color-offwhite);
 }
 progress::-webkit-progress-value {
-    background-color: #4a4a4a; /* TODO: Please add a branded background color for progress bar value */
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+    background-color: var(--color-secondary); /* TODO: Please add a branded background color for progress bar value */
 }
 
 /* Loading Indicator */
-.is-loading:before  {
+.is-loading:after  {
     content: '';
     position: absolute;
     top: 50%;
@@ -110,13 +120,17 @@ progress::-webkit-progress-value {
     margin-top: 20px;
 }
 
+.load-more__btn:before {
+    content: "\e904";
+}
+
 .load-more__btn.is-loading {
     position: relative;
     opacity: 0.6;
     cursor: not-allowed;
 }
 
-.load-more__btn.is-loading:before {
+.load-more__btn.is-loading:after {
     width: 20px;
     height: 20px;
 }
@@ -263,3 +277,70 @@ progress::-webkit-progress-value {
     margin-bottom: 20px;
 }
 
+
+
+.blog-listing__pagination {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.blog-listing__pagination .btn {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog-featured__card {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--color-white);
+    border-radius: 20px;
+    overflow: hidden;
+    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.1));
+}
+
+.blog-featured__date {
+    color: #8D99AE;
+    opacity: 0.8;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+}
+
+.blog-featured__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0;
+}
+
+.blog-featured__image,
+.blog-featured__content {
+    position: relative;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .blog-featured__image,
+    .blog-featured__content {
+        position: relative;
+        width: 50%;
+    }   
+}
+
+.blog-featured__content {
+    padding: 35px 30px;
+}
+
+@media (min-width: 768px) {
+    .blog-featured__content {
+        padding: 40px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .blog-featured__content {
+        padding: 60px;
+    }
+}

@@ -7,7 +7,7 @@
 \*------------------------------------*/
 
 .page-footer {
-    color: #333333;
+    color: var(--color-text-default);
     background: rgba(239, 242, 244, 0.4);
     position: relative;
 }
@@ -80,7 +80,7 @@
 
 .footer-top p {
     font-size: 16px;
-    color: #333333;
+    color: var(--color-text-default);
     font-family: 'avenir_next_lt_proregular';
     padding-bottom: 10px;
     padding-left: 30px;
@@ -96,7 +96,7 @@
 }
 
 .footer-top p a {
-    color: #333333;
+    color: var(--color-text-default);
 }
 
 .footer-contact-column {
@@ -115,7 +115,7 @@
 
 .footer-quick-links li a {
     font-size: 16px;
-    color: #333333;
+    color: var(--color-text-default);
     font-family: 'avenir_next_lt_proregular';
     position: relative;
 }

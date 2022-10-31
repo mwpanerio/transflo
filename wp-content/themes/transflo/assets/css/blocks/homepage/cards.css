@@ -15,7 +15,7 @@
     background: var(--color-white);
     transition: transform .2s linear;
     border-radius: 20px;
-    color: #333333;
+    color: var(--color-text-default);
     font-family: 'avenir_next_lt_proregular';
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
@@ -211,6 +211,20 @@
 .cards-flex .slick-list .card-item {
     padding: 25px 20px;
     margin-bottom: 20px;
+}
+
+.cards-flex .slick-track {
+    display: flex;
+}
+
+.cards-flex .slick-track .slick-slide {
+    height: inherit;
+}
+
+.cards-flex .slick-track .slick-slide > div,
+.cards-flex .slick-track .slick-slide > div .card-item,
+.cards-flex .slick-track .slick-slide > div .card {
+    height: 100%;
 }
 
 @media (max-width: 1199px) {

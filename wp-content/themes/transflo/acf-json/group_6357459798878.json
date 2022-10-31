@@ -1,6 +1,6 @@
 {
     "key": "group_6357459798878",
-    "title": "[Block] Homepage - Half Image + CTA",
+    "title": "[Block] General - Half Image + CTA",
     "fields": [
         {
             "key": "field_63574638f36a9",
@@ -134,6 +134,13 @@
                 "operator": "==",
                 "value": "acf\/homepage-half-image-cta"
             }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/innerpage-cta"
+            }
         ]
     ],
     "menu_order": 0,
@@ -145,5 +152,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1666664431
+    "modified": 1666956646
 }

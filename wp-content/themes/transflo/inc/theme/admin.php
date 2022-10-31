@@ -157,6 +157,24 @@ function fx_mce_before_init( $settings ) {
             'classes'  => 'btn',
         ),
 
+        array(
+            'title'    => 'Button Primary',
+            'selector' => 'a',
+            'classes'  => 'btn btn-primary',
+        ),
+
+        array(
+            'title'    => 'Button Secondary',
+            'selector' => 'a',
+            'classes'  => 'btn btn-secondary',
+        ),
+
+        array(
+            'title'    => 'Button Tertiary',
+            'selector' => 'a',
+            'classes'  => 'btn btn-tertiary ',
+        ),
+
         /*
         Examples for adding styles
         array(
@@ -249,13 +267,26 @@ function fx_restrict_homepage_blocks( $allowed_blocks, WP_Block_Editor_Context $
     $post = $block_editor_context->post;
 
     if( isset( $post->ID ) && $post->ID === absint( get_option( 'page_on_front' ) ) ) {
-        $allowed_blocks = [ 'acf/homepage-block' ];
+        $allowed_blocks = [
+            'acf/homepage-block',
+            'acf/homepage-masthead-slider',
+            'acf/homepage-counter-section',
+            'acf/homepage-products-section',
+            'acf/homepage-testimonial-section',
+            'acf/homepage-latest-news-and-resources',
+            'acf/homepage-half-image-cta',
+        ];
 
     } else {
         // @todo — add blocks that should be only on homepage. Block name should be acf/{name}
         $disallowed_blocks = [
             'acf/homepage-block',
-            'acf/homepage-masthead-slider', // TODO remove if not using homepage masthead slider
+            'acf/homepage-masthead-slider',
+            'acf/homepage-counter-section',
+            'acf/homepage-products-section',
+            'acf/homepage-testimonial-section',
+            'acf/homepage-latest-news-and-resources',
+            'acf/homepage-half-image-cta',
         ];
         
         if( is_bool( $allowed_blocks ) ) {

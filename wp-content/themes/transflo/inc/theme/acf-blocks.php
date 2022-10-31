@@ -260,7 +260,115 @@ fx_add_block_category( 'FX Innerpage Blocks', 'fx-innerpage-blocks' );
 
 // @todo — add additional innerpage blocks below with the "fx-innerpage-blocks" category
 
+fx_register_block(
+    [
+        'name'          => 'innerpage-half-media-text',
+        'title'         => 'Innerpage - Half Media / Half Text',
+        'template'      => 'innerpage/half-media-text.php',
+        'css_deps'      => ['fx_contained_image_text', 'fx_lightbox_plugin'],
+        'category'      => 'fx-innerpage-blocks',
+        'js_deps'       => ['fx_lightbox'],
+        'post_types'    => [],
+    ]
+);
 
+fx_register_block(
+    [
+        'name'          => 'innerpage-half-image-form',
+        'title'         => 'Innerpage - Half Image / Half Form',
+        'template'      => 'innerpage/half-image-form.php',
+        'category'      => 'fx-innerpage-blocks',
+        'css_deps'      => [ 'fx_cf7' ],
+        'css'           => 'innerpage/image-form.css',
+        'post_types'    => [],
+    ]
+);
 
+fx_register_block(
+    [
+        'name'          => 'innerpage-statistics-bar',
+        'title'         => 'Innerpage - Statistics Bar',
+        'template'      => 'innerpage/statistics-bar.php',
+        'category'      => 'fx-innerpage-blocks',
+        'post_types'    => [],
+    ]
+);
 
+fx_register_block(
+    [
+        'name'          => 'innerpage-products-section',
+        'title'         => 'Innerpage - Products Section',
+        'template'      => 'homepage/products-section.php',
+        'description'   => '',
+        'css'           => 'homepage/products.css',
+        'css_deps'      => [ 'fx_slick' ],
+        'js'            => 'homepage/products-slider.js',
+        'js_deps'       => [ 'fx_slick' ],
+        'category'      => 'fx-innerpage-blocks',
+        'post_types'    => [],
+    ]
+);
 
+fx_register_block(
+    [
+        'name'          => 'innerpage-testimonial-with-statistics',
+        'title'         => 'Innerpage - Testimonial Tabs with Statistics',
+        'template'      => 'homepage/testimonial-section.php',
+        'description'   => '',
+        'css'           => 'homepage/tab-block.css',
+        'css_deps'      => [ 'fx_slick', 'fx_odometter_styles',  'fx_counter_block' ],
+        'js'            => 'homepage/tab.js',
+        'js_deps'       => [ 'fx_slick', 'fx_counter_script' ],
+        'category'      => 'fx-innerpage-blocks',
+        'post_types'    => [],
+    ]
+);
+
+fx_register_block(
+    [
+        'name'          => 'innerpage-blog-preview',
+        'title'         => 'Innerpage - Blog Preview',
+        'template'      => 'homepage/latest-news-and-resources.php',
+        'description'   => '',
+        'css'           => 'homepage/cards.css',
+        'css_deps'      => [ 'fx_wysiwyg',  'fx_slick' ],
+        'js'            => 'homepage/cards-slider.js',
+        'js_deps'       => [ 'fx_slick' ],
+        'category'      => 'fx-innerpage-blocks',
+        'post_types'    => [],
+    ]
+);
+
+fx_register_block(
+    [
+        'name'          => 'innerpage-newsletter-section',
+        'title'         => 'Innerpage - Newsletter Section',
+        'template'      => 'innerpage/newsletter-section.php',
+        'category'      => 'fx-innerpage-blocks',
+        'post_types'    => [],
+    ]
+);
+
+fx_register_block(
+    [
+        'name'          => 'innerpage-cta',
+        'title'         => 'Innerpage - CTA',
+        'template'      => 'homepage/half-image-cta.php',
+        'description'   => 'Slider block for the homepage masthead.',
+        'css'           => 'homepage/half-image-cta.css',
+        'css_deps'      => [ 'fx_wysiwyg' ],
+        'category'      => 'fx-innerpage-blocks',
+        'post_types'    => [],
+    ]
+);
+
+fx_register_block(
+    [
+        'name'          => 'innerpage-benefits-section',
+        'title'         => 'Innerpage - Benefits Section',
+        'template'      => 'innerpage/benefits-section.php',
+        'css'           => 'innerpage/benefits-section.css',
+        'category'      => 'fx-innerpage-blocks',
+        'post_types'    => [],
+    ]
+);

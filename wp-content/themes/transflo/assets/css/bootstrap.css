@@ -38,7 +38,7 @@ body {
     margin: 0;
     padding: 0 0 60px;
     font-size: 18px;
-    color: #333333;
+    color: var(--color-text-default);
     font-family: 'avenir_next_lt_proregular';
     font-weight: normal;
     overflow-x: hidden;

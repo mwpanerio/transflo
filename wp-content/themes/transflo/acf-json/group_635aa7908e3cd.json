@@ -1,12 +1,12 @@
 {
-    "key": "group_6081c8167cfcb",
-    "title": "[Block] Wysiwyg",
+    "key": "group_635aa7908e3cd",
+    "title": "[Settings] Innerpages",
     "fields": [
         {
-            "key": "field_635b40cd3affa",
-            "label": "Background Type",
-            "name": "background_type",
-            "type": "select",
+            "key": "field_635aa7a393967",
+            "label": "Catch Image",
+            "name": "catch_image",
+            "type": "image",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,22 +15,21 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "bg-white": "White Background",
-                "bg-gray": "Gray Background"
-            },
-            "default_value": false,
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": ""
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         },
         {
-            "key": "field_6081c82a4512c",
-            "label": "Content",
-            "name": "content",
+            "key": "field_635aa7af93968",
+            "label": "Description",
+            "name": "description",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -40,24 +39,24 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
             "tabs": "all",
             "toolbar": "full",
             "media_upload": 1,
+            "default_value": "",
             "delay": 0
         }
     ],
     "location": [
         [
             {
-                "param": "block",
-                "operator": "==",
-                "value": "acf\/wysiwyg"
+                "param": "page",
+                "operator": "!=",
+                "value": "7"
             }
         ]
     ],
     "menu_order": 0,
-    "position": "normal",
+    "position": "side",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
@@ -65,5 +64,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1666924776
+    "modified": 1666885691
 }

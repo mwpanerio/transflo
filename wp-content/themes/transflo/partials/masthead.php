@@ -2,16 +2,9 @@
     <div class="left-text">
         <div class="left-text-wrapper">
             <div class="back-top-page hidden-lg"><a href="#"><i class="icon-left"></i> Back to About</a></div>
-            <div class="breadcrumbs hidden-md-down">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li>Flexible Content</li>
-                </ul>
-            </div>
             <?php
                 if( function_exists( 'yoast_breadcrumb' ) ) {
-                    yoast_breadcrumb( '<div class="breadcrumbs">', '</div>' );
+                    yoast_breadcrumb( '<div class="breadcrumbs hidden-md-down">', '</div>' );
                 }
             ?>
             <?php if ( is_search() ): ?>
@@ -23,14 +16,16 @@
             <?php else : ?>
                 <h1><?php the_title(); ?></h1>
             <?php endif; ?>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae ipsum vulputate, pharetra tellus ut, ornare felis. Phasellus ornare, tellus et interdum consequat, dolor nisl tempus mi, ac scelerisque dolor justo non dolor.</p>
-            <a href="#" class="btn btn-primary">Primary Button</a>
-            <a href="#" class="btn btn-secondary">Secondary Button</a>
+            <?php if($masthead_description = get_field('description')): ?>
+                <?php echo $masthead_description; ?>
+            <?php endif; ?>
         </div>
     </div>
     <div class="right-image hidden-md-down">
+        <?php if($catch_image = get_field('catch_image')): ?>
         <div class="right-image-wrapper">
-            <img src="../wp-content/themes/transflo/assets/img/masthead-image.jpg" alt="" class="object-fit">
+            <?php echo fx_get_image_tag($catch_image, 'object-fit'); ?>
         </div>
+        <?php endif; ?>
     </div>
 </section>

@@ -1,4 +1,4 @@
-<section class="wysiwyg section-margins <?php the_field('background_color'); ?>">
+<section class="wysiwyg section-padding <?php the_field('background_type'); ?>">
 
 	<div class="container">
 		<div class="row">

@@ -2,7 +2,7 @@
 .testimonials__top-content,
 .tab-blcok__top-content {
     padding-bottom: 30px;
-    color: #333333;
+    color: var(--color-text-default);
 }
 
 .tab-column {
@@ -119,7 +119,7 @@
     background: #EFF2F4;
     border-radius: 20px;
     padding: 30px 30px 35px;
-    color: #333333;
+    color: var(--color-text-default);
 }
 
 .tab-content--inner h4 {

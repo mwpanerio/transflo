@@ -20,8 +20,9 @@
     --color-primary: #2474BB;
     --color-secondary: #DA1F2C;
     --color-tertiary: #8D99AE;
+    --color-text-default: #333333;
 
-    --color-border: #e2e7eb;
+    --color-border: rgba(141, 153, 174, 0.5);
     --color-offblue: #8f9aab;
     --color-offwhite: #EFF2F4;
     --color-white: #fff;

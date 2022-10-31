@@ -548,6 +548,10 @@ img.logo {
     .nav-primary .ubermenu .ubermenu-item-type-column>.ubermenu-submenu-type-stack>.ubermenu-item-normal:first-child {
         margin-top: 0;
     }
+
+    .nav-primary .ubermenu-responsive .ubermenu-item.ubermenu-active > .ubermenu-submenu.ubermenu-submenu-type-mega {
+        box-shadow: none;
+    }
 }
 
 @media (max-width: 767px) {

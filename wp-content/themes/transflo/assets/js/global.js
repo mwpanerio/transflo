@@ -114,8 +114,6 @@ var FX = ( function( FX, $ ) {
 				const $this = $(this);
 				const $blockquoteIcon = $('#js-blockquote-icon').html();
 
-				console.log($this);
-
 				$this.prepend(`<div class="blockquote__icon">${$blockquoteIcon}</div>`)
 			})
 			

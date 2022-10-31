@@ -21,6 +21,8 @@ var FX = ( function( FX, $ ) {
 							$(this).find('.odometer').each(function() {
 								arr[i++] = $(this).attr('data-count');
 								$(this).html($(this).attr('data-count'));
+
+								console.log($(this).attr('data-count'));
 							});
 							flag = false;
 						}

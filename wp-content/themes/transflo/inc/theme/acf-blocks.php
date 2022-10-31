@@ -353,7 +353,10 @@ fx_register_block(
     [
         'name'          => 'innerpage-cta',
         'title'         => 'Innerpage - CTA',
-        'template'      => 'innerpage/cta.php',
+        'template'      => 'homepage/half-image-cta.php',
+        'description'   => 'Slider block for the homepage masthead.',
+        'css'           => 'homepage/half-image-cta.css',
+        'css_deps'      => [ 'fx_wysiwyg' ],
         'category'      => 'fx-innerpage-blocks',
         'post_types'    => [],
     ]

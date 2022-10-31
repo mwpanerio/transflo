@@ -582,6 +582,7 @@ img.logo {
     transition: transform 0.3s ease-in-out;
   }
 
+  .ubermenu > ul > li:hover > a:before,
   .ubermenu > ul > li.ubermenu-active > a:before {
     transform: scaleX(1);
     transform-origin: left;

@@ -47,7 +47,7 @@
                     "label": "Catch Image",
                     "name": "catch_image",
                     "type": "image",
-                    "instructions": "",
+                    "instructions": "Recommended Image Size: 832px x 415px",
                     "required": 0,
                     "conditional_logic": [
                         [
@@ -79,7 +79,7 @@
                     "label": "Thumbnail Image",
                     "name": "thumbnail_image",
                     "type": "image",
-                    "instructions": "Note: If there's no thumbnail image added, youtube thumbnail will be displayed instead.",
+                    "instructions": "Note: <br>\r\n- If there's no thumbnail image added, youtube thumbnail will be displayed instead. <br>\r\n- Recommended Image Size: 832px x 415px",
                     "required": 0,
                     "conditional_logic": [
                         [
@@ -289,7 +289,7 @@
                                     "label": "Image",
                                     "name": "image",
                                     "type": "image",
-                                    "instructions": "",
+                                    "instructions": "Recommended Image Size: 180px x 105px",
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
@@ -389,7 +389,7 @@
                                     "label": "Image",
                                     "name": "image",
                                     "type": "image",
-                                    "instructions": "",
+                                    "instructions": "Recommended Image Size: 110px x 120px",
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
@@ -467,5 +467,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1666621344
+    "modified": 1667219365
 }

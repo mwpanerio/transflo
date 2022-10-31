@@ -79,7 +79,7 @@
                     "label": "Image",
                     "name": "image",
                     "type": "image",
-                    "instructions": "",
+                    "instructions": "Recommended Image Size: 380px x 260px",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -115,7 +115,7 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "maxlength": 20
                 },
                 {
                     "key": "field_6356a636dd7f2",
@@ -132,7 +132,7 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "maxlength": "",
+                    "maxlength": 50,
                     "rows": "",
                     "new_lines": ""
                 },
@@ -179,5 +179,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1666963843
+    "modified": 1667219403
 }

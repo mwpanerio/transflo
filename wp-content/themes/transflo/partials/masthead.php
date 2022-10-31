@@ -3,6 +3,15 @@
         <div class="left-text-wrapper">
             <?php
                 global $post;     // if outside the loop
+                global $wp_query;
+                $post_id = 0;
+
+
+                if(is_home() || is_archive() || is_taxonomy() || is_category()) {
+                    $post_id = 26;
+                } else {
+                    $post_id = $wp_query->post->ID;
+                }
 
                 if ( is_page() && $post->post_parent ):
             ?>
@@ -24,13 +33,36 @@
             <?php else : ?>
                 <h1><?php the_title(); ?></h1>
             <?php endif; ?>
-            <?php if($masthead_description = get_field('description')): ?>
+            <?php if($masthead_description = get_field('description', $post_id)): ?>
                 <?php echo $masthead_description; ?>
+            <?php endif; ?>
+
+            <?php if(is_home() || is_archive() || is_taxonomy() || is_category()): ?>
+                <div class="masthead__category">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-col">
+                                <input type="tel" placeholder="&nbsp;">
+                                <label>Search blog posts...</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-col">
+                                <select name="blog-category" id="blog-category">
+                                    <option value="all">Select a category</option>
+                                    <option value="knowledge-base">Knowledge Base</option>
+                                    <option value="blog">Blog</option>
+                                    <option value="guides-and-white-papers">Guides & White-papers</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             <?php endif; ?>
         </div>
     </div>
     <div class="right-image hidden-md-down">
-        <?php if($catch_image = get_field('catch_image')): ?>
+        <?php if($catch_image = get_field('catch_image', $post_id)): ?>
         <div class="right-image-wrapper">
             <?php echo fx_get_image_tag($catch_image, 'object-fit'); ?>
         </div>

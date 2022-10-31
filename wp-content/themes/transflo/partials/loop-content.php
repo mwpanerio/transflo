@@ -12,32 +12,33 @@
 	$excerpt 	= wp_trim_words( get_the_excerpt(), 20, ' &hellip;' );
 ?>
 
-<div class="col-xxs-12 col-xs-6 col-md-4">
-	<article class="blog-post__item">
-
-		<?php if( !empty( $img_tag ) ): ?>
-			<a class="blog-post__img-container show" href="<?php echo esc_url( $permalink ); ?>">
-				<?php echo $img_tag; ?>
-			</a>
-		<?php endif; ?>
-
-		<div class="blog-post__meta">	
-			<?php if( !empty( $terms ) ): ?>
-				<div class="blog-post__tags">
-					<?php foreach( $terms as $term ): ?>
-						<a class="blog-post__tag" href="<?php echo esc_url( get_term_link( $term ) ); ?>"><?php echo $term->name; ?></a>
-					<?php endforeach; ?>
-				</div>
-			<?php endif; ?>
-
-			<h3 class="blog-post__title">
-				<a class="blog-post__title__link" href="<?php echo esc_url( $permalink ); ?>"><?php the_title(); ?></a>
-			</h3>
-
-			<div class="blog-post__excerpt push-bottom"><?php echo $excerpt; ?></div>
-
-			<a class="blog-post__link btn-tertiary" href="<?php echo esc_url( $permalink ); ?>">Read More</a>
+<div class="col-sm-6 col-lg-4 card-item">
+	<a class="card card--link" href="<?php echo get_the_permalink(); ?>">
+		<div class="card__top">
+			<div class="card__img-wrap">
+				<?php echo fx_get_image_tag(get_field('featured_image'), 'card__img object-fit'); ?>
+			</div>
+			<div class="card__details">
+				<div class="card__icon"> <span>Read More</span><i class="icon-button-right"></i></div>
+				<div class="card__date"><?php echo get_the_date('F j, Y'); ?></div>
+				<h4 class="card__title"><?php echo get_the_title(); ?></h4>
+			</div>
 		</div>
-		
-	</article>
+		<div class="card__bottom">
+			<?php
+				$blocks = parse_blocks( $post->post_content );
+
+				foreach ( $blocks as $block ) {
+				if ( 'acf/wysiwyg' === $block['blockName'] ) {
+						if(isset($block["attrs"]["data"]["content"])) {
+							$excerpt = strip_tags(trim($block["attrs"]["data"]["content"]));
+						}
+						break;
+					}
+				}
+
+				echo $excerpt;
+			?>
+		</div>
+	</a>
 </div>

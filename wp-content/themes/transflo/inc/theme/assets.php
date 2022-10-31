@@ -63,6 +63,22 @@ function fx_theme_styles() {
             'inline'    => true,
         ]
     );
+
+    fx_assets_add_stylesheet(
+        [
+            'handle'    => 'site-card',
+            'src'       => $theme_url . '/assets/css/blocks/homepage/cards.css',
+            'enqueue'   => ( is_home() )
+        ]
+    );
+
+    fx_assets_add_stylesheet(
+        [
+            'handle'    => 'site-subscription-form',
+            'src'       => $theme_url . '/assets/css/blocks/innerpage/subscribes.css',
+            'enqueue'   => ( is_home() )
+        ]
+    );
     
     // Header Styling
     fx_assets_add_stylesheet(
@@ -163,7 +179,7 @@ function fx_theme_styles() {
             'handle'        => 'fx_choices_custom',
             'src'           => $theme_url . '/assets/css/components/choices.css',
             'dependencies'  => [ 'fx_choices_plugin' ],
-            // 'enqueue'       => is_archive(), // TODO uncomment if categories in sidebar will use drop-downs. Remove otherwise.
+            'enqueue'       => (is_archive() || is_home() || is_singular() ),
         ]
     );
     
@@ -342,7 +358,7 @@ function fx_theme_scripts() {
             'src'           => $theme_url . '/assets/js/components/FxChoices.js',
             'dependencies'  => [ 'fx_choices_plugin' ],
             'defer'         => true,
-            // 'enqueue'       => ( is_archive() || is_home() ), // todo — uncomment and add conditions for dropdowns, etc
+            'enqueue'       => (is_archive() || is_home() || is_singular() ),
         ]
     );     
     

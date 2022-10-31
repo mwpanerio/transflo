@@ -344,16 +344,6 @@ fx_register_block(
 
 fx_register_block(
     [
-        'name'          => 'innerpage-newsletter-section',
-        'title'         => 'Innerpage - Newsletter Section',
-        'template'      => 'innerpage/newsletter-section.php',
-        'category'      => 'fx-innerpage-blocks',
-        'post_types'    => [],
-    ]
-);
-
-fx_register_block(
-    [
         'name'          => 'innerpage-cta',
         'title'         => 'Innerpage - CTA',
         'template'      => 'homepage/half-image-cta.php',
@@ -368,7 +358,7 @@ fx_register_block(
 fx_register_block(
     [
         'name'          => 'innerpage-subscribe-section',
-        'title'         => 'Innerpage - Subscribe Section',
+        'title'         => 'Innerpage - Newsletter Section',
         'template'      => 'innerpage/subscribe-section.php',
         'css'           => 'innerpage/subscribes.css',
         'category'      => 'fx-innerpage-blocks',

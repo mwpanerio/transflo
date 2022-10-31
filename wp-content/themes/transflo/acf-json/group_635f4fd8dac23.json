@@ -1,6 +1,6 @@
 {
     "key": "group_635f4fd8dac23",
-    "title": "[Block] Innerpage - Subscription Section",
+    "title": "[Block] Innerpage - Newsletter Section",
     "fields": [
         {
             "key": "field_635f4ffc7110e",
@@ -84,5 +84,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667190850
+    "modified": 1667191183
 }

@@ -109,6 +109,15 @@ var FX = ( function( FX, $ ) {
 			$('input,textarea').focus( () => {
 				$(this).removeAttr('placeholder');
 			});
+
+			$('blockquote').each(function() {
+				const $this = $(this);
+				const $blockquoteIcon = $('#js-blockquote-icon').html();
+
+				console.log($this);
+
+				$this.prepend(`<div class="blockquote__icon">${$blockquoteIcon}</div>`)
+			})
 			
 			// nav search toggle
 			$('.js-search-toggle').on('click', () => {
@@ -173,7 +182,6 @@ var FX = ( function( FX, $ ) {
 					$('#js-masthead-tile-popup .image-buttons__popup__info p').removeAttr('style')
 				});
 			})
-
 			
 			/* ubermenu hack to force-show a Ubermenu submenu. Delete prior to launch */
 			// setInterval(function() {

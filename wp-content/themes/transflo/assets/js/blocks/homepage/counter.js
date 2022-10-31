@@ -30,7 +30,7 @@ var FX = ( function( FX, $ ) {
 			
 			// for check the section in view port or not;
 			$.fn.isInViewport = function() {
-				var elementTop = $(this).offset().top;
+				var elementTop = $(this).offset().top * 0.9;
 				var elementBottom = elementTop + $(this).outerHeight();
 			
 				var viewportTop = $(window).scrollTop();

@@ -97,7 +97,7 @@
                     "label": "Image",
                     "name": "image",
                     "type": "image",
-                    "instructions": "",
+                    "instructions": "Recommended Image Size: 565px x 360px",
                     "required": 0,
                     "conditional_logic": [
                         [
@@ -223,5 +223,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1666926062
+    "modified": 1667222476
 }

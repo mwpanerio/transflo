@@ -207,7 +207,7 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "maxlength": 80
                 }
             ]
         }
@@ -230,5 +230,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667189285
+    "modified": 1667222409
 }

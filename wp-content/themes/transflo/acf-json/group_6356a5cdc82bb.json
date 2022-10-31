@@ -1,6 +1,6 @@
 {
     "key": "group_6356a5cdc82bb",
-    "title": "[Block] Homepage - Products Section",
+    "title": "[Block] General - Products Section",
     "fields": [
         {
             "key": "field_6356a609dd7ec",
@@ -179,5 +179,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667219403
+    "modified": 1667222577
 }

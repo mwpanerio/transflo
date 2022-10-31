@@ -7,7 +7,7 @@
             "label": "Catch Image",
             "name": "catch_image",
             "type": "image",
-            "instructions": "",
+            "instructions": "Recommended Image Size: 830px x 460px",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -64,5 +64,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1666885691
+    "modified": 1667222388
 }

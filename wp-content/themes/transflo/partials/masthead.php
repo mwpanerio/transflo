@@ -1,7 +1,15 @@
 <section class="masthead masthead--innerpage">
     <div class="left-text">
         <div class="left-text-wrapper">
-            <div class="back-top-page hidden-lg"><a href="#"><i class="icon-left"></i> Back to About</a></div>
+            <?php
+                global $post;     // if outside the loop
+
+                if ( is_page() && $post->post_parent ):
+            ?>
+                <div class="back-top-page hidden-lg"><a href="<?php echo get_the_permalink($post->post_parent); ?>"><i class="icon-left"></i>Back to <?php echo get_the_title($post->post_parent); ?></a></div>
+            <?php else: ?>
+                <div class="back-top-page hidden-lg"><a href="<?php echo site_url(); ?>"><i class="icon-left"></i> Back to Homepage</a></div>
+            <?php endif; ?>
             <?php
                 if( function_exists( 'yoast_breadcrumb' ) ) {
                     yoast_breadcrumb( '<div class="breadcrumbs hidden-md-down">', '</div>' );

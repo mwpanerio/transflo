@@ -367,6 +367,17 @@ fx_register_block(
 
 fx_register_block(
     [
+        'name'          => 'innerpage-subscribe-section',
+        'title'         => 'Innerpage - Subscribe Section',
+        'template'      => 'innerpage/subscribe-section.php',
+        'css'           => 'innerpage/subscribes.css',
+        'category'      => 'fx-innerpage-blocks',
+        'post_types'    => [],
+    ]
+);
+
+fx_register_block(
+    [
         'name'          => 'innerpage-benefits-section',
         'title'         => 'Innerpage - Benefits Section',
         'template'      => 'innerpage/benefits-section.php',

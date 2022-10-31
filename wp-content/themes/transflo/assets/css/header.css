@@ -1139,6 +1139,17 @@ body:after {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: background 0.25s ease-in-out;
+}
+
+@media (min-width: 1200px) {
+    .nav-primary .header-card a:hover {
+        background-color: #BCD2E6;
+    }
+
+    .nav-primary .header-card a:hover .header-card__icon {
+        color: var(--color-secondary);
+    }
 }
 
 .header-card__image {
@@ -1166,10 +1177,12 @@ body:after {
 
 .header-card__content h3 {
     font-size: 18px;
+    transition: color 0.25s ease-in-out;
 }
 
 .header-card__icon {
     color: var(--color-primary);
+    transition: color 0.25s ease-in-out;
 }
 
 .header-cta {

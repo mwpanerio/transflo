@@ -890,6 +890,7 @@ label {
   left: 25px;
   transition: all ease-in-out 0.2s;
   font-family: 'avenir_next_lt_proregular';
+  cursor: pointer;
 }
 
 label sup {

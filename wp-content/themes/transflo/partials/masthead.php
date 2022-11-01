@@ -41,10 +41,14 @@
                 <div class="masthead__category">
                     <div class="row">
                         <div class="col-lg-6">
-                            <div class="form-col">
-                                <input type="tel" placeholder="&nbsp;">
-                                <label>Search blog posts...</label>
-                            </div>
+                            <form action="./" class="form masthead__category__search">
+                                <div class="form-col">
+                                    <input type="text" placeholder="&nbsp;" name="search-query" id="search-query" value="<?php echo get_search_query( true ); ?>" data-swplive="true">
+                                    <input type="hidden" name="post-type" value="post">
+                                    <label for="search-query">Search blog posts...</label>
+                                </div>
+                                <button type="submit"><i class="icon-search"></i></button>
+                            </form>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-col">

@@ -36,7 +36,7 @@
 </section>
 
 <?php $pagination = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1; ?>
-<?php if ( 1 === $pagination ) : // Only show Featured post on first page of posts ?>
+<?php if ( 1 === $pagination && !isset($_GET['s'])) : // Only show Featured post on first page of posts ?>
     <?php
         $featured_post_query = new WP_Query(
             [

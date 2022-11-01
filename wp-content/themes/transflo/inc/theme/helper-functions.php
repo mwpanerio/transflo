@@ -255,3 +255,12 @@ function import_template( $tpl, $vars = array() ) {
 	extract( $vars );
 	include $path;
 }
+
+
+function finder_sort($query) {
+    if ($query->is_main_query() || isset($_GET['s'])) {
+        $query->set('post__not_in', array());
+        $query->set('s', $_GET['s']);
+    }
+}
+add_action('pre_get_posts','finder_sort');

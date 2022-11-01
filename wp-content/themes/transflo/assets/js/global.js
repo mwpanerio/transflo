@@ -128,6 +128,13 @@ var FX = ( function( FX, $ ) {
 					}
 				});
 			})
+
+			$('#blog-category').on('change', function() {
+				const $this = $(this);
+
+				window.location = $this.val();
+				return false;
+			})
 			
 			// nav search toggle
 			$('.js-search-toggle').on('click', () => {

@@ -6,3 +6,48 @@
     Otherwise, put your styles in individual block stylesheets
 
 \*------------------------------------*/
+
+.choices__inner {
+    font-size: 17px;
+    border-radius: 50px;
+    padding: 10px 20px 11px;
+    color: var(--color-text-default);
+    background-color: var(--color-white);
+    border-color: var(--color-border);
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.is-open .choices__inner {
+    border-radius: 20px 20px 0 0;
+}
+
+.choices[data-type*='select-one']:after {
+    content: "";
+    display: block;
+    position: absolute;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    right: 20px;
+    border: 2px solid var(--color-primary);
+    border-top: 0;
+    border-left: 0;
+    width: 10px;
+    height: 10px;
+    transition: transform 0.3s ease-in-out,
+                top 0.3s ease-in-out;
+}
+
+.choices[data-type*='select-one'].is-open:after {
+    transform: translateY(-50%) rotate(225deg);
+    top: 55%;
+    border: 2px solid var(--color-primary);
+    border-top: 0;
+    border-left: 0;
+    margin: 0;
+}
+
+.is-open .choices__list--dropdown {
+    border-radius: 0 0 20px 20px;
+}

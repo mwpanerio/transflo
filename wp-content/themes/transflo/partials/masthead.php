@@ -27,9 +27,19 @@
             <?php if ( is_search() ): ?>
                 <h3 class="h1">Search Results</h3><?php /* different heading type for SEO benefit */ ?>
             <?php elseif ( is_home() ): ?>
-                <h3 class="h1">Blog</h3><?php /* different heading type for SEO benefit */ ?>
+                <h3 class="h1">Resources</h3><?php /* different heading type for SEO benefit */ ?>
             <?php elseif ( is_404() ) : ?>
                 <h1><?php the_field('404_title', 'option'); ?></h1>
+            <?php elseif ( is_category() ) : ?>
+                <?php
+                    $current_slug = '';
+
+                    if(is_category()) {
+                        $current_slug = get_the_category()[0]->slug;
+                        $current_category_name = get_the_category()[0]->name;
+                    }    
+                ?>
+                <h3 class="h1"><?php echo $current_category_name; ?></h3>
             <?php else : ?>
                 <h1><?php the_title(); ?></h1>
             <?php endif; ?>
@@ -41,18 +51,30 @@
                 <div class="masthead__category">
                     <div class="row">
                         <div class="col-lg-6">
-                            <div class="form-col">
-                                <input type="tel" placeholder="&nbsp;">
-                                <label>Search blog posts...</label>
-                            </div>
+                            <form action="./" class="form masthead__category__search">
+                                <div class="form-col">
+                                    <input type="text" placeholder="&nbsp;" name="search-block" id="search-block" value="<?php echo get_search_query( true ); ?>" data-swplive="true">
+                                    <label for="search-block">Search blog posts...</label>
+                                </div>
+                                <button type="submit"><i class="icon-search"></i></button>
+                            </form>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-col">
+                                <?php 
+                                    $categories = get_terms(
+                                        [
+                                            'hide_empty'    => true,
+                                            'post_type'     => 'post',
+                                            'taxonomy'      => 'category',
+                                        ]
+                                    );
+                                ?>
                                 <select name="blog-category" id="blog-category">
-                                    <option value="all">Select a category</option>
-                                    <option value="knowledge-base">Knowledge Base</option>
-                                    <option value="blog">Blog</option>
-                                    <option value="guides-and-white-papers">Guides & White-papers</option>
+                                    <option value="<?php echo home_url() . '/resources'; ?>">Select a category</option>
+                                    <?php foreach($categories as $category): ?>
+                                    <option value="<?php echo home_url() . '/category/' . $category->slug; ?>"<?php echo $current_slug == $category->slug ? ' selected' : ''; ?>><?php echo $category->name; ?></option>
+                                    <?php endforeach; ?>
                                 </select>
                             </div>
                         </div>

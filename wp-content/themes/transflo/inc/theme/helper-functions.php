@@ -255,3 +255,17 @@ function import_template( $tpl, $vars = array() ) {
 	extract( $vars );
 	include $path;
 }
+
+
+function finder_sort($query) {
+    if(is_admin() || !$query->is_main_query()) {
+        return;
+    }
+
+    if ($query->is_main_query() || isset($_GET['search-block'])) {
+        $query->set('post__not_in', array());
+        $query->set('s', $_GET['search-block']);
+        wp_reset_query();
+    }
+}
+add_action('pre_get_posts','finder_sort');

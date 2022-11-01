@@ -815,6 +815,36 @@ body:after {
     color: var(--color-black);
 }
 
+.masthead__category {
+    margin-top: 30px;
+}
+
+.masthead__category .form-col {
+    margin-bottom: 0;
+}
+
+.masthead__category__search {
+    position: relative;
+}
+
+.masthead__category__search input {
+    padding-right: 60px;
+}
+
+.masthead__category__search button[type=submit] {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+    border: 0;
+    color: var(--color-primary);
+}
+
 .right-image {
     width: 100%;
     height: 200px;

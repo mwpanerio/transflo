@@ -203,7 +203,7 @@
         background: #DA1F2C;
     }
 
-    .card:hover .card__icon span {
+    .card__icon span {
         display: inline-block;
     }
 

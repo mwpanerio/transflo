@@ -671,7 +671,7 @@ img.logo {
 
     .nav-primary .ubermenu-responsive.ubermenu-mobile-accordion:not(.ubermenu-mobile-modal):not(.ubermenu-in-transition):not(.ubermenu-responsive-collapse),
     .nav-primary .ubermenu-responsive {
-        max-height: calc(100vh - 90px) !important;
+        max-height: calc(100% - 90px) !important;
         overflow: scroll !important;
     }
 }
@@ -723,7 +723,7 @@ img.logo {
     .nav-primary {
         top: auto;
         bottom: 60px;
-        height: calc(100vh - 60px);
+        height: calc(100% - 60px);
         background-color: var(--color-offwhite);
     }
 
@@ -741,7 +741,7 @@ img.logo {
 
     .nav-primary .ubermenu-responsive.ubermenu-mobile-accordion:not(.ubermenu-mobile-modal):not(.ubermenu-in-transition):not(.ubermenu-responsive-collapse),
     .nav-primary .ubermenu-responsive {
-        max-height: calc(100vh - 60px) !important;
+        max-height: calc(100% - 60px) !important;
         overflow: scroll !important;
     }
 }

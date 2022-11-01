@@ -23,6 +23,14 @@
     display: inline-block;
 }
 
+.social-share-row__item:before {
+    display: none;
+}
+
+.social-share-row__item:first-child {
+    padding-left: 0;
+}
+
 .resp-sharing-button__link,
 .resp-sharing-button__icon {
     display: inline-block

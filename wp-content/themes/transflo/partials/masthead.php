@@ -88,6 +88,10 @@
         <div class="right-image-wrapper">
             <?php echo fx_get_image_tag($catch_image, 'object-fit'); ?>
         </div>
+        <?php elseif(is_singular()): ?>
+            <div class="right-image-wrapper">
+                <?php echo fx_get_image_tag(get_field('featured_image'), 'object-fit'); ?>
+            </div>
         <?php endif; ?>
     </div>
 </section>

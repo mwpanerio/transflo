@@ -228,11 +228,6 @@
 }
 
 @media (max-width: 1199px) {
-    .card {
-        transform: scale(1);
-        transition: transform 0.45s ease-in-out;
-    }
-
     .cards-flex {
         display: flex;
         margin-bottom: 30px;
@@ -240,10 +235,6 @@
 
     .cards-flex .slick-list .card-item {
         margin-bottom: 0;
-    }
-
-    .is-animating .card {
-        transform: scale(0.7);
     }
 
     .cards-flex .slick-arrow {

@@ -372,6 +372,9 @@ fx_register_block(
         'title'         => 'Innerpage - Benefits Section',
         'template'      => 'innerpage/benefits-section.php',
         'css'           => 'innerpage/benefits-section.css',
+        'css_deps'      => [ 'fx_slick' ],
+        'js'            => 'innerpage/benefits-section.js',
+        'js_deps'       => [ 'fx_slick' ],
         'category'      => 'fx-innerpage-blocks',
         'post_types'    => [],
     ]

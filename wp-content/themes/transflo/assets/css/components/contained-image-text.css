@@ -17,6 +17,10 @@
     align-items: center
 }
 
+.image-text.bg-gray + .image-text.bg-gray {
+    padding-top: 0 !important;
+} 
+
 .image-text__img {
     height: auto;
     margin-bottom: 30px;
@@ -74,7 +78,7 @@
     border-radius: 50%;
     transform: scale(0);
     opacity: 1;
-    animation: pulse 1.15s ease-in-out infinite;
+    animation: pulseActive 0.9s ease-in-out forwards;
 }
 
 .image-video-text__link__icon:before {
@@ -169,7 +173,7 @@
 
     .image-video-text__link:hover .image-video-text__link__icon:before,
     .image-video-text__link:hover .image-video-text__link__icon:after {
-        animation: pulseActive 0.9s ease-in-out forwards;
+        animation: pulse 1.15s ease-in-out infinite;
     }
     
     .image-video-text__link:hover .image-video-text__link__icon:after {

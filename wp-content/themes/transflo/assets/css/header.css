@@ -835,6 +835,11 @@ body:after {
     line-height: 1.6em;
 }
 
+.left-text-wrapper p:last-child,
+.left-text-wrapper p:last-of-type {
+    padding-bottom: 0;
+}
+
 
  @media (min-width: 768px) {
     .masthead {

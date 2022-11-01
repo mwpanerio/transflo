@@ -7,8 +7,8 @@
                 $post_id = 0;
 
 
-                if(is_home() || is_archive() || is_taxonomy() || is_category()) {
-                    $post_id = 26;
+                if(is_home() || is_archive()) {
+                    $post_id = 17;
                 } else {
                     $post_id = $wp_query->post->ID;
                 }
@@ -37,7 +37,7 @@
                 <?php echo $masthead_description; ?>
             <?php endif; ?>
 
-            <?php if(is_home() || is_archive() || is_taxonomy() || is_category()): ?>
+            <?php if(is_home() || is_archive()): ?>
                 <div class="masthead__category">
                     <div class="row">
                         <div class="col-lg-6">

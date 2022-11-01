@@ -72,7 +72,8 @@ fx_register_block(
         'title'         => 'General - WYSIWYG',
         'template'      => 'general/wysiwyg.php',
         'description'   => 'A basic "What you see is what you get" editor.',
-        'css_deps'      => [ 'fx_wysiwyg' ],
+        'css_deps'      => [ 'fx_wysiwyg', 'fx_custom_scrollbar' ],
+        'js_deps'       => [ 'fx_custom_scrollbar' ],
         'post_types'    => [],
     ]
 );

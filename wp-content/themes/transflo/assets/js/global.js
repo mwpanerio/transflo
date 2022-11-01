@@ -116,6 +116,18 @@ var FX = ( function( FX, $ ) {
 
 				$this.prepend(`<div class="blockquote__icon">${$blockquoteIcon}</div>`)
 			})
+
+			$('.table-structure').each(function() {
+				const $this = $(this);
+
+				$this.mCustomScrollbar({
+					axis:"x",
+					theme: "light-3",
+					advanced: {
+						autoExpandHorizontalScroll: true
+					}
+				});
+			})
 			
 			// nav search toggle
 			$('.js-search-toggle').on('click', () => {

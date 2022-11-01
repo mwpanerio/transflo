@@ -266,6 +266,13 @@ function fx_theme_styles() {
 
     fx_assets_add_stylesheet(
         [
+            'handle'        => 'fx_custom_scrollbar',
+            'src'           => $theme_url . '/assets/css/plugins/jquery.mCustomScrollbar.min.css',
+        ]
+    );
+
+    fx_assets_add_stylesheet(
+        [
             'handle'    => 'fx_counter_block',
             'src'       => $theme_url . '/assets/css/blocks/homepage/counter-block.css',
         ]
@@ -438,6 +445,15 @@ function fx_theme_scripts() {
         [
             'handle'        => 'fx_lightbox',
             'src'           => $theme_url . '/assets/js/plugins/lightbox.js',
+        ]
+    );
+
+    // Script for "Custom Scrollbar" block sections
+    fx_assets_add_script(
+        [
+            'handle'        => 'fx_custom_scrollbar',
+            'src'           => $theme_url . '/assets/js/plugins/jquery.mCustomScrollbar.min.js',
+            'dependencies'  => [ 'jquery' ]
         ]
     );
     

@@ -185,6 +185,12 @@ img.logo {
     display: none;
 }
 
+@media (max-width: 768px) {
+    .desktop-menu__search .container {
+        padding-left: 0;
+    }
+}
+
 .desktop-menu__search.js-search-active {
     display: block;
 }

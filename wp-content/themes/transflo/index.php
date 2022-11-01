@@ -78,7 +78,16 @@
 <?php endif; ?>
 
 <?php if( have_posts() ): ?>
-    <section class="blog-listing-container js-load-more-block section-margins">
+    <?php
+
+        $args = array(
+            'post_type' => 'post',
+            's'         => $_GET['s']
+        );
+        $the_query = new WP_Query( $args );
+        $totalpost = $the_query->found_posts; 
+    ?>
+    <section class="blog-listing-container js-load-more-block section-margins" data-load-more-total="<?php echo $totalpost; ?>">
         <div class="container">
             <div class="blog-lising__wrapper">
                 <div class="blog-listing row cards-flex js-load-more-posts">

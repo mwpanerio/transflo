@@ -27,9 +27,19 @@
             <?php if ( is_search() ): ?>
                 <h3 class="h1">Search Results</h3><?php /* different heading type for SEO benefit */ ?>
             <?php elseif ( is_home() ): ?>
-                <h3 class="h1">Blog</h3><?php /* different heading type for SEO benefit */ ?>
+                <h3 class="h1">Resources</h3><?php /* different heading type for SEO benefit */ ?>
             <?php elseif ( is_404() ) : ?>
                 <h1><?php the_field('404_title', 'option'); ?></h1>
+            <?php elseif ( is_category() ) : ?>
+                <?php
+                    $current_slug = '';
+
+                    if(is_category()) {
+                        $current_slug = get_the_category()[0]->slug;
+                        $current_category_name = get_the_category()[0]->name;
+                    }    
+                ?>
+                <h3 class="h1"><?php echo $current_category_name; ?></h3>
             <?php else : ?>
                 <h1><?php the_title(); ?></h1>
             <?php endif; ?>
@@ -59,12 +69,6 @@
                                             'taxonomy'      => 'category',
                                         ]
                                     );
-
-                                    $current_slug = '';
-
-                                    if(is_category()) {
-                                        $current_slug = get_the_category()[0]->slug;
-                                    }
                                 ?>
                                 <select name="blog-category" id="blog-category">
                                     <option value="<?php echo home_url() . '/resources'; ?>">Select a category</option>

@@ -36,7 +36,7 @@
 </section>
 
 <?php $pagination = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1; ?>
-<?php if ( 1 === $pagination && !isset($_GET['s'])) : // Only show Featured post on first page of posts ?>
+<?php if ( 1 === $pagination && !isset($_GET['search-block'])) : // Only show Featured post on first page of posts ?>
     <?php
         $featured_post_query = new WP_Query(
             [
@@ -80,12 +80,14 @@
 <?php if( have_posts() ): ?>
     <?php
 
-        $args = array(
-            'post_type' => 'post',
-            's'         => $_GET['s']
-        );
-        $the_query = new WP_Query( $args );
-        $totalpost = $the_query->found_posts; 
+        if(isset($_GET['search-block'])) {
+            $args = array(
+                'post_type' => 'post',
+                's'         => $_GET['search-block']
+            );
+            $the_query = new WP_Query( $args );
+            $totalpost = $the_query->found_posts;
+        }
     ?>
     <section class="blog-listing-container js-load-more-block section-margins" data-load-more-total="<?php echo $totalpost; ?>">
         <div class="container">

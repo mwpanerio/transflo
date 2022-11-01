@@ -68,7 +68,7 @@ function fx_theme_styles() {
         [
             'handle'    => 'site-card',
             'src'       => $theme_url . '/assets/css/blocks/homepage/cards.css',
-            'enqueue'   => ( is_home() )
+            'enqueue'   => ( is_home() || is_archive() )
         ]
     );
 
@@ -76,7 +76,7 @@ function fx_theme_styles() {
         [
             'handle'    => 'site-subscription-form',
             'src'       => $theme_url . '/assets/css/blocks/innerpage/subscribes.css',
-            'enqueue'   => ( is_home() )
+            'enqueue'   => ( is_home() || is_archive() )
         ]
     );
     

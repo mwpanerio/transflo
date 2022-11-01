@@ -43,20 +43,34 @@
                         <div class="col-lg-6">
                             <form action="./" class="form masthead__category__search">
                                 <div class="form-col">
-                                    <input type="text" placeholder="&nbsp;" name="search-query" id="search-query" value="<?php echo get_search_query( true ); ?>" data-swplive="true">
-                                    <input type="hidden" name="post-type" value="post">
-                                    <label for="search-query">Search blog posts...</label>
+                                    <input type="text" placeholder="&nbsp;" name="search-block" id="search-block" value="<?php echo get_search_query( true ); ?>" data-swplive="true">
+                                    <label for="search-block">Search blog posts...</label>
                                 </div>
                                 <button type="submit"><i class="icon-search"></i></button>
                             </form>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-col">
+                                <?php 
+                                    $categories = get_terms(
+                                        [
+                                            'hide_empty'    => true,
+                                            'post_type'     => 'post',
+                                            'taxonomy'      => 'category',
+                                        ]
+                                    );
+
+                                    $current_slug = '';
+
+                                    if(is_category()) {
+                                        $current_slug = get_the_category()[0]->slug;
+                                    }
+                                ?>
                                 <select name="blog-category" id="blog-category">
-                                    <option value="all">Select a category</option>
-                                    <option value="knowledge-base">Knowledge Base</option>
-                                    <option value="blog">Blog</option>
-                                    <option value="guides-and-white-papers">Guides & White-papers</option>
+                                    <option value="<?php echo home_url() . '/resources'; ?>">Select a category</option>
+                                    <?php foreach($categories as $category): ?>
+                                    <option value="<?php echo home_url() . '/category/' . $category->slug; ?>"<?php echo $current_slug == $category->slug ? ' selected' : ''; ?>><?php echo $category->name; ?></option>
+                                    <?php endforeach; ?>
                                 </select>
                             </div>
                         </div>

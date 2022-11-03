@@ -6,31 +6,7 @@
     <div class="container">
         <div class="subscribe">
             <h3 class="text-center">Subscribe to Our Newsletter</h3>
-            <div class="subscribe__wrap">
-                <div class="subscribe__box">
-                    <div class="form-col">
-                        <input type="text" placeholder="&nbsp;">
-                        <label>First Name <sup>*</sup></label>
-                    </div>
-                </div>
-                <div class="subscribe__box">
-                    <div class="form-col">
-                        <input type="text" placeholder="&nbsp;">
-                        <label>Last Name <sup>*</sup></label>
-                    </div>
-                </div>
-                <div class="subscribe__box subscribe__box--big">
-                    <div class="form-col">
-                        <input type="email" placeholder="&nbsp;">
-                        <label>Email Address <sup>*</sup></label>
-                    </div>
-                </div>
-                <div class="subscribe__button">
-                    <div class="form-col">
-                        <button type="submit" class="btn btn-primary">Submit <i class="icon-button-right"></i></button>
-                    </div>
-                </div>
-            </div>
+            <?php echo apply_shortcodes('[contact-form-7 id="358" title="Newsletter Form"]'); ?>
         </div>
     </div>
 </section>

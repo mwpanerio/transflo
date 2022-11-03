@@ -2,13 +2,19 @@
     <div class="container">
         <div class="half-img-form">
             <div class="half-img-form__image">
-                <img src="../wp-content/themes/transflo/assets/img/touch.jpg" class="object-fit" alt="">        
+                <?php echo fx_get_image_tag(get_field('image'), 'object-fit'); ?>
             </div>
             <div class="half-img-form__text">
-                <h5>Get In Touch</h5>
-                <h3>H3. Contact Us Today</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <?php echo apply_shortcodes('[contact-form-7 id="197" title="Contact form 1"]'); ?>
+                <?php if($subheading = get_field('subheading')): ?>
+                    <h5><?php echo $subheading; ?></h5>
+                <?php endif; ?>
+                <?php if($title = get_field('title')): ?>
+                    <h3><?php echo $title; ?></h3>
+                <?php endif; ?>
+                <?php if($description = get_field('description')): ?>
+                    <?php echo $description; ?>
+                <?php endif; ?>
+                <?php echo apply_shortcodes(get_field('form_shortcode')); ?>
             </div>
         </div>
     </div>

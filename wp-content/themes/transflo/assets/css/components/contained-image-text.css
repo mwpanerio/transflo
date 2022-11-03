@@ -180,3 +180,31 @@
         animation-delay: 0.25s;
     }
 }
+
+.image-text--boxed-container {
+    background-color: transparent;
+}
+
+.image-text--boxed-container.bg-white {
+    background-color: var(--color-white);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
+}
+
+.image-text--boxed-container.bg-gray .container {
+    background: #EFF2F4;
+    padding: 60px 22px;
+    border-radius: 20px;
+}
+
+@media (min-width: 768px) {
+    .image-text--boxed-container.bg-gray .container {
+        padding: 70px 52px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .image-text--boxed-container.bg-gray .container {
+        padding: 70px 81px ;
+    }
+}

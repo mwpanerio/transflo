@@ -1,4 +1,4 @@
-<section class="image-text image-text--<?php echo get_field('media_position'); ?> <?php echo get_field('background_type'); ?> section-padding">
+<section class="image-text image-text--<?php echo get_field('media_position'); ?> image-text--<?php echo get_field('section_type'); ?> <?php echo get_field('background_type'); ?> section-padding">
     <div class="container">
         <div class="row flex-row<?php echo get_field('media_position') == 'right' ? ' flex-opposite' : ''; ?>">
             <div class="col-lg-6 col-xxs-12 image-text__half image-text__img">

@@ -380,3 +380,15 @@ fx_register_block(
         'post_types'    => [],
     ]
 );
+
+fx_register_block(
+    [
+        'name'          => 'innerpage-brokers-list',
+        'title'         => 'Innerpage - Brokers List Section',
+        'template'      => 'innerpage/brokers-list.php',
+        'css'           => 'innerpage/brokers-list.css',
+        'js'            => 'innerpage/brokers-list.js',
+        'category'      => 'fx-innerpage-blocks',
+        'post_types'    => [],
+    ]
+);

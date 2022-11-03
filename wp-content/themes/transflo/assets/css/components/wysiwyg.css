@@ -11,15 +11,6 @@
     position: relative;
 }
 
-.bg-white {
-    background: var(--color-white);
-}
-
-.bg-gray {
-    background: #EFF2F4;
-    color: var(--color-text-default);
-}
-
 .example-btn .btn {
     margin-bottom: 15px;
 }

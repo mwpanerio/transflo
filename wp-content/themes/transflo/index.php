@@ -65,7 +65,7 @@
             $totalpost = $the_query->found_posts;
         }
     ?>
-    <section class="blog-listing-container js-load-more-block section-margins" data-load-more-total="<?php echo $totalpost; ?>">
+    <section class="blog-listing-container js-load-more-block section-margins"<?php echo $totalpost ? ' data-load-more-total="' . $totalpost . '"' : ''; ?>>
         <div class="container">
             <div class="blog-lising__wrapper">
                 <div class="blog-listing row cards-flex js-load-more-posts">

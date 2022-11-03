@@ -1143,3 +1143,12 @@ button::-moz-focus-inner,
         /* TODO: update to match how far down page when sidebar should stick */
     }
 }
+
+.bg-white {
+  background: var(--color-white);
+}
+
+.bg-gray {
+  background: #EFF2F4;
+  color: var(--color-text-default);
+}

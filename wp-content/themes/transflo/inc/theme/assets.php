@@ -153,6 +153,7 @@ function fx_theme_styles() {
         [
             'handle'    => 'fx_cf7',
             'src'       => $theme_url . '/assets/css/components/cf7.css',
+            'enqueue'   => array( is_home() || is_archive() || is_single() )
         ]
     );
 

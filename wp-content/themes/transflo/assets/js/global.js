@@ -135,6 +135,13 @@ var FX = ( function( FX, $ ) {
 				window.location = $this.val();
 				return false;
 			})
+
+			$('.wpcf7-form-control-wrap').each(function() {
+				const $this = $(this);
+				const $thisLabel = $this.next('label');
+
+				$thisLabel.appendTo($this);
+			})
 			
 			// nav search toggle
 			$('.js-search-toggle').on('click', () => {

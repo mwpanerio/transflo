@@ -246,6 +246,7 @@ function fx_get_simple_link_tag( $link, $classes = '', string $title = 'Click he
   
 }
 
+//Cleaner way of importing partials/template files
 function import_template( $tpl, $vars = array() ) {
 	$tpl  = ltrim( $tpl, '/' ) . '.php';
 	$path = locate_template( array( $tpl ) );
@@ -257,6 +258,7 @@ function import_template( $tpl, $vars = array() ) {
 }
 
 
+//Custom query for search block
 function finder_sort($query) {
     if(is_admin() || !$query->is_main_query()) {
         return;
@@ -269,3 +271,17 @@ function finder_sort($query) {
     }
 }
 add_action('pre_get_posts','finder_sort');
+
+
+//Remove P and BR tags in CF7
+add_filter( 'wpcf7_autop_or_not', '__return_false' );
+
+//include CF7 scripts for 
+add_filter('fx_bam_include_cf7_scripts', 'fx_include_cf7_on_frontpage' );
+function fx_include_cf7_on_frontpage( $include_cf7 ) {
+    if ( has_block('acf/innerpage-half-image-form') ) {
+        $include_cf7 = true;
+    }
+    
+    return $include_cf7;
+}

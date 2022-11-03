@@ -4,6 +4,17 @@
     padding: 30px 30px 25px 30px;
 }
 
+.subscribe form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subscribe .wpcf7-response-output {
+    display: inline-block;
+    width: auto;
+}
+
 .subscribe h3 {
     font-size: 20px;
     color: var(--color-white);

@@ -62,7 +62,7 @@
             <div class="col-xxs-12 col-md-6">
                 <div class="contact-404">
                     <h4><?php echo $contact_form['text_before_contact_button']; ?></h4>
-                    <a href="#" class="btn"><?php echo $contact_form['text_in_contact_button']; ?></a>
+                    <a href="<?php echo get_the_permalink(23); ?>" class="btn"><?php echo $contact_form['text_in_contact_button']; ?></a>
                 </div>
             </div>
             <?php endif; ?>

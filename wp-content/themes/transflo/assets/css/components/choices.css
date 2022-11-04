@@ -48,6 +48,10 @@
     margin: 0;
 }
 
+.choices__list--dropdown {
+    z-index: 99;
+}
+
 .is-open .choices__list--dropdown {
     border-radius: 0 0 20px 20px;
 }

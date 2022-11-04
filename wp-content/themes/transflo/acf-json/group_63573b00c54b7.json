@@ -76,7 +76,7 @@
         },
         {
             "key": "field_63573b0a59b6e",
-            "label": "Posts To DIsplay",
+            "label": "Posts To Display",
             "name": "posts_to_display",
             "type": "relationship",
             "instructions": "",
@@ -127,5 +127,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1666956607
+    "modified": 1667563255
 }

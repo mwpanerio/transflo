@@ -1181,10 +1181,15 @@ body:after {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    transition: background 0.25s ease-in-out;
+    transition: background 0.25s ease-in-out,
+                transform 0.25s ease-in-out;
 }
 
 @media (min-width: 1200px) {
+    .nav-primary .header-card a:hover {
+        transform: scale(1.01);
+    }
+
     .nav-primary .header-card a:hover .header-card__icon {
         color: var(--color-secondary);
     }

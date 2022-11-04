@@ -73,7 +73,7 @@
                                 <select name="blog-category" id="blog-category">
                                     <option value="<?php echo home_url() . '/resources'; ?>">Select a category</option>
                                     <?php foreach($categories as $category): ?>
-                                    <option value="<?php echo home_url() . '/category/' . $category->slug; ?>"<?php echo $current_slug == $category->slug ? ' selected' : ''; ?>><?php echo $category->name; ?></option>
+                                    <option value="<?php echo home_url() . '/' . $category->slug; ?>"<?php echo $current_slug == $category->slug ? ' selected' : ''; ?>><?php echo $category->name; ?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>

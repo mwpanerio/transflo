@@ -457,6 +457,14 @@ function fx_theme_scripts() {
             'dependencies'  => [ 'jquery' ]
         ]
     );
+
+    fx_assets_add_script(
+        [
+            'handle'        => 'fx_isotope',
+            'src'           => $theme_url . '/assets/js/plugins/isotope.min.js'
+        ]
+    );
+    
     
     /**
      * Plugin-specific JS

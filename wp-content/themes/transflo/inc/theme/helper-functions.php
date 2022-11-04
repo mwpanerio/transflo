@@ -264,13 +264,13 @@ function finder_sort($query) {
         return;
     }
 
-    if ($query->is_main_query() || isset($_GET['search-block'])) {
+    if (isset($_GET['search-block'])) {
         $query->set('post__not_in', array());
         $query->set('s', $_GET['search-block']);
         wp_reset_query();
     }
 }
-add_action('pre_get_posts','finder_sort');
+// add_action('pre_get_posts','finder_sort');
 
 
 //Remove P and BR tags in CF7

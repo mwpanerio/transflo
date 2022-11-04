@@ -3,6 +3,31 @@
     "title": "[Block] Innerpage - Half Media \/ Half Text",
     "fields": [
         {
+            "key": "field_636338b0bd2d2",
+            "label": "Section Type",
+            "name": "section_type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "full-width": "Full Width",
+                "boxed-container": "Boxed (width depends on the site's width container)"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_635b45b890af3",
             "label": "Background Type",
             "name": "background_type",
@@ -223,5 +248,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667222476
+    "modified": 1667447146
 }

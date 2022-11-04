@@ -56,6 +56,8 @@
 <?php if( have_posts() ): ?>
     <?php
 
+        $count = 1;
+
         if(isset($_GET['search-block'])) {
             $args = array(
                 'post_type' => 'post',
@@ -71,13 +73,15 @@
                 <div class="blog-listing row cards-flex js-load-more-posts">
                     <?php while( have_posts() ): the_post(); ?>
                         <?php get_template_part( 'partials/loop-content' ); ?>
-                    <?php endwhile; ?>
+                    <?php $count++; endwhile; ?>
                 </div>
+                <?php if($count > 10): ?>
                 <div class="blog-listing__pagination">
                     <div class="col-xxs-12">
                         <?php get_template_part( 'partials/pagination' ); ?> 
                     </div>
                 </div>
+                <?php endif; ?>
             </div>
         </div>
     </section>

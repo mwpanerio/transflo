@@ -126,6 +126,12 @@
     padding-top: 20px;
 }
 
+.footer-bottom .container {
+    background: #EFF2F4;
+    position: relative;
+    z-index: 2;
+}
+
 .footer-secondary-menu ul li {
     display: inline-block;
     padding: 0 12px;
@@ -313,6 +319,16 @@
         color: rgba(36, 116, 187, 1);
     }
 
+    .back-top-btn {
+        margin-right: -40px;
+        padding-right: 22px;
+    }
+
+    .back-top-btn a {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
 }
 
 @media (min-width: 1500px) {
@@ -323,6 +339,6 @@
 
 @media (min-width: 1800px) {
     .footer-bottom::before {
-        width: 20%;
+        width: 50%;
     }
 }

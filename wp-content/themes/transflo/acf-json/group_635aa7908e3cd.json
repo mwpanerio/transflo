@@ -51,7 +51,14 @@
             {
                 "param": "page",
                 "operator": "!=",
-                "value": "7"
+                "value": "133"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
             }
         ]
     ],
@@ -64,5 +71,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667222388
+    "modified": 1667533227
 }

@@ -1136,6 +1136,31 @@ body:after {
     font-family: 'avenir_next_lt_prodemi';
 }
 
+@media (min-width: 1200px) {
+    .nav-primary .ubermenu .ubermenu-submenu-type-mega.ubermenu-submenu-align-full_width .ubermenu-row .ubermenu-target span {
+        position: relative;
+    }
+
+    .nav-primary .ubermenu .ubermenu-submenu-type-mega.ubermenu-submenu-align-full_width .ubermenu-row .ubermenu-target span:before {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: var(--color-border);
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-primary .ubermenu .ubermenu-submenu-type-mega.ubermenu-submenu-align-full_width .ubermenu-row .ubermenu-target:hover span:before {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+}
+
 @media (max-width: 1199px) {
     .nav-primary .ubermenu .ubermenu-submenu-type-mega.ubermenu-submenu-align-full_width .ubermenu-row .ubermenu-target {
         color: var(--color-primary);

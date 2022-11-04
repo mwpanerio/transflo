@@ -15,6 +15,8 @@
     ];
 
     $brokers_list_posts = new WP_Query($brokers_list_args);
+    $brokers_list_posts_count = $brokers_list_posts->found_posts;
+
 ?>
 <section class="brokers-list section-padding hard-top">
     <div class="container">
@@ -34,15 +36,15 @@
                     <p>Filter by State</p>
                     <div class="form-col">
                         <select name="filter-by-state" id="filter-by-state">
-                            <option value="0">Select One</option>
+                            <option value="*">Select One</option>
                             <?php foreach($broker_states as $broker_state): ?>
-                            <option value="<?php echo esc_attr( $broker_state->term_id ); ?>"><?php echo esc_attr( $broker_state->name ); ?></option>
+                            <option value=".<?php echo esc_attr( $broker_state->slug ); ?>"><?php echo esc_attr( $broker_state->name ); ?></option>
                             <?php endforeach; ?>
                         </select>
                     </div>
                 </div>
                 <div class="brokers-list__upper__form__item">
-                    <button class="btn btn-primary">Go</button>
+                    <button class="btn btn-primary" id="js-search-broker">Go</button>
                 </div>
             </div>
         </div>
@@ -56,44 +58,58 @@
                         </button>
                         <div class="brokers-list__modal__upper">
                             <div class="brokers-list__modal__upper__inner">
+                                <?php foreach( get_the_terms(get_the_ID(), 'brokers_list_category') as $state ): ?>
                                 <span class="brokers-list__modal__location">
                                     <i class="icon-location"></i>
-                                    <span>NEW YORK</span>
+                                    <span><?php echo $state->name; ?></span>
                                 </span>
+                                <?php endforeach; ?>
                                 <h2 class="brokers-list__modal__title"><?php echo get_the_title(); ?></h2>
                             </div>
                         </div>
                         <div class="brokers-list__modal__left">
                             <div class="brokers-list__modal__image">
-                                <img src="/wp-content/uploads/2022/11/download-10.png" alt="">
+                                <?php 
+                                    if($logo_image = get_field('logo', get_the_ID())) {
+                                        echo fx_get_image_tag($logo_image);
+                                    } else {
+                                        echo fx_get_image_tag(get_field('brokers_list_placeholder_image', 'option'));
+                                    }
+                                ?>
                             </div>
-                            <a href="#" class="btn btn-tertiary">Visit Site</a>
+                            <?php if($button = get_field('site_link', get_the_ID())): ?>
+                                <a href="<?php echo $button['url']; ?>" class="btn btn-tertiary"<?php echo $button['target'] ? ' target="' . $button['target'] . '"': ''; ?>>Visit Site</a>
+                            <?php endif; ?>
                         </div>
                         <div class="brokers-list__modal__right">
                             <div class="brokers-list__modal__description">
-                                <p>A&Z Trucking provides hands-on, timely, customer-focused transportation services to customers located throughout the United States, Canada, and Europe.</p>
+                                <?php echo get_field('broker_description', get_the_ID()); ?>
                             </div>
                             <dl class="brokers-list__modal__info">
                                 <div>
                                     <dt>State</dt>
-                                    <dd>New York</dd>
+                                    <?php foreach( get_the_terms(get_the_ID(), 'brokers_list_category') as $state ): ?>
+                                    <dd><?php echo $state->name; ?></dd>
+                                    <?php endforeach; ?>
                                 </div>
+                                <?php while(have_rows('specs_information', get_the_ID())): the_row(); ?>
                                 <div>
                                     <dt>MC NUMBER</dt>
-                                    <dd>510449</dd>
+                                    <dd><?php echo get_sub_field('mc_number') ? get_sub_field('mc_number') : '-'; ?></dd>
                                 </div>
                                 <div>
                                     <dt>Broker ID</dt>
-                                    <dd>AZTDV</dd>
+                                    <dd><?php echo get_sub_field('broker_id') ? get_sub_field('broker_id') : '-'; ?></dd>
                                 </div>
                                 <div>
                                     <dt>Scan Fee</dt>
-                                    <dd>Free</dd>
+                                    <dd><?php echo get_sub_field('scan_fee') ? get_sub_field('scan_fee') : '-'; ?></dd>
                                 </div>
                                 <div>
                                     <dt>Mobile Enabled</dt>
-                                    <dd>NO</dd>
+                                    <dd><?php echo get_sub_field('mobile_enabled') ? get_sub_field('mobile_enabled') : '-'; ?></dd>
                                 </div>
+                                <?php endwhile; ?>
                             </dl>
                         </div>
                     </div>
@@ -102,7 +118,14 @@
             </div>
             <div class="brokers-list__list">
                 <?php while($brokers_list_posts->have_posts()): $brokers_list_posts->the_post(); setup_postdata($brokers_list_posts); ?>
-                <div class="brokers-list__item">
+                <?php
+                    $state_name = '';
+
+                    foreach( get_the_terms(get_the_ID(), 'brokers_list_category') as $state ) {
+                        $state_name = $state->slug;
+                    }
+                ?>
+                <div class="brokers-list__item <?php echo $state_name; ?>">
                     <article class="brokers-list__card js-broker-list-button" data-modal-target="#js-broker-list-modal-<?php echo get_the_ID(); ?>">
                         <div class="brokers-list__logo">
                             <?php 
@@ -128,6 +151,17 @@
                     </article>
                 </div>
                 <?php wp_reset_postdata(); endwhile; ?>
+            </div>
+            <div class="brokers-list__pagination">
+                <div class="brokers-list__pagination__text">
+                    <p>Showing <span class="showing-result"><?php echo $brokers_list_posts_count >= 9 ? '9' : $brokers_list_posts_count; ?></span> of <span class="total-result"><?php echo $brokers_list_posts_count; ?></span> Results</p>
+                </div>
+                <div class="brokers-list__pagination__wrapper">
+                    <div class="brokers-list__pagination__bar"></div>
+                </div>
+                <div class="brokers-list__pagination__button">
+                    <a id="load-more" class="btn btn-primary">Load More</a>
+                </div>
             </div>
         </div>
     </div>

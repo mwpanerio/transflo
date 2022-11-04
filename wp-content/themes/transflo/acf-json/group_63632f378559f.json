@@ -43,8 +43,8 @@
         },
         {
             "key": "field_63632f721cb64",
-            "label": "Description",
-            "name": "description",
+            "label": "Broker Description",
+            "name": "broker_description",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -187,5 +187,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667476846
+    "modified": 1667521748
 }

@@ -1,3 +1,29 @@
 /**
  * Add styling for 404 page here
  */
+
+ .search-404 input {
+    padding: 15px 60px 15px 25px;
+ }
+
+ .search-404 form {
+    position: relative;
+ }
+
+ .search-404 [type=submit] {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    background-color: transparent;
+    color: var(--color-primary);
+ }
+
+ .image-buttons {
+    margin-bottom: 30px;
+ }

@@ -347,6 +347,12 @@
     width: 100%;
 }
 
+@media (max-width: 1199px) {
+    .brokers-list__modal__left .btn {
+        margin-bottom: 20px;
+    }
+}
+
 .brokers-list__modal__upper {
     background-color: var(--color-primary);
     width: calc(100% + 44px);

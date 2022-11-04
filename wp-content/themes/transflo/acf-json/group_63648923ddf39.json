@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_63648931a5f78",
-            "label": "Message",
+            "label": "Description",
             "name": "",
             "type": "message",
             "instructions": "",
@@ -38,5 +38,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667533167
+    "modified": 1667534073
 }

@@ -158,6 +158,10 @@
 
 .brokers-list__logo {
     width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--color-white);
     border-radius: 15px;
     padding: 7px;
@@ -248,12 +252,44 @@
     display: none;
 }
 
+@media (max-width: 767px) {
+    .brokers-list__modal {
+        overflow: scroll;
+    }
+}
+
 .brokers-list__modal__image {
     padding: 16px;
     border-radius: 20px;
     margin-bottom: 30px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     background-color: var(--color-white);
+    width: 220px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .brokers-list__modal__image {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .brokers-list__modal__image {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+@media (max-width: 767px) {
+    .brokers-list__modal__image {
+        margin: -50px auto 30px;
+    }
 }
 
 .brokers-list__modal__image img {
@@ -263,26 +299,43 @@
 
 .brokers-list__modal__container {
     max-width: calc(872px + 44px);
-    padding: 0 22px;
+    padding: 30px 22px;
     display: none;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .brokers-list__modal__container {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        padding: 0 22px;
+    }
 }
 
 .brokers-list__modal__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 70px 50px;
     width: 100%;
+    padding: 0 22px 20px;
     border-radius: 30px;
     overflow: hidden;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     background-color: var(--color-white);
     position: relative;
+}
+
+@media (min-width: 768px) {
+    .brokers-list__modal__wrapper {
+        padding: 0 70px 50px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .brokers-list__modal__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 .brokers-list__modal__left,
@@ -294,10 +347,39 @@
     width: 100%;
 }
 
+.brokers-list__modal__upper {
+    background-color: var(--color-primary);
+    width: calc(100% + 44px);
+    margin-left: -22px;
+    margin-right: -22px;
+    padding: 50px 33px 70px;
+}
+
+@media (min-width: 768px) {
+    .brokers-list__modal__left {
+        width: 150px;
+        margin-top: -120px;
+    }
+
+    .brokers-list__modal__upper {
+        background-color: var(--color-primary);
+        width: calc(100% + 140px);
+        padding: 70px 0 50px;
+        margin-left: -70px;
+        margin-right: -70px;
+    }
+
+    .brokers-list__modal__upper__inner {
+        width: calc(100% - 200px);
+        padding-left: 50px;
+        margin-left: auto;
+    }
+}
+
 @media (min-width: 1200px) {
     .brokers-list__modal__left {
         width: 220px;
-        width: 220px;
+        margin-top: 0;
         top: -130px;
         position: relative;
     }
@@ -306,15 +388,6 @@
         width: calc(100% - 220px);
         padding-left: 50px;
         padding-top: 40px;
-    }
-
-    .brokers-list__modal__upper {
-        background-color: var(--color-primary);
-        width: calc(100% + 140px);
-        padding-top: 70px;
-        padding-bottom: 50px;
-        margin-left: -70px;
-        margin-right: -70px;
     }
 
     .brokers-list__modal__upper__inner {

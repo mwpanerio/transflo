@@ -278,6 +278,14 @@ function fx_theme_styles() {
             'src'       => $theme_url . '/assets/css/blocks/homepage/counter-block.css',
         ]
     );
+
+    fx_assets_add_stylesheet(
+        [
+            'handle'    => 'fx_image_button',
+            'src'       => $theme_url . '/assets/css/blocks/general/image-button.css',
+            'enqueue'   => is_404()
+        ]
+    );
     
     // TODO: remove if not using ninja tables.
     fx_assets_add_stylesheet(

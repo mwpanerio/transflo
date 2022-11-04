@@ -1185,10 +1185,6 @@ body:after {
 }
 
 @media (min-width: 1200px) {
-    .nav-primary .header-card a:hover {
-        background-color: #BCD2E6;
-    }
-
     .nav-primary .header-card a:hover .header-card__icon {
         color: var(--color-secondary);
     }

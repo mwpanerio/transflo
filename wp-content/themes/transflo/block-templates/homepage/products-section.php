@@ -28,7 +28,7 @@
                                     <?php echo fx_get_image_tag($image, 'object-fit'); ?>
                                 <?php endif; ?>
                             </div>
-                            <div class="products__descrition">
+                            <div class="products__description">
                                 <?php if($title = get_sub_field('title')): ?>
                                 <h3><?php echo $title; ?></h3>
                                 <?php endif; ?>

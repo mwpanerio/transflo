@@ -1,6 +1,6 @@
 
 .testimonials__top-content,
-.tab-blcok__top-content {
+.tab-block__top-content {
     padding-bottom: 30px;
     color: var(--color-text-default);
 }
@@ -207,7 +207,7 @@
     }
 
     .testimonials__top-content,
-    .tab-blcok__top-content {
+    .tab-block__top-content {
         padding-bottom: 40px;
     }
 

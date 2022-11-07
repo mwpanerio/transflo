@@ -157,55 +157,6 @@ var FX = ( function( FX, $ ) {
 				$('button.ubermenu-responsive-toggle').click();
 				$('.nav-primary').stop().slideToggle();
 			})
-
-			const $thisTimelineMax = new TimelineMax({ paused : true });
-			
-			$thisTimelineMax
-				.to('#js-masthead-tile-popup .image-buttons__popup__image', 0.6, {
-					'transform' : 'scaleY(1)',
-					ease: Power4.easeInOut
-				})
-				.to('#js-masthead-tile-popup .image-buttons__popup__image > span', 0.6, {
-					'transform' : 'scaleY(0)',
-					ease: Power4.easeInOut
-				}, '-=0.25')
-				.to('#js-masthead-tile-popup .image-buttons__popup__info h3', 0.6, {
-					'transform' : 'translateY(0)',
-					opacity: 1,
-					ease: Power4.easeInOut
-				}, '-=0.55')
-				.to('#js-masthead-tile-popup .image-buttons__popup__description', 0.6, {
-					'transform' : 'translateY(0)',
-					opacity: 1,
-					ease: Power4.easeInOut
-				}, '-=0.55')
-
-			$('.js-masthead-tiles').on('click', function() {
-				const $this = $(this);
-				const $thisImage = $this.find('.image-buttons__popup__image img').attr('src');
-				const $thisInfoTitle = $this.find('.image-buttons__popup__info h3').text();
-				const $thisInfoDescription = $this.find('.image-buttons__popup__description p').html();
-
-				$('#js-masthead-tile-popup').find('.image-buttons__popup__image img').attr('src', $thisImage);
-				$('#js-masthead-tile-popup').find('.image-buttons__popup__info h3 span').text($thisInfoTitle);
-				$('#js-masthead-tile-popup').find('.image-buttons__popup__description').html($thisInfoDescription);
-
-				$thisTimelineMax.progress(0).play();
-				$('#js-masthead-tile-popup').stop().slideDown();
-			})
-
-			$('#js-masthead-tile-popup .popup-cross').on('click', function () {
-				const $this = $(this);
-
-				$('#js-masthead-tile-popup').stop().slideUp(function() {
-					$thisTimelineMax.progress(0).reverse()
-					$('#js-masthead-tile-popup .image-buttons__popup__image').removeAttr('style')
-					$('#js-masthead-tile-popup .image-buttons__popup__image span').removeAttr('style')
-					$('#js-masthead-tile-popup .image-buttons__popup__image img').removeAttr('style')
-					$('#js-masthead-tile-popup .image-buttons__popup__info h3').removeAttr('style')
-					$('#js-masthead-tile-popup .image-buttons__popup__info p').removeAttr('style')
-				});
-			})
 			
 			/* ubermenu hack to force-show a Ubermenu submenu. Delete prior to launch */
 			// setInterval(function() {

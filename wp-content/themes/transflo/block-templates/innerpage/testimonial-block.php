@@ -13,7 +13,7 @@
         </div>
         
         <?php
-            $post__in = get_field('show_testimonial') == 'show-all' ? get_field('testimonial_to_posts') : array(); 
+            $post__in = get_field('show_testimonial') == 'choose-manually' ? get_field('testimonial_to_posts') : array(); 
             $args = array(
                 'post_type'      => 'testimonial',
                 's'              => $_GET['search-block'],

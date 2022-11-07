@@ -393,3 +393,17 @@ fx_register_block(
         'post_types'    => [],
     ]
 );
+
+fx_register_block(
+    [
+        'name'          => 'innerpage-testimonial-block',
+        'title'         => 'Innerpage - Testimonial Block',
+        'template'      => 'innerpage/testimonial-block.php',
+        'css'           => 'innerpage/testimonial-block.css',
+        'css_deps'      => [ 'fx_image_button' ],
+        'js'            => 'innerpage/testimonial-block.js',
+        'js_deps'       => [ 'jquery' ],
+        'category'      => 'fx-innerpage-blocks',
+        'post_types'    => [],
+    ]
+);

@@ -446,6 +446,7 @@ function fx_theme_scripts() {
         [
             'handle'        => 'fx_gsap',
             'src'           => $theme_url . '/assets/js/plugins/gsap.min.js',
+            'enqueue'       => !is_admin()
         ]
     );
 

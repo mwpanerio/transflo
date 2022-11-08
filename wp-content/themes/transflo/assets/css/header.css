@@ -1350,3 +1350,17 @@ body:after {
         min-width: 33.33%;
     }
 }
+
+.page-header .nav-primary .ubermenu-submenu.ubermenu-submenu-type-flyout > li {
+    padding: 0;
+}
+
+.page-header .nav-primary .ubermenu-submenu.ubermenu-submenu-type-flyout > li > a {
+    padding: 10px 22px;
+}
+
+@media (min-width: 1200px) {
+    .page-header .nav-primary .ubermenu-submenu.ubermenu-submenu-type-flyout {
+        width: 200px;
+    }
+}

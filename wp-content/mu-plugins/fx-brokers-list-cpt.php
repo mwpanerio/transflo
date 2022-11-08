@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Brokers List CPT
+Plugin Name: Broker List CPT
 Plugin URI: https://webfx.com/
 Description: Registers New Gallery post type
 Version: 1.0
@@ -12,8 +12,8 @@ function fx_brokers_list() {
     $labels = array(
         'name'               => _x( 'Broker List', 'post type general name' ),
         'singular_name'      => _x( 'Broker List', 'post type singular name' ),
-        'menu_name'          => _x( 'Brokers Lists', 'admin menu' ),
-        'name_admin_bar'     => _x( 'Brokers Lists', 'add new on admin bar' ),
+        'menu_name'          => _x( 'Broker Lists', 'admin menu' ),
+        'name_admin_bar'     => _x( 'Broker Lists', 'add new on admin bar' ),
         'add_new'            => _x( 'Add New', 'Broker List' ),
         'add_new_item'       => __( 'Add New Broker List ' ),
         'new_item'           => __( 'New Broker List' ),
@@ -52,17 +52,17 @@ function register_brokers_list_category() {
 
     // brand name
     $brokers_state_label = array(
-        'name'              => 'Brokers List State',
-        'singular_name'     => 'Brokers List State',
-        'search_items'      => 'Search Brokers List State',
-        'all_items'         => 'All Brokers List State',
-        'parent_item'       => 'Parent Brokers List State',
-        'parent_item_colon' => 'Parent Brokers List State:',
-        'edit_item'         => 'Edit Brokers List State',
-        'update_item'       => 'Update Brokers List State',
-        'add_new_item'      => 'Add New Brokers List State',
-        'new_item_name'     => 'New Brokers List State',
-        'menu_name'         => 'Brokers List State',
+        'name'              => 'Broker List State',
+        'singular_name'     => 'Broker List State',
+        'search_items'      => 'Search Broker List State',
+        'all_items'         => 'All Broker List State',
+        'parent_item'       => 'Parent Broker List State',
+        'parent_item_colon' => 'Parent Broker List State:',
+        'edit_item'         => 'Edit Broker List State',
+        'update_item'       => 'Update Broker List State',
+        'add_new_item'      => 'Add New Broker List State',
+        'new_item_name'     => 'New Broker List State',
+        'menu_name'         => 'Broker List State',
     );
     $brand_args = array(
         'hierarchical'      => true,

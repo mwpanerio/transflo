@@ -7,7 +7,7 @@
             "label": "Logo",
             "name": "logo",
             "type": "image",
-            "instructions": "",
+            "instructions": "Recommended Image Size : 220px x 220px",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -187,5 +187,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667521748
+    "modified": 1667877921
 }

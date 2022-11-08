@@ -208,6 +208,21 @@
     z-index: 2;
 }
 
+.brokers-list__arrow > span {
+    font-size: 18px;
+    font-family: 'avenir_next_lt_prodemi';
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    width: 200px;
+    text-align: right;
+    padding-right: 50px;
+    opacity: 0;
+    right: 30px;
+    transition: opacity 0.25s ease-in-out,
+                right 0.25s ease-in-out;
+}
+
 @media (min-width: 1200px) {
 
     .brokers-list__arrow {
@@ -234,6 +249,11 @@
         width: 100%;
         background: var(--color-secondary);
         border-radius: 0 0 20px 20px;
+    }
+
+    .brokers-list__card:hover .brokers-list__arrow > span {
+        right: 0;
+        opacity: 1;
     }
 
     .brokers-list__card:hover .brokers-list__arrow {

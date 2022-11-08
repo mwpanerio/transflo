@@ -264,7 +264,7 @@
 
 @media (min-width: 1200px) {
     .cards-flex {
-        display: block;
+        display: flex;
         margin-bottom: 30px;
     }
 }

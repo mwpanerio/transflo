@@ -161,6 +161,7 @@ img.logo {
         display: inline-block;
         height: auto;
         width: 100%;
+        background-position: center;
      }
     
   }
@@ -176,6 +177,7 @@ img.logo {
         display: inline-block;
         height: auto;
         width: 100%;
+        background-position: center;
      }
   }
 

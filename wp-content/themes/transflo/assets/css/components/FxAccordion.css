@@ -20,12 +20,19 @@
 }
 
 
-.fxa-accordion__panel.is-expanded .fxa-accordion__panel__toggle,
-.fxa-accordion__panel__toggle:hover,
-.fxa-accordion__panel__toggle:focus {
+.fxa-accordion__panel.is-expanded .fxa-accordion__panel__toggle {
     color: inherit;
     background: var(--color-white);
     text-decoration: none;
+}
+
+@media (min-width: 1200px) {
+    .fxa-accordion__panel__toggle:hover,
+    .fxa-accordion__panel__toggle:focus {
+        color: inherit;
+        background: var(--color-white);
+        text-decoration: none;
+    }
 }
 
 .fxa-accordion__panel.is-expanded .fxa-accordion__panel__toggle {

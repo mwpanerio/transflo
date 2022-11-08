@@ -11,13 +11,13 @@
             <?php echo $description; ?>
             <?php endif; ?>
         </div>
-        <div class="row cards-flex js-cards-slider">
+        <div class="row cards-flex js-cards-slider fx-slider">
             <?php
                 $posts_to_display = get_field('posts_to_display');
 
                 foreach($posts_to_display as $posts_to_display_item):
             ?>
-            <div class="col-sm-6 col-lg-4 card-item">
+            <div class="col-sm-6 col-lg-4 card-item fx-slide">
                 <a class="card card--link" href="<?php echo get_the_permalink($posts_to_display_item); ?>">
                     <div class="card__top">
                         <div class="card__img-wrap">

@@ -37,7 +37,7 @@ var FX = ( function( FX, $ ) {
 					  {
 						breakpoint: 1200,
 						settings: {
-							slidesToShow: 1,
+							slidesToShow: 2,
 							slidesToScroll: 1,
 							centerMode: true,
 							centerPadding: '90px',

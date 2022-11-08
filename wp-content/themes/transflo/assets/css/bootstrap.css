@@ -344,7 +344,6 @@ body {
 @media (min-width: 768px) {
     .row {
         --bs-gutter-x: 32px;
-        /* TODO: Update "32px" if a custom grid is specified in the 'Design Notes' of your build specs. Screenshot: https://webpagefx.mangoapps.com/msc/NzQxNjEzXzkxMTc3MTc */
     }
 
     .col-sm-auto {

@@ -8,7 +8,7 @@
             </div>
             <div class="image-buttons__popup__image">
                 <span></span>
-                <img src="/wp-content/themes/transflo/assets/img/image-button-img-05.png" alt="" class="object-fit">
+                <img src="" alt="">
             </div>
             <div class="image-buttons__popup__info">
                 <h3> <span>Factoring</span> <i class="icon-button-right"></i></h3>

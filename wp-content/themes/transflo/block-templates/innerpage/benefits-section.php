@@ -12,13 +12,13 @@
             <?php endif; ?>
         </div>
         <div class="benefits-section__row">
-            <div class="row flex-row js-benefits-slider">
+            <div class="row flex-row js-benefits-slider fx-slider">
                 <?php
                     $column_per_row = (int)get_field('benefits_column_per_row');
                     
                     while(have_rows('benefits_item')): the_row();
                 ?>
-                <div class="benefits-section__item col-xxs-12 col-sm-6 col-lg-<?php echo 12 / $column_per_row; ?>">
+                <div class="benefits-section__item col-xxs-12 col-sm-6 col-lg-<?php echo 12 / $column_per_row; ?> fx-slide">
                     <article class="benefits-section__card">
                         <div class="benefits-section__image">
                             <?php echo fx_get_image_tag(get_sub_field('image')); ?>

@@ -94,8 +94,10 @@
     padding-bottom: 6px;
 }
 
-.card-item a:hover {
-    text-decoration: none;
+@media (min-width: 1200px) {
+    .card-item a:hover {
+        text-decoration: none;
+    }
 }
 
 .card__icon span {

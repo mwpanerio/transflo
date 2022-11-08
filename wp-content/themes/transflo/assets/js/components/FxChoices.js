@@ -31,7 +31,6 @@
 
 class FxChoice {
 
-	// todo - support for additional parameters/settings (for now, add conditions with config)
     constructor( el, config = {} ) {
         this.el 		= el
 		this.config 	= this.parseConfig( config )
@@ -79,7 +78,6 @@ class FxChoice {
         if( 'cat' === self.el.id ) {
             self.el.onchange = null
 
-			// todo — this.choices.passedElement.element is same as self.el (double-check)
             self.choices.passedElement.element.addEventListener( 'change', e => {
 				const form = e.target.form
 

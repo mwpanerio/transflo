@@ -72,9 +72,9 @@ var FX = ( function( FX, $ ) {
 
                 //when no more to load, hide show more button
                 if (hiddenElems.length == 0) {
-                    $("#load-more").addClass('is-disabled');
+                    $("#load-more").hide();
                 } else {
-                    $("#load-more").removeClass('is-disabled');
+                    $("#load-more").show();
                 };
 
                 setTimeout(function() {
@@ -82,7 +82,7 @@ var FX = ( function( FX, $ ) {
                     var $totalcount = $('.brokers-list__item:visible').length;
 
                     var $totality = $totalcount / $total;
-                    var $progwidth = $totality * 100;
+                    var $progwidth = $total == 0 ? 100 : $totality * 100;
 
                     $('.brokers-list__pagination__bar').width($progwidth + "%");
 
@@ -103,13 +103,17 @@ var FX = ( function( FX, $ ) {
                 }
             });
 
-            $('#js-search-broker').on('click', function() {
+            $('.brokers-list__upper__form').submit(function(e) {
+                e.preventDefault();
+
                 qsRegex = new RegExp( $('#search-by-name').val(), 'gi' );
                 buttonFilter = $('#filter-by-state').val();
                 $container.isotope();
 
                 loadMore(initShow);
-            })
+
+                return false;
+            });
         }
 	}
 

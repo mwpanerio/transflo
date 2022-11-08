@@ -24,7 +24,7 @@
             <div class="brokers-list__upper__title">
                 <h2 class="h1">Search for a Broker</h2>
             </div>
-            <div class="brokers-list__upper__form">
+            <form class="brokers-list__upper__form">
                 <div class="brokers-list__upper__form__item">
                     <p>Search by Name</p>
                     <div class="form-col">
@@ -44,9 +44,9 @@
                     </div>
                 </div>
                 <div class="brokers-list__upper__form__item">
-                    <button class="btn btn-primary" id="js-search-broker">Go</button>
+                    <button class="btn btn-primary" type="submit" id="js-search-broker">Go</button>
                 </div>
-            </div>
+            </form>
         </div>
         <div class="brokers-list__container">
             <div class="brokers-list__modal">
@@ -146,6 +146,7 @@
                             <h3><?php echo get_the_title(); ?></h3>
                         </div>
                         <div class="brokers-list__arrow">
+                            <span>Learn More</span>
                             <i class="icon-button-right"></i>
                         </div>
                     </article>

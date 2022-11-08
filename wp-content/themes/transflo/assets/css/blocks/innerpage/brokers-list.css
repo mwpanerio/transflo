@@ -365,11 +365,12 @@
 
 .brokers-list__modal__left .btn {
     width: 100%;
+    margin-bottom: 20px
 }
 
-@media (max-width: 1199px) {
+@media (min-width: 1200px) {
     .brokers-list__modal__left .btn {
-        margin-bottom: 20px;
+        margin-bottom: 0;
     }
 }
 

@@ -92,7 +92,7 @@ progress::-webkit-progress-bar {
 progress::-webkit-progress-value {
     transition: all 0.3s ease-in-out;
     border-radius: 10px;
-    background-color: var(--color-secondary); /* TODO: Please add a branded background color for progress bar value */
+    background-color: var(--color-secondary);
 }
 
 /* Loading Indicator */

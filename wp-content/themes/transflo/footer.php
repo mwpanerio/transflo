@@ -73,7 +73,9 @@
                     </div>
                 </div>
             </div>
-            <div class="fixed-item hidden-md-down"><img src="/wp-content/themes/transflo/assets/img/fixed-item.png" alt="" class="img-responsive"></div>
+            <div class="fixed-item hidden">
+                <?php echo fx_get_image_tag(500); ?>
+            </div>
         </footer>
 
         <?php wp_footer(); ?>

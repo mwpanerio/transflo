@@ -53,18 +53,18 @@ img.alignright,
 .wp-caption.alignright,
 img.alignleft,
 .wp-caption.alignleft {
-    height: 208px;
+    height: auto;
     width: 100%;
     box-shadow: 0 0 20px rgba(0,0,0,0.10);
     border-radius: 20px;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   img.alignright,
   .wp-caption.alignright,
   img.alignleft,
   .wp-caption.alignleft {
-    height: auto;
+    height: 208px;
   }
 }
 
@@ -496,12 +496,12 @@ blockquote {
   left: 0;
   right: 0;
   margin: 0 auto;
-  bottom: 9.5px;
+  bottom: 6px;
 }
 
-@media (max-width: 1199px) {
+@media (min-width: 1200px) {
   .blockquote__icon {
-    bottom: 6px;
+    bottom: 9.5px;
   }
 }
 
@@ -574,14 +574,6 @@ blockquote {
     COMPONENTS
 \*------------------------------------*/
 
-
-
-
-/**
- * Utility Margin/Padding Classes
- *
- * TODO: Update the --margins variable in custom-properties.css to match prototypes margins 
- */
 
 /* Used on outer-most section container so section margins collapse */
 .section-margins {
@@ -1140,7 +1132,6 @@ button::-moz-focus-inner,
         position: -webkit-sticky;
         position: sticky;
         top: 125px;
-        /* TODO: update to match how far down page when sidebar should stick */
     }
 }
 

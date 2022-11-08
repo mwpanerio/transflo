@@ -72,7 +72,7 @@ var FX = ( function( FX, $ ) {
 		},
 
 		maybeShowButton() {
-			if( $( window ).scrollTop() > 100 ) { // TODO: Update "100" for how far down page to show button
+			if( $( window ).scrollTop() > 100 ) {
 				this.$btn.removeClass( 'hide' );
 			} else {
 				this.$btn.addClass( 'hide' );
@@ -157,13 +157,6 @@ var FX = ( function( FX, $ ) {
 				$('button.ubermenu-responsive-toggle').click();
 				$('.nav-primary').stop().slideToggle();
 			})
-			
-			/* ubermenu hack to force-show a Ubermenu submenu. Delete prior to launch */
-			// setInterval(function() {
-				// 	$('#menu-item-306').addClass('ubermenu-active');
-				// }, 1000 );
-				
-				// TODO: Add additional small scripts below
 		},
 
 
@@ -430,7 +423,7 @@ var FX = ( function( FX, $ ) {
 
 		scrollToSmooth( target ) {
 			var $target = $( target ),
-				headerHeight = 0 // TODO: if using sticky header change to $('#page-header').outerHeight(true)
+				headerHeight = 0;
 			
 			$target = ( $target.length ) ? $target : $( this.hash );
 

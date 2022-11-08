@@ -61,6 +61,8 @@
     text-align: center;
     font-weight: normal;
     position: relative;
+    width: 50px;
+    height: 50px;
 }
 
 .toggle-menu > span {
@@ -148,6 +150,35 @@ img.logo {
     background-image: none;
 }
 
+@media (-webkit-min-device-pixel-ratio: 2) and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), (-webkit-min-device-pixel-ratio: 2) and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) and (max-width: 1024px) { 
+	
+    .logo a img { opacity: 0; }
+  
+    .logo a {
+        background: url('/wp-content/uploads/2022/11/logo-transflo-high-res.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
+        height: auto;
+        width: 100%;
+     }
+    
+  }
+  
+  /* iPhone 12 & 13 */
+  @media (-webkit-min-device-pixel-ratio: 3) and (max-width: 1024px) {
+    .logo a img { opacity: 0; }
+  
+    .logo a {
+        background: url('/wp-content/uploads/2022/11/logo-transflo-high-res.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
+        height: auto;
+        width: 100%;
+     }
+  }
+
 .header-right {
     float: right;
 }
@@ -185,9 +216,19 @@ img.logo {
     display: none;
 }
 
-@media (max-width: 768px) {
+.desktop-menu__search .container {
+    padding-left: 0;
+}
+
+@media (min-width: 768px) {
     .desktop-menu__search .container {
-        padding-left: 0;
+        padding-left: var(--bs-gutter-x, 52px);
+    }
+}
+
+@media (min-width: 1200px) {
+    .desktop-menu__search .container {
+        padding-left: var(--bs-gutter-x, 16px);
     }
 }
 
@@ -377,13 +418,6 @@ img.logo {
         width: 40%;
     }
     
-}
-
-
-@media (-webkit-min-device-pixel-ratio: 2) and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) and (max-width: 1024px) {
-
-	/* TODO: Add Retina-specific logo here - see instructions https://webpagefx.mangoapps.com/mlink/wiki/NjA3Nzg */
-
 }
 
 /**
@@ -656,6 +690,10 @@ img.logo {
         top: 90px;
         width: 100%;
     }
+
+    .admin-bar .nav-primary {
+        top: 122px;   
+    }
 }
 
 @media screen and (max-width: 782px) {
@@ -728,8 +766,8 @@ img.logo {
 @media (max-width: 767px) {
     .nav-primary {
         top: auto;
-        bottom: 60px;
-        height: calc(100% - 60px);
+        bottom: 66px;
+        height: calc(100% - 66px);
         background-color: var(--color-offwhite);
     }
 
@@ -750,11 +788,6 @@ img.logo {
         max-height: calc(100% - 60px) !important;
         overflow: scroll !important;
     }
-}
-
-/* controls sticky bar menu icon and overlay on mobile */
-.sticky-bar .menu-is-active .fa-bars:before {
-    content: 'X'; /* TODO: change this to be an icon from the icon font on the site */
 }
 
 body:after {
@@ -779,7 +812,6 @@ body:after {
 @media screen and (width: 375px) and (height: 813px) {
 	
 	.sticky-bar {
-		/* ^ TODO: change classname to match mobile sticky bar class */
 		
 		/* prevents 'home indicator' overlap */
 		padding-bottom: 34px; 

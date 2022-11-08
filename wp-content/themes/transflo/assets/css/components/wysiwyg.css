@@ -146,9 +146,13 @@
     transition: 0.2s ease-in-out;
 }
 
-@media (max-width: 767px) {
+.table-scroll {
+    padding: 0 20px;
+}
+
+@media (min-width: 768px) {
     .table-scroll {
-        padding: 0 20px;
+        padding: 0;
     }
 }
 

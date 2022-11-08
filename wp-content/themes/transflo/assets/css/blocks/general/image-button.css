@@ -116,10 +116,6 @@
         align-items: center;
         justify-content: center;
     }
-
-    .image-buttons .row {
-        margin-bottom: -30px;
-    }
     
     .image-button-item {
         margin-bottom: 30px;
@@ -156,6 +152,10 @@
         height: 64px;
         transition: all ease-in-out 0.2s;
         background-color: transparent;
+    }
+
+    .image-buttons .row {
+        margin-bottom: -30px;
     }
     
     .image-button-item {

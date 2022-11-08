@@ -185,6 +185,7 @@
     .form-block__cta__title {
         padding-right: 25px;
         text-align: left;
+        margin-bottom: 0;
     }
 }
 

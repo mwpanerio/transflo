@@ -73,7 +73,7 @@
                     </div>
                 </div>
             </div>
-            <div class="fixed-item hidden">
+            <div class="fixed-item hidden-md-down">
                 <?php echo fx_get_image_tag(500); ?>
             </div>
         </footer>

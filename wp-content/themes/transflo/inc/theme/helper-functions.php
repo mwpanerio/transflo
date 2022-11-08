@@ -279,7 +279,7 @@ add_filter( 'wpcf7_autop_or_not', '__return_false' );
 //include CF7 scripts for 
 add_filter('fx_bam_include_cf7_scripts', 'fx_include_cf7_on_frontpage' );
 function fx_include_cf7_on_frontpage( $include_cf7 ) {
-    if ( has_block('acf/innerpage-half-image-form') || has_block('acf/innerpage-subscribe-section') || is_archive() || is_home()) {
+    if ( has_block('acf/innerpage-half-image-form') || has_block('acf/innerpage-subscribe-section') || has_block('acf/innerpage-forms-block') || is_archive() || is_home()) {
         $include_cf7 = true;
     }
     

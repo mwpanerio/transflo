@@ -407,3 +407,17 @@ fx_register_block(
         'post_types'    => [],
     ]
 );
+
+fx_register_block(
+    [
+        'name'          => 'innerpage-forms-block',
+        'title'         => 'Innerpage - Forms Block',
+        'template'      => 'innerpage/forms-block.php',
+        'css'           => 'innerpage/forms-block.css',
+        'css_deps'      => [ 'fx_image_button' ],
+        'js'            => 'innerpage/forms-block.js',
+        'js_deps'       => [ 'jquery' ],
+        'category'      => 'fx-innerpage-blocks',
+        'post_types'    => [],
+    ]
+);

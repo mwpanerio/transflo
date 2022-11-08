@@ -311,6 +311,7 @@
     display: inline-block;
     vertical-align: middle;
     padding: 0;
+    margin-bottom: 0;
 }
 
 .product__feed li:not(:last-child) {

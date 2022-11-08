@@ -163,12 +163,12 @@ var FX = ( function( FX, $ ) {
 			$('.js-masthead-tiles').on('click', function() {
 				const $this = $(this);
 				const $thisImage = $this.find('.image-buttons__popup__image img').attr('src');
-				const $thisInfoTitle = $this.find('.image-buttons__popup__info h3').text();
+				const $thisInfoTitle = $this.find('.image-buttons__popup__info').html();
 				const $thisInfoDescription = $this.find('.image-buttons__popup__description p').html();
 
 				$('#js-masthead-tile-popup').find('.image-buttons__popup__image img').attr('src', $thisImage);
-				$('#js-masthead-tile-popup').find('.image-buttons__popup__info h3 span').text($thisInfoTitle);
-				$('#js-masthead-tile-popup').find('.image-buttons__popup__description').html($thisInfoDescription);
+				$('#js-masthead-tile-popup').find('.image-buttons__popup__info').html($thisInfoTitle);
+				// $('#js-masthead-tile-popup').find('.image-buttons__popup__description').html($thisInfoDescription);
 
 				$thisTimelineMax.progress(0).play();
 				$('#js-masthead-tile-popup').stop().slideDown();

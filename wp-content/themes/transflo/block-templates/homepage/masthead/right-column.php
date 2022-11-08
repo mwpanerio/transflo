@@ -36,7 +36,9 @@
                             <?php echo fx_get_image_tag(get_sub_field('image'), 'object-fit'); ?>
                         </div>
                         <div class="image-buttons__popup__info">
-                            <h3><?php echo get_sub_field('title'); ?> <i class="icon-button-right"></i></h3>
+                            <a href="<?php echo get_sub_field('link')['url']; ?>"<?php echo get_sub_field('link')['target'] ? ' target="' . get_sub_field('link')['target'] . '"': ''; ?>>
+                                <h3><?php echo get_sub_field('title'); ?> <i class="icon-button-right"></i></h3>
+                            </a>
                             <p><?php echo get_sub_field('description'); ?></p>
                         </div>
                     </div>

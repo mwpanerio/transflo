@@ -593,7 +593,6 @@
     position: relative;
 }
 
-.image-buttons__popup__wrapper .image-buttons__popup__info h3,
 .image-buttons__popup__wrapper .image-buttons__popup__description {
     position: relative;
     transform: translateY(50px);

@@ -146,7 +146,7 @@ var FX = ( function( FX, $ ) {
 			// nav search toggle
 			$('.js-search-toggle').on('click', () => {
 				$('.desktop-menu__phone, .js-search-toggle').toggleClass('js-search-active');
-				$('.desktop-menu__search').stop().fadeToggle();
+				$('.desktop-menu__search').stop().fadeToggle().toggleClass('is-shown');
                 $('.desktop-menu__search input[name="s"]').focus();
 			});
 

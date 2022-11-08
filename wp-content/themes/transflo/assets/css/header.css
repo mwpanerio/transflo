@@ -216,6 +216,12 @@ img.logo {
     top: 100%;
     width: 100%;
     display: none;
+    transform: translateX(100px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.desktop-menu__search.is-shown {
+    transform: translateX(0);
 }
 
 .desktop-menu__search .container {

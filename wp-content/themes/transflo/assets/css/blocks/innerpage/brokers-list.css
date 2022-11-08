@@ -271,11 +271,12 @@
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 9999;
     display: none;
+    overflow: scroll;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 768px) {
     .brokers-list__modal {
-        overflow: scroll;
+        overflow: hidden;
     }
 }
 
@@ -290,6 +291,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: -50px auto 30px;
 }
 
 @media (min-width: 768px) {
@@ -307,9 +309,9 @@
     }
 }
 
-@media (max-width: 767px) {
+@media (min-width: 768px) {
     .brokers-list__modal__image {
-        margin: -50px auto 30px;
+        margin: 0;
     }
 }
 

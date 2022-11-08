@@ -460,6 +460,7 @@
 .image-buttons__popup__image img {
     display: block;
     border-radius: 10px;
+    height: auto;
 }
 
 .image-buttons__popup__info {

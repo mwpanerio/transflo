@@ -157,6 +157,18 @@ var FX = ( function( FX, $ ) {
 				$('button.ubermenu-responsive-toggle').click();
 				$('.nav-primary').stop().slideToggle();
 			})
+
+			if($('#js-masthead-sticky').length > 0) {
+				const controller = new ScrollMagic.Controller({});
+
+				new ScrollMagic.Scene({
+					triggerElement: "#js-masthead-innerpage",
+					triggerHook : "onLeave",
+					offset: $('#js-masthead-innerpage').outerHeight() - $('.page-header').outerHeight()
+				})
+					.setClassToggle("#js-masthead-sticky", "is-sticky")
+					.addTo(controller);
+			}
 		},
 
 

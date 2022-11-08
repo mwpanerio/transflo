@@ -473,6 +473,14 @@ function fx_theme_scripts() {
             'src'           => $theme_url . '/assets/js/plugins/isotope.min.js'
         ]
     );
+
+    fx_assets_add_script(
+        [
+            'handle'        => 'fx_scrollmagic',
+            'src'           => $theme_url . '/assets/js/plugins/ScrollMagic.min.js',
+            'enqueue'       => ( is_home() || is_archive() )
+        ]
+    );
     
     
     /**

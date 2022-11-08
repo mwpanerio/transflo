@@ -301,21 +301,40 @@
 }
 
 
+.product__feed {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
 
+.product__feed li {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+}
 
+.product__feed li:not(:last-child) {
+    margin-right: 10px;
+}
 
+.product__feed li:before {
+    display: none;
+}
 
+.product__feed li a {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: var(--color-primary);
+    display: block;
+    background-image: none;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-offwhite);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.product__feed li a:hover {
+    background-image: none;
+}

@@ -421,3 +421,17 @@ fx_register_block(
         'post_types'    => [],
     ]
 );
+
+fx_register_block(
+    [
+        'name'          => 'innerpage-feed-block',
+        'title'         => 'Innerpage - Feed Block',
+        'template'      => 'innerpage/feed-block.php',
+        'css'           => 'homepage/products.css',
+        'css_deps'      => [ 'fx_slick' ],
+        'js'            => 'homepage/products-slider.js',
+        'js_deps'       => [ 'fx_slick' ],
+        'category'      => 'fx-innerpage-blocks',
+        'post_types'    => [],
+    ]
+);

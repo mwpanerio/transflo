@@ -1216,13 +1216,15 @@ button::-moz-focus-inner,
   border-radius: 20px;
 }
 
-.mfp-iframe:hover .media-gallery__item-video__icon:before,
-.mfp-iframe:hover .media-gallery__item-video__icon:after {
-    animation: pulse 1.15s ease-in-out infinite;
-}
+@media (min-width: 1200px) {
+  .mfp-iframe:hover .media-gallery__item-video__icon:before,
+  .mfp-iframe:hover .media-gallery__item-video__icon:after {
+      animation: pulse 1.15s ease-in-out infinite;
+  }
 
-.mfp-iframe:hover .media-gallery__item-video__icon:after {
-    animation-delay: 0.25s;
+  .mfp-iframe:hover .media-gallery__item-video__icon:after {
+      animation-delay: 0.25s;
+  }
 }
 
 .media-gallery__item-video__icon {

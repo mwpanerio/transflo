@@ -103,9 +103,11 @@
     background-color: #EFF2F4;
 }
 
-.js-products-slider .slick-arrow:hover,
-.js-products-slider .slick-arrow:focus {
-    background-color: #2474BB;
+@media (min-width: 1200px) {
+    .js-products-slider .slick-arrow:hover,
+    .js-products-slider .slick-arrow:focus {
+        background-color: #2474BB;
+    }
 }
 
 .js-products-slider .slick-arrow::before {
@@ -336,6 +338,8 @@
     color: var(--color-offwhite);
 }
 
-.product__feed li a:hover {
-    background-image: none;
+@media (min-width: 1200px) {
+    .product__feed li a:hover {
+        background-image: none;
+    }
 }

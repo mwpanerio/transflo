@@ -116,12 +116,11 @@ Guru: https://app.getguru.com/card/ixR67EpT/Slick-Slider
     right: 0;
 }
 
-.slick-arrow:hover,
-.slick-arrow:focus {
-    border: 1px solid #2474BB;
-    color: var(--color-white);
-    background-color: #2474BB;
+@media (min-width: 1200px) {
+    .slick-arrow:hover,
+    .slick-arrow:focus {
+        border: 1px solid #2474BB;
+        color: var(--color-white);
+        background-color: #2474BB;
+    }
 }
-
-
-

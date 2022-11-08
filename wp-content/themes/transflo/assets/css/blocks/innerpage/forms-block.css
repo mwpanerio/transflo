@@ -1,0 +1,323 @@
+.form-blocks__inner {
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.form-blocks__inner h4,
+.form-blocks__inner h4 {
+    font-size: 22px;
+}
+
+@media (min-width: 768px) {
+    .form-blocks__inner h4,
+    .form-blocks__inner h4 {
+        font-size: 26px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .form-blocks__inner h4,
+    .form-blocks__inner h4 {
+        font-size: 30px;
+    }
+}
+
+.forms-block__locations {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.forms-block__locations img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.form-block__demo {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+.form-block__demo__item {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 0 10px;
+}
+
+@media (min-width: 768px) {
+    .form-block__demo {
+        margin: 0 -10px;
+    }
+
+    .form-block__demo__item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .form-block__demo__item {
+        width: 50%;
+    }
+}
+
+.form-block__demo__card {
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: var(--color-offwhite);
+    align-items: center;
+    padding: 10px 15px 10px 10px;
+    text-decoration: none;
+    box-shadow: none;;
+    background-image: none;
+    transition: background 0.25s ease-in-out;
+}
+
+@media (min-width: 1200px) {
+    .form-block__demo__card:hover {
+        background-image: none;
+        background-color: var(--color-primary);
+    }
+
+    .form-block__demo__card:hover .form-block__demo__title p,
+    .form-block__demo__card:hover .form-block__demo__title p i {
+        color: var(--color-white);
+    }
+}
+
+.form-block__demo__image {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.form-block__demo__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.form-block__demo__title {
+    padding-left: 20px;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    flex: 1;
+}
+
+.form-block__demo__title p {
+    font-size: 18px;
+    font-family: 'avenir_next_lt_probold';
+    margin: 0;
+    padding: 0;
+    color: var(--color-black);
+    text-transform: uppercase;
+    position: relative;
+    padding-right: 30px;
+    transition: color 0.25s ease-in-out;
+}
+
+.form-block__demo__title p i {
+    color: var(--color-primary);
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    transition: color 0.25s ease-in-out;
+}
+
+.form-block__text-with-icon {
+    position: relative;
+    padding-left: 26px;
+    font-size: 17px;
+    margin-right: -20px;
+}
+
+.form-block__text-with-icon i {
+    font-size: 16px;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    color: var(--color-tertiary);
+}
+
+.form-block__text-with-icon i svg {
+    width: 16px;
+    height: 16px;
+}
+
+.form-block__cta {
+    margin-top: 60px;
+    border-radius: 20px;
+    padding: 30px 20px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .form-block__cta {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 47px 81px;
+    }
+}
+
+.form-block__cta__title {
+    flex: 1;
+    padding-right: 25px;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .form-block__cta__title {
+        padding-right: 25px;
+        text-align: left;
+    }
+}
+
+.form-block__cta__title h3 {
+    padding: 0;
+    margin: 0;
+}
+
+.form-block__cta i {
+    font-size: 150px;
+    color: var(--color-tertiary);
+    opacity: 0.08;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+
+@media (min-width: 768px) {
+    .form-block__cta i {
+        top: 0;
+        transform: none;
+    }
+}
+
+.form-block__demo__modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    z-index: 999;
+}
+
+.form-block__demo__modal__container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-block__demo__modal__inner {
+    padding: 30px;
+    background-color: var(--color-white);
+    border-radius: 20px;
+    max-width: 872px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.form-block__demo__modal__close {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 20px 0 20px;
+    background-color: var(--color-tertiary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.form-block__demo__modal__close > span {
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: relative;
+}
+
+.form-block__demo__modal__close > span:before,
+.form-block__demo__modal__close > span:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-white);
+    transition: transform 0.3s ease-in-out;
+}
+
+.form-block__demo__modal__close > span:before {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.form-block__demo__modal__close > span:after {
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+@media (min-width: 1024px) {
+    .form-block__demo__modal__close:hover > span:before,
+    .form-block__demo__modal__close:hover > span:after {
+        transform: translateY(-50%) rotate(0deg);
+    }
+}
+
+.form-block__demo__modal__title {
+    text-align: center;
+    padding-bottom: 0;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.forms-block__row__item {
+    margin-bottom: 40px;
+}
+
+@media (min-width: 769px) and (max-width: 1199px) {
+    .forms-block__row__item:first-child {
+        order: 1;
+    }
+
+    .forms-block__row__item:nth-child(2) {
+        order: 3;
+        width: 100%;
+    }
+
+    .forms-block__row__item:nth-child(3) {
+        order: 2;
+        width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .forms-block__row__item,
+    .forms-block__row__item:not(:last-child) {
+        margin-bottom: 0;
+    }
+}

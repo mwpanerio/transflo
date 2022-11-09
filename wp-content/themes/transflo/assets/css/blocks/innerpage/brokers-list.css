@@ -298,6 +298,7 @@
     .brokers-list__modal__image {
         width: 150px;
         height: 150px;
+        margin-bottom: 20px;
     }
 }
 
@@ -337,6 +338,7 @@
         right: 0;
         margin: 0 auto;
         padding: 0 22px;
+        height: auto;
     }
 }
 
@@ -355,6 +357,7 @@
 @media (min-width: 768px) {
     .brokers-list__modal__wrapper {
         padding: 0 70px 50px;
+        height: auto;
     }
 }
 
@@ -372,7 +375,8 @@
 
 .brokers-list__modal__left .btn {
     width: 100%;
-    margin-bottom: 20px
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 @media (min-width: 1200px) {

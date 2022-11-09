@@ -97,10 +97,6 @@ var FX = ( function( FX, $ ) {
 
                 counter = counter + initShow;
                 loadMore(counter);
-
-                if($(".brokers-list__item:hidden").length == 0) {
-                    $("#load-more").addClass('is-disabled');
-                }
             });
 
             $('.brokers-list__upper__form').submit(function(e) {

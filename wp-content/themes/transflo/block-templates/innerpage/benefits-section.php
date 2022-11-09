@@ -12,7 +12,7 @@
             <?php endif; ?>
         </div>
         <div class="benefits-section__row">
-            <div class="row flex-row js-benefits-slider fx-slider">
+            <div class="row flex-row js-benefits-slider fx-slider" data-benefits-slider="<?php echo $column_per_row; ?>">
                 <?php
                     $column_per_row = (int)get_field('benefits_column_per_row');
                     

@@ -10,12 +10,14 @@ var FX = ( function( FX, $ ) {
 		init() {
 			$('.js-benefits-slider').each(function() {
 				const $this = $(this);
+				const $slidesToShow = parseFloat($this.attr('data-benefits-slider'));
 
 				$this.slick( {
 					infinite: false,
 					speed: 700,
-					slidesToShow: 3,
+					slidesToShow: $slidesToShow,
 					slidesToScroll: 1,
+					arrows: true,
 					responsive: [
 						{
 							breakpoint: 9999,

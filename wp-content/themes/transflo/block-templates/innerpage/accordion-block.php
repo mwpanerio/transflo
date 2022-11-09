@@ -1,4 +1,4 @@
-<section class="accordion-block section-padding">
+<section class="accordion-block section-padding <?php echo get_field('background_type'); ?>">
     <div class="container">
         <div class="accordion-block__upper">
             <?php if($subheading = get_field('subheading')): ?>

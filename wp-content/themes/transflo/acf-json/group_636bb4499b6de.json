@@ -3,6 +3,31 @@
     "title": "[Block] Innerpage - Accordion Block",
     "fields": [
         {
+            "key": "field_636bb7ce54387",
+            "label": "Background Type",
+            "name": "background_type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "bg-white": "White Background",
+                "bg-gray": "Gray Background"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_636bb45841d87",
             "label": "Subheading",
             "name": "subheading",
@@ -137,5 +162,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1668002945
+    "modified": 1668003818
 }

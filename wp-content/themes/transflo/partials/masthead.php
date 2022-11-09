@@ -43,11 +43,13 @@
             <?php else : ?>
                 <h1><?php the_title(); ?></h1>
             <?php endif; ?>
-            <?php if($masthead_description = get_field('description', $post_id)): ?>
-                <?php echo $masthead_description; ?>
-            <?php endif; ?>
-            <?php if(is_404()): ?>
-                <?php echo get_field('masthead_description', 'option'); ?>
+            <?php if ( !is_search() ): ?>
+                <?php if($masthead_description = get_field('description', $post_id)): ?>
+                    <?php echo $masthead_description; ?>
+                <?php endif; ?>
+                <?php if(is_404()): ?>
+                    <?php echo get_field('masthead_description', 'option'); ?>
+                <?php endif; ?>
             <?php endif; ?>
 
             <?php if(is_home() || is_archive()): ?>
@@ -87,18 +89,20 @@
         </div>
     </div>
     <div class="right-image hidden-md-down">
-        <?php if($catch_image = get_field('catch_image', $post_id)): ?>
-        <div class="right-image-wrapper">
-            <?php echo fx_get_image_tag($catch_image, 'object-fit'); ?>
-        </div>
-        <?php elseif(is_singular()): ?>
+        <?php if ( !is_search() ): ?>
+            <?php if($catch_image = get_field('catch_image', $post_id)): ?>
             <div class="right-image-wrapper">
-                <?php echo fx_get_image_tag(get_field('featured_image'), 'object-fit'); ?>
+                <?php echo fx_get_image_tag($catch_image, 'object-fit'); ?>
             </div>
-        <?php elseif(is_404()): ?>
-            <div class="right-image-wrapper">
-                <?php echo fx_get_image_tag(get_field('404_masthead_catch_image', 'option'), 'object-fit'); ?>
-            </div>
+            <?php elseif(is_singular()): ?>
+                <div class="right-image-wrapper">
+                    <?php echo fx_get_image_tag(get_field('featured_image'), 'object-fit'); ?>
+                </div>
+            <?php elseif(is_404()): ?>
+                <div class="right-image-wrapper">
+                    <?php echo fx_get_image_tag(get_field('404_masthead_catch_image', 'option'), 'object-fit'); ?>
+                </div>
+            <?php endif; ?>
         <?php endif; ?>
     </div>
 </section>

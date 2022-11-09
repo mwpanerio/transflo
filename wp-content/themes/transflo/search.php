@@ -26,7 +26,9 @@
     }
 ?>
 
-<section class="section-margins">
+<?php get_template_part('partials/masthead'); ?>
+
+<section class="section-padding">
 	<div class="container">
 		<div class="row">
 			<div class="col-xxs-12">

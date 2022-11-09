@@ -435,3 +435,16 @@ fx_register_block(
         'post_types'    => [],
     ]
 );
+
+fx_register_block(
+    [
+        'name'          => 'innerpage-accordion-block',
+        'title'         => 'Innerpage - Accordion Block',
+        'template'      => 'innerpage/accordion-block.php',
+        'css'           => 'innerpage/accordion-block.css',
+        'js'            => 'innerpage/accordion-block.js',
+        'js_deps'       => [ 'jquery' ],
+        'category'      => 'fx-innerpage-blocks',
+        'post_types'    => [],
+    ]
+);

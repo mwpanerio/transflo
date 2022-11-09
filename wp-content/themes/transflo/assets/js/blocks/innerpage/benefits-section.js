@@ -17,6 +17,7 @@ var FX = ( function( FX, $ ) {
 					speed: 700,
 					slidesToShow: $slidesToShow,
 					slidesToScroll: 1,
+					infinite: true,
 					arrows: true,
 					responsive: [
 						{

@@ -349,8 +349,7 @@ function fx_theme_scripts() {
             'handle'        => 'fx_masthead_slider_2',
             'src'           => $theme_url . '/assets/js/blocks/homepage/masthead-slider2.js',
             'dependencies'  => [ 'fx_slick' ],
-            'minify'        => false,
-            'defer'         => false,
+            'defer'         => true,
         ]
     );   
 

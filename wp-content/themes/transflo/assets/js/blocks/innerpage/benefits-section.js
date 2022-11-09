@@ -20,10 +20,6 @@ var FX = ( function( FX, $ ) {
 					arrows: true,
 					responsive: [
 						{
-							breakpoint: 9999,
-							settings: "unslick"
-						},
-						{
 							breakpoint: 1200,
 							settings: {
 								infinite: true,

@@ -59,12 +59,16 @@
                         <div class="brokers-list__modal__upper">
                             <div class="brokers-list__modal__upper__inner">
                                 <?php foreach( get_the_terms(get_the_ID(), 'brokers_list_category') as $state ): ?>
-                                <span class="brokers-list__modal__location">
+                                <span class="brokers-list__modal__location hidden-xs-down">
                                     <i class="icon-location"></i>
                                     <span><?php echo $state->name; ?></span>
                                 </span>
                                 <?php endforeach; ?>
-                                <h2 class="brokers-list__modal__title"><?php echo get_the_title(); ?></h2>
+                                <h2 class="brokers-list__modal__title hidden-xs-down"><?php echo get_the_title(); ?></h2>
+                                <a href="" class="btn btn-tertiary hidden-sm-up">Visit More</a>
+                                <?php if($button = get_field('site_link', get_the_ID())): ?>
+                                    <a href="<?php echo $button['url']; ?>" class="btn btn-tertiary hidden-sm-up"<?php echo $button['target'] ? ' target="' . $button['target'] . '"': ''; ?>>Visit Site</a>
+                                <?php endif; ?>
                             </div>
                         </div>
                         <div class="brokers-list__modal__left">
@@ -78,10 +82,19 @@
                                 ?>
                             </div>
                             <?php if($button = get_field('site_link', get_the_ID())): ?>
-                                <a href="<?php echo $button['url']; ?>" class="btn btn-tertiary"<?php echo $button['target'] ? ' target="' . $button['target'] . '"': ''; ?>>Visit Site</a>
+                                <a href="<?php echo $button['url']; ?>" class="btn btn-tertiary hidden-xs-down"<?php echo $button['target'] ? ' target="' . $button['target'] . '"': ''; ?>>Visit Site</a>
                             <?php endif; ?>
                         </div>
                         <div class="brokers-list__modal__right">
+                            <div class="brokers-list__modal__upper__inner hidden-sm-up">
+                                <?php foreach( get_the_terms(get_the_ID(), 'brokers_list_category') as $state ): ?>
+                                <span class="brokers-list__modal__location">
+                                    <i class="icon-location"></i>
+                                    <span><?php echo $state->name; ?></span>
+                                </span>
+                                <?php endforeach; ?>
+                                <h2 class="brokers-list__modal__title"><?php echo get_the_title(); ?></h2>
+                            </div>
                             <div class="brokers-list__modal__description">
                                 <?php echo get_field('broker_description', get_the_ID()); ?>
                             </div>

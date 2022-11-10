@@ -448,3 +448,28 @@ fx_register_block(
         'post_types'    => [],
     ]
 );
+
+fx_register_block(
+    [
+        'name'          => 'innerpage-tab-block',
+        'title'         => 'Innerpage - Tab Block',
+        'template'      => 'innerpage/tab-block.php',
+        'css'           => 'homepage/tab-block.css',
+        'css_deps'      => [ 'fx_slick' ],
+        'js'            => 'innerpage/tab-block.js',
+        'js_deps'       => [ 'fx_slick' ],
+        'category'      => 'fx-innerpage-blocks',
+        'post_types'    => [],
+    ]
+);
+
+fx_register_block(
+    [
+        'name'          => 'innerpage-cta-block',
+        'title'         => 'Innerpage - CTA Block',
+        'template'      => 'innerpage/cta-block.php',
+        'css'           => 'innerpage/cta-block.css',
+        'category'      => 'fx-innerpage-blocks',
+        'post_types'    => [],
+    ]
+);

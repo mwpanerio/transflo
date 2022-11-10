@@ -219,7 +219,7 @@
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.8);
     display: none;
-    z-index: 999;
+    z-index: 9999;
 }
 
 .form-block__demo__modal__container {

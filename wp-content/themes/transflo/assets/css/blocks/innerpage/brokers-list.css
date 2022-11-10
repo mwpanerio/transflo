@@ -291,7 +291,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: -100px 0 30px;
+    margin: -80px 0 30px;
 }
 
 @media (min-width: 768px) {
@@ -424,8 +424,8 @@
 
 @media (max-width: 767px) {
     .brokers-list__modal__upper {
-        min-height: 120px;
-        padding: 40px 33px;
+        min-height: 115px;
+        padding: 45px 33px 25px;
     }
 }
 
@@ -477,8 +477,8 @@
 
 .brokers-list__modal__close {
     position: absolute;
-    right: 20px;
-    top: 15px;
+    right: 10px;
+    top: 5px;
     width: 40px;
     height: 40px;
     background-color: transparent;
@@ -486,6 +486,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (min-width: 768px) {
+    .brokers-list__modal__close {
+        right: 20px;
+        top: 15px;
+    }
 }
 
 .brokers-list__modal__close span {

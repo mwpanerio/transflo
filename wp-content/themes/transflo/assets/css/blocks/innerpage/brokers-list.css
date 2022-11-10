@@ -422,6 +422,13 @@
     margin: 0 0 0 auto;
 }
 
+@media (max-width: 767px) {
+    .brokers-list__modal__upper .brokers-list__modal__upper__inner {
+        min-height: 120px;
+        padding: 40px 33px;
+    }
+}
+
 @media (min-width: 768px) {
     .brokers-list__modal__left {
         width: 150px;

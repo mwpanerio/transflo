@@ -65,7 +65,6 @@
                                 </span>
                                 <?php endforeach; ?>
                                 <h2 class="brokers-list__modal__title hidden-xs-down"><?php echo get_the_title(); ?></h2>
-                                <a href="" class="btn btn-tertiary hidden-sm-up">Visit More</a>
                                 <?php if($button = get_field('site_link', get_the_ID())): ?>
                                     <a href="<?php echo $button['url']; ?>" class="btn btn-tertiary hidden-sm-up"<?php echo $button['target'] ? ' target="' . $button['target'] . '"': ''; ?>>Visit Site</a>
                                 <?php endif; ?>

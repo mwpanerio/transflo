@@ -19,6 +19,7 @@ var FX = ( function( FX, $ ) {
 					slidesToScroll: 1,
 					infinite: true,
 					arrows: true,
+					variableWidth: true,
 					responsive: [
 						{
 							breakpoint: 1200,
@@ -26,6 +27,7 @@ var FX = ( function( FX, $ ) {
 								infinite: true,
 								slidesToShow: 2,
 								slidesToScroll: 1,
+								variableWidth: false,
 								arrows: true
 							}
 						},
@@ -42,6 +44,15 @@ var FX = ( function( FX, $ ) {
 	
 					]
 				})
+
+				$this.on('beforeChange', function(event, slick, currentSlide, nextSlide) {   
+					let calc = ( (nextSlide) / (slick.slideCount-1) ) * 100;
+					const $progressBar = $this.next('.benefits-section-progress');
+					
+				$progressBar
+					.css('background-size', calc + '% 100%')
+					.attr('aria-valuenow', calc );
+				});
 			})
 		},
 	}

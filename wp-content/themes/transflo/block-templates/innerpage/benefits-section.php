@@ -27,6 +27,7 @@
                 </div>
                 <?php endwhile; ?>
             </div>
+            <div class="benefits-section-progress hidden-md-down" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
     </div>
 </section>

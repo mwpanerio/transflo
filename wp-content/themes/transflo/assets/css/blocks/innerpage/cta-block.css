@@ -3,7 +3,7 @@
 }
 
 .cta-block__inner {
-    padding: 60px 81px;
+    padding: 40px 22px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,4 +68,16 @@
 
 .cta-block__content > * {
     color: var(--color-white);
+}
+
+.cta-block__content {
+    padding-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .cta-block__content {
+        flex: 1;
+        padding-right: 30px;
+        padding-bottom: 0;
+    }
 }

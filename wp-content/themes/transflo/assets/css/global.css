@@ -850,6 +850,11 @@ blockquote {
   position: relative;
 }
 
+.form-col--last p {
+  text-align: center;
+  margin-top: 20px;
+}
+
 .form-col--last {
   margin-bottom: 0;
 }

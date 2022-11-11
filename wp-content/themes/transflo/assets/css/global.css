@@ -418,6 +418,7 @@
      background: #8D99AE;
      text-align: center;
      font-size: 14px;
+     line-height: 28px;
      color: var(--color-white);
      font-family: 'avenir_next_lt_prodemi';
  }

@@ -845,7 +845,7 @@ img.logo {
 
     .nav-primary .ubermenu-responsive.ubermenu-mobile-accordion:not(.ubermenu-mobile-modal):not(.ubermenu-in-transition):not(.ubermenu-responsive-collapse),
     .nav-primary .ubermenu-responsive {
-        max-height: calc(100% - 60px) !important;
+        max-height: none !important;
         overflow: scroll !important;
     }
 }

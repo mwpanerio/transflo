@@ -46,6 +46,7 @@ var FX = ( function( FX, $ ) {
 
             const $container = $('.brokers-list__list').isotope({
                 itemSelector: '.brokers-list__item',
+                percentPosition: true,
                 layoutMode: 'fitRows',
                 filter: function() {
                     const $this = $(this);

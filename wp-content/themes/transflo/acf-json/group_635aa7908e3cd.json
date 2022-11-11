@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_635aa7a393967",
-            "label": "Catch Image",
+            "label": "Page Header Image",
             "name": "catch_image",
             "type": "image",
             "instructions": "Recommended Image Size: 830px x 460px",
@@ -61,7 +61,7 @@
         ]
     ],
     "menu_order": 0,
-    "position": "side",
+    "position": "acf_after_title",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
@@ -69,5 +69,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667878168
+    "modified": 1668128588
 }

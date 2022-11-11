@@ -195,16 +195,19 @@
     background: #EFF2F4;
     padding: 60px 22px;
     border-radius: 20px;
+    max-width: calc(100% - 44px);
 }
 
 @media (min-width: 768px) {
     .image-text--boxed-container.bg-gray .container {
         padding: 70px 52px;
+        max-width: calc(100% - 108px);
     }
 }
 
 @media (min-width: 1200px) {
     .image-text--boxed-container.bg-gray .container {
         padding: 70px 81px ;
+        max-width: 1356px;
     }
 }

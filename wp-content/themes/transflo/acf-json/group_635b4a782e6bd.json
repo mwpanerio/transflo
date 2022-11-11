@@ -61,10 +61,10 @@
         },
         {
             "key": "field_635b4fe3e3052",
-            "label": "How do you want your benefits section look?",
+            "label": "How do you want your benefits section to look?",
             "name": "benefits_section_look",
             "type": "select",
-            "instructions": "<strong>Look #1:<\/strong> <a href=\"https:\/\/webpagefx.mangoapps.com\/msc\/OTkzNDgxXzEwNjI2ODM4\" target=\"_blank\"> Check screenshot <\/a> <br>\r\n<strong>Look #2: <\/strong> <a href=\"https:\/\/webpagefx.mangoapps.com\/msc\/OTkzNDgyXzEwNjI2ODM5\" target=\"_blank\"> Check screenshot <\/a><\/strong>",
+            "instructions": "<strong>Look #1:<\/strong><br> <img src=\"http:\/\/transflo.webpagefxstage.com\/wp-content\/uploads\/2022\/11\/benefit-section-look-1.png\"> <br>\r\n<strong>Look #2: <\/strong><br> <img src=\"http:\/\/transflo.webpagefxstage.com\/wp-content\/uploads\/2022\/11\/benefit-section-look-2.png\">",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -166,7 +166,7 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "tabs": "all",
+                    "tabs": "visual",
                     "toolbar": "full",
                     "media_upload": 1,
                     "delay": 0
@@ -192,5 +192,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667222522
+    "modified": 1668129264
 }

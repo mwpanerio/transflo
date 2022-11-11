@@ -20,7 +20,8 @@
     height: 100%;
     border-radius: 10px 0 0 10px;
     display: block;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .image-button__info {
@@ -201,21 +202,3 @@
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

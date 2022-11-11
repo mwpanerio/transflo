@@ -240,7 +240,8 @@
         width: 56px;
         border-radius: 20px 0 20px 0;
         background: var(--color-primary);
-        transform-origin: right;
+        -webkit-transform-origin: right;
+                transform-origin: right;
         transition: width 0.45s ease-in-out,
                     background 0.4s ease-in-out,
                     border-radius 0.2s ease-in-out;;
@@ -333,7 +334,8 @@
     .brokers-list__modal__container {
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
         left: 0;
         right: 0;
         margin: 0 auto;
@@ -357,7 +359,8 @@
     max-height: 510px;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -370,7 +373,8 @@
         max-height: 100%;
         width: 100%;
         position: relative;
-        transform: none;
+        -webkit-transform: none;
+                transform: none;
         top: 0;
     }
 }
@@ -499,7 +503,8 @@
     width: 20px;
     height: 20px;
     position: relative;
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
 }
 
 .brokers-list__modal__close span:before,
@@ -508,7 +513,8 @@
     display: block;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     left: 0;
     right: 0;
     margin: 0 auto;

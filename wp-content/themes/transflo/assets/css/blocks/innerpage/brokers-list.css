@@ -165,6 +165,18 @@
     position: relative;
 }
 
+@media (min-width: 768px) {
+    .brokers-list__card {
+        min-height: 190px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .brokers-list__card {
+        min-height: 200px;
+    }
+}
+
 .brokers-list__logo {
     width: 80px;
     height: 80px;

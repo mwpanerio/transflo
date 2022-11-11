@@ -59,28 +59,11 @@ var FX = ( function( FX, $ ) {
 		$btn: null,
 
 		init() {
-			this.$btn = $('.back-to-top');
+			$('.back-top-btn a').on('click', function(e) {
+				e.preventDefault();
 
-			if( this.$btn.length ) {
-				this.bind();
-			}
-		},
-
-		bind() {
-			$(window).on( 'scroll load', this.maybeShowButton.bind( this ) );
-			this.$btn.on( 'click', this.scrollToTop );
-		},
-
-		maybeShowButton() {
-			if( $( window ).scrollTop() > 100 ) {
-				this.$btn.removeClass( 'hide' );
-			} else {
-				this.$btn.addClass( 'hide' );
-			}
-		},
-
-		scrollToTop() {
-			$(window).scrollTop( 0 );
+				$("html, body").animate ({scrollTop: 0});
+			})
 		}
 	};
 

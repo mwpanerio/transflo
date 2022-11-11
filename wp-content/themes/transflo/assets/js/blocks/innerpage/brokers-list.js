@@ -46,7 +46,11 @@ var FX = ( function( FX, $ ) {
 
             const $container = $('.brokers-list__list').isotope({
                 itemSelector: '.brokers-list__item',
+                percentPosition: true,
                 layoutMode: 'fitRows',
+                fitRows: {
+                    equalheight: true
+                },
                 filter: function() {
                     const $this = $(this);
                     const searchResult = qsRegex ? $this.find('h3').text().match( qsRegex ) : true;

@@ -46,30 +46,7 @@
     width: 100%;
 }
 
-@media (min-width: 1200px) {
-    .brokers-list__upper__form {
-        margin-top: 0;
-    }
-
-    .brokers-list__upper p {
-        margin-bottom: 10px;
-    }
-
-    .brokers-list__upper {
-        display: flex;
-        align-items: center;
-    }
-
-    .brokers-list__upper__title {
-        padding-right: 55px;    
-    }
-    
-    .brokers-list__upper__form {
-        display: flex;
-        align-items: flex-end;
-        flex: 1;
-    }
-
+@media (min-width: 768px) {
     .brokers-list__upper__form {
         margin: 0 -15px;
     }
@@ -85,6 +62,38 @@
 
     .brokers-list__upper__form__item:last-child {
         flex: initial;
+    }
+
+    .brokers-list__upper__form {
+        display: flex;
+        align-items: flex-end;
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .brokers-list__upper__form {
+        margin-top: 0;
+    }
+
+    .brokers-list__upper {
+        display: flex;
+        align-items: center;
+    }
+
+    .brokers-list__upper p {
+        margin-bottom: 10px;
+    }
+
+    .brokers-list__upper__title {
+        padding-right: 55px;    
+    }
+
+    .brokers-list__upper__form {
+        display: flex;
+        align-items: flex-end;
+        flex: 1;
+        margin-top: 0;
     }
 }
 
@@ -240,7 +249,8 @@
         width: 56px;
         border-radius: 20px 0 20px 0;
         background: var(--color-primary);
-        transform-origin: right;
+        -webkit-transform-origin: right;
+                transform-origin: right;
         transition: width 0.45s ease-in-out,
                     background 0.4s ease-in-out,
                     border-radius 0.2s ease-in-out;;
@@ -333,7 +343,8 @@
     .brokers-list__modal__container {
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
         left: 0;
         right: 0;
         margin: 0 auto;
@@ -357,7 +368,8 @@
     max-height: 510px;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -370,7 +382,8 @@
         max-height: 100%;
         width: 100%;
         position: relative;
-        transform: none;
+        -webkit-transform: none;
+                transform: none;
         top: 0;
     }
 }
@@ -499,7 +512,8 @@
     width: 20px;
     height: 20px;
     position: relative;
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
 }
 
 .brokers-list__modal__close span:before,
@@ -508,7 +522,8 @@
     display: block;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     left: 0;
     right: 0;
     margin: 0 auto;

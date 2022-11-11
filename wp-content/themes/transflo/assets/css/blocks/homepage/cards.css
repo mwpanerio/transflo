@@ -13,7 +13,9 @@
     text-decoration: none;
     height: 100%;
     background: var(--color-white);
+    transition: -webkit-transform .2s linear;
     transition: transform .2s linear;
+    transition: transform .2s linear, -webkit-transform .2s linear;
     border-radius: 20px;
     color: var(--color-text-default);
     font-family: 'avenir_next_lt_proregular';
@@ -48,8 +50,10 @@
 }
 
 .card__img {
-       object-fit: cover;
-       object-position: center center;
+       -o-object-fit: cover;
+          object-fit: cover;
+       -o-object-position: center center;
+          object-position: center center;
 }
 
 .card__icon {
@@ -192,7 +196,8 @@
 
     .card:hover {
         background: var(--color-white);
-        transform: scale(1.04);
+        -webkit-transform: scale(1.04);
+                transform: scale(1.04);
     }
 
     .card:hover .card__icon span {

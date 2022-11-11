@@ -140,47 +140,43 @@
 
 
 
-@keyframes duepduep {
+@-webkit-keyframes duepduep {
 
     0% {
-        transform: translate(0, 0);
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
     }
 
     50% {
-        transform: translate(-40px, 0);
+        -webkit-transform: translate(-40px, 0);
+                transform: translate(-40px, 0);
     }
 
     75% {
-        transform: translate(0, 0);
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
     }
 }
 
 
-/* 
-.number-counter-section .odometer {
-    margin-right: 15px;
+
+
+
+
+@keyframes duepduep {
+
+    0% {
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+    }
+
+    50% {
+        -webkit-transform: translate(-40px, 0);
+                transform: translate(-40px, 0);
+    }
+
+    75% {
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+    }
 }
-.number-counter-section .odometer:last-child {
-    margin: 0;
-}
-.number-counter-section .odometer .odometer-digit{
-    margin-right: 6px;
-    padding: 10px; 
-}
-.number-counter-section .odometer.odometer-auto-theme .odometer-value, .odometer.odometer-theme-default .odometer-value{
-    padding: 12px 10px;
-}
-.number-counter-section .odometer .odometer-digit:last-child{
-    margin-right: 0;
-} */
-
-
-
-
-
-
-
-
-
-
-

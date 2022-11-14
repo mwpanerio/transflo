@@ -325,6 +325,11 @@
     height: 100%;
 }
 
+.testimonials--general-tab .tab-content-item {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
 .testimonials--general-tab .tab-content {
     overflow: hidden;
 }

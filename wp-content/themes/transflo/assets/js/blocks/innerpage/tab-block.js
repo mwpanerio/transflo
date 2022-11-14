@@ -16,7 +16,6 @@ var FX = ( function( FX, $ ) {
 				fade: true,
 				asNavFor: '.js-tab-menu',
 				infinite: false,
-                adaptiveHeight: true,
 			});
 
 			$('.js-tab-menu').slick({

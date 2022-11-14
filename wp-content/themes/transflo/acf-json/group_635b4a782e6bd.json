@@ -60,6 +60,31 @@
             "delay": 0
         },
         {
+            "key": "field_63719d55f809d",
+            "label": "Background Color",
+            "name": "background_color",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "bg-gray": "Gray Background",
+                "bg-white": "White Background"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_635b4fe3e3052",
             "label": "How do you want your benefits section to look?",
             "name": "benefits_section_look",
@@ -192,5 +217,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1668129264
+    "modified": 1668390256
 }

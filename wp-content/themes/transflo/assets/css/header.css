@@ -367,7 +367,7 @@ img.logo {
     }
     
     .logo {
-        max-width: 260px;
+        max-width: 175px;
         margin-top: 0;
     }
 
@@ -378,7 +378,7 @@ img.logo {
     .js-search-toggle {
         float: right;
         text-align: center;
-        margin: 20px 40px 0 20px;
+        margin: 20px 25px 0 20px;
     }
 
     .js-search-toggle i {
@@ -418,9 +418,15 @@ img.logo {
 
 }
 
+@media (min-width: 1255px) {
+    .logo {
+        max-width: 215px;
+    }
+}
+
 @media (min-width: 1366px) {
     .logo {
-        max-width: 275px;
+        max-width: 225px;
     }
 
     .desktop-menu__search::before {
@@ -527,7 +533,15 @@ img.logo {
         cursor: pointer;
         position: relative;
         margin: 0;
+    }
+    
+    .page-header .nav-primary .ubermenu > ul > li {
         padding: 0 15px;
+
+    }
+
+    .page-header .nav-primary .ubermenu > ul > li:not(:first-child) {
+        padding-left: 0;
     }
 
     .page-header .nav-primary li.menu-item-has-children a {

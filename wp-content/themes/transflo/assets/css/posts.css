@@ -139,6 +139,7 @@ progress::-webkit-progress-value {
 .load-more__btn.is-disabled {
     cursor: not-allowed;
     background-color: #4a4a4a;
+    display: none;
 }
 
 /* Placeholder Space */

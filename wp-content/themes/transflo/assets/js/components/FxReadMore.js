@@ -80,7 +80,8 @@
 			this.isExpanded = expand
 
 			this.el.style.setProperty( '--readMoreLines', lineClamp )
-			this.btn.innerText = btnText
+			this.btn.classList.toggle('is-expanding')
+			this.btn.querySelector("span").innerText = btnText
 		}
 	}
 

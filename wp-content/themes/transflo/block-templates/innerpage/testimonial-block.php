@@ -36,7 +36,17 @@
                         <div class="testimonial-block__content">
                             <h3 class="testimonial-block__title h4"><?php echo get_the_title(); ?></h3>
                             <div class="testimonial-block__description">
-                                <?php echo get_field('testimonial_content', get_the_ID()); ?>
+                                <div class="read-more__box">
+                                    <div class="read-more js-read-more" style="--readMoreLines: 4">
+                                        <div class="read-more__wrapper">
+                                            <?php echo get_field('testimonial_content', get_the_ID()); ?>
+                                        </div>
+                                    </div>
+                                    <a class="expand js-read-more-toggle" href="javascript:;">
+                                        <span>Read More</span>
+                                        <i class="icon-button-down"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </article>

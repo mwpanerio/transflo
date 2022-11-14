@@ -400,9 +400,9 @@ fx_register_block(
         'title'         => 'Innerpage - Testimonial Block',
         'template'      => 'innerpage/testimonial-block.php',
         'css'           => 'innerpage/testimonial-block.css',
-        'css_deps'      => [ 'fx_image_button' ],
+        'css_deps'      => [ 'fx_image_button', 'fx_readmore' ],
         'js'            => 'innerpage/testimonial-block.js',
-        'js_deps'       => [ 'jquery' ],
+        'js_deps'       => [ 'jquery', 'fx_readmore' ],
         'category'      => 'fx-innerpage-blocks',
         'post_types'    => [],
     ]

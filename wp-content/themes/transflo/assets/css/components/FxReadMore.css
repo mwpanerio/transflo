@@ -12,7 +12,7 @@
 	display: block;
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
-	-webkit-line-clamp: var( --readMoreLines );
+	-webkit-line-clamp: var(--readMoreLines);
 	overflow: hidden;
 	word-break: break-all;
 }
@@ -23,6 +23,32 @@
 }
 
 /* fix - display: -webkit-box; prevents margins from collapsing */
-.read-more__content p {
+.read-more__wrapper p {
     margin-top: 0;
+    display: block;
+    word-break: break-word;
+}
+
+.read-more__box .expand {
+	display: inline-block;
+	margin-top: 20px;
+	background-image: none;
+}
+
+.read-more__box .expand i {
+	margin-left: 10px;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	top: 1px;
+	transform: rotate(0);
+	transition: transform 0.3s ease-in-out;
+}
+
+.read-more__box .expand.is-expanding i {
+	transform: rotate(180deg);
+}
+
+.read-more__box .expand:hover {
+	background-image: none;
 }

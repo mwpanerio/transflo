@@ -227,6 +227,11 @@
     float: right;
 }
 
+.benefits-section:not(.bg-white),
+.bg-white .benefits-section-progress {
+    background-color: var(--color-offwhite);
+}
+
 @media (min-width: 1200px) {
     .benefits-section-progress {
         width: calc(100% - 200px);

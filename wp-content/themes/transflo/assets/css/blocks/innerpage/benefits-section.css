@@ -148,7 +148,7 @@
 }
 
 .benefits-section--version-look-2 .benefits-section__row .slick-list {
-    margin-bottom: 0;
+    margin-bottom: 30px;
 }
 
 .benefits-section__row .slick-list {
@@ -174,11 +174,21 @@
         height: inherit;
     }
 
+    .benefits-section__row .slick-track .slick-slide > div .benefits-section__item {
+        padding: 0 20px;
+    }
+
     .benefits-section__row .slick-track .slick-slide > div,
     .benefits-section__row .slick-track .slick-slide > div .benefits-section__item,
     .benefits-section__row .slick-track .slick-slide > div .benefits-section__card {
         height: 100%;
         margin: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .benefits-section__row .slick-track .slick-slide > div .benefits-section__item {
+        padding: 0;
     }
 }
 

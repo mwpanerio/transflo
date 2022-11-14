@@ -82,12 +82,15 @@
         justify-content: space-between;
     }
 
+    .counter-bar ul {
+        margin-bottom: -20px;
+    }
+
     .counter-bar ul li {
-        max-width: 33.333%;
-        flex: 1;
+        width: 50%;
         padding: 0 5px;
         border-top: none;
-        border-left: 1px solid rgba(253, 253, 253, 0.25);
+        margin-bottom: 20px;
     }
 
     .counter-bar p {
@@ -114,10 +117,21 @@
         padding-bottom: 50px;
     }
 
-    .counter-bar ul li {
-        padding: 0 30px;
+    .counter-bar ul {
+        margin-bottom: 0;
     }
 
+    .counter-bar ul li {
+        padding: 0 30px;
+        max-width: 33.333%;
+        flex: 1;
+        margin-bottom: 0;
+    }
+
+    .counter-bar ul li:not(:last-child) {
+        border-right: 1px solid rgba(253, 253, 253, 0.25);
+    }
+    
     .counter-bar p {
         font-size: 20px;
         line-height: 1.4em;

@@ -26,6 +26,17 @@
     padding: 0 40px 30px 26px;
 }
 
+
+.card__bottom {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    padding-bottom: 0;
+    margin-bottom: 40px;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
 .card__bottom p {
     font-size: 15px;
 }
@@ -191,7 +202,8 @@
     }
 
     .card__bottom {
-        padding: 0 40px 40px 40px;
+        padding: 0 40px 0 40px;
+        margin-bottom: 40px;
     }
 
     .card:hover {

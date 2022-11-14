@@ -1088,18 +1088,17 @@ body:after {
 .breadcrumbs ul {
     margin: 0;
     padding: 0;
-    display: flex;
-    align-items: center;
 }
 
 .breadcrumbs li {
     list-style-type: none;
     color: var(--color-black);
     margin: 0;
-    padding: 0 11px;
+    padding: 0 11px 0 0;
     font-family: 'avenir_next_lt_prodemi';
     border-left: 1px solid #8D99AE;
     font-size: 0;
+    display: inline;
 }
 
 .breadcrumbs li:first-child {
@@ -1115,6 +1114,7 @@ body:after {
 .breadcrumbs span {
     font-size: 16px;
     line-height: 1em;
+    display: inline;
 }
 
 .breadcrumbs a {
@@ -1139,7 +1139,7 @@ body:after {
 
 .breadcrumbs span {
     padding-left: 11px;
-    display: inline-block;
+    display: inline;
 }
 
 

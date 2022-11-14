@@ -32,6 +32,10 @@
     border-radius: 30px;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .testimonial-block__image {
@@ -40,6 +44,7 @@
     align-items: center;
     padding: 20px 10px;
     background-color: var(--color-offwhite);
+    flex: 1;
 }
 
 .testimonial-block__image img {
@@ -106,4 +111,5 @@
 .testimonial-block__pagination .btn.is-disabled {
     cursor: not-allowed;
     background-color: #4a4a4a;
+    display: none;
 }

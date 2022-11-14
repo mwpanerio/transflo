@@ -23,15 +23,15 @@
 
                         if ($link_image) {
                             $link_image = get_sub_field('404_link_page_image');
-                            $url = wp_get_attachment_image_src( $link_image , 'thumbnail')[0];
-                        } else if (get_the_post_thumbnail( $page, 'thumbnail' )) {
-                            $url = get_the_post_thumbnail_url( $page, 'thumbnail' );
+                            $url = wp_get_attachment_image_src( $link_image , 'full')[0];
+                        } else if (get_the_post_thumbnail( $page, 'full' )) {
+                            $url = get_the_post_thumbnail_url( $page, 'full' );
                         } else if (get_field('placeholder_image', 'option')) {
                             $link_image = get_field('placeholder_image', 'option');
-                            $url = wp_get_attachment_image_src( $link_image , 'thumbnail')[0];
+                            $url = wp_get_attachment_image_src( $link_image , 'full')[0];
                         } else {
                             $link_image = get_field('logo', 'option');
-                            $url = wp_get_attachment_image_src( $link_image , 'thumbnail')[0];
+                            $url = wp_get_attachment_image_src( $link_image , 'full')[0];
                         }
                     ?>
                     <img src="<?php echo $url; ?>" class="image-button__img">

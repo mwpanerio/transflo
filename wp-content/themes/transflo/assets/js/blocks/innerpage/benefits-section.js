@@ -11,6 +11,7 @@ var FX = ( function( FX, $ ) {
 			$('.js-benefits-slider').each(function() {
 				const $this = $(this);
 				const $slidesToShow = parseFloat($this.attr('data-benefits-slider'));
+				const $sliderWidth =  $this.find('.benefits-section__item').length > $slidesToShow;
 
 				$this.slick( {
 					infinite: false,
@@ -19,7 +20,7 @@ var FX = ( function( FX, $ ) {
 					slidesToScroll: 1,
 					infinite: true,
 					arrows: true,
-					variableWidth: true,
+					variableWidth: $sliderWidth,
 					responsive: [
 						{
 							breakpoint: 1200,
@@ -38,7 +39,9 @@ var FX = ( function( FX, $ ) {
 								infinite: true,
 								slidesToShow: 1,
 								slidesToScroll: 1,
-								arrows: true
+								variableWidth: false,
+								arrows: true,
+								adaptiveHeight: true,
 							}
 						},
 	

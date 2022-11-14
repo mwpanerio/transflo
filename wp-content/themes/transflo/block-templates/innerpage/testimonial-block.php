@@ -28,9 +28,11 @@
             <?php while( $testimonial_posts->have_posts() ): $testimonial_posts->the_post(); setup_postdata($testimonial_posts); ?>
                 <div class="testimonial-block__item js-testimonial-post">
                     <article class="testimonial-block__card">
+                        <?php if($logo_image = get_field('logo', get_the_ID())): ?>
                         <div class="testimonial-block__image">
-                            <?php echo fx_get_image_tag(get_field('logo', get_the_ID()), 'img-responsive'); ?>
+                            <?php echo fx_get_image_tag($logo_image, 'img-responsive'); ?>
                         </div>
+                        <?php endif; ?>
                         <div class="testimonial-block__content">
                             <h3 class="testimonial-block__title h4"><?php echo get_the_title(); ?></h3>
                             <div class="testimonial-block__description">

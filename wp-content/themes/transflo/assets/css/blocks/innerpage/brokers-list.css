@@ -613,6 +613,7 @@
     cursor: none;
     pointer-events: none;
     background-color: var(--color-tertiary);
+    display: none;
 }
 
 .brokers-list__pagination__button .btn:before {

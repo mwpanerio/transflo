@@ -227,7 +227,7 @@
     float: right;
 }
 
-@media (min-widht: 1200px) {
+@media (min-width: 1200px) {
     .benefits-section-progress {
         width: calc(100% - 200px);
     }

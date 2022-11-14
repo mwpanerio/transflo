@@ -4,6 +4,11 @@
     position: relative;
 }
 
+.counter-block__upper {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 .counter-bar {
     background: #2474BB;
     border-radius: 20px;

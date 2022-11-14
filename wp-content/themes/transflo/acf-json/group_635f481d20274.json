@@ -3,6 +3,63 @@
     "title": "[Block] Innerpage - Statistics Bar",
     "fields": [
         {
+            "key": "field_63724177ccc57",
+            "label": "Subheading",
+            "name": "subheading",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6372417cccc58",
+            "label": "Title",
+            "name": "title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_63724181ccc59",
+            "label": "Description",
+            "name": "description",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "default_value": "",
+            "delay": 0
+        },
+        {
             "key": "field_635f483481f0a",
             "label": "Background Type",
             "name": "background_type",
@@ -230,5 +287,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667222409
+    "modified": 1668432277
 }

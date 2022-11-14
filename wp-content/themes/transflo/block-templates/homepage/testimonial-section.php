@@ -24,7 +24,11 @@
                 ?>
                 <div class="tab-menu-item fx-slide">
                     <div class="tab-column">
-                        <?php echo fx_get_image_tag(get_field('logo', $testimonial_to_post), 'img-responsive'); ?>
+                        <?php if(get_field('logo', $testimonial_to_post)): ?>
+                            <?php echo fx_get_image_tag(get_field('logo', $testimonial_to_post), 'img-responsive'); ?>
+                        <?php else: ?>
+                            <p><?php echo get_the_title($testimonial_to_post); ?></p>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <?php endforeach; ?>

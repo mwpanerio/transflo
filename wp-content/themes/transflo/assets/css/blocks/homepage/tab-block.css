@@ -354,12 +354,23 @@
     display: flex;
 }
 
-.testimonials--general-tab .slick-slide {
+@media (min-width: 768px) {
+    .testimonials--general-tab .slick-slide {
+        height: inherit;
+    }
+
+    .testimonials--general-tab .slick-slide > div,
+    .testimonials--general-tab .slick-slide .tab-menu-item {
+        height: 100%;
+    }
+}
+
+.testimonials--general-tab .js-tab-menu .slick-slide {
     height: inherit;
 }
 
-.testimonials--general-tab .slick-slide > div,
-.testimonials--general-tab .slick-slide .tab-menu-item {
+.testimonials--general-tab .js-tab-menu .slick-slide > div,
+.testimonials--general-tab .js-tab-menu .slick-slide .tab-menu-item {
     height: 100%;
 }
 

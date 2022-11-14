@@ -628,7 +628,7 @@
    font-weight: normal;
    text-decoration: none;
    color: var(--color-white);
-   padding: 13px 45px 13px 19px;
+   padding: 13px 45px 11px 19px;
    border-radius: 99px;
    border: 1px solid transparent;
    position: relative;
@@ -692,7 +692,7 @@
  @media (min-width: 1200px) {
    .btn {
      font-size: 18px;
-     padding: 16px 49px 16px 23px;
+     padding: 16px 49px 14px 23px;
    }
  
    .btn:before {

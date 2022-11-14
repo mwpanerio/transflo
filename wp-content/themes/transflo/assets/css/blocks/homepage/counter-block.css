@@ -1,5 +1,6 @@
 .counter-block {
     padding-top: 40px;
+    padding-bottom: 40px;
     position: relative;
 }
 
@@ -72,6 +73,7 @@
 @media (min-width: 768px) {
     .counter-block {
         padding-top: 60px;
+        padding-bottom: 60px;
     }
 
     .counter-item {
@@ -109,6 +111,7 @@
 @media (min-width: 1200px) {
     .counter-block {
         padding-top: 50px;
+        padding-bottom: 50px;
     }
 
     .counter-bar ul li {

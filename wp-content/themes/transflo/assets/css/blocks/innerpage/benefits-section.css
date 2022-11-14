@@ -24,7 +24,6 @@
 .benefits-section__row .row {
     display: flex;
     justify-content: center;
-    margin-bottom: -40px;
     margin-left: 0;
     margin-right: 0;
 }

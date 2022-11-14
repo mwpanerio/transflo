@@ -344,16 +344,10 @@
     color: var(--color-black);
 }
 
-.testimonials--general-tab .testimonials__image {
-    border-radius: 20px;
-    overflow: hidden;
-}
-
 .testimonials--general-tab .testimonials__image img {
     position: relative;
     width: 100%;
     height: auto;
-    border-radius: 20px;
 }
 
 .testimonials--general-tab .slick-track {

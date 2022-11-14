@@ -227,6 +227,10 @@
     float: right;
 }
 
+.row[data-benefits-slider="4"] + .benefits-section-progress {
+    margin-top: -28px;
+}
+
 .benefits-section:not(.bg-white),
 .bg-white .benefits-section-progress {
     background-color: var(--color-offwhite);

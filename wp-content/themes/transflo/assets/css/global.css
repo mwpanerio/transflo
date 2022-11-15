@@ -1207,6 +1207,10 @@
    background: #EFF2F4;
    color: var(--color-text-default);
  }
+
+ .bg-gray + .bg-gray {
+  padding-top: 0 !important;
+ }
  
  /* Gallery styles */
  

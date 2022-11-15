@@ -1023,7 +1023,7 @@ body:after {
     }
 
     .right-image {
-        width: 43.7%;
+        width: 820px;
         height: auto;
     }
 
@@ -1033,7 +1033,7 @@ body:after {
     }
 
     .left-text {
-        width: 56.3%;
+        width: calc(100% - 820px);
     }
   
     .left-text-wrapper {

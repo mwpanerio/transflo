@@ -27,22 +27,22 @@
 				<div class="card__date"><?php echo get_the_date('F j, Y'); ?></div>
 				<h4 class="card__title"><?php echo get_the_title(); ?></h4>
 			</div>
-		</div>
-		<div class="card__bottom">
-			<?php
-				$blocks = parse_blocks( $post->post_content );
+			<div class="card__bottom">
+				<?php
+					$blocks = parse_blocks( $post->post_content );
 
-				foreach ( $blocks as $block ) {
-				if ( 'acf/wysiwyg' === $block['blockName'] ) {
-						if(isset($block["attrs"]["data"]["content"])) {
-							$excerpt = strip_tags(trim($block["attrs"]["data"]["content"]));
+					foreach ( $blocks as $block ) {
+					if ( 'acf/wysiwyg' === $block['blockName'] ) {
+							if(isset($block["attrs"]["data"]["content"])) {
+								$excerpt = strip_tags(trim($block["attrs"]["data"]["content"]));
+							}
+							break;
 						}
-						break;
 					}
-				}
 
-				echo $excerpt;
-			?>
+					echo $excerpt;
+				?>
+			</div>
 		</div>
 	</a>
 </div>

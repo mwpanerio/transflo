@@ -671,9 +671,14 @@
  
  @media (min-width: 600px) {
  
-     .btn+.btn {
+     .btn {
          margin-top: 0;
-         margin-left: 16px;
+         margin-right: 16px;
+         margin-bottom: 16px;
+     }
+
+     .btn + .btn {
+      margin-top: 0;
      }
  
  }

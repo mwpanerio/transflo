@@ -188,7 +188,7 @@
 
 @media (min-width: 1200px) {
     .benefits-section__row .slick-track .slick-slide > div .benefits-section__item {
-        padding: 0;
+        padding: 20px 0;
     }
 }
 

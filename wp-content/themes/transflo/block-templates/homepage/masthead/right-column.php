@@ -54,17 +54,17 @@
         <div class="js-masthead__slider2 fx-slider">
             <?php while(have_rows('slider_item')): the_row(); ?>
             <div class="masthead__slider__item fx-slide">
-                <div class="masthead__slider-col">
+                <a class="masthead__slider-col" href="<?php echo get_sub_field('link')['url']; ?>"<?php echo get_sub_field('link')['target'] ? ' target="' . get_sub_field('link')['target'] . '"': ''; ?>>
                     <div class="masthead__slider-image">
                         <?php echo fx_get_image_tag(get_sub_field('image'), 'object-fit'); ?>
                     </div>
                     <div class="masthead__slider-info">
                         <h3><?php echo get_sub_field('title'); ?></h3>
                         <div class="masthead__slider-link">
-                            <a href="<?php echo get_sub_field('link')['url']; ?>"<?php echo get_sub_field('link')['target'] ? ' target="' . get_sub_field('link')['target'] . '"': ''; ?>><i class="icon-button-right"></i></a>
+                            <i class="icon-button-right"></i>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
             <?php endwhile; ?>
         </div>

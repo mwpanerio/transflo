@@ -100,13 +100,24 @@
 }
 
 .masthead__slider-col {
-    background: var(--color-white);
     border-radius: 10px;
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     position: relative;
+    background-color: var(--color-white);
+    background-image: none;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+@media (min-width: 1200px) {
+    .masthead__slider-col:hover {
+        background-image: none;
+        background-color: var(--color-white);
+        transform: scale(1.02);
+    }
 }
 
 .masthead__slider-image {

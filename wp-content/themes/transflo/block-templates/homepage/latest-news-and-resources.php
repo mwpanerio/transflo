@@ -24,7 +24,7 @@
                             <?php if($featured_image = get_field('featured_image', $posts_to_display_item)): ?>
                                 <?php echo fx_get_image_tag($featured_image, 'card__img object-fit'); ?>
                             <?php else: ?>
-                                <?php echo fx_get_image_tag(get_field('placeholder_image', 'option')); ?>
+                                <?php echo fx_get_image_tag(get_field('placeholder_image', 'option'), 'card__img object-fit'); ?>
                             <?php endif; ?>
                         </div>
                         <div class="card__details">

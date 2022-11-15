@@ -28,7 +28,7 @@
 
 .card__bottom {
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
     padding-bottom: 0;
     margin-bottom: 40px;
     -webkit-box-orient: vertical;

@@ -20,6 +20,10 @@
     font-family: 'avenir_next_lt_prodemi';
 }
 
+.wpcf7-form .choices + .wpcf7-not-valid-tip {
+    margin-top: -23px;
+}
+
 .wpcf7-form .wpcf7-not-valid-label {
   color: #DA1F2C !important;
 }

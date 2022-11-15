@@ -5,7 +5,11 @@
         <article class="header-card">
             <a href="<?php echo get_the_permalink(); ?>">
                 <div class="header-card__image">
-                    <?php echo fx_get_image_tag(get_field('featured_image', get_the_ID())); ?>
+                    <?php if($featured_image = get_field('featured_image', get_the_ID())): ?>
+                        <?php echo fx_get_image_tag($featured_image); ?>
+                    <?php else: ?>
+                        <?php echo fx_get_image_tag(get_field('placeholder_image', 'option')); ?>
+                    <?php endif; ?>
                 </div>
                 <div class="header-card__content">
                     <h3><?php echo get_the_title(); ?></h3>

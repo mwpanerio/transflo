@@ -59,7 +59,14 @@
                             <form action="./" class="form masthead__category__search">
                                 <div class="form-col">
                                     <input type="text" placeholder="&nbsp;" name="search-block" id="search-block" value="<?php echo get_search_query( true ); ?>" data-swplive="true">
-                                    <label for="search-block">Search blog posts...</label>
+                                    <?php 
+                                        if(is_category()):
+                                            $current_category_name = get_the_category()[0]->name;
+                                    ?>
+                                        <label for="search-block">Search for <?php echo strtolower($current_category_name); ?> posts...</label>
+                                    <?php else: ?>
+                                        <label for="search-block">Search blog posts...</label>
+                                    <?php endif; ?>
                                 </div>
                                 <button type="submit"><i class="icon-search"></i></button>
                             </form>
@@ -135,7 +142,17 @@
                         yoast_breadcrumb( '<div class="breadcrumbs hidden-md-down">', '</div>' );
                     }
                 ?>
+                <?php
+                    $current_slug = '';
+
+                    if(is_category()):
+                        $current_slug = get_the_category()[0]->slug;
+                        $current_category_name = get_the_category()[0]->name;
+                ?>
+                <h3><?php echo $current_category_name; ?></h3>
+                <?php else: ?>
                 <h3>Resources</h3>
+                <?php endif; ?>
             </div>
             <div class="masthead__category">
                 <div class="row">
@@ -143,7 +160,14 @@
                         <form action="./" class="form masthead__category__search">
                             <div class="form-col">
                                 <input type="text" placeholder="&nbsp;" name="search-block" id="search-block" value="<?php echo get_search_query( true ); ?>" data-swplive="true">
-                                <label for="search-block">Search blog posts...</label>
+                                <?php 
+                                    if(is_category()):
+                                        $current_category_name = get_the_category()[0]->name;
+                                ?>
+                                    <label for="search-block">Search for <?php echo strtolower($current_category_name); ?> posts...</label>
+                                <?php else: ?>
+                                    <label for="search-block">Search blog posts...</label>
+                                <?php endif; ?>
                             </div>
                             <button type="submit"><i class="icon-search"></i></button>
                         </form>

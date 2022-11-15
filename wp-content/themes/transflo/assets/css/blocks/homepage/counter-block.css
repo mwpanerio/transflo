@@ -84,7 +84,7 @@
     .counter-item {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
     }
 
     .counter-bar ul {

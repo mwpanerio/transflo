@@ -51,7 +51,7 @@
                             <span class="testimonials-author"><?php echo get_field('client_name', $testimonial_to_post); ?></span>
                             <span class="testimonials-author-position"><?php echo get_field('location', $testimonial_to_post); ?></span>
                         </div>
-                        <div class="testimonials__image hidden-md-down">
+                        <div class="testimonials__image testimonials__image--<?php echo get_field('featured_image_type', $testimonial_to_post); ?> hidden-md-down">
                             <?php echo fx_get_image_tag(get_post_thumbnail_id($testimonial_to_post), 'img-responsive'); ?>
                         </div>
                     </div>

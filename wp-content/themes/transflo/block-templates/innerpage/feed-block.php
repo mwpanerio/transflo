@@ -11,18 +11,10 @@
             </div>
             <div class="products__btns">
                 <ul class="product__feed">
-                    <li>
-                        <a target="_blank" class="external" rel="noopener"><i class="icon-facebook"></i></a>
-                    </li>
-                    <li>
-                        <a target="_blank" class="external" rel="noopener"><i class="icon-twitter"></i></a>
-                    </li>
-                    <li>
-                        <a target="_blank" class="external" rel="noopener"><i class="icon-youtube"></i></a>
-                    </li>
-                    <li>
-                        <a target="_blank" class="external" rel="noopener"><i class="icon-linkedin"></i></a>
-                    </li>
+                    <li><a href="<?php echo get_field('facebook', 'option'); ?>" target="_blank"><i class="icon-facebook"></i></a></li>
+                    <li><a href="<?php echo get_field('twitter', 'option'); ?>" target="_blank"><i class="icon-twitter"></i></a></li>
+                    <li><a href="<?php echo get_field('youtube', 'option'); ?>" target="_blank"><i class="icon-youtube"></i></a></li>
+                    <li><a href="<?php echo get_field('linkedin', 'option'); ?>" target="_blank"><i class="icon-linkedin"></i></a></li>
                 </ul>
             </div>
         </div>

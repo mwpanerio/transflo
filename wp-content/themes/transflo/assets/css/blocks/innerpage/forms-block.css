@@ -333,3 +333,18 @@
         margin-bottom: 0;
     }
 }
+
+/* Override styles for adjacent child for products section */
+@media (min-width: 768px) {
+    .forms-block + .products .products__btns {
+        float: none;
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .forms-block + .products .products__btns {
+        float: right;
+        margin-top: -29px;
+    }
+}

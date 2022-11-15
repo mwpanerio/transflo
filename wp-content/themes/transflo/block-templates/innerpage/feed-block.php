@@ -27,8 +27,8 @@
             </div>
         </div>
         <div class="products__listings">
-            <div class="js-products-slider fx-slider">
-                <!-- <?php while(have_rows('product_slider')): the_row(); ?>
+            <!-- <div class="js-products-slider fx-slider">
+                <?php while(have_rows('product_slider')): the_row(); ?>
                 <div class="products-items fx-slide">
                     <a href="<?php echo get_sub_field('button')['url']; ?>" class="products__link"<?php echo get_sub_field('button')['target'] ? ' target="' . get_sub_field('button')['target'] . '"': ''; ?>>
                         <div class="products__info-top">
@@ -51,9 +51,9 @@
                         </div>
                     </a>
                 </div>
-                <?php endwhile; ?> -->
+                <?php endwhile; ?>
             </div>
-            <div class="progress-products-item" role="progressbar" aria-valuemin="0" aria-valuemax="100" ></div>
+            <div class="progress-products-item" role="progressbar" aria-valuemin="0" aria-valuemax="100" ></div> -->
         </div>
     </div>
 </section>

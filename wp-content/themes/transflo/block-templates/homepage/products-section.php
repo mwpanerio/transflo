@@ -18,6 +18,7 @@
             <?php endif; ?>
         </div>
         <div class="products__listings">
+            <?php if(have_rows('product_slider')): ?>
             <div class="js-products-slider fx-slider">
                 <?php while(have_rows('product_slider')): the_row(); ?>
                 <div class="products-items fx-slide">
@@ -45,6 +46,7 @@
                 <?php endwhile; ?>
             </div>
             <div class="progress-products-item" role="progressbar" aria-valuemin="0" aria-valuemax="100" ></div>
+            <?php endif; ?>
         </div>
         <?php if($button = get_field('button')): ?>
         <div class="products__btns hidden-lg">

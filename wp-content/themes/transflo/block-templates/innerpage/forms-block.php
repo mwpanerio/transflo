@@ -9,7 +9,7 @@
                             <i class="icon-location"></i> 
                             Address: <br>
                             <?php echo get_field('location_address'); ?> <br>
-                            <a href="<?php echo strip_tags(get_field('location_address'))?>">Get Directions</a>
+                            <a href="https://maps.google.com/maps?q=<?php echo strip_tags(get_field('location_address'))?>">Get Directions</a>
                         </p>
                         <p class="form-block__text-with-icon">
                             <i class="icon-email"></i>

@@ -9,7 +9,6 @@
 .card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     text-decoration: none;
     height: 100%;
     background: var(--color-white);

@@ -409,7 +409,7 @@
  
  ol li:before {
      content: counter(list) "";
-     position: absolute;
+     position: relative;
      left: 0;
      top: 0;
      width: 26px;
@@ -421,6 +421,9 @@
      line-height: 28px;
      color: var(--color-white);
      font-family: 'avenir_next_lt_prodemi';
+     display: inline-block;
+     vertical-align: middle;
+     margin-right: 12px;
  }
  
  
@@ -448,13 +451,16 @@
  
  ul li:before {
      content: "";
-     position: absolute;
      left: 0;
-     top: 9px;
+     top: 0;
+     position: relative;
      width: 8px;
      height: 8px;
      background: #2474BB;
      border-radius: 50%;
+     display: inline-block;
+     vertical-align: middle;
+     margin-right: 12px;
  }
  
  a {
@@ -546,7 +552,7 @@
    }
  
    ul li:before {
-       top: 11px;
+       top: 0;
    }
  
    a:hover {

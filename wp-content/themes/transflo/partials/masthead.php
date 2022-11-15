@@ -35,8 +35,9 @@
                     $current_slug = '';
 
                     if(is_category()) {
-                        $current_slug = get_the_category()[0]->slug;
-                        $current_category_name = get_the_category()[0]->name;
+						$category = get_category( get_query_var( 'cat' ) );
+                        $current_slug = $category->slug;
+                        $current_category_name = $category->name;
                     }    
                 ?>
                 <h3 class="h1"><?php echo $current_category_name; ?></h3>
@@ -146,8 +147,9 @@
                     $current_slug = '';
 
                     if(is_category()):
-                        $current_slug = get_the_category()[0]->slug;
-                        $current_category_name = get_the_category()[0]->name;
+						$category = get_category( get_query_var( 'cat' ) );
+                        $current_slug = $category->slug;
+                        $current_category_name = $category->name;
                 ?>
                 <h3><?php echo $current_category_name; ?></h3>
                 <?php else: ?>

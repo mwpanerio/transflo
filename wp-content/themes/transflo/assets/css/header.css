@@ -988,7 +988,7 @@ body:after {
 }
 
 .left-text-wrapper {
-    padding: 40px 22px 50px;
+    padding: 40px 0 50px;
     color: var(--color-text-default);
     width: 100%;
 }
@@ -1014,7 +1014,7 @@ body:after {
     }
 
     .left-text-wrapper {
-        padding: 50px 52px 60px;
+        padding: 50px 0 60px;
     }
     
     .left-text-wrapper p {
@@ -1038,7 +1038,10 @@ body:after {
 
     .right-image {
         width: 820px;
-        height: auto;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
     }
 
     .right-image img {
@@ -1047,13 +1050,13 @@ body:after {
     }
 
     .left-text {
-        width: calc(100% - 820px);
+        width: calc(100% - 760px);
     }
   
     .left-text-wrapper {
         padding: 80px 80px 90px 16px;
-        max-width: 796px;
-        float: right;
+        max-width: 100%;
+        float: none;
     }
 
     .left-text-wrapper p {
@@ -1065,7 +1068,7 @@ body:after {
 
  @media (min-width: 1366px) {
     .left-text-wrapper {
-        padding: 82px 113px 94px 16px;
+        padding: 82px 40px 94px 16px;
     }
 
 

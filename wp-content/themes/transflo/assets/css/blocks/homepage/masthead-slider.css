@@ -58,13 +58,30 @@
 @media (min-width: 1200px) {
     .masthead__right {
         width: 420px;
-        float: right;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .masthead__right .masthead__right__column1 {
+        flex: 1;
+    }
+
+    .masthead__right .masthead__tiles {
+        display: flex;
+        height: 100%;
+        flex-wrap: wrap;
+    }
+
+    .masthead__right .masthead__tiles__image {
+        min-height: 106px;
+        height: 100%;
     }
 
     .masthead__left {
-        width: calc(100% - 452px);
-        float: left;
+        width: calc(100% - 450px);
         padding-bottom: 50px;
+        margin-bottom: 0;
+        margin-right: 30px;
     }
 
     .masthead__image {
@@ -85,6 +102,12 @@
 
     .masthead__info p {
         padding-bottom: 20px;
+    }
+
+    .masthead__wrap {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
 }
 

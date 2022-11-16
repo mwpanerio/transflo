@@ -648,7 +648,7 @@ img.logo {
 
 @media (min-width: 1200px) {
     .nav-primary .ubermenu .ubermenu-item-type-column>.ubermenu-submenu-type-stack>.ubermenu-item-normal:first-child,
-    .nav-primary .ubermenu .ubermenu-submenu > .ubermenu-row > .ubermenu-item:first-child {
+    .nav-primary .ubermenu .ubermenu-nav > .ubermenu-item > .ubermenu-submenu > .ubermenu-row > .ubermenu-item:first-child {
         margin-top: 20px;
     }
 }

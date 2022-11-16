@@ -19,7 +19,7 @@ var FX = ( function( FX, $ ) {
 			});
 
 			$('.js-tab-menu').slick({
-				infinite: false,
+				infinite: true,
 				slidesToShow: 4,
 				slidesToScroll: 1,
 				asNavFor: '.js-tab-for',

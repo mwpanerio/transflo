@@ -1,3 +1,7 @@
+.brokers-list .btn {
+    margin-bottom: 0;
+}
+
 .brokers-list__upper {
     background-color: var(--color-tertiary);
     border-radius: 20px;

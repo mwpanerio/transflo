@@ -167,7 +167,7 @@
             </div>
             <div class="brokers-list__pagination">
                 <div class="brokers-list__pagination__text">
-                    <p>Showing <span class="showing-result"><?php echo $brokers_list_posts_count >= 9 ? '9' : $brokers_list_posts_count; ?></span> of <span class="total-result"><?php echo $brokers_list_posts_count; ?></span> Results</p>
+                    <p>Showing <span class="showing-result"><?php echo $brokers_list_posts_count >= 12 ? '12' : $brokers_list_posts_count; ?></span> of <span class="total-result"><?php echo $brokers_list_posts_count; ?></span> Results</p>
                 </div>
                 <div class="brokers-list__pagination__wrapper">
                     <div class="brokers-list__pagination__bar"></div>

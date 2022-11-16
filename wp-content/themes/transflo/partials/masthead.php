@@ -62,7 +62,9 @@
                                     <input type="text" placeholder="&nbsp;" name="search-block" id="search-block" value="<?php echo get_search_query( true ); ?>" data-swplive="true">
                                     <?php 
                                         if(is_category()):
-                                            $current_category_name = get_the_category()[0]->name;
+                                            $category = get_category( get_query_var( 'cat' ) );
+                                            $current_slug = $category->slug;
+                                            $current_category_name = $category->name;
                                     ?>
                                         <label for="search-block">Search for <?php echo strtolower($current_category_name); ?> posts...</label>
                                     <?php else: ?>

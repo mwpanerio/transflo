@@ -53,6 +53,16 @@ body:not(.home) .js-tab-menu .slick-slide.slick-current.slick-active .tab-column
     opacity: 1;
 }
 
+@media (max-width: 767px) {
+    .js-tab-menu .slick-slide.slick-current.slick-active .tab-column {
+        border-bottom: 5px solid #2474BB;
+    }
+
+    .js-tab-menu .slick-slide.slick-current.slick-active .tab-column img {
+        opacity: 1;
+    }
+}
+
 .tab-content {
     margin: 25px 22px 30px 0;
     background: var(--color-black);

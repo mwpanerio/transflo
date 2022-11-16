@@ -111,6 +111,20 @@ var FX = ( function( FX, $ ) {
 
                 return false;
             });
+
+            const options = {
+                damping: 0.04,
+                thumbMinSize: 20,
+                renderByPixel: true,
+                continuousScrolling: false
+            };
+
+
+            $('.brokers-list__modal__right').each(function() {
+                const $this = $(this);
+
+                Scrollbar.init($this[0], options);
+            })
         }
 	}
 

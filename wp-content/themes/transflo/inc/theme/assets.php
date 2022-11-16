@@ -462,8 +462,8 @@ function fx_theme_scripts() {
     // Script for "Custom Scrollbar" block sections
     fx_assets_add_script(
         [
-            'handle'        => 'fx_custom_scrollbar',
-            'src'           => $theme_url . '/assets/js/plugins/jquery.mCustomScrollbar.min.js',
+            'handle'        => 'fx_custom_scroll_bar',
+            'src'           => $theme_url . '/assets/js/plugins/smooth-scrollbar.js',
             'dependencies'  => [ 'jquery' ]
         ]
     );

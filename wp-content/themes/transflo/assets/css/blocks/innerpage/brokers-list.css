@@ -420,9 +420,19 @@
 @media (max-width: 767px) {
     .brokers-list__modal__right {
         height: 100%;
-        overflow: scroll;
-        padding-right: 10px;
+        overflow: hidden;
+        padding-right: 15px;
     }
+}
+
+.brokers-list__modal__right .scrollbar-track-y {
+    opacity: 1;
+    background-color: var(--color-offwhite);
+    border-radius: 10px;
+}
+
+.brokers-list__modal__right .scrollbar-track-y .scrollbar-thumb {
+    background-color: var(--color-secondary);
 }
 
 .brokers-list__modal__left .btn {

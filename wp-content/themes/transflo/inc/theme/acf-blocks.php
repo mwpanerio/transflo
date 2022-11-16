@@ -388,7 +388,7 @@ fx_register_block(
         'template'      => 'innerpage/brokers-list.php',
         'css'           => 'innerpage/brokers-list.css',
         'js'            => 'innerpage/brokers-list.js',
-        'js_deps'       => ['fx_isotope', 'fx_custom_scrollbar', 'jquery'],
+        'js_deps'       => ['fx_isotope', 'fx_custom_scroll_bar', 'jquery'],
         'category'      => 'fx-innerpage-blocks',
         'post_types'    => [],
     ]

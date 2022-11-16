@@ -56,7 +56,7 @@ var FX = ( function( FX, $ ) {
                 }
             });
 
-            let initShow = 9; //number of items loaded on init & onclick load more button
+            let initShow = 12; //number of items loaded on init & onclick load more button
             let counter = 3; //counter for load more button
             const iso = $container.data('isotope'); // get Isotope instance
 

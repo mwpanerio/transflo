@@ -14,14 +14,15 @@ var FX = ( function( FX, $ ) {
 				arrows: false,
 				dots: false,
 				fade: true,
-				autoplay: true,
-				autoplaySpeed: 2000,
 				asNavFor: '.js-tab-menu',
 				infinite: false,
+				autoplay: true,
+				autoplaySpeed: 2000,
 			});
 
 			$('.js-tab-menu').slick({
-				infinite: false,
+				infinite: true,
+				loop: true,
 				slidesToShow: 3,
 				slidesToScroll: 1,
 				asNavFor: '.js-tab-for',

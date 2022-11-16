@@ -160,7 +160,7 @@
 }
 
 .form-block__cta {
-    margin-top: 60px;
+    margin-top: var(--section-margins);
     border-radius: 20px;
     padding: 30px 20px;
     position: relative;
@@ -311,11 +311,16 @@
     text-transform: uppercase;
 }
 
-.forms-block__row__item {
+.forms-block__row__item:not(:last-child) {
     margin-bottom: 40px;
 }
 
 @media (min-width: 769px) and (max-width: 1199px) {
+    .forms-block__row__item,
+    .forms-block__row__item:not(:last-child) {
+        margin-bottom: 40px;
+    }
+
     .forms-block__row__item:first-child {
         order: 1;
     }

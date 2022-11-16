@@ -15,8 +15,6 @@ var FX = ( function( FX, $ ) {
 				dots: false,
 				fade: true,
 				infinite: true,
-				autoplay: true,
-				autoplaySpeed: 2000,
 				responsive: [
 					{
 					  breakpoint: 768,
@@ -38,10 +36,6 @@ var FX = ( function( FX, $ ) {
 				}
 			})
 
-			$('.js-tab-for').on('init', function() {
-				console.log('slick initialize')
-			})
-
 			$('.js-tab-menu').slick({
 				infinite: true,
 				slidesToShow: 4,
@@ -53,7 +47,6 @@ var FX = ( function( FX, $ ) {
 					  breakpoint: 768,
 					  settings: {
 						focusOnSelect: true,
-						asNavFor: '.js-tab-for',
 						autoplay: true,
 						autoplaySpeed: 2000,
 						slidesToShow: 1,

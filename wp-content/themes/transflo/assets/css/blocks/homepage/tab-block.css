@@ -43,11 +43,13 @@
     margin: 0 10px;
 }
 
-.js-tab-menu .slick-slide.slick-current.slick-active .tab-column {
+body:not(.home) .js-tab-menu .slick-slide.slick-current.slick-active .tab-column,
+.js-tab-menu .slick-slide.is-current .tab-column {
     border-bottom: 5px solid #2474BB;
 }
 
-.js-tab-menu .slick-slide.slick-current.slick-active .tab-column img {
+body:not(.home) .js-tab-menu .slick-slide.slick-current.slick-active .tab-column img,
+.js-tab-menu .slick-slide.is-current .tab-column img {
     opacity: 1;
 }
 

@@ -116,7 +116,7 @@
 
 @media (min-width: 768px) {
     .brokers-list__list {
-        margin: 0 -32px -32px;
+        margin: 0 -16px -32px;
     }
 
     .brokers-list__item {

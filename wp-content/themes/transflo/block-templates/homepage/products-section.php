@@ -34,7 +34,7 @@
                                 <h3><?php echo $title; ?></h3>
                                 <?php endif; ?>
                                 <?php if($description = get_sub_field('description')): ?>
-                                <p><?php echo $description; ?></p>
+                                    <?php echo $description; ?>
                                 <?php endif; ?>
                             </div>
                         </div>

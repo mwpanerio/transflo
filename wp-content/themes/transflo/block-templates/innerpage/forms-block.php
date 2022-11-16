@@ -22,7 +22,7 @@
             <div class="forms-block__row__item col-xxs-12 col-sm-6 col-md-6 col-lg-3">
                 <div class="form-blocks__inner">
                     <h4 class="h4"><?php echo get_field('support_title'); ?></h4>
-                    <p><?php echo get_field('support_description'); ?></p>
+                    <?php echo get_field('support_description'); ?>
                     <p class="form-block__text-with-icon">
                         <i class="icon-phone">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">

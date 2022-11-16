@@ -26,11 +26,11 @@
                     }
                 ?>
                 <?php if ( is_search() ): ?>
-                    <h3 class="h1">Search Results</h3><?php /* different heading type for SEO benefit */ ?>
+                    <h3 class="h3">Search Results</h3><?php /* different heading type for SEO benefit */ ?>
                 <?php elseif ( is_home() ): ?>
-                    <h3 class="h1">Resources</h3><?php /* different heading type for SEO benefit */ ?>
+                    <h3 class="h3">Resources</h3><?php /* different heading type for SEO benefit */ ?>
                 <?php elseif ( is_404() ) : ?>
-                    <h1><?php the_field('404_title', 'option'); ?></h1>
+                    <h1 class="h3"><?php the_field('404_title', 'option'); ?></h1>
                 <?php elseif ( is_category() ) : ?>
                     <?php
                         $current_slug = '';
@@ -41,9 +41,9 @@
                             $current_category_name = $category->name;
                         }    
                     ?>
-                    <h3 class="h1"><?php echo $current_category_name; ?></h3>
+                    <h3 class="h3"><?php echo $current_category_name; ?></h3>
                 <?php else : ?>
-                    <h1><?php the_title(); ?></h1>
+                    <h1 class="h3"><?php the_title(); ?></h1>
                 <?php endif; ?>
                 <?php if ( !is_search() ): ?>
                     <?php if($masthead_description = get_field('description', $post_id)): ?>

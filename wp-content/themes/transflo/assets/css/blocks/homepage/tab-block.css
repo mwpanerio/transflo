@@ -342,6 +342,12 @@
 
 .testimonials--general-tab .tab-content {
     background-color: var(--color-offwhite);
+    margin-right: 0;
+    margin-top: 0;
+}
+
+.testimonials--general-tab .js-tab-for {
+    margin-top: 20px;
 }
 
 .testimonials--general-tab .tab-content-item,
@@ -352,6 +358,13 @@
 .testimonials--general-tab .tab-content-item {
     border-radius: 20px;
     overflow: hidden;
+    padding-right: 22px;
+}
+
+@media (min-width: 768px) {
+    .testimonials--general-tab .tab-content-item {
+        padding-right: 0;
+    }
 }
 
 .testimonials--general-tab .tab-content {
@@ -374,20 +387,18 @@
     height: auto;
 }
 
-.testimonials .js-tab-menu .slick-track {
+.testimonials .slick-track {
     display: flex;
 }
 
-@media (min-width: 768px) {
-    .testimonials .slick-slide {
-        height: inherit;
-    }
+.testimonials .slick-slide {
+    height: inherit;
+}
 
-    .testimonials .slick-slide > div,
-    .testimonials .slick-slide .tab-menu-item,
-    .testimonials .slick-slide .tab-column {
-        height: 100%;
-    }
+.testimonials .slick-slide > div,
+.testimonials .slick-slide .tab-menu-item,
+.testimonials .slick-slide .tab-column {
+    height: 100%;
 }
 
 .testimonials .js-tab-menu .slick-slide {

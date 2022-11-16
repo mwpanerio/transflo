@@ -15,15 +15,7 @@ var FX = ( function( FX, $ ) {
 				dots: false,
 				fade: true,
 				asNavFor: '.js-tab-menu',
-				infinite: false,
-				responsive: [
-					{
-					  breakpoint: 768,
-					  settings: {
-						adaptiveHeight: true
-					  }
-					}
-				]
+				infinite: false
 			});
 
 			$('.js-tab-menu').slick({

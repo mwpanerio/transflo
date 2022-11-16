@@ -1,3 +1,7 @@
+.image-buttons + .bg-white {
+    padding-top: 0 !important;
+}
+
 .image-buttons__top-content {
     text-align: center;
     padding-bottom: 20px;

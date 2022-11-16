@@ -869,6 +869,13 @@ img.logo {
         max-height: none !important;
         overflow: scroll !important;
     }
+
+    .nav-primary .ubermenu .ubermenu-row,
+    .nav-primary .ubermenu .ubermenu-autocolumn,
+    .nav-primary .ubermenu .ubermenu-submenu-type-stack {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
 }
 
 body:after {

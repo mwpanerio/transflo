@@ -56,7 +56,7 @@
             <?php if(is_home() || is_archive()): ?>
                 <div class="masthead__category">
                     <div class="row">
-                        <div class="col-xxs-12 col-sm-6 col-lg-6">
+                        <div class="col-xxs-12 col-sm-6 col-lg-7">
                             <form action="./" class="form masthead__category__search">
                                 <div class="form-col">
                                     <input type="text" placeholder="&nbsp;" name="search-block" id="search-block" value="<?php echo get_search_query( true ); ?>" data-swplive="true">
@@ -74,7 +74,7 @@
                                 <button type="submit"><i class="icon-search"></i></button>
                             </form>
                         </div>
-                        <div class="col-xxs-12 col-sm-6 col-lg-6">
+                        <div class="col-xxs-12 col-sm-6 col-lg-5">
                             <div class="form-col">
                                 <?php 
                                     $categories = get_terms(
@@ -166,7 +166,9 @@
                                 <input type="text" placeholder="&nbsp;" name="search-block" id="search-block" value="<?php echo get_search_query( true ); ?>" data-swplive="true">
                                 <?php 
                                     if(is_category()):
-                                        $current_category_name = get_the_category()[0]->name;
+                                        $category = get_category( get_query_var( 'cat' ) );
+                                        $current_slug = $category->slug;
+                                        $current_category_name = $category->name;
                                 ?>
                                     <label for="search-block">Search for <?php echo strtolower($current_category_name); ?> posts...</label>
                                 <?php else: ?>

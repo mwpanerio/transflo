@@ -1309,7 +1309,8 @@ body:after {
         margin-bottom: 0;
     }
 
-    .nav-primary .ubermenu .ubermenu-submenu-type-mega.ubermenu-submenu-align-full_width .ubermenu-row > li > ul > li:not(:last-child) {
+    .nav-primary .ubermenu .ubermenu-submenu-type-mega.ubermenu-submenu-align-full_width .ubermenu-row > li > ul > li:not(:last-child),
+    .nav-primary .ubermenu .ubermenu-submenu-type-mega.ubermenu-submenu-align-full_width .ubermenu-row > li > ul:not(:last-child) {
         border-bottom: 1px solid var(--color-border);
     }
 }

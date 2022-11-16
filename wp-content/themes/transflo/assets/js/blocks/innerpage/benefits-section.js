@@ -41,7 +41,7 @@ var FX = ( function( FX, $ ) {
 								slidesToScroll: 1,
 								variableWidth: false,
 								arrows: true,
-								adaptiveHeight: true,
+								adaptiveHeight: false,
 							}
 						},
 	

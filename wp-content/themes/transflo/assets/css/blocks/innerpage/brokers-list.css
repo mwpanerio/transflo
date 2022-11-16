@@ -542,11 +542,11 @@
 
 .brokers-list__modal__close span:before {
     width: 100%;
-    height: 1px;
+    height: 2px;
 }
 
 .brokers-list__modal__close span:after {
-    width: 1px;
+    width: 2px;
     height: 100%;
 }
 

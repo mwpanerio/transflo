@@ -27,7 +27,7 @@ var FX = ( function( FX, $ ) {
 					$('.js-tab-for').slick('slickGoTo', $index);
 				}
 			})
-
+			
 			$('.js-tab-for').slick({
 				slidesToShow: 1,
 				slidesToScroll: 1,
@@ -57,6 +57,7 @@ var FX = ( function( FX, $ ) {
 					  breakpoint: 768,
 					  settings: {
 						focusOnSelect: true,
+						asNavFor: '.js-tab-for',
 						autoplay: true,
 						autoplaySpeed: 2000,
 						slidesToShow: 1,

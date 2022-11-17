@@ -1051,7 +1051,7 @@ body:after {
     }
 
     .left-text {
-        width: calc(100% - 760px);
+        width: calc(100% - 645px);
     }
   
     .left-text-wrapper {

@@ -1,3 +1,4 @@
+<?php $category_object = get_queried_object(); ?>
 <section class="masthead masthead--innerpage" id="js-masthead-innerpage">
     <div class="container">
         <div class="left-text">
@@ -46,8 +47,11 @@
                     <h1 class="h3"><?php the_title(); ?></h1>
                 <?php endif; ?>
                 <?php if ( !is_search() ): ?>
-                    <?php if($masthead_description = get_field('description', $post_id)): ?>
+                    <?php if($masthead_description = get_field('description', $post_id) && !is_category()): ?>
                         <?php echo $masthead_description; ?>
+                    <?php endif; ?>
+                    <?php if(is_category()): ?>
+                        <?php echo get_field('description', $category_object); ?>
                     <?php endif; ?>
                     <?php if(is_404()): ?>
                         <?php echo get_field('masthead_description', 'option'); ?>
@@ -93,9 +97,13 @@
     </div>
     <div class="right-image hidden-md-down">
         <?php if ( !is_search() ): ?>
-            <?php if($catch_image = get_field('catch_image', $post_id)): ?>
+            <?php if($catch_image = get_field('catch_image', $post_id) && !is_category()): ?>
             <div class="right-image-wrapper">
                 <?php echo fx_get_image_tag($catch_image, 'object-fit'); ?>
+            </div>
+            <?php elseif(is_category()): ?>
+            <div class="right-image-wrapper">
+                <?php echo fx_get_image_tag(get_field('page_header_image', $category_object), 'object-fit'); ?>
             </div>
             <?php elseif(is_singular()): ?>
                 <div class="right-image-wrapper">

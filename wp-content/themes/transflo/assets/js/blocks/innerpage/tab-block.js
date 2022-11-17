@@ -27,7 +27,7 @@ var FX = ( function( FX, $ ) {
 					$('.js-tab-for').slick('slickGoTo', $index);
 				}
 			})
-			
+
 			$('.js-tab-for').slick({
 				slidesToShow: 1,
 				slidesToScroll: 1,
@@ -67,6 +67,8 @@ var FX = ( function( FX, $ ) {
 					}
 				]
 			});
+
+			$('.js-tab-menu').find(`.slick-slide[data-slick-index=0]`).addClass('is-current');
 		},
 	}
 

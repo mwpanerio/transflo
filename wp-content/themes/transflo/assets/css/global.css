@@ -1256,7 +1256,7 @@
  }
 
  .mfp-bg {
-  z-index: 99999;
+  z-index: 99999 !important;
  }
  
  .mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {

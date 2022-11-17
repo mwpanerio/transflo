@@ -1051,7 +1051,7 @@ body:after {
     }
 
     .left-text {
-        width: 38.190325vw;
+        width: 34.290325vw;
     }
   
     .left-text-wrapper {
@@ -1065,6 +1065,12 @@ body:after {
         padding-bottom: 50px;
     }
 
+ }
+
+ @media (min-width: 1250px) {
+    .left-text {
+        width: 38.190325vw;
+    }
  }
 
  @media (min-width: 1366px) {

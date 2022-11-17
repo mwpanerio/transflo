@@ -473,3 +473,16 @@ fx_register_block(
         'post_types'    => [],
     ]
 );
+
+fx_register_block(
+    [
+        'name'          => 'innerpage-team-block',
+        'title'         => 'Innerpage - Team Block',
+        'template'      => 'innerpage/team-block.php',
+        'css'           => 'innerpage/team-block.css',
+        'js'            => 'innerpage/team-block.js',
+        'js_deps'       => [ 'jquery', 'fx_custom_scroll_bar' ],
+        'category'      => 'fx-innerpage-blocks',
+        'post_types'    => [],
+    ]
+);

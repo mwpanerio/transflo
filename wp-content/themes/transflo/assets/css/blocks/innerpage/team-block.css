@@ -1,0 +1,223 @@
+.team-block__list {
+    margin: 50px -22px -44px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.team-block__item:before {
+    display: none;
+}
+
+.team-block__item {
+    width: 100%;
+    padding: 0 22px;
+    margin-bottom: 44px;
+}
+
+@media (min-width: 768px) {
+    .team-block__item {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .team-block__item {
+        width: 33.33%;
+    }
+}
+
+.team-block__card {
+    text-align: center;
+    background-color: var(--color-primary);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding-top: 150px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out,
+                opacity 0.3s ease-in-out;
+}
+
+@media (min-width: 1200px) {
+    .team-block__card.is-not-focused {
+        transform: scale(0.98);
+        opacity: 0.6;
+    }
+
+    .team-block__card.is-focused {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.team-block__card__inner {
+    background-color: var(--color-white);
+    padding: 0 20px 40px;
+    flex: 1;
+}
+
+.team-block__card__image {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto -80px;
+    position: relative;
+    top: -100px;
+    border-radius: 50%;
+    border: 10px solid var(--color-white);
+}
+
+.team-block__card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.team-block__card__content h3 {
+    padding-bottom: 4px;
+}
+
+.team-block__modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 9999;
+    display: none;
+}
+
+.team-block__modal .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.team-block__modal__inner {
+    max-width: 820px;
+    background-color: var(--color-primary);
+    padding-top: 100px;
+    width: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.team-block__modal__close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .team-block__modal__close {
+        right: 20px;
+        top: 15px;
+    }
+}
+
+.team-block__modal__close span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+
+.team-block__modal__close span:before,
+.team-block__modal__close span:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: var(--color-white);
+}
+
+.team-block__modal__close span:before {
+    width: 2px;
+    height: 100%;
+    top: 50%;
+    -webkit-transform: translateY(-50%) rotate(90deg);
+            transform: translateY(-50%) rotate(90deg);
+}
+
+.team-block__modal__close span:after {
+    width: 2px;
+    height: 100%;
+}
+
+.team-block__modal__image {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto -100px;
+    position: relative;
+    top: 0;
+    border-radius: 50%;
+    border: 10px solid var(--color-white);   
+}
+
+.team-block__modal__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.team-block__modal__content {
+    text-align: center; 
+    padding: 120px 16px 40px 22px;
+    background-color: var(--color-white);
+}
+
+@media (min-width: 768px) {
+    .team-block__modal__content {
+        padding: 120px 30px 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .team-block__modal__content__inner {
+        max-height: 400px;
+        overflow: scroll;
+        padding-right: 10px;
+    }
+}
+
+.team-block__modal__content h3 {
+    padding-bottom: 5px;
+}
+
+.team-block__modal__description {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.team-block__modal .scrollbar-track-y {
+    opacity: 1;
+    background-color: var(--color-offwhite);
+    border-radius: 10px;
+}
+
+.team-block__modal .scrollbar-track-y .scrollbar-thumb {
+    background-color: var(--color-secondary);
+}

@@ -22,7 +22,7 @@
             <div class="js-products-slider fx-slider">
                 <?php while(have_rows('product_slider')): the_row(); ?>
                 <div class="products-items fx-slide">
-                    <a href="<?php echo get_sub_field('button')['url']; ?>" class="products__link"<?php echo get_sub_field('button')['target'] ? ' target="' . get_sub_field('button')['target'] . '"': ''; ?>>
+                    <div class="products__link">
                         <div class="products__info-top">
                             <div class="products__image">
                                 <?php if($image = get_sub_field('image')): ?>
@@ -39,9 +39,9 @@
                             </div>
                         </div>
                         <div class="products__info-bottom">
-                            <span class="btn btn-secondary">Learn More</span>
+                            <a href="<?php echo get_sub_field('button')['url']; ?>" class="btn btn-secondary"<?php echo get_sub_field('button')['target'] ? ' target="' . get_sub_field('button')['target'] . '"': ''; ?>>Learn More</a>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 <?php endwhile; ?>
             </div>

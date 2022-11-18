@@ -46,11 +46,23 @@
 
 .counter-bar h2 {
     padding: 0 0 0;
-    font-size: 46px;
+    font-size: 38px;
     color: var(--color-white);
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (min-width: 768px) {
+    .counter-bar h2 {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .counter-bar h2 {
+        font-size: 46px;
+    }
 }
 
 .counter-block.counter-block--white {
@@ -96,10 +108,14 @@
     }
 
     .counter-bar ul li {
-        width: 50%;
+        width: 33.33%;
         padding: 0 5px;
         border-top: none;
         margin-bottom: 20px;
+    }
+
+    .counter-bar ul li:not(:last-child) {
+        border-right: 1px solid rgba(253, 253, 253, 0.25);
     }
 
     .counter-bar p {
@@ -135,10 +151,6 @@
         max-width: 33.333%;
         flex: 1;
         margin-bottom: 0;
-    }
-
-    .counter-bar ul li:not(:last-child) {
-        border-right: 1px solid rgba(253, 253, 253, 0.25);
     }
     
     .counter-bar p {

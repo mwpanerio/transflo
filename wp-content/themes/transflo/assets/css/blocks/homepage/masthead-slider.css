@@ -141,6 +141,10 @@
         background-color: var(--color-white);
         transform: scale(1.02);
     }
+
+    .masthead__slider-col:hover i {
+        color: var(--color-secondary);
+    }
 }
 
 .masthead__slider-image {

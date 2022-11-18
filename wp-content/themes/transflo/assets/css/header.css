@@ -1313,7 +1313,7 @@ body:after {
 @media (max-width: 1199px) {
     .nav-primary .ubermenu .ubermenu-submenu-type-mega.ubermenu-submenu-align-full_width .ubermenu-row .ubermenu-target {
         color: var(--color-primary);
-        padding: 16px 23px 16px 42px !important;
+        padding: 16px 50px 16px 70px!important;
     }
     
     .nav-primary .ubermenu .ubermenu-submenu-type-mega.ubermenu-submenu-align-full_width .ubermenu-row > li > ul {
@@ -1324,6 +1324,12 @@ body:after {
     .nav-primary .ubermenu .ubermenu-submenu-type-mega.ubermenu-submenu-align-full_width .ubermenu-row > li > ul > li:not(:last-child),
     .nav-primary .ubermenu .ubermenu-submenu-type-mega.ubermenu-submenu-align-full_width .ubermenu-row > li:not(:last-child) {
         border-bottom: 1px solid var(--color-border);
+    }
+}
+
+@media (max-width: 767px) {
+    .nav-primary .ubermenu .ubermenu-submenu-type-mega.ubermenu-submenu-align-full_width .ubermenu-row .ubermenu-target {
+        padding: 16px 23px 16px 42px !important;
     }
 }
 

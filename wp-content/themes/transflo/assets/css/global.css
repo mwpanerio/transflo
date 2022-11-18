@@ -674,10 +674,11 @@
  
  .btn {
   margin-right: 10px;
+  margin-bottom: 16px;
  }
- 
+
  .btn+.btn {
-     margin-top: 15px;
+     margin-top: 0;
  }
  
  @media (min-width: 600px) {

@@ -6,14 +6,16 @@
             <div class="popup-cross">
                 <i class="icon-close"></i>
             </div>
-            <div class="image-buttons__popup__image">
-                <span></span>
-                <img src="" alt="">
-            </div>
-            <div class="image-buttons__popup__info">
-                <h3> <span>Factoring</span> <i class="icon-button-right"></i></h3>
-                <div class="image-buttons__popup__description">
-                    <p>Lorem ipsum dolor sit amet, conse ctetur adipiscing elit, sed do eiusmod tempor</p>
+            <div class="image-button__popup__inner">
+                <div class="image-buttons__popup__image">
+                    <span></span>
+                    <img src="" alt="">
+                </div>
+                <div class="image-buttons__popup__info">
+                    <h3> <span>Factoring</span> <i class="icon-button-right"></i></h3>
+                    <div class="image-buttons__popup__description">
+                        <p>Lorem ipsum dolor sit amet, conse ctetur adipiscing elit, sed do eiusmod tempor</p>
+                    </div>
                 </div>
             </div>
         </div>

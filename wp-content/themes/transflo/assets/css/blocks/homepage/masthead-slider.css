@@ -522,7 +522,7 @@
     .image-buttons__popup__info a:hover {
         box-shadow: none;
     }
-    
+
     .image-buttons__popup__info a:hover i {
         color: var(--color-secondary);
     }
@@ -558,6 +558,24 @@
 
 .image-buttons__popup {
     display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .image-button__popup__inner {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+    .image-buttons__popup__image {
+        width: 60%;
+        height: 100%;
+    }
+
+    .image-buttons__popup__info {
+        width: 40%;
+        padding-left: 20px;
+    }
 }
 
 

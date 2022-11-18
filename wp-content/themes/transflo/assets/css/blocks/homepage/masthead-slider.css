@@ -254,17 +254,17 @@
 }
 
 .slider-nav__prev {
-    padding-left: 50px;
+    padding-left: 60px;
 }
 
 .slider-nav__next {
-    padding-right: 50px;
+    padding-right: 60px;
     justify-content: flex-end;
     text-align: right;
 }
 
 .masthead__right .slick-arrow {
-    bottom: -79px;
+    bottom: -88px;
 }
 
 .masthead__right__column1 {

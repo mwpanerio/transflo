@@ -32,7 +32,7 @@
 .progress,
 .progress-1  {
     display: block;
-    width: 232px;
+    width: calc(100% - 90px);
     height: 6px;
     border-radius: 99px;
     overflow: hidden;

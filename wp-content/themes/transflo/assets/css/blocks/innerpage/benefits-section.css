@@ -27,7 +27,6 @@
 
 .benefits-section__row .row {
     display: flex;
-    justify-content: center;
     margin-left: 0;
     margin-right: 0;
 }
@@ -199,7 +198,7 @@
 
 @media (min-width: 768px) {
     .benefits-section__row .slick-track .slick-slide > div .benefits-section__item {
-        padding: 0 20px;
+        padding: 20px;
     }
 }
 
@@ -245,7 +244,7 @@
 
 .benefits-section-progress {
     display: block;
-    width: calc(100% - 140px);
+    width: calc(100% - 150px);
     height: 6px;
     border-radius: 99px;
     overflow: hidden;
@@ -257,8 +256,21 @@
     margin: 9px 0 0 20px;
     float: right;
     position: absolute;
-    right: 0;
-    bottom: 24px;
+    right: 20px;
+    bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .benefits-section-progress {
+        width: calc(100% - 180px);
+    }   
+}
+
+@media (min-width: 1200px) {
+    .benefits-section-progress {
+        width: calc(100% - 140px);
+        right: 0;
+    }   
 }
 
 .row[data-benefits-slider="4"] + .benefits-section-progress {

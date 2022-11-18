@@ -28,7 +28,7 @@
                 <?php endwhile; ?>
             </div>
             <?php if(count(get_field('benefits_item')) > $column_per_row): ?>
-            <div class="benefits-section-progress hidden-md-down" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="benefits-section-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
             <?php endif; ?>
         </div>
     </div>

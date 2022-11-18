@@ -87,6 +87,13 @@ Guru: https://app.getguru.com/card/ixR67EpT/Slick-Slider
     border-radius: 50%;
 }
 
+@media (min-width: 768px) {
+    .slick-arrow {
+        width: 50px;
+        height: 50px;
+    }
+}
+
 .slick-next {
     right: 20px;
 }
@@ -103,6 +110,12 @@ Guru: https://app.getguru.com/card/ixR67EpT/Slick-Slider
     font-size: 12px;
     font-family: 'icomoon';
     font-weight: normal;
+}
+
+@media (min-width: 768px) {
+    .slick-arrow:before {
+        font-size: 12px;
+    }
 }
 
 .slick-prev::before {

@@ -1107,6 +1107,8 @@ body:after {
     padding: 0 3px 3px 0;
     font-size: 9px;
     color: #8D99AE;
+    position: relative;
+    top: -1.3px;
 }
 
 .breadcrumbs {

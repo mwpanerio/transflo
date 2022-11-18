@@ -486,3 +486,14 @@ fx_register_block(
         'post_types'    => [],
     ]
 );
+
+fx_register_block(
+    [
+        'name'          => 'innerpage-small-image-button',
+        'title'         => 'Innerpage - Small Image Button',
+        'template'      => 'innerpage/small-image-button.php',
+        'css'           => 'innerpage/benefits-section.css',
+        'category'      => 'fx-innerpage-blocks',
+        'post_types'    => [],
+    ]
+);

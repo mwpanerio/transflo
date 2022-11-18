@@ -299,6 +299,10 @@
      line-height: 1.56em;
      font-weight: normal;
  }
+
+ strong {
+  font-family: "avenir_next_lt_prodemi";
+ }
  
  p:last-child {
      padding-bottom: 0;

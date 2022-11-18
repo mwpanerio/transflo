@@ -14,11 +14,10 @@ var FX = ( function( FX, $ ) {
 				const $sliderWidth =  $this.find('.benefits-section__item').length > $slidesToShow;
 
 				$this.slick( {
-					infinite: false,
+					infinite: true,
 					speed: 700,
 					slidesToShow: $slidesToShow,
 					slidesToScroll: 1,
-					infinite: true,
 					arrows: true,
 					variableWidth: $sliderWidth,
 					responsive: [

@@ -381,6 +381,7 @@
 
 .testimonials--general-tab .tab-content {
     overflow: hidden;
+    align-items: center;
 }
 
 @media (min-width: 768px) {
@@ -397,6 +398,9 @@
     position: relative;
     width: 100%;
     height: auto;
+    border-radius: 30px;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 .testimonials .slick-track {

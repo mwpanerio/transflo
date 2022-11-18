@@ -33,6 +33,7 @@
 	display: inline-block;
 	margin-top: 20px;
 	background-image: none;
+	box-shadow: none;
 }
 
 .read-more__box .expand i {
@@ -51,4 +52,5 @@
 
 .read-more__box .expand:hover {
 	background-image: none;
+	box-shadow: none;
 }

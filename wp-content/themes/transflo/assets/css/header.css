@@ -170,6 +170,7 @@ img.logo {
 .logo a {
     display: block;
     background-image: none;
+    box-shadow: none;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2) and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) and (max-width: 1024px) { 
@@ -1144,6 +1145,7 @@ body:after {
 
 .breadcrumbs a {
     text-decoration: none;
+    box-shadow: none;
     color: #2474BB;
     border: none;
     background: transparent;
@@ -1153,6 +1155,7 @@ body:after {
 @media (min-width: 1200px) {
     .breadcrumbs a:hover {
         color: var(--color-black);
+        box-shadow: none;
     }
 }
 

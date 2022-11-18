@@ -474,10 +474,8 @@
      font-weight: normal;
      font-family: 'avenir_next_lt_prodemi';
      position: relative;
-     background: linear-gradient(to bottom,  rgba(36,116,187,0.20) 0%,rgba(36,116,187,0.20) 100%);
-     background-position: 0 100%;
-     background-repeat: repeat-x;
-     background-size: 2px 2px;
+     box-shadow: inset 0 -4px rgba(36,116,187,.2);
+     transition: box-shadow 0.45s ease-in-out;
  }
  
  a:focus,
@@ -560,9 +558,7 @@
    }
  
    a:hover {
-     background: linear-gradient(to bottom,  rgba(36,116,187,0.20) 0%,rgba(36,116,187,0.20) 100%);
-       background-position: 0 0%;
-       transition: all ease-in-out 0.3s;
+     box-shadow: inset 0 -100px rgba(36,116,187,.2);
    }
  
    blockquote {
@@ -646,6 +642,7 @@
    background: #2474BB;
    letter-spacing: 0.02em;
    z-index: 1;
+   box-shadow: none;
  }
  
  .btn:before {
@@ -712,6 +709,7 @@
  
    .btn:before {
      font-size: 20px;
+     box-shadow: none;
    }
  
    .btn:hover,

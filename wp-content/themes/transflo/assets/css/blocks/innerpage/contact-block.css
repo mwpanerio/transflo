@@ -201,11 +201,13 @@
 
     .schedule-list-col a:hover {
         background: #2474BB;
+        box-shadow: none;
     }
 
     .schedule-list-col a:hover .schedule-info,
     .schedule-list-col a:hover .schedule-info i {
         color: #fff;
+        box-shadow: none;
     }
 
 }

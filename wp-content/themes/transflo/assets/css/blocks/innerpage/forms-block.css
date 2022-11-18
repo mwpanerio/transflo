@@ -78,12 +78,14 @@
     text-decoration: none;
     box-shadow: none;;
     background-image: none;
+    box-shadow: none;
     transition: background 0.25s ease-in-out;
 }
 
 @media (min-width: 1200px) {
     .form-block__demo__card:hover {
         background-image: none;
+        box-shadow: none;
         background-color: var(--color-primary);
     }
 

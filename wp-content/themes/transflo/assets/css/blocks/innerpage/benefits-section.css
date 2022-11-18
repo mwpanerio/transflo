@@ -21,6 +21,10 @@
     }
 }
 
+.benefits-section__row {
+    position: relative;
+}
+
 .benefits-section__row .row {
     display: flex;
     justify-content: center;
@@ -250,6 +254,9 @@
     transition: background-size .4s ease-in-out;
     margin: 9px 0 0 20px;
     float: right;
+    position: absolute;
+    right: 0;
+    bottom: 24px;
 }
 
 .row[data-benefits-slider="4"] + .benefits-section-progress {

@@ -164,6 +164,10 @@
     letter-spacing: 0.02em;
 }
 
+.page-footer a {
+    box-shadow: none;
+}
+
 .back-top-btn a i {
     display: inline-block;
     vertical-align: middle;
@@ -321,8 +325,13 @@
         border-radius: 99px;
     }
 
+    .page-footer a {
+        box-shadow: none;
+    }
+
     .page-footer a:hover {
         color: rgba(36, 116, 187, 1);
+        box-shadow: none;
     }
 
     .back-top-btn {

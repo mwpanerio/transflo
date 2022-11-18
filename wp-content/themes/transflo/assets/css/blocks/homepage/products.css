@@ -333,6 +333,7 @@
     background-color: var(--color-primary);
     display: block;
     background-image: none;
+    box-shadow: none;
     font-size: 24px;
     display: flex;
     justify-content: center;
@@ -343,5 +344,6 @@
 @media (min-width: 1200px) {
     .product__feed li a:hover {
         background-image: none;
+        box-shadow: none;
     }
 }

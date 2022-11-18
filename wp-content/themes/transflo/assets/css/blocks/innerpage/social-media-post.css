@@ -72,5 +72,6 @@
     .social-media-links ul li a:hover {
         color: var(--color-white);
         background: #164670;
+        box-shadow: none;
     }
 }

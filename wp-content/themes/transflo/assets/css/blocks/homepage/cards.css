@@ -112,6 +112,7 @@
 @media (min-width: 1200px) {
     .card-item a:hover {
         text-decoration: none;
+        box-shadow: none;
     }
 }
 

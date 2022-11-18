@@ -276,10 +276,12 @@ progress::-webkit-progress-value {
     text-decoration: none;
     display: block;
     background-image: none;
+    box-shadow: none;
 }
 
 .search-result:hover {
     background-image: none;
+    box-shadow: none;
 }
 
 .search-result:not(:last-child) {

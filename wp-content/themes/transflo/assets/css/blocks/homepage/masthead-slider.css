@@ -512,6 +512,12 @@
     position: relative;
 }
 
+@media (min-width: 1200px) {
+    .image-buttons__popup__info a:hover i {
+        color: var(--color-secondary);
+    }
+}
+
 .image-buttons__popup__info h3 i {
     position: absolute;
     right: 15px;

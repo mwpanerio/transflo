@@ -8,9 +8,22 @@
 .tab-column {
     width: 200px;
     padding-bottom: 15px;
-    border-bottom: 5px solid #EFF2F4;
+    border: 0;
     cursor: pointer;
     transition: border 0.3s ease-in-out;
+    position: relative;
+}
+
+.tab-column:before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #EFF2F4;
+    border-radius: 6px;
+    transition: background 0.3s ease-in-out;
 }
 
 @media (min-width: 1200px) {
@@ -18,8 +31,8 @@
         transition: color 0.25s ease-in-out;
     }
 
-    .slick-slide:not(.slick-current.slick-active) .tab-column:hover {
-        border-bottom-color: var(--color-primary);
+    .slick-slide:not(.slick-current.slick-active) .tab-column:hover:before {
+        background-color: var(--color-primary);
     }
 
     .slick-slide:not(.slick-current.slick-active) .tab-column:hover p {
@@ -44,8 +57,8 @@
 }
 
 @media (min-width: 768px) {
-    .js-tab-menu .slick-slide.is-current .tab-column {
-        border-bottom: 5px solid #2474BB;
+    .js-tab-menu .slick-slide.is-current .tab-column:before {
+        background-color: var(--color-primary);
     }
 
     .js-tab-menu .slick-slide.is-current .tab-column img {
@@ -54,8 +67,8 @@
 }
 
 @media (max-width: 767px) {
-    .js-tab-menu .slick-slide.slick-current.slick-active .tab-column {
-        border-bottom: 5px solid #2474BB;
+    .js-tab-menu .slick-slide.slick-current.slick-active .tab-column:before {
+        background-color: var(--color-primary);
     }
 
     .js-tab-menu .slick-slide.slick-current.slick-active .tab-column img {

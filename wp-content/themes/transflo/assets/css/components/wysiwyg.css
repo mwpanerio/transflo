@@ -58,9 +58,34 @@
     padding: 0 0 0 0;
     position: relative;
     color: var(--color-text-default);
-    box-shadow: 0 0 20px rgba(0,0,0,0.10);
     border-radius: 20px;
     overflow: initial;
+}
+
+@media (max-width: 1199px) {
+    .table-structure {
+        padding: 0 22px 20px;
+        margin: 0 -22px;
+        border-radius: 0;
+    }
+}
+
+.table-scroll .scrollbar-track-y,
+.table-scroll .scrollbar-track-x {
+    opacity: 1;
+    background-color: var(--color-offwhite);
+    border-radius: 10px;
+}
+
+.table-scroll .scrollbar-track-x {
+    margin: 0 auto;
+    right: 0;
+    width: calc(100% - 44px);
+}
+
+.table-scroll .scrollbar-track-y .scrollbar-thumb,
+.table-scroll .scrollbar-track-x .scrollbar-thumb {
+    background-color: var(--color-secondary);
 }
 
 .table-structure table {
@@ -68,6 +93,7 @@
     width: 872px;
     border-radius: 20px;
     overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .table-structure table thead {
@@ -188,7 +214,8 @@
     }
 
     .table-structure {
-        padding: 0 0;
+        padding: 22px;
+        margin: -22px;
     }    
 
     .table-structure table {

@@ -160,6 +160,8 @@
 
 .benefits-section--version-look-1 .benefits-section__content strong {
     font-size: 20px;
+    display: block;
+    margin-bottom: 10px;
 }
 
 .benefits-section--version-look-2 .benefits-section__row .slick-list {

@@ -511,6 +511,7 @@ img.logo {
     padding: 0 0;
     border: none;
     background: transparent;
+    box-shadow: none;
 }
 
 .sub-menu-toggle {
@@ -1098,6 +1099,7 @@ body:after {
     background: transparent;
     font-family: 'avenir_next_lt_prodemi';
     line-height: 1em;
+    box-shadow: none;
 }
 
 .back-top-page a i {

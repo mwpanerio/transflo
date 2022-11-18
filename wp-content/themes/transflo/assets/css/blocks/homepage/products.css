@@ -9,6 +9,7 @@
     flex-direction: column;
     justify-content: space-between;
     text-decoration: none;
+    box-shadow: none;
     height: 100%;
     background: #EFF2F4;
     transition: -webkit-transform .2s linear;

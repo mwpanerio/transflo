@@ -27,6 +27,7 @@
     font-weight: normal;
     text-decoration: none;
     background: transparent;
+    box-shadow: none;
 }
 
 .page-footer ul li::before,

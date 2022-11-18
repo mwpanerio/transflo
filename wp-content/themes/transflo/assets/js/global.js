@@ -100,16 +100,17 @@ var FX = ( function( FX, $ ) {
 				$this.prepend(`<div class="blockquote__icon">${$blockquoteIcon}</div>`)
 			})
 
+			const options = {
+				damping: 0.04,
+				thumbMinSize: 20,
+				renderByPixel: true,
+				continuousScrolling: false
+			};
+
 			$('.table-structure').each(function() {
 				const $this = $(this);
 
-				$this.mCustomScrollbar({
-					axis:"x",
-					theme: "light-3",
-					advanced: {
-						autoExpandHorizontalScroll: true
-					}
-				});
+				Scrollbar.init($this[0], options);
 			})
 
 			$('#blog-category').on('change', function() {

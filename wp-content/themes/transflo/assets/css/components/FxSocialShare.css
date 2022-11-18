@@ -39,7 +39,8 @@
 .resp-sharing-button__link {
     text-decoration: none;
     color: var(--color-white);
-    margin: 0.5em
+    margin: 0.5em;
+    box-shadow: none;
 }
 
 .social-share-row__item:first-child .resp-sharing-button__link {

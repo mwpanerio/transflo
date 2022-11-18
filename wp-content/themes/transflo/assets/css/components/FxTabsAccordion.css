@@ -34,6 +34,7 @@
     border-radius: 4px;
     width: 100%;
     text-align: left;
+    box-shadow: none;
 }
 
 .tab-accordion__tab.is-active,
@@ -54,6 +55,7 @@
     color: inherit;
     background: var(--color-white);
     text-decoration: none;
+    box-shadow: none;
 }
 
 .tab-accordion__tab:focus:not(:focus-visible),

@@ -6,6 +6,12 @@
             $phone_link = fx_get_client_phone_number( true );
             $logo_id    = fx_get_client_logo_image_id(); 
             $home_url   = get_home_url();
+
+            if($address_url = get_field('address_url', 'option')) {
+                $address_url = $address_url;
+            } else {
+                $address_url = 'https://maps.google.com/maps?q=' . strip_tags($address);
+            }
         ?>
 
         <footer class="page-footer">
@@ -34,7 +40,7 @@
                                     <i class="icon-location"></i><?php echo str_replace(['<p>', '</p>'], '', $address); ?>
                                 </p>
                             <?php endif; ?>
-                            <p><i class=" icon-directions"></i> <a href="https://maps.google.com/maps?q=<?php echo strip_tags($address); ?>" target="_blank">Get Directions</a></p>
+                            <p><i class=" icon-directions"></i> <a href="<?php echo $address_url; ?>" target="_blank">Get Directions</a></p>
                         </div>
                         <div class="footer-quick-links">
                             <h4>Quick Links</h4>
@@ -73,10 +79,18 @@
                     </div>
                 </div>
             </div>
-            <div class="fixed-item hidden-md-down">
+            <div class="fixed-item hidden">
                 <?php echo fx_get_image_tag(500); ?>
             </div>
         </footer>
+
+        <!-- Qualified -->
+        <script>
+            (function(w,q){w['QualifiedObject']=q;w[q]=w[q]||function(){
+            (w[q].q=w[q].q||[]).push(arguments)};})(window,'qualified')
+        </script>
+        <script async src="https://js.qualified.com/qualified.js?token=Piz58Ybm4vu68fPv"></script>
+        <!-- End Qualified -->
 
         <?php wp_footer(); ?>
     </body>

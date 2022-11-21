@@ -61,7 +61,7 @@
         },
         {
             "key": "field_6357334ca8ee3",
-            "label": "Testimonial To Posts",
+            "label": "Testimonials to Post",
             "name": "testimonial_to_posts",
             "type": "relationship",
             "instructions": "",
@@ -294,5 +294,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667219058
+    "modified": 1669000168
 }

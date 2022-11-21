@@ -52,26 +52,31 @@
     margin-right: -22px;
 }
 
-.js-tab-menu .slick-slide {
+.js-tab-menu .slick-slide,
+.js-simple-tab-menu .slick-slide {
     margin: 0 10px;
 }
 
 @media (min-width: 768px) {
-    .js-tab-menu .slick-slide.is-current .tab-column:before {
+    .js-tab-menu .slick-slide.is-current .tab-column:before,
+    .js-simple-tab-menu .slick-slide.is-current .tab-column:before {
         background-color: var(--color-primary);
     }
 
-    .js-tab-menu .slick-slide.is-current .tab-column img {
+    .js-tab-menu .slick-slide.is-current .tab-column img,
+    .js-simple-tab-menu .slick-slide.is-current .tab-column img {
         opacity: 1;
     }
 }
 
 @media (max-width: 767px) {
-    .js-tab-menu .slick-slide.slick-current.slick-active .tab-column:before {
+    .js-tab-menu .slick-slide.slick-current.slick-active .tab-column:before,
+    .js-simple-tab-menu .slick-slide.slick-current.slick-active .tab-column:before {
         background-color: var(--color-primary);
     }
 
-    .js-tab-menu .slick-slide.slick-current.slick-active .tab-column img {
+    .js-tab-menu .slick-slide.slick-current.slick-active .tab-column img,
+    .js-simple-tab-menu .slick-slide.slick-current.slick-active .tab-column img {
         opacity: 1;
     }
 }
@@ -145,7 +150,8 @@
     font-weight: normal;
 }
 
-.js-tab-menu .slick-slide.slick-current.slick-active .tab-column {
+.js-tab-menu .slick-slide.slick-current.slick-active .tab-column,
+.js-simple-tab-menu .slick-slide.slick-current.slick-active .tab-column {
     color: var(--color-black);
 }
 
@@ -246,7 +252,8 @@
         font-size: 17px;
     }
 
-    .js-tab-menu .slick-slide {
+    .js-tab-menu .slick-slide,
+    .js-simple-tab-menu .slick-slide {
         margin: 0 16px;
     }
 
@@ -301,6 +308,12 @@
         position: absolute;
         bottom: 0;
         left: 0;
+        height: 85%;
+        width: auto;
+        right: 0;
+        left: auto;
+        object-position: right;
+        max-width: initial;
     }
 
     .testimonials__wrap,
@@ -326,7 +339,8 @@
         font-size: 18px;
     }
 
-    .js-tab-menu {
+    .js-tab-menu,
+    .js-simple-tab-menu {
         margin: 0 -16px;
     }
 
@@ -371,7 +385,8 @@
     margin-top: 0;
 }
 
-.testimonials--general-tab .js-tab-for {
+.testimonials--general-tab .js-tab-for,
+.testimonials--general-tab .js-simple-tab-for {
     margin-top: 20px;
 }
 
@@ -435,7 +450,9 @@
 }
 
 .testimonials--general-tab .js-tab-menu .slick-slide > div,
-.testimonials--general-tab .js-tab-menu .slick-slide .tab-menu-item {
+.testimonials--general-tab .js-tab-menu .slick-slide .tab-menu-item,
+.testimonials--general-tab .js-simple-tab-menu .slick-slide > div,
+.testimonials--general-tab .js-simple-tab-menu .slick-slide .tab-menu-item {
     height: 100%;
 }
 

@@ -1024,7 +1024,7 @@ body:after {
     .left-text-wrapper p {
         font-size: 18px;
         line-height: 1.52em;
-        padding-bottom: 25px;
+        padding-bottom: 20px;
     }
  }
 
@@ -1065,7 +1065,6 @@ body:after {
 
     .left-text-wrapper p {
         font-size: 20px;
-        padding-bottom: 50px;
     }
 
  }

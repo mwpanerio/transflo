@@ -318,12 +318,19 @@
         width: 100px;
         height: 100%;
         background: #8D99AE;
+        transition: background 0.3s ease-in-out;
+    }
+
+    .is-back-to-top-focused .footer-bottom::before {
+        background-color: #2474BB;
     }
 
     .back-top-btn a {
         padding: 14px 0 14px 20px;
         font-size: 18px;
         border-radius: 99px;
+        transition: color 0.3s ease-in-out,
+                    background 0.3s ease-in-out;
     }
 
     .page-footer a {
@@ -333,6 +340,12 @@
     .page-footer a:hover {
         color: rgba(36, 116, 187, 1);
         box-shadow: none;
+    }
+
+    .is-back-to-top-focused .back-top-btn a:hover,
+    .is-back-to-top-focused .back-top-btn a {
+        color: #fff;
+        background-color: #2474BB;
     }
 
     .back-top-btn {

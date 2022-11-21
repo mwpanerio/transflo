@@ -64,6 +64,16 @@ var FX = ( function( FX, $ ) {
 
 				$("html, body").animate ({scrollTop: 0});
 			})
+
+			$('.back-top-btn a').on('mouseenter', function() {
+                const $this = $(this);
+                $('.page-footer').addClass('is-back-to-top-focused');
+            })
+            
+            $('.back-top-btn a').on('mouseleave', function() {
+                const $this = $(this);
+                $('.page-footer').removeClass('is-back-to-top-focused');
+            })
 		}
 	};
 

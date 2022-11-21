@@ -400,6 +400,13 @@
      padding: 0;
      list-style: none;
  }
+
+ ul ul,
+ ul ol,
+ ol ol,
+ ol ul {
+  padding: 10px 0 0 20px;
+ }
  
  
  .page-content ul,
@@ -1375,6 +1382,20 @@
    -webkit-animation-delay: 0.3s;
            animation-delay: 0.3s;
    background-color: rgba(255, 255, 255, 0.4)
+ }
+
+ .media-gallery--with-button .media-gallery__item-link {
+  border-radius: 20px 20px 0 0;
+ }
+
+ .media-gallery--with-button .media-gallery__item-link img {
+  border-radius: 0;
+ }
+
+ .media-gallery--with-button .btn {
+  margin-bottom: 0;
+  border-radius: 0 0 20px 20px;
+  width: 100%;
  }
  
  @-webkit-keyframes pulse {

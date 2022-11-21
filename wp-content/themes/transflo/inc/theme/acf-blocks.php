@@ -161,9 +161,9 @@ fx_register_block(
         'template'      => 'homepage/masthead-section.php',
         'description'   => '',
         'css'           => 'homepage/masthead-slider.css',
-        'css_deps'      => [ 'fx_slick' ],
+        'css_deps'      => [ 'fx_slick', 'fx_lightbox_plugin' ],
         'js'            => 'homepage/masthead-slider.js',
-        'js_deps'       => [ 'fx_slick', 'fx_masthead_slider_2', 'fx_gsap' ],
+        'js_deps'       => [ 'fx_slick', 'fx_masthead_slider_2', 'fx_gsap', 'fx_lightbox' ],
         'category'      => 'fx-homepage-blocks',
     ]
 );
@@ -213,7 +213,7 @@ fx_register_block(
 fx_register_block(
     [
         'name'          => 'homepage-latest-news-and-resources',
-        'title'         => 'Homepage - Latest News & Resources Section',
+        'title'         => 'Homepage - Resource Preview',
         'template'      => 'homepage/latest-news-and-resources.php',
         'description'   => '',
         'css'           => 'homepage/cards.css',
@@ -331,7 +331,7 @@ fx_register_block(
 fx_register_block(
     [
         'name'          => 'innerpage-blog-preview',
-        'title'         => 'Innerpage - Blog Preview',
+        'title'         => 'Innerpage - Resource Preview',
         'template'      => 'homepage/latest-news-and-resources.php',
         'description'   => '',
         'css'           => 'homepage/cards.css',

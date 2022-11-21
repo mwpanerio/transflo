@@ -9,26 +9,22 @@ var FX = ( function( FX, $ ) {
 
 		init() {
 
-			$('.js-tab-for').on('afterChange', function() {
+			$('.js-simple-tab-menu .tab-menu-item').each(function() {
 				const $this = $(this);
-				const $index = +($this.find('.slick-active').attr('data-slick-index'));
 
 				if($(window).outerWidth() > 768) {
-					$('.js-tab-menu').find('.slick-slide').removeClass('is-current');
-					$('.js-tab-menu').find(`.slick-slide[data-slick-index=${$index}]`).addClass('is-current');
+					$this.on('click', function() {
+						const $this = $(this);
+						const $tabMenuParent = $this.parents('.js-simple-tab-menu');
+						const $tabFor = $tabMenuParent.next('.js-simple-tab-for');
+						const $index = +($this.parents('.slick-slide').attr('data-slick-index'));
+
+						$tabFor.slick('slickGoTo', $index);
+					})
 				}
 			})
 
-			$('.js-tab-menu .tab-menu-item').on('click', function() {
-				const $this = $(this);
-				const $index = +($this.parents('.slick-slide').attr('data-slick-index'));
-
-				if($(window).outerWidth() > 768) {
-					$('.js-tab-for').slick('slickGoTo', $index);
-				}
-			})
-
-			$('.js-tab-for').slick({
+			$('.js-simple-tab-for').slick({
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				arrows: false,
@@ -40,13 +36,13 @@ var FX = ( function( FX, $ ) {
 					  breakpoint: 768,
 					  settings: {
 						autoplay: false,
-						asNavFor: '.js-tab-menu',
+						asNavFor: '.js-simple-tab-menu',
 					  }
 					}
 				]
 			});
 
-			$('.js-tab-menu').slick({
+			$('.js-simple-tab-menu').slick({
 				infinite: true,
 				slidesToShow: 4,
 				slidesToScroll: 1,				
@@ -57,7 +53,7 @@ var FX = ( function( FX, $ ) {
 					  breakpoint: 768,
 					  settings: {
 						focusOnSelect: true,
-						asNavFor: '.js-tab-for',
+						asNavFor: '.js-simple-tab-for',
 						autoplay: true,
 						autoplaySpeed: 2000,
 						slidesToShow: 1,
@@ -68,7 +64,31 @@ var FX = ( function( FX, $ ) {
 				]
 			});
 
-			$('.js-tab-menu').find(`.slick-slide[data-slick-index=0]`).addClass('is-current');
+			$('.js-simple-tab-menu').find(`.slick-slide[data-slick-index=0]`).addClass('is-current');
+
+			$('.js-simple-tab-for').each(function() {
+				const $this = $(this);
+
+				$this.on('afterChange', function(slick, currentSlide) {
+					const $this = $(this);
+					const $index = +($this.find('.slick-active').attr('data-slick-index'));
+
+					console.log('naruto');
+	
+					if($(window).outerWidth() > 768) {
+						$this.prev('.js-simple-tab-menu').find('.slick-slide').removeClass('is-current');
+	
+						$this.prev('.js-simple-tab-menu').find('.slick-slide').each(function() {
+							const $this = $(this);
+							const $parentIndex = $this.attr('data-slick-index');
+	
+							if(+($parentIndex) == $index) {
+								$this.addClass('is-current');
+							}
+						})
+					}
+				})
+			})
 		},
 	}
 

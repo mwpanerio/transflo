@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="testimonials__wrap">
-            <div class="js-tab-menu fx-slider">
+            <div class="js-simple-tab-menu fx-slider">
                 <?php while(have_rows('tab_item')) : the_row(); ?>
                 <div class="tab-menu-item fx-slide">
                     <div class="tab-column">
@@ -25,7 +25,7 @@
                 </div>
                 <?php endwhile; ?>
             </div>
-            <div class="js-tab-for fx-slider">
+            <div class="js-simple-tab-for fx-slider">
                 <?php while(have_rows('tab_item')) : the_row(); ?>
                 <div class="tab-content-item fx-slide">
                     <div class="tab-content">

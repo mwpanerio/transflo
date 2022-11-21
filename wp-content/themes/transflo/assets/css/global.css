@@ -690,6 +690,10 @@
   margin-bottom: 16px;
  }
 
+ .btn:last-child {
+  margin-bottom: 0;
+ }
+
  .btn+.btn {
      margin-top: 0;
  }
@@ -700,6 +704,10 @@
          margin-top: 0;
          margin-right: 10px;
          margin-bottom: 16px;
+     }
+
+     .btn:last-child {
+      margin-bottom: 0;
      }
 
      .btn + .btn {

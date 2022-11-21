@@ -322,6 +322,10 @@ img.logo {
     content: '\e908';
 }
 
+.header-btn .btn {
+    margin-bottom: 0;
+}
+
 @media (min-width: 768px) {
     .page-header {
         position: fixed;

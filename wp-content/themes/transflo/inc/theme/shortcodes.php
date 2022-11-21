@@ -11,10 +11,17 @@ function calling_featured_resources($atts = []) {
     if( isset( $atts['posts_to_display'] ) ) { 
         $posts_to_display = $atts['posts_to_display'];
     }
+
+    if( isset( $atts['posts_id'] ) ) { 
+        $posts_id = explode (",", $atts['posts_id']);
+    } else {
+        $posts_id = [];
+    }
     
     $args = array(
         'post_type' => 'post',
         'posts_per_page' => $posts_to_display,
+        'post__in'  => $posts_id,
     );
     $post_query = new WP_Query($args);
 

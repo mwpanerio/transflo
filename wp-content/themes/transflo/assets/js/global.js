@@ -458,6 +458,12 @@ var FX = ( function( FX, $ ) {
 	FX.MastheadInnerpageAnimation = {
 		init() {
 			new TimelineMax()
+				.staggerTo('.left-text-wrapper > *', 0.6, {
+					opacity: 1,
+					'transform' : 'translate(0, 0)'
+				}, 0.15);
+
+			new TimelineMax()
 				.to(".right-image__squares .right-image__squares__item", {
 					duration: 0.8,
 					scale: 0, 
@@ -469,7 +475,7 @@ var FX = ( function( FX, $ ) {
 						ease: Power4.easeInOut,
 						from: 'center'
 					}
-				}), '-=0.85'
+				});
 		}
 	}
 

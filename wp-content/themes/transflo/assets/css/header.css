@@ -1014,6 +1014,18 @@ body:after {
     width: 100%;
 }
 
+.left-text-wrapper > * {
+    position: relative;
+    transform: translate(0, -50px);
+    opacity: 0;
+}
+
+@media (min-width: 1200px) {
+    .left-text-wrapper > * {
+        transform: translate(-40px, 0);
+    }
+}
+
 .left-text-wrapper p {
     font-size: 16px;
     line-height: 1.6em;

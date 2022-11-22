@@ -1,6 +1,6 @@
 <section class="benefits-section benefits-section--version-<?php echo get_field('benefits_section_look'); ?> section-padding <?php echo get_field('background_color'); ?>">
     <div class="container">
-        <div class="benefits-section__header">
+        <div class="benefits-section__header js-animated-text animated-text">
             <?php if($subheading = get_field('subheading')): ?>
             <h5><?php echo $subheading; ?></h5>
             <?php endif; ?>

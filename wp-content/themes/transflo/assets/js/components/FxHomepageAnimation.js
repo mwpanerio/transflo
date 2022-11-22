@@ -48,7 +48,7 @@ var FX = ( function( FX, $ ) {
                         'transform' : 'rotate(0)',
                         'opacity' : 0,
                         ease: Power4.easeOut
-                    }, -0.1), '-=1'
+                    }, -0.1), '-=0.8'
             )
 
             $loaderTextAnimation.add(

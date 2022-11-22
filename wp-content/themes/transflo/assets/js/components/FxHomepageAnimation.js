@@ -26,6 +26,15 @@ var FX = ( function( FX, $ ) {
             })
 
             $loaderTextAnimation.add(
+                new TimelineMax()    
+                    .staggerTo('.loader__squares span', 1, {
+                        'transform' : 'rotate(45deg)',
+                        'opacity' : 1,
+                        ease: Power4.easeOut
+                    }, 0.1), '-=0.5'
+            )
+
+            $loaderTextAnimation.add(
                 new TimelineMax()
                     .to('.js-loader-text-logo', 1, {
                         'transform' : 'translateY(-92px)',
@@ -34,11 +43,20 @@ var FX = ( function( FX, $ ) {
             )
 
             $loaderTextAnimation.add(
+                new TimelineMax()    
+                    .staggerTo('.loader__squares span', 1, {
+                        'transform' : 'rotate(0)',
+                        'opacity' : 0,
+                        ease: Power4.easeOut
+                    }, -0.1), '-=1'
+            )
+
+            $loaderTextAnimation.add(
                 new TimelineMax()
                     .to(".loader__boxes", {
                         duration: 0.8,
                         scale: 0, 
-                        ease: "power1.inOut",
+                        ease: "power4.easeInOut",
                         onComplete: function() {
                             $('.loader').hide();
                         },
@@ -49,7 +67,7 @@ var FX = ( function( FX, $ ) {
                             ease: Power4.easeInOut,
                             from: 'center'
                         }
-                    }), '-=0.6'
+                    }), '-=0.85'
             )
 		},
 	}

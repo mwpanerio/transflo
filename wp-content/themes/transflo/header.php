@@ -29,8 +29,7 @@
             <?php endfor; ?>
         </div>
         <div class="loader__container container">
-            <div class="loader__dots">
-                <span></span>
+            <div class="loader__squares">
                 <span></span>
                 <span></span>
             </div>
@@ -46,7 +45,7 @@
                         EFFICIENT
                     </div>
                     <div class="loader__text__item js-loader-text js-loader-text-logo">
-                        <?php echo fx_get_image_tag( 29246 ); ?>
+                        <?php echo fx_get_image_tag( 29281 ); ?>
                     </div>
                 </div>
             </div>

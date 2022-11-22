@@ -1,7 +1,7 @@
 <?php while(have_rows('right_column')): the_row(); ?>
 <div class="masthead__right clearfix">
     <?php while(have_rows('step_block')): the_row(); ?>
-    <div class="masthead__right__column masthead__right__column1">
+    <div class="masthead__right__column masthead__right__column1 js-masthead-column-item masthead-column-item--2">
         <div class="image-buttons__popup__wrapper" id="js-masthead-tile-popup">
             <div class="popup-cross">
                 <i class="icon-close"></i>
@@ -52,7 +52,7 @@
     <?php endwhile; ?>
 
     <?php while(have_rows('mini_slider')): the_row(); ?>
-    <div class="masthead__right__column masthead__right__column2">
+    <div class="masthead__right__column masthead__right__column2 js-masthead-column-item masthead-column-item--3">
         <div class="js-masthead__slider2 fx-slider">
             <?php while(have_rows('slider_item')): the_row(); ?>
             <div class="masthead__slider__item fx-slide">

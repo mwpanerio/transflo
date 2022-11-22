@@ -1,5 +1,5 @@
 <?php while(have_rows('left_column')): the_row(); ?>
-<div class="masthead__left">
+<div class="masthead__left masthead-column-item--1 js-masthead-column-item">
     <?php if(get_sub_field('media_type_to_display') == 'video'): ?>
         <a href="<?php echo get_sub_field('video_url'); ?>" data-fancybox="" class="masthead__image">
             <?php echo fx_get_image_tag(get_sub_field('thumbnail_image'), 'img-responsive'); ?>

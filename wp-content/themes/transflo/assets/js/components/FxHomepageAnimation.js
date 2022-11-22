@@ -13,6 +13,8 @@ var FX = ( function( FX, $ ) {
             const $loaderBackground = $('.js-loader-background');
             const $loaderTextAnimation = new TimelineMax();
 
+            const controller = new ScrollMagic.Controller();
+
             $loaderTextItem.each(function(e) {
                 const $this = $(this);
 
@@ -69,6 +71,34 @@ var FX = ( function( FX, $ ) {
                         }
                     }), '-=0.85'
             )
+
+            $loaderTextAnimation.add(
+                new TimelineMax()
+                    .staggerTo(".js-masthead-column-item", 1.4, {
+                        'transform' : 'translate(0, 0)',
+                        'opacity': 1,
+                        ease: Power4.easeOut
+                    }, 0.05), '-=0.5'
+            )
+
+            $('.counter-block').each(function() {
+                const $this = $(this);
+                const $item = $this.find('.counter-bttn');
+
+                const counterBlockTimeline = new TimelineMax();
+                    counterBlockTimeline
+                        .staggerTo($item, 0.6, {
+                            opacity: 1,
+                            'transform': 'translate(0, 0)'
+                        }, 0.15)
+
+                new ScrollMagic.Scene({
+                    triggerElement: $this[0],
+                    triggerHook: 0.85
+                })
+                .setTween(counterBlockTimeline)
+                .addTo(controller);
+            })
 		},
 	}
 

@@ -23,6 +23,7 @@
 .counter-bar ul {
     margin: 0;
     padding: 0;
+    overflow: initial;
 }
 
 .counter-bar ul li {
@@ -222,4 +223,21 @@
         -webkit-transform: translate(0, 0);
                 transform: translate(0, 0);
     }
+}
+
+.home .counter-bar ul .counter-bttn {
+    position: relative;
+    opacity: 0;
+}
+
+.home .counter-bar ul li .counter-bttn {
+    transform: translate(0, -20px)
+}
+
+.home .counter-bar ul li:first-child .counter-bttn {
+    transform: translate(-50px, -20px)
+}
+
+.home .counter-bar ul li:last-child .counter-bttn {
+    transform: translate(50px, -20px)
 }

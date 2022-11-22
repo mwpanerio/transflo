@@ -768,3 +768,21 @@
     position: relative;
     z-index: 2;
 }
+
+.masthead-column-item--1 {
+    position: relative;
+    transform: translate(-50px, 0);
+    opacity: 0;
+}
+
+.masthead-column-item--2 {
+    position: relative;
+    transform: translate(50px, -50px);
+    opacity: 0;
+}
+
+.masthead-column-item--3 {
+    position: relative;
+    transform: translate(50px, 50px);
+    opacity: 0;
+}

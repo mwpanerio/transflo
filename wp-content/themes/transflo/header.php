@@ -18,6 +18,7 @@
         $home_url   = get_home_url();
     ?>
 
+    <?php if(is_front_page()): ?>
     <div class="loader">
         <div class="loader__background js-loader-background">
             <?php for($i = 0; $i <= 15; $i++): ?>
@@ -51,6 +52,7 @@
             </div>
         </div>
     </div>
+    <?php endif; ?>
 
     <header class="page-header">
         <div class="container clearfix">

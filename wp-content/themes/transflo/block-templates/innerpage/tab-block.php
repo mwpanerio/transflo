@@ -1,4 +1,4 @@
-<section class="testimonials testimonials--general-tab section-padding">
+<section class="testimonials testimonials--general-tab section-padding bg-white">
     <div class="container">
         <div class="testimonials__top-content text-center">
             <div class="row">

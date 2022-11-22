@@ -18,6 +18,49 @@
         $home_url   = get_home_url();
     ?>
 
+    <div class="loader">
+        <div class="loader__background js-loader-background">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="loader__container container">
+            <div class="loader__dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="loader__text js-loader-text-parent">
+                <div class="loader__text__inner js-loader-text-inner">
+                    <div class="loader__text__item js-loader-text">
+                        FASTER
+                    </div>
+                    <div class="loader__text__item js-loader-text">
+                        SMARTER
+                    </div>
+                    <div class="loader__text__item js-loader-text">
+                        EFFICIENT
+                    </div>
+                    <div class="loader__text__item js-loader-text js-loader-text-logo">
+                        <?php echo fx_get_image_tag( 29246 ); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header class="page-header">
         <div class="container clearfix">
             <div class="logo">

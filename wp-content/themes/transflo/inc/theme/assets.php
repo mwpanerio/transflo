@@ -433,6 +433,15 @@ function fx_theme_scripts() {
             'defer'         => true,
         ]
     );  
+
+    // Script for Homepage Animation
+    fx_assets_add_script(
+        [
+            'handle'        => 'fx_homepage_animation',
+            'src'           => $theme_url . '/assets/js/components/FxHomepageAnimation.js',
+            'enqueue'       => is_front_page()
+        ]
+    );
         
     // Script for "Counter Odometer" block sections
     fx_assets_add_script(

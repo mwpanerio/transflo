@@ -33,14 +33,6 @@ var FX = ( function( FX, $ ) {
                     })
             )
 
-            $loaderBackground.find(' > div ').each(function() {
-                const $this = $(this);
-
-                for(let i = 0; i < 25; i++) {
-                    $this.append('<span class="loader__boxes"></span>')
-                }
-            })
-
             const pixelOverlay = $loaderBackground.find('polygon').toArray();
             pixelOverlay.sort(function(){return 0.5-Math.random()});
 

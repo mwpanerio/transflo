@@ -20,21 +20,13 @@
 
     <div class="loader">
         <div class="loader__background js-loader-background">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <?php for($i = 0; $i <= 15; $i++): ?>
+                <div>
+                    <?php for($inner = 0; $inner <= 25; $inner++): ?>
+                        <span></span>
+                    <?php endfor; ?>
+                </div>
+            <?php endfor; ?>
         </div>
         <div class="loader__container container">
             <div class="loader__dots">

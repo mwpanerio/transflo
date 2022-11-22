@@ -1463,3 +1463,9 @@
                transform: scale(1);
    }
  }
+
+ .animated-text > * {
+  position: relative;
+  transform: translate(-30px, 0) scale(1);
+  opacity: 0;
+ }

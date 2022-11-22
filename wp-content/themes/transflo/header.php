@@ -24,7 +24,7 @@
             <?php for($i = 0; $i <= 15; $i++): ?>
                 <div>
                     <?php for($inner = 0; $inner <= 25; $inner++): ?>
-                        <span class="loader__boxes"></span>
+                        <span class="loader__boxes<?php echo $inner > 7 ? ' hidden-xs-down' : ''; ?>"></span>
                     <?php endfor; ?>
                 </div>
             <?php endfor; ?>

@@ -108,3 +108,25 @@
     }
     
 }
+
+.home .image-overlay-image {
+    position: relative;
+    transform: translate(0, -50px);
+    opacity: 0;
+}
+
+.home .image-overlay-text__content {
+    position: relative;
+    transform: translate(0, 50px);
+    opacity: 0;
+}
+
+@media (min-width: 1200px) {
+    .home .image-overlay-image {
+        transform: translate(-20%, -20%);
+    }
+    
+    .home .image-overlay-text__content {
+        transform: translate(20%, 20%);
+    }
+}

@@ -31,6 +31,16 @@ var FX = ( function( FX, $ ) {
     $( () => {
 		FX.MobileMenu.init();
 	})
+
+	$( () => {
+		if(!$('body').hasClass('home')) {
+			FX.MastheadInnerpageAnimation.init();
+		}
+	})
+
+	$( () => {
+		FX.AnimatedText.init();
+	})
 	
 	
 	$(window).on( 'load', () => {
@@ -444,6 +454,50 @@ var FX = ( function( FX, $ ) {
 			}
 		}
 	};
+
+	FX.MastheadInnerpageAnimation = {
+		init() {
+			new TimelineMax()
+				.to(".right-image__squares .right-image__squares__item", {
+					duration: 0.8,
+					scale: 0, 
+					ease: "power4.easeInOut",
+					stagger: {
+						amount: 0.5, 
+						grid: 'auto', 
+						axis: null, 
+						ease: Power4.easeInOut,
+						from: 'center'
+					}
+				}), '-=0.85'
+		}
+	}
+
+	FX.AnimatedText = {
+		init() {
+			const $animatedText = $('.js-animated-text');
+			const controller = new ScrollMagic.Controller({})
+
+			$animatedText.each(function() {
+                const $this = $(this);
+                const $animatedTextChildren = $this.find('> *');
+
+                const animatedTextWrapTimeline = new TimelineMax();
+                    animatedTextWrapTimeline
+						.staggerTo($animatedTextChildren, 1, {
+							opacity : 1,
+							'transform' : 'translate(0, 0) scale(1)',
+						}, 0.15)
+
+                new ScrollMagic.Scene({
+                    triggerElement: $this[0],
+                    triggerHook: 0.95
+                })
+                .setTween(animatedTextWrapTimeline)
+                .addTo(controller);
+            })
+		}
+	}
 
 	
 

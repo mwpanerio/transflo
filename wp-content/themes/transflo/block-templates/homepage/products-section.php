@@ -1,7 +1,7 @@
 <section class="products section-padding">
     <div class="container">
-        <div class="products__top-content">
-            <div class="products__heading">
+        <div class="products__top-content js-animated-text animated-text">
+            <div class="products__heading js-animated-text animated-text">
                 <?php if($subheading = get_field('subheading')): ?>
                 <h5><?php echo $subheading; ?></h5>
                 <?php endif; ?>

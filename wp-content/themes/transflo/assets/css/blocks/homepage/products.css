@@ -348,3 +348,10 @@
         box-shadow: none;
     }
 }
+
+.home .products-items {
+    position: relative;
+    transform: scale(0.8) translate(50px, 0);
+    opacity: 0;
+    filter: blur(10px);
+}

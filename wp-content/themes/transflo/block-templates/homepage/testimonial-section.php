@@ -2,7 +2,7 @@
     <div class="container">
         <div class="testimonials__top-content text-center">
             <div class="row">
-                <div class="col-lg-10 col-lg-offset-1">
+                <div class="col-lg-10 col-lg-offset-1 js-animated-text animated-text">
                     <?php if($subheading = get_field('subheading')): ?>
                     <h5><?php echo $subheading; ?></h5>
                     <?php endif; ?>

@@ -1,7 +1,11 @@
 var FX = ( function( FX, $ ) {
 
 	$( () => {
-		FX.HomepageAnimation.init()
+		FX.HomepageAnimation.init();
+        FX.ProductSlider.init()
+        FX.ImageButtonAnimation.init();
+        FX.BlogSlider.init();
+        FX.ImageOverlay.init();
 	})
 
 	FX.HomepageAnimation = {
@@ -78,7 +82,12 @@ var FX = ( function( FX, $ ) {
                         'transform' : 'translate(0, 0)',
                         'opacity': 1,
                         ease: Power4.easeOut
-                    }, 0.05), '-=0.5'
+                    }, 0.05)
+                    .to(".page-header", 1, {
+                        'transform' : 'translate(0, 0)',
+                        'opacity': 1,
+                        ease: Power4.easeOut
+                    }, '-=1.45'), '-=0.5'
             )
 
             $('.counter-block').each(function() {
@@ -101,6 +110,123 @@ var FX = ( function( FX, $ ) {
             })
 		},
 	}
+
+    FX.ProductSlider = {
+        init() {
+            const $productSlider = $('.js-products-slider');
+            const controller = new ScrollMagic.Controller();
+
+            $productSlider.each(function() {
+                const $this = $(this);
+                const $productSliderItem = $this.find('.products-items');
+
+                const productSliderTimeline = new TimelineMax();
+                    productSliderTimeline
+                        .staggerTo($productSliderItem, 0.6, {
+                            opacity: 1,
+                            'transform': 'translate(50px, 0) scale(1)',
+                            'filter' : 'blur(0px)'
+                        }, 0.15)
+                        .staggerTo($productSliderItem, 0.6, {
+                            'transform': 'translate(0, 0) scale(1)',
+                        }, 0.15, '-=1.25')
+
+                new ScrollMagic.Scene({
+                    triggerElement: $this[0],
+                    triggerHook: 0.85
+                })
+                .setTween(productSliderTimeline)
+                .addTo(controller);
+            })
+        }
+    }
+
+    FX.ImageButtonAnimation = {
+        init() {
+            const $imageButton = $('.image-buttons');
+            const controller = new ScrollMagic.Controller();
+
+            $imageButton.each(function() {
+                const $this = $(this);
+                const $imageButtonItem = $this.find('.image-button-item');
+
+                const imageButtonTimeline = new TimelineMax()
+                    .staggerTo($imageButtonItem, 1, {
+                        scale: 1, 
+                        opacity: 1,
+                        ease: Power4.easeInOut,
+                    }, 0.15)
+                        
+
+                new ScrollMagic.Scene({
+                    triggerElement: $this[0],
+                    triggerHook: 0.75
+                })
+                .setTween(imageButtonTimeline)
+                .addTo(controller);
+            })
+        }
+    }
+
+    FX.BlogSlider = {
+        init() {
+            const $blogCardSlider = $('.js-cards-slider');
+            const controller = new ScrollMagic.Controller();
+
+            $blogCardSlider.each(function() {
+                const $this = $(this);
+                const $blogCardSliderItem = $this.find('.card--link');
+
+                const blogCardSliderTimeline = new TimelineMax();
+                    blogCardSliderTimeline
+                        .staggerTo($blogCardSliderItem, 0.6, {
+                            opacity: 1,
+                            'left' : 0,
+                            'filter' : 'blur(0px)'
+                        }, 0.15)
+
+                new ScrollMagic.Scene({
+                    triggerElement: $this[0],
+                    triggerHook: 0.85
+                })
+                .setTween(blogCardSliderTimeline)
+                .addTo(controller);
+            })
+        }
+    }
+
+    FX.ImageOverlay = {
+        init() {
+            const $imageOverlayWrap = $('.image-overlay-text__wrap');
+            const controller = new ScrollMagic.Controller();
+
+            $imageOverlayWrap.each(function() {
+                const $this = $(this);
+                const $imageOverlayImage = $this.find('.image-overlay-image');
+                const $imageOverlayContent = $this.find('.image-overlay-text__content');
+
+                const imageOverlayWrapTimeline = new TimelineMax();
+                    imageOverlayWrapTimeline
+                        .to($imageOverlayImage, 1.2, {
+                            opacity: 1,
+                            'transform' : 'translate(0)',
+                            ease: Power4.easeInOut
+                        })
+                        .to($imageOverlayContent, 1.2, {
+                            opacity: 1,
+                            'transform' : 'translate(0)',
+                            ease: Power4.easeInOut
+                        }, '-=1')
+
+                new ScrollMagic.Scene({
+                    triggerElement: $this[0],
+                    triggerHook: 0.85
+                })
+                .setTween(imageOverlayWrapTimeline)
+                .addTo(controller);
+            })
+        }
+    }
 
 	return FX
 

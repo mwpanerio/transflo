@@ -22,9 +22,21 @@
     background: var(--color-white);
     z-index: 9999;
     padding: 8px 0;
-    transition: all .5s;
     border-bottom: 1px solid rgba(141, 153, 174, 0.3);
     border-top: 3px solid #2474BB;
+}
+
+@media (max-width: 767px) {
+    .page-header {
+        transform: none !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .page-header {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
 }
 
 .admin-bar .page-header {
@@ -983,6 +995,7 @@ body:after {
 .right-image {
     width: 100%;
     height: 200px;
+    position: relative;
 }
 
 .right-image-wrapper {
@@ -1034,7 +1047,7 @@ body:after {
 
  @media (min-width: 1200px) {
     .masthead {
-        margin-top: 99px;
+        margin-top: 108px;
     }
 
     .left-text-right-image,
@@ -1086,6 +1099,39 @@ body:after {
 
 
  }
+
+ .right-image__squares {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+.right-image__squares > div {
+    display: flex;
+    width: 100%;
+}
+
+.right-image__squares > div span {
+    display: block;
+    background-color: var(--color-offwhite);
+    width: 100%;
+    position: relative;
+    transform-origin: center;
+    background-size: 820px auto;
+}
+
+.right-image__squares > div span:first-child {
+    transform-origin: left center;
+}
+
+.right-image__squares > div span:last-child {
+    transform-origin: right center;
+}
 
 /**
  * Breadcrumbs
@@ -1647,12 +1693,18 @@ body:after {
     display: flex;
 }
 
+@media (min-width: 768px) {
+    .loader__text {
+        height: 92px;
+    }
+}
+
 .loader__text__inner {
     margin-top: 92px;
 }
 
 .loader__text__item {
-    font-size: 60px;
+    font-size: 40px;
     font-style: italic;
     text-align: center;
     color: var(--color-white);
@@ -1664,6 +1716,12 @@ body:after {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .loader__text {
+        font-size: 60px;
+    }
 }
 
 .loader__background {
@@ -1679,14 +1737,28 @@ body:after {
 .loader__background > div {
     display: flex;
     width: 100%;
+    font-size: 0;
 }
 
 .loader__background > div span {
     display: block;
+    font-size: 0;
     background-color: var(--color-primary);
     width: 100%;
     position: relative;
     transform-origin: center;
+}
+
+.loader__background > div span:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-primary);
+    transform: scale(1.05);
 }
 
 .loader__background svg {
@@ -1707,8 +1779,15 @@ body:after {
     left: 0;
     right: 0;
     margin: 0 auto;
-    width: 500px;
-    height: 500px;
+    width: 280px;
+    height: 280px;
+}
+
+@media (min-width: 768px) {
+    .loader__squares {
+        width: 500px;
+        height: 500px;
+    }
 }
 
 .loader__squares > span {

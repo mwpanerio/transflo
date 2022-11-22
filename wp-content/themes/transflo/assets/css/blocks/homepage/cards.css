@@ -300,3 +300,10 @@
         margin-bottom: 30px;
     }
 }
+
+.home .card--link {
+    position: relative;
+    left: 50px;
+    opacity: 0;
+    filter: blur(10px);
+}

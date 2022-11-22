@@ -1,7 +1,7 @@
 <section class="image-buttons<?php echo is_front_page() ? ' push-lg-top': ' section-padding'; ?>">
     <div class="container">
-        <div class="image-buttons__top-content">
-            <div class="image-buttons__heading">
+        <div class="image-buttons__top-content js-animated-text animated-text">
+            <div class="image-buttons__heading js-animated-text animated-text">
                 <?php if($subheading = get_field('subheading')): ?>
                 <h5><?php echo $subheading; ?></h5>
                 <?php endif; ?>

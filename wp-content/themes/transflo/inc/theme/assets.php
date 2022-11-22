@@ -488,7 +488,7 @@ function fx_theme_scripts() {
         [
             'handle'        => 'fx_scrollmagic',
             'src'           => $theme_url . '/assets/js/plugins/ScrollMagic.min.js',
-            'enqueue'       => ( is_home() || is_archive() || is_front_page())
+            'enqueue'       => !is_admin()
         ]
     );
 
@@ -497,7 +497,7 @@ function fx_theme_scripts() {
             'handle'        => 'fx_animation_scrollmagic',
             'src'           => $theme_url . '/assets/js/plugins/animation.gsap.min.js',
             'defer'         => true,
-            'enqueue'       => ( is_home() || is_archive() || is_front_page())
+            'enqueue'       => !is_admin()
         ]
     );
     

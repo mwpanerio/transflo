@@ -33,7 +33,7 @@
 }
 
 @media (min-width: 1200px) {
-    .page-header {
+    .home .page-header {
         transform: translateY(-100%);
         opacity: 0;
     }

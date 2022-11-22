@@ -20,7 +20,7 @@
                     </a>
                 <?php endif; ?>
             </div>
-            <div class="col-lg-6 col-xxs-12 image-text__half image-text__text">
+            <div class="col-lg-6 col-xxs-12 image-text__half image-text__text js-animated-text animated-text">
                 <?php echo get_field('content'); ?>
             </div>
         </div>

@@ -33,9 +33,6 @@ var FX = ( function( FX, $ ) {
                     })
             )
 
-            const pixelOverlay = $loaderBackground.find('polygon').toArray();
-            pixelOverlay.sort(function(){return 0.5-Math.random()});
-
             $loaderTextAnimation.add(
                 new TimelineMax()
                     .to(".loader__boxes", {

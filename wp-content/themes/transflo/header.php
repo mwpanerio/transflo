@@ -23,7 +23,7 @@
             <?php for($i = 0; $i <= 15; $i++): ?>
                 <div>
                     <?php for($inner = 0; $inner <= 25; $inner++): ?>
-                        <span></span>
+                        <span class="loader__boxes"></span>
                     <?php endfor; ?>
                 </div>
             <?php endfor; ?>

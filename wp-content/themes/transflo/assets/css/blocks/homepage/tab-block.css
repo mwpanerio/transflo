@@ -59,14 +59,12 @@
 
 @media (min-width: 768px) {
     .js-tab-menu .slick-slide.is-current .tab-column:before,
-    .js-simple-tab-menu .slick-slide.is-current .tab-column:before,
-    .js-simple-tab-menu .slick-slide.slick-current.slick-active .tab-column:before {
+    .js-simple-tab-menu .slick-slide.is-current .tab-column:before {
         background-color: var(--color-primary);
     }
 
     .js-tab-menu .slick-slide.is-current .tab-column img,
-    .js-simple-tab-menu .slick-slide.is-current .tab-column img,
-    .js-simple-tab-menu .slick-slide.slick-current.slick-active .tab-column img {
+    .js-simple-tab-menu .slick-slide.is-current .tab-column img {
         opacity: 1;
     }
 }

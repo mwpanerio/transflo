@@ -92,7 +92,7 @@
 }
 
 .bg-white .benefits-section__item {
-    padding: 20px 0;
+    padding: 20px;
 }
 
 .benefits-section--not-slider .benefits-section__item {
@@ -242,6 +242,12 @@
     order: 1;
 }
 
+@media (max-width: 767px) {
+    .benefits-section__row .slick-prev {
+        margin-left: 22px;
+    }
+}
+
 .benefits-section__row .slick-next {
     order: 2;
 }
@@ -254,7 +260,7 @@
 
 .benefits-section-progress {
     display: block;
-    width: calc(100% - 150px);
+    width: calc(100% - 172px);
     height: 6px;
     border-radius: 99px;
     overflow: hidden;

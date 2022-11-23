@@ -1236,7 +1236,8 @@
    color: var(--color-text-default);
  }
 
- .bg-gray + .bg-gray {
+ .bg-gray + .bg-gray,
+ .bg-white + .bg-white {
   padding-top: 0 !important;
  }
  

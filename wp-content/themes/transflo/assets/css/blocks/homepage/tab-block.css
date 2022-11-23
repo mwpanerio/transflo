@@ -87,6 +87,7 @@
     border-radius: 20px;
     padding: 30px 30px 35px;
     color: var(--color-white);
+    height: calc(100% - 100px);
 }
 
 .stars {
@@ -376,6 +377,11 @@
         padding-right: 0;
     }
 
+}
+
+.tab-content-item,
+.tab-content {
+    height: 100%;
 }
 
 

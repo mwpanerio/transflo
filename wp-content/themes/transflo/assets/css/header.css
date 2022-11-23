@@ -1371,6 +1371,17 @@ body:after {
         -webkit-transform-origin: left;
                 transform-origin: left;
     }
+
+    .nav-primary .ubermenu .ubermenu-submenu-type-mega.ubermenu-submenu-align-full_width .ubermenu-row .ubermenu-target:hover + .ubermenu-custom-content p {
+        box-shadow: inset 0 -2px var(--color-border);
+    }
+
+    .nav-primary .ubermenu .ubermenu-submenu-type-mega.ubermenu-submenu-align-full_width .ubermenu-row .ubermenu-target + .ubermenu-custom-content p {
+        line-height: 1.8em;
+        display: inline;
+        box-shadow: inset 0 0 var(--color-border);
+        transition: box-shadow 0.3s ease-in-out;
+    }
 }
 
 @media (max-width: 1199px) {

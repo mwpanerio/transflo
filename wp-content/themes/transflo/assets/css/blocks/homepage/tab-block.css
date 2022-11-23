@@ -442,6 +442,14 @@
     margin: 0 auto;
 }
 
+@media (max-width: 767px) {
+    .testimonials--general-tab .testimonials__image img {
+        max-height: 200px;
+        width: auto;
+        max-width: 100%;
+    }
+}
+
 .testimonials .slick-track {
     display: flex;
 }
@@ -483,5 +491,28 @@
 @media (min-width: 1200px) {
     .testimonials--general-tab .testimonials__info p {
         font-size: 22px;
+    }
+}
+
+@media (max-width: 767px) {
+    .testimonials--general-tab .js-simple-tab-for .slick-track,
+    .testimonials--general-tab .tab-content-item,
+    .testimonials--general-tab .tab-content {
+        height: auto;
+        margin: 0;
+    }
+
+    .testimonials--general-tab .tab-content {
+        display: block;
+    }
+
+    .testimonials--general-tab .js-simple-tab-for .slick-track {
+        display: block;
+        height: inherit;
+    }
+
+    .testimonials--general-tab .js-simple-tab-for .slick-slide {
+        height: auto;
+        vertical-align: top;
     }
 }

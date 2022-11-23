@@ -37,6 +37,7 @@ var FX = ( function( FX, $ ) {
 					  settings: {
 						autoplay: false,
 						asNavFor: '.js-simple-tab-menu',
+						adaptiveHeight: true
 					  }
 					}
 				]
@@ -54,7 +55,7 @@ var FX = ( function( FX, $ ) {
 					  settings: {
 						focusOnSelect: true,
 						asNavFor: '.js-simple-tab-for',
-						autoplay: true,
+						autoplay: false,
 						autoplaySpeed: 2000,
 						slidesToShow: 1,
 						slidesToScroll: 1,
@@ -72,8 +73,6 @@ var FX = ( function( FX, $ ) {
 				$this.on('afterChange', function(slick, currentSlide) {
 					const $this = $(this);
 					const $index = +($this.find('.slick-active').attr('data-slick-index'));
-
-					console.log('naruto');
 	
 					if($(window).outerWidth() >= 768) {
 						$this.prev('.js-simple-tab-menu').find('.slick-slide').removeClass('is-current');

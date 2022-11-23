@@ -51,7 +51,7 @@ var FX = ( function( FX, $ ) {
 				arrows: false,
 				responsive: [
 					{
-					  breakpoint: 768,
+					  breakpoint: 1200,
 					  settings: {
 						focusOnSelect: true,
 						asNavFor: '.js-simple-tab-for',

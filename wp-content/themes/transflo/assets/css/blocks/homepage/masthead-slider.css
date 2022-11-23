@@ -481,10 +481,10 @@
 
 .image-buttons__popup__wrapper {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    width: calc(100% - 20px);
-    height: calc(100% - 20px);
+    top: 9px;
+    left: 9px;
+    width: calc(100% - 18px);
+    height: calc(100% - 18px);
     background-color: var(--color-white);
     z-index: 2;
     border-radius: 8px;

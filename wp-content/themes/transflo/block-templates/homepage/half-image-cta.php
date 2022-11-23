@@ -1,4 +1,4 @@
-<section class="image-overlay-text section-padding">
+<section class="image-overlay-text section-padding bg-white">
     <div class="container">
         <div class="image-overlay-text__wrap">
             <div class="image-overlay-image">

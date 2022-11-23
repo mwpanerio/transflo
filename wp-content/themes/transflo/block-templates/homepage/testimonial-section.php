@@ -1,4 +1,4 @@
-<section class="testimonials section-padding">
+<section class="testimonials section-padding bg-white">
     <div class="container">
         <div class="testimonials__top-content text-center">
             <div class="row">

@@ -1,4 +1,4 @@
-<section class="products section-padding">
+<section class="products section-padding bg-white">
     <div class="container">
         <div class="products__top-content js-animated-text animated-text">
             <div class="products__heading js-animated-text animated-text">

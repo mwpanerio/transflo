@@ -14,7 +14,7 @@ var FX = ( function( FX, $ ) {
 				const $sliderWidth =  $this.find('.benefits-section__item').length > $slidesToShow;
 
 				$this.slick( {
-					infinite: true,
+					infinite: false,
 					speed: 700,
 					slidesToShow: $slidesToShow,
 					slidesToScroll: 1,
@@ -24,7 +24,7 @@ var FX = ( function( FX, $ ) {
 						{
 							breakpoint: 1200,
 							settings: {
-								infinite: true,
+								infinite: false,
 								slidesToShow: 2,
 								slidesToScroll: 1,
 								variableWidth: false,
@@ -35,7 +35,7 @@ var FX = ( function( FX, $ ) {
 						{
 							breakpoint: 768,
 							settings: {
-								infinite: true,
+								infinite: false,
 								slidesToShow: 1,
 								slidesToScroll: 1,
 								variableWidth: false,

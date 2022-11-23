@@ -114,14 +114,41 @@
                 <?php echo fx_get_image_tag(get_field('catch_image', $post_id), 'object-fit'); ?>
             </div>
             <?php elseif(is_category()): ?>
+            <div class="right-image__squares">
+                <?php for($i = 0; $i <= 15; $i++): ?>
+                    <div>
+                        <?php for($inner = 0; $inner <= 25; $inner++): ?>
+                            <span class="right-image__squares__item"></span>
+                        <?php endfor; ?>
+                    </div>
+                <?php endfor; ?>
+            </div>
             <div class="right-image-wrapper">
                 <?php echo fx_get_image_tag(get_field('page_header_image', $category_object), 'object-fit'); ?>
             </div>
             <?php elseif(is_singular()): ?>
+                <div class="right-image__squares">
+                    <?php for($i = 0; $i <= 15; $i++): ?>
+                        <div>
+                            <?php for($inner = 0; $inner <= 25; $inner++): ?>
+                                <span class="right-image__squares__item"></span>
+                            <?php endfor; ?>
+                        </div>
+                    <?php endfor; ?>
+                </div>
                 <div class="right-image-wrapper">
                     <?php echo fx_get_image_tag(get_field('featured_image'), 'object-fit'); ?>
                 </div>
             <?php elseif(is_404()): ?>
+                <div class="right-image__squares">
+                    <?php for($i = 0; $i <= 15; $i++): ?>
+                        <div>
+                            <?php for($inner = 0; $inner <= 25; $inner++): ?>
+                                <span class="right-image__squares__item"></span>
+                            <?php endfor; ?>
+                        </div>
+                    <?php endfor; ?>
+                </div>
                 <div class="right-image-wrapper">
                     <?php echo fx_get_image_tag(get_field('404_masthead_catch_image', 'option'), 'object-fit'); ?>
                 </div>

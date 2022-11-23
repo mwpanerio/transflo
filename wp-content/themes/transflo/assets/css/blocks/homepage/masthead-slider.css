@@ -195,9 +195,11 @@
     transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-.js-masthead__slider2.is-animating .masthead__slider__item {
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
+@media (min-width: 1200px) {
+    .js-masthead__slider2.is-animating .masthead__slider__item {
+        -webkit-transform: scale(0.8);
+                transform: scale(0.8);
+    }
 }
 
 .js-masthead__slider,

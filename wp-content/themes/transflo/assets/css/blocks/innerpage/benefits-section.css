@@ -81,6 +81,16 @@
     padding: 0;
 }
 
+.benefits-section__item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .benefits-section__item:not(:last-child) {
+        margin-bottom: 0;
+    }
+}
+
 .bg-white .benefits-section__item {
     padding: 20px 0;
 }

@@ -33,7 +33,7 @@ var FX = ( function( FX, $ ) {
 				infinite: true,
 				responsive: [
 					{
-					  breakpoint: 768,
+					  breakpoint: 1200,
 					  settings: {
 						autoplay: false,
 						asNavFor: '.js-simple-tab-menu',
@@ -51,7 +51,7 @@ var FX = ( function( FX, $ ) {
 				arrows: false,
 				responsive: [
 					{
-					  breakpoint: 1200,
+					  breakpoint: 1199,
 					  settings: {
 						focusOnSelect: true,
 						asNavFor: '.js-simple-tab-for',

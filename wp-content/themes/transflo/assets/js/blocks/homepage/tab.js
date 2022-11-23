@@ -13,7 +13,7 @@ var FX = ( function( FX, $ ) {
 				const $this = $(this);
 				const $index = +($this.find('.slick-active').attr('data-slick-index'));
 
-				if($(window).outerWidth() > 768) {
+				if($(window).outerWidth() >= 768) {
 					$('.js-tab-menu').find('.slick-slide').removeClass('is-current');
 					$('.js-tab-menu').find(`.slick-slide[data-slick-index=${$index}]`).addClass('is-current');
 				}
@@ -23,7 +23,7 @@ var FX = ( function( FX, $ ) {
 				const $this = $(this);
 				const $index = +($this.parents('.slick-slide').attr('data-slick-index'));
 
-				if($(window).outerWidth() > 768) {
+				if($(window).outerWidth() >= 768) {
 					$('.js-tab-for').slick('slickGoTo', $index);
 				}
 			})

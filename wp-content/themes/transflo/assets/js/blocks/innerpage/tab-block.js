@@ -12,7 +12,7 @@ var FX = ( function( FX, $ ) {
 			$('.js-simple-tab-menu .tab-menu-item').each(function() {
 				const $this = $(this);
 
-				if($(window).outerWidth() > 768) {
+				if($(window).outerWidth() >= 768) {
 					$this.on('click', function() {
 						const $this = $(this);
 						const $tabMenuParent = $this.parents('.js-simple-tab-menu');
@@ -75,7 +75,7 @@ var FX = ( function( FX, $ ) {
 
 					console.log('naruto');
 	
-					if($(window).outerWidth() > 768) {
+					if($(window).outerWidth() >= 768) {
 						$this.prev('.js-simple-tab-menu').find('.slick-slide').removeClass('is-current');
 	
 						$this.prev('.js-simple-tab-menu').find('.slick-slide').each(function() {

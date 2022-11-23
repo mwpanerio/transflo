@@ -22,7 +22,7 @@
                         <?php
                             $next_post = get_next_post();
                             if (!empty( $next_post )): ?>
-                            <a class="btn-post-pagination btn-next-post" href="<?php echo get_the_permalink($prev_post->ID); ?>"><strong>Next Article</strong><span class="post-pagination-text"><?php echo $next_post->post_title ?></span><span class="mobile-arrow"></span></a>
+                            <a class="btn-post-pagination btn-next-post" href="<?php echo get_the_permalink($next_post->ID); ?>"><strong>Next Article</strong><span class="post-pagination-text"><?php echo $next_post->post_title ?></span><span class="mobile-arrow"></span></a>
                         <?php endif ?>
                     </div>
 

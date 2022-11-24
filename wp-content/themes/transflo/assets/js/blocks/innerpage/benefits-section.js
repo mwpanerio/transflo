@@ -16,7 +16,7 @@ var FX = ( function( FX, $ ) {
 				$this.slick( {
 					infinite: false,
 					speed: 700,
-					slidesToShow: $slidesToShow,
+					slidesToShow: 1,
 					slidesToScroll: 1,
 					arrows: true,
 					variableWidth: $sliderWidth,

@@ -79,6 +79,10 @@
 .benefits-section__item {
     margin-bottom: 0;
     padding: 0;
+    position: relative;
+    left: 50px;
+    opacity: 0;
+    filter: blur(20px);
 }
 
 .benefits-section__item:not(:last-child) {

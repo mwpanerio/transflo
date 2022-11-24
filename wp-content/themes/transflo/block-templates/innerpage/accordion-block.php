@@ -1,6 +1,6 @@
 <section class="accordion-block section-padding <?php echo get_field('background_type'); ?>">
     <div class="container">
-        <div class="accordion-block__upper">
+        <div class="accordion-block__upper js-animated-text animated-text">
             <?php if($subheading = get_field('subheading')): ?>
             <h5><?php echo $subheading; ?></h5>
             <?php endif; ?>
@@ -11,7 +11,7 @@
                 <?php echo $description; ?>
             <?php endif; ?>
         </div>
-        <dl class="accordion-block__list">
+        <dl class="accordion-block__list js-animated-text animated-text">
             <?php while(have_rows('accordion_item')): the_row(); ?>
             <div class="accordion-block__item">
                 <dt class="accordion-block__headline js-accordion-headline">

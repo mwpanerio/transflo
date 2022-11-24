@@ -178,6 +178,7 @@ var FX = ( function( FX, $ ) {
                     .staggerTo($imageButtonItem, 1, {
                         scale: 1, 
                         opacity: 1,
+                        'filter' : 'blur(0)',
                         ease: Power4.easeInOut,
                     }, 0.15)
                         

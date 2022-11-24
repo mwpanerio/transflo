@@ -518,9 +518,10 @@ var FX = ( function( FX, $ ) {
 
                 const animatedTextWrapTimeline = new TimelineMax();
                     animatedTextWrapTimeline
-						.staggerTo($animatedTextChildren, 1, {
+						.staggerTo($animatedTextChildren, 0.8, {
 							opacity : 1,
 							'transform' : 'translate(0, 0) scale(1)',
+							ease: Power4.easeInOut
 						}, 0.15)
 
                 new ScrollMagic.Scene({

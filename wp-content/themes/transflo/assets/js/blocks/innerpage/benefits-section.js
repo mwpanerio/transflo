@@ -10,13 +10,13 @@ var FX = ( function( FX, $ ) {
 		init() {
 			$('.js-benefits-slider').each(function() {
 				const $this = $(this);
-				const $slidesToShow = parseFloat($this.attr('data-benefits-slider'));
+				const $slidesToShow = parseFloat($this.attr('data-benefits-slider')) >= $this.find('.benefits-section__item').length ? parseFloat($this.attr('data-benefits-slider')) : 1;
 				const $sliderWidth =  $this.find('.benefits-section__item').length > $slidesToShow;
 
 				$this.slick( {
 					infinite: false,
 					speed: 700,
-					slidesToShow: 1,
+					slidesToShow: $slidesToShow,
 					slidesToScroll: 1,
 					arrows: true,
 					variableWidth: $sliderWidth,

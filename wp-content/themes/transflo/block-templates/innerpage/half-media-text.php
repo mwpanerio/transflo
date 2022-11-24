@@ -1,7 +1,7 @@
-<section class="image-text image-text--<?php echo get_field('media_position'); ?> image-text--<?php echo get_field('section_type'); ?> <?php echo get_field('background_type'); ?> section-padding">
+<section class="js-image-text image-text image-text--<?php echo get_field('media_position'); ?> image-text--<?php echo get_field('section_type'); ?> <?php echo get_field('background_type'); ?> section-padding">
     <div class="container">
         <div class="row flex-row<?php echo get_field('media_position') == 'right' ? ' flex-opposite' : ''; ?>">
-            <div class="col-lg-6 col-xxs-12 image-text__half image-text__img">
+            <div class="col-lg-6 col-xxs-12 image-text__half image-text__img js-image-text-image">
                 <?php if(get_field('media_type') == 'image'): ?>
                     <?php echo fx_get_image_tag(get_field('media')['image'], 'object-fit'); ?>
                 <?php else: ?>
@@ -20,7 +20,7 @@
                     </a>
                 <?php endif; ?>
             </div>
-            <div class="col-lg-6 col-xxs-12 image-text__half image-text__text js-animated-text animated-text">
+            <div class="col-lg-6 col-xxs-12 image-text__half image-text__text js-image-text-content">
                 <?php echo get_field('content'); ?>
             </div>
         </div>

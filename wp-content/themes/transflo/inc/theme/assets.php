@@ -360,6 +360,14 @@ function fx_theme_scripts() {
             'dependencies'  => [ 'fx_odometter' ]
         ]
     );   
+
+    fx_assets_add_script(
+        [
+            'handle'        => 'fx_innerpage_animation',
+            'src'           => $theme_url . '/assets/js/blocks/innerpage/innerpage-block-animation.js',
+            'enqueue'       => (!is_front_page())
+        ]
+    );
     
 
     /**

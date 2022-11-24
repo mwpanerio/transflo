@@ -37,8 +37,13 @@
 }
 
 .counter-bar ul li:first-child {
-    padding-top: 0;
     border-top: none;
+}
+
+@media (max-width: 767px) {
+    .counter-bar ul li:first-child {
+        padding-top: 0;
+    }
 }
 
 .counter-bar ul li::before {

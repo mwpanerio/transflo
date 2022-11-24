@@ -41,7 +41,10 @@ var FX = ( function( FX, $ ) {
 	$( () => {
 		FX.AnimatedText.init();
 	})
-	
+
+	$( () => {
+		FX.FormBlockPopup.init();
+	})
 	
 	$(window).on( 'load', () => {
 		FX.BackToTop.init()
@@ -527,6 +530,38 @@ var FX = ( function( FX, $ ) {
                 .setTween(animatedTextWrapTimeline)
                 .addTo(controller);
             })
+		}
+	}
+
+	FX.FormBlockPopup = {
+		init() {
+			const $formDemoButton = $('.js-form-popup-button');
+			const $formDemoClose = $('.js-form-popup-close');
+
+			$formDemoButton.on('click', function(e) {
+				e.preventDefault();
+				const $this = $(this);
+				const $thisTarget = $this.attr('href');
+				const $thisTargetElement = $($thisTarget);
+
+				$this.toggleClass('is-active');
+				$thisTargetElement.stop().fadeIn();
+			})
+
+			$formDemoClose.on('click', function() {
+				const $this = $(this);
+				const $thisParent = $this.parents('.js-form-popup');
+				
+				$thisParent.stop().fadeOut();
+			})
+
+			$(document).mouseup(function(e) {
+                const container = $(".js-form-popup__inner");
+
+                if (!container.is(e.target) && container.has(e.target).length === 0)  {
+                    $('.js-form-popup:visible').stop().fadeOut();
+                }
+            });
 		}
 	}
 

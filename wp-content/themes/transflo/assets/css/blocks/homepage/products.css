@@ -306,6 +306,16 @@
 }
 
 
+.products__description ul li {
+    padding-left: 20px;
+}
+
+.products__description ul li:before {
+    position: absolute;
+    top: 8px;
+    left: 0;
+}
+
 .product__feed {
     list-style-type: none;
     padding: 0;

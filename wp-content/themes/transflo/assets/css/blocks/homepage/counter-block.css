@@ -148,10 +148,14 @@
     }
 
     .counter-bar ul li {
-        padding: 0 30px;
-        max-width: 33.333%;
+        padding: 30px;
+        min-width: 33.333%;
         flex: 1;
         margin-bottom: 0;
+    }
+
+    .counter-bar ul li:nth-child(3n) {
+        border-right: 0;
     }
     
     .counter-bar p {

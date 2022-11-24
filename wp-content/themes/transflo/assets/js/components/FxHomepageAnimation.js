@@ -79,21 +79,12 @@ var FX = ( function( FX, $ ) {
             } else {
                 $loaderTextAnimation.add(
                     new TimelineMax()
-                        .to(".loader__boxes", {
-                            duration: 0.8,
-                            scale: 0, 
-                            ease: Power4.easeInOut,
+                        .staggerTo(".loader__boxes", 1, {
+                            'transform' : 'scale(0)',
                             onComplete: function() {
                                 $('.loader').hide();
                             },
-                            stagger: {
-                                amount: 0.5, 
-                                grid: 'auto', 
-                                axis: null, 
-                                ease: Power4.easeInOut,
-                                from: 'center'
-                            }
-                        }), '-=0.8'
+                        }, 0.0005), '-=0.8'
                 )
             }
 

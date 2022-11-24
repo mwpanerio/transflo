@@ -1752,6 +1752,13 @@ body:after {
     height: auto;
 }
 
+@media (max-width: 767px) {
+    .loader__text__item img {
+        max-width: 200px;
+        height: auto;
+    }   
+}
+
 .loader__background {
     position: absolute;
     top: 0;

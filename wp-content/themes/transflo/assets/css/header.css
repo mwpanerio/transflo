@@ -1747,6 +1747,11 @@ body:after {
     }
 }
 
+.loader__text__item img {
+    width: 100%;
+    height: auto;
+}
+
 .loader__background {
     position: absolute;
     top: 0;

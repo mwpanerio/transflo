@@ -59,12 +59,13 @@ var FX = ( function( FX, $ ) {
                         .to(".loader__boxes", {
                             duration: 0.8,
                             scale: 0, 
+                            opacity: 0,
                             ease: "power4.easeInOut",
                             onComplete: function() {
                                 $('.loader').fadeOut();
                             },
                             stagger: {
-                                amount: 0.5, 
+                                amount: 0.25, 
                                 grid: 'auto', 
                                 axis: null, 
                                 ease: Power4.easeInOut,

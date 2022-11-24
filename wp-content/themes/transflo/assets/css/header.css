@@ -1742,13 +1742,13 @@ body:after {
 }
 
 @media (min-width: 768px) {
-    .loader__text {
+    .loader__text__item {
         font-size: 60px;
     }
 }
 
 .loader__text__item img {
-    width: 100%;
+    max-width: 400px;
     height: auto;
 }
 
@@ -1814,8 +1814,15 @@ body:after {
 
 @media (min-width: 768px) {
     .loader__squares {
-        width: 500px;
-        height: 500px;
+        width: 600px;
+        height: 600px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .loader__squares {
+        width: 700px;
+        height: 700px;
     }
 }
 

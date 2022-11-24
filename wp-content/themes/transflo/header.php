@@ -46,7 +46,7 @@
                         EFFICIENT
                     </div>
                     <div class="loader__text__item js-loader-text js-loader-text-logo">
-                        <?php echo fx_get_image_tag( 29281 ); ?>
+                        <?php echo fx_get_image_tag( 29426 ); ?>
                     </div>
                 </div>
             </div>

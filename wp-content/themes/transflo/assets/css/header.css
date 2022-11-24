@@ -957,6 +957,8 @@ body:after {
 
 .masthead__category {
     margin-top: 30px;
+    position: relative;
+    z-index: 9;
 }
 
 .masthead__category .form-col {

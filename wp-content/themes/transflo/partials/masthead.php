@@ -220,7 +220,7 @@
                                     ]
                                 );
                             ?>
-                            <select name="blog-category" id="blog-category">
+                            <select name="blog-category" id="blog-category-2">
                                 <option value="<?php echo home_url() . '/resources'; ?>">Select a category</option>
                                 <?php foreach($categories as $category): ?>
                                 <option value="<?php echo home_url() . '/' . $category->slug; ?>"<?php echo $current_slug == $category->slug ? ' selected' : ''; ?>><?php echo $category->name; ?></option>

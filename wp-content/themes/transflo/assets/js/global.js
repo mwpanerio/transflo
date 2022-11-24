@@ -140,6 +140,13 @@ var FX = ( function( FX, $ ) {
 				return false;
 			})
 
+			$('#blog-category-2').on('change', function() {
+				const $this = $(this);
+
+				window.location = $this.val();
+				return false;
+			})
+
 			$('.wpcf7-form-control-wrap').each(function() {
 				const $this = $(this);
 				const $thisLabel = $this.next('label');

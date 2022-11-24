@@ -173,6 +173,24 @@ var FX = ( function( FX, $ ) {
 					.setClassToggle("#js-masthead-sticky", "is-sticky")
 					.addTo(controller);
 			}
+
+			$('.wysiwyg').each(function() {
+				const $this = $(this);
+
+				if($this.find('table > .table-scroll').length > 0) {
+					$this.find('table').wrap('<div class="table-scroll"><div class="table-structure"></div></div>');
+				}
+
+				if($this.find('blockquote').length > 0) {
+					$this.find('blockquote').each(function() {
+						const $thisBlockquote = $(this);
+	
+						if($thisBlockquote.find('i').length == 0) {
+							$thisBlockquote.prepend('<i class="icon-small-quotes"></i>')
+						}
+					})
+				}
+			})
 		},
 
 

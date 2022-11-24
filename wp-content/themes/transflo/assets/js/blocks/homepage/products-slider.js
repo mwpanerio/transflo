@@ -25,7 +25,7 @@ var FX = ( function( FX, $ ) {
 
 		applySlick() {
             this.$slider.slick( {
-				infinite: true,
+				infinite: false,
 				speed: 600,
 				slidesToShow: 1,
 				slidesToScroll: 1,

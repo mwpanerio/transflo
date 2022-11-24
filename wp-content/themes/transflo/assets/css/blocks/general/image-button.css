@@ -17,21 +17,22 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
-    height: 70px;
+    height: auto;
 }
 
 .image-button__img {
     width: 80px;
-    height: 100%;
+    height: auto;
     border-radius: 10px 0 0 10px;
     display: block;
+    object-position: center;
     -o-object-fit: cover;
        object-fit: cover;
 }
 
 .image-button__info {
     width: calc(100% - 80px);
-    padding: 0 20px;
+    padding: 20px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;

@@ -57,24 +57,45 @@ var FX = ( function( FX, $ ) {
                     }, -0.1), '-=0.8'
             )
 
-            $loaderTextAnimation.add(
-                new TimelineMax()
-                    .to(".loader__boxes", {
-                        duration: 0.8,
-                        scale: 0, 
-                        ease: "power4.easeInOut",
-                        onComplete: function() {
-                            $('.loader').hide();
-                        },
-                        stagger: {
-                            amount: 0.5, 
-                            grid: 'auto', 
-                            axis: null, 
+            if($(window).outerWidth() >= 768) {
+                $loaderTextAnimation.add(
+                    new TimelineMax()
+                        .to(".loader__boxes", {
+                            duration: 0.8,
+                            scale: 0, 
+                            ease: "power4.easeInOut",
+                            onComplete: function() {
+                                $('.loader').hide();
+                            },
+                            stagger: {
+                                amount: 0.5, 
+                                grid: 'auto', 
+                                axis: null, 
+                                ease: Power4.easeInOut,
+                                from: 'center'
+                            }
+                        }), '-=0.85'
+                )
+            } else {
+                $loaderTextAnimation.add(
+                    new TimelineMax()
+                        .to(".loader__boxes", {
+                            duration: 0.8,
+                            scale: 0, 
                             ease: Power4.easeInOut,
-                            from: 'center'
-                        }
-                    }), '-=0.85'
-            )
+                            onComplete: function() {
+                                $('.loader').hide();
+                            },
+                            stagger: {
+                                amount: 0.5, 
+                                grid: 'auto', 
+                                axis: null, 
+                                ease: Power4.easeInOut,
+                                from: 'center'
+                            }
+                        }), '-=0.8'
+                )
+            }
 
             $loaderTextAnimation.add(
                 new TimelineMax()

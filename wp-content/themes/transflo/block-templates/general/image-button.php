@@ -1,4 +1,4 @@
-<section class="image-buttons<?php echo is_front_page() ? ' push-lg-top': ' section-padding'; ?>">
+<section class="image-buttons section-padding bg-white">
     <div class="container">
         <div class="image-buttons__top-content js-animated-text animated-text">
             <div class="image-buttons__heading js-animated-text animated-text">

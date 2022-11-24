@@ -78,7 +78,7 @@ var FX = ( function( FX, $ ) {
                         .staggerTo('.loader__squares span', 0.6, {
                             rotate: 0,
                             opacity: 0,
-                            ease: Power4.easeOut
+                            ease: Power4.easeInOut
                         }, -0.05, '-=1')
                         .staggerTo(".loader__boxes:not(.hidden-xs-down)", 0.6, {
                             opacity: 0,
@@ -86,7 +86,7 @@ var FX = ( function( FX, $ ) {
                             onComplete: function() {
                                 $('.loader').fadeOut();
                             },
-                        }, 0.0015, '-=0.6')
+                        }, 0.0015, '-=0.6'), '-=0.8'
                 )
             }
 

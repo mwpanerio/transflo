@@ -79,8 +79,10 @@ var FX = ( function( FX, $ ) {
             } else {
                 $loaderTextAnimation.add(
                     new TimelineMax()
-                        .to(".loader__boxes", 1, {
-                            scale: 0,
+                        .staggerTo(".loader__background > div", 1, {
+                            scaleY: 0,
+                            opacity: 0,
+                            'transform-origin' : 'top',
                             onComplete: function() {
                                 $('.loader').hide();
                             },

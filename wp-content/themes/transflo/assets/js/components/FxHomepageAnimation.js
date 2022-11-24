@@ -85,7 +85,7 @@ var FX = ( function( FX, $ ) {
                             onComplete: function() {
                                 $('.loader').hide();
                             },
-                        }, 0.005), '-=0.8'
+                        }, 0.0005), '-=0.8'
                 )
             }
 

@@ -217,11 +217,22 @@
     
     .products__info-top {
         padding-bottom: 25px;
+        display: flex;
+        flex-direction: column;
     }
     
     .products__image {
         width: 340px;
+        min-height: 312px;
         height: 240px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .products__image img {
+        max-width: 100%;
+        height: auto;
     }
     
     .products__description {

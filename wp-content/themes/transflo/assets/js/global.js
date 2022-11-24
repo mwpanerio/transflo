@@ -177,7 +177,7 @@ var FX = ( function( FX, $ ) {
 			$('.wysiwyg').each(function() {
 				const $this = $(this);
 
-				if($this.find('table > .table-scroll').length > 0) {
+				if($this.find('table > .table-scroll').length == 0) {
 					$this.find('table').wrap('<div class="table-scroll"><div class="table-structure"></div></div>');
 				}
 

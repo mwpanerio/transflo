@@ -1819,13 +1819,6 @@ body:after {
     }
 }
 
-@media (min-width: 1200px) {
-    .loader__squares {
-        width: 700px;
-        height: 700px;
-    }
-}
-
 .loader__squares > span {
     display: block;
     position: absolute;

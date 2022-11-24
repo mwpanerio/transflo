@@ -80,13 +80,22 @@ var FX = ( function( FX, $ ) {
                             opacity: 0,
                             ease: Power4.easeInOut
                         }, -0.05, '-=1')
-                        .staggerTo(".loader__boxes:not(.hidden-xs-down)", 0.6, {
+                        .to(".loader__boxes:not(.hidden-xs-down)", {
+                            duration: 0.8,
+                            scale: 0, 
                             opacity: 0,
-                            scale: 0,
+                            ease: Power4.easeInOut,
+                            stagger: {
+                                amount: 0.5, 
+                                grid: 'auto', 
+                                axis: null, 
+                                ease: Power4.easeInOut,
+                                from: 'center'
+                            },
                             onComplete: function() {
                                 $('.loader').fadeOut();
                             },
-                        }, 0.0015, '-=0.6'), '-=0.8'
+                        }, '-=0.8'), '-=0.8'
                 )
             }
 

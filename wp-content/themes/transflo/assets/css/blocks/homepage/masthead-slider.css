@@ -22,6 +22,15 @@
     overflow: hidden;
 }
 
+.masthead__image .fluid-width-video-wrapper {
+    padding-top: 56.25% !important;
+}
+
+.masthead__image iframe {
+    width: 100%;
+    height: auto;
+}
+
 .masthead__image img {
     width: 100%;
 }

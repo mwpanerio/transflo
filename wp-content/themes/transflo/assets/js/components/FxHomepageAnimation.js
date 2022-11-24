@@ -31,14 +31,14 @@ var FX = ( function( FX, $ ) {
                 )
             })
 
-            // $loaderTextAnimation.add(
-            //     new TimelineMax()    
-            //         .staggerTo('.loader__squares span', 1, {
-            //             'transform' : 'rotate(45deg)',
-            //             'opacity' : 1,
-            //             ease: Power4.easeOut
-            //         }, 0.1), '-=0.5'
-            // )
+            $loaderTextAnimation.add(
+                new TimelineMax()    
+                    .staggerTo('.loader__squares span', 1, {
+                        rotate : 45,
+                        opacity: 1,
+                        ease: Power4.easeOut
+                    }, 0.1), '-=0.5'
+            )
 
             $loaderTextAnimation.add(
                 new TimelineMax()
@@ -48,24 +48,20 @@ var FX = ( function( FX, $ ) {
                     })
             )
 
-            // $loaderTextAnimation.add(
-            //     new TimelineMax()    
-            //         .staggerTo('.loader__squares span', 1, {
-            //             'transform' : 'rotate(0)',
-            //             'opacity' : 0,
-            //             ease: Power4.easeOut
-            //         }, -0.1), '-=0.8'
-            // )
-
             if($(window).outerWidth() >= 768) {
                 $loaderTextAnimation.add(
                     new TimelineMax()
+                        .staggerTo('.loader__squares span', 1, {
+                            rotate: 0,
+                            opacity: 0,
+                            ease: Power4.easeOut
+                        }, -0.1)
                         .to(".loader__boxes", {
                             duration: 0.8,
                             scale: 0, 
                             ease: "power4.easeInOut",
                             onComplete: function() {
-                                $('.loader').hide();
+                                $('.loader').fadeOut();
                             },
                             stagger: {
                                 amount: 0.5, 
@@ -74,18 +70,23 @@ var FX = ( function( FX, $ ) {
                                 ease: Power4.easeInOut,
                                 from: 'center'
                             }
-                        }), '-=0.85'
+                        }, '-=0.8'), '-=0.85'
                 )
             } else {
                 $loaderTextAnimation.add(
                     new TimelineMax()
+                        .staggerTo('.loader__squares span', 0.6, {
+                            rotate: 0,
+                            opacity: 0,
+                            ease: Power4.easeOut
+                        }, -0.05, '-=1')
                         .staggerTo(".loader__boxes:not(.hidden-xs-down)", 0.6, {
                             opacity: 0,
                             scale: 0,
                             onComplete: function() {
-                                $('.loader').hide();
+                                $('.loader').fadeOut();
                             },
-                        }, 0.0015), '-=0.9'
+                        }, 0.0015, '-=0.6')
                 )
             }
 

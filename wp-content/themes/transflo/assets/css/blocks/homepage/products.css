@@ -230,6 +230,10 @@
         align-items: center;
     }
 
+    body:not(.home) .products__image {
+        min-height: 312px;
+    }
+
     .products__image img {
         max-width: 100%;
         height: auto;

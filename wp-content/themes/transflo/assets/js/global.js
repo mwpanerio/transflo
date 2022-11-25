@@ -539,7 +539,7 @@ var FX = ( function( FX, $ ) {
 			const $formDemoButton = $('.js-form-popup-button');
 			const $formDemoClose = $('.js-form-popup-close');
 
-			$('body').on('click', 'a[href^="#"]', function(e) {
+			$('body').on('click', 'a:not(.js-form-popup-button)[href^="#"]', function(e) {
 				e.preventDefault();
 				const $this = $(this);
 				const $href = $this.attr('href');

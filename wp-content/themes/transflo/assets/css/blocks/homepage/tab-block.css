@@ -433,6 +433,17 @@
     color: var(--color-black);
 }
 
+.testimonials--general-tab .tab-content ol li {
+    position: relative;
+    padding-left: 35px;
+}
+
+.testimonials--general-tab .tab-content ol li:before {
+    position: absolute;
+    left: 0;
+    top: -1px;
+}
+
 .testimonials--general-tab .testimonials__image img {
     position: relative;
     width: 100%;

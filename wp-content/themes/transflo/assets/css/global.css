@@ -1319,7 +1319,8 @@
    border-radius: 20px;
  }
 
- .gallery-wrapper .gallery-filter__select {
+ .gallery-wrapper .gallery-filter__select,
+ .gallery-wrapper > form {
   display: none;
  }
 

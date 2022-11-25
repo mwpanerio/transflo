@@ -11,6 +11,15 @@
 
 .half-img-form__image {
     height: 157px;
+    position: relative;
+    transform: translate(0, -50px);
+    opacity: 0;
+}
+
+@media (min-width: 1200px) {
+    .half-img-form__image {
+        transform: translate(-50px, 0);
+    }
 }
 
 .half-img-form__image img {
@@ -21,6 +30,15 @@
     padding: 30px 30px 25px 30px;
     border-radius: 0 0 20px 20px;
     background-color: #EFF2F4;
+    position: relative;
+    transform: translate(0, 50px);
+    opacity: 0;
+}
+
+@media (min-width: 1200px) {
+    .half-img-form__text {
+        transform: translate(50px, 0);
+    }
 }
 
 .half-img-form__text h2 {

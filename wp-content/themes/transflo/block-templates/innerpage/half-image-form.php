@@ -1,10 +1,10 @@
-<section class="image-form section-padding bg-white">
+<section class="image-form section-padding bg-white js-image-form">
     <div class="container">
         <div class="half-img-form">
-            <div class="half-img-form__image">
+            <div class="half-img-form__image js-image-form-image">
                 <?php echo fx_get_image_tag(get_field('image'), 'object-fit'); ?>
             </div>
-            <div class="half-img-form__text">
+            <div class="half-img-form__text js-animated-text animated-text">
                 <?php if($subheading = get_field('subheading')): ?>
                     <h5><?php echo $subheading; ?></h5>
                 <?php endif; ?>

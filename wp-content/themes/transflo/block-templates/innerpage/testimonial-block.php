@@ -1,5 +1,6 @@
 <section class="testimonial-block section-padding">
     <div class="container">
+        <?php if(get_field('subheading') || get_field('title') || get_field('description')):?>
         <div class="testimonial-block__upper">
             <?php if($subheading = get_field('subheading')): ?>
             <h5><?php echo $subheading; ?></h5>
@@ -11,7 +12,7 @@
                 <?php echo $description; ?>
             <?php endif; ?>
         </div>
-        
+        <?php endif; ?>
         <?php
             $post__in = get_field('show_testimonial') == 'choose-manually' ? get_field('testimonial_to_posts') : array(); 
             $args = array(

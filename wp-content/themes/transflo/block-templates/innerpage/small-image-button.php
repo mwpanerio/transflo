@@ -1,5 +1,6 @@
 <section class="benefits-section benefits-section--version-1 benefits-section--not-slider section-padding <?php echo get_field('background_type'); ?>">
     <div class="container">
+        <?php if(get_field('subheading') || get_field('title') || get_field('description')):?>
         <div class="benefits-section__header">
             <?php if($subheading = get_field('subheading')): ?>
             <h5><?php echo $subheading; ?></h5>
@@ -11,6 +12,7 @@
                 <?php echo $description; ?>
             <?php endif; ?>
         </div>
+        <?php endif; ?>
         <div class="benefits-section__row">
             <div class="row flex-row">
                 <?php while(have_rows('image_button')): the_row(); ?>

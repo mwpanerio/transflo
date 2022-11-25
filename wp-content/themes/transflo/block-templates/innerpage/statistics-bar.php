@@ -1,6 +1,7 @@
 <?php if(have_rows('statistics_item')): ?>
 <div class="counter-block counter-block--<?php echo get_field('background_type'); ?> bg-white section-padding">
-    <div class="container">           
+    <div class="container">        
+        <?php if(get_field('subheading') || get_field('title') || get_field('description')):?>
         <div class="counter-block__upper">
             <?php if($subheading = get_field('subheading')): ?>
             <h5><?php echo $subheading; ?></h5>
@@ -12,6 +13,7 @@
                 <?php echo $description; ?>
             <?php endif; ?>
         </div> 
+        <?php endif; ?>
         <div class="counter-bar text-center number-counter-section">
             <ul class="counter-item">
                 <?php while(have_rows('statistics_item')): the_row(); ?>

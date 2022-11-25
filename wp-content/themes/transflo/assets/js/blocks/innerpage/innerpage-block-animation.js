@@ -7,6 +7,7 @@ var FX = ( function( FX, $ ) {
         FX.BenefitsSection.init()
         FX.ImageOverlay.init()
         FX.HalfMediaTextAnimation.init()
+        FX.TeamBlock.init()
 	})
 
 	FX.InnerpageBlockAnimation = {
@@ -163,6 +164,66 @@ var FX = ( function( FX, $ ) {
                     triggerHook: 0.85
                 })
                 .setTween(halfMediaTextWrapTimeline)
+                .addTo(controller);
+            })
+		},
+	}
+
+    FX.HalfMediaTextAnimation = {
+		init() {
+            const $halfImageFormWrap = $('.js-image-form');
+            const controller = new ScrollMagic.Controller();
+
+            $halfImageFormWrap.each(function() {
+                const $this = $(this);
+                const $halfImageFormImage = $this.find('.js-image-form-image');
+                const $halfImageFormContent = $this.find('.js-animated-text');
+
+                const halfImageFormWrapTimeline = new TimelineMax();
+                    halfImageFormWrapTimeline
+                        .to($halfImageFormImage, 0.8, {
+                            opacity: 1,
+                            'transform' : 'translate(0, 0)',
+                            ease: Power4.easeInOut
+                        })
+                        .to($halfImageFormContent, 0.8, {
+                            opacity: 1,
+                            'transform' : 'translate(0, 0)',
+                            ease: Power4.easeInOut
+                        }, '-=0.8')
+
+                new ScrollMagic.Scene({
+                    triggerElement: $this[0],
+                    triggerHook: 0.85
+                })
+                .setTween(halfImageFormWrapTimeline)
+                .addTo(controller);
+            })
+		},
+	}
+
+    FX.TeamBlock = {
+		init() {
+            const $teamBlockWrap = $('.team-block__list');
+            const controller = new ScrollMagic.Controller();
+
+            $teamBlockWrap.each(function() {
+                const $this = $(this);
+                const $teamBlockItem = $this.find('.team-block__item');
+
+                const teamBlockWrapTimeline = new TimelineMax();
+                    teamBlockWrapTimeline
+                        .staggerTo($teamBlockItem, 1.2, {
+                            opacity: 1,
+                            'transform' : 'translate(0, 0)',
+                            ease: Power4.easeInOut
+                        }, 0.15)
+
+                new ScrollMagic.Scene({
+                    triggerElement: $this[0],
+                    triggerHook: 0.85
+                })
+                .setTween(teamBlockWrapTimeline)
                 .addTo(controller);
             })
 		},

@@ -1,5 +1,6 @@
 <section class="js-benefits-section benefits-section benefits-section--version-<?php echo get_field('benefits_section_look'); ?> section-padding <?php echo get_field('background_color'); ?>">
     <div class="container">
+        <?php if(get_field('subheading') || get_field('title') || get_field('description')):?>
         <div class="benefits-section__header js-animated-text animated-text">
             <?php if($subheading = get_field('subheading')): ?>
             <h5><?php echo $subheading; ?></h5>
@@ -11,6 +12,7 @@
                 <?php echo $description; ?>
             <?php endif; ?>
         </div>
+        <?php endif; ?>
         <div class="benefits-section__row">
             <?php $column_per_row = (int)get_field('benefits_column_per_row'); ?>
             <div class="row flex-row js-benefits-slider fx-slider<?php echo count(get_field('benefits_item')) > $column_per_row ? '' : ' benefits-section--equal'; ?>" data-benefits-slider="<?php echo $column_per_row; ?>">

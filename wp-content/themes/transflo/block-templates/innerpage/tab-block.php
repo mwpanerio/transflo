@@ -1,8 +1,9 @@
 <section class="testimonials testimonials--general-tab section-padding bg-white">
     <div class="container">
+        <?php if(get_field('subheading') || get_field('title') || get_field('description')):?>
         <div class="testimonials__top-content text-center">
             <div class="row">
-                <div class="col-lg-10 col-lg-offset-1">
+                <div class="col-lg-10 col-lg-offset-1 js-animated-text animated-text">
                     <?php if($subheading = get_field('subheading')): ?>
                     <h5><?php echo $subheading; ?></h5>
                     <?php endif; ?>
@@ -15,6 +16,7 @@
                 </div>
             </div>
         </div>
+        <?php endif; ?>
         <div class="testimonials__wrap">
             <div class="js-simple-tab-menu fx-slider">
                 <?php while(have_rows('tab_item')) : the_row(); ?>

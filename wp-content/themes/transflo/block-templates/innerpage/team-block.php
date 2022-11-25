@@ -1,6 +1,7 @@
 <section class="team-block section-padding <?php echo get_field('background_type'); ?>">
     <div class="container">
-        <div class="team-block__upper">
+        <?php if(get_field('subheading') || get_field('title') || get_field('description')):?>
+        <div class="team-block__upper js-animated-text animated-text">
             <?php if($subheading = get_field('subheading')): ?>
             <h5><?php echo $subheading; ?></h5>
             <?php endif; ?>
@@ -11,6 +12,7 @@
                 <?php echo $description; ?>
             <?php endif; ?>
         </div>
+        <?php endif; ?>
         <ul class="team-block__list">
             <?php $count = 0; while(have_rows('teams')): the_row(); ?>
             <li class="team-block__item">

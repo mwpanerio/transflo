@@ -1318,6 +1318,14 @@
  .media-gallery--grid-layout .media-gallery__item-img {
    border-radius: 20px;
  }
+
+ .gallery-wrapper .gallery-filter__select {
+  display: none;
+ }
+
+ .media-gallery--grid-layout .media-gallery__item {
+  margin-bottom: 60px;
+ }
  
  @media (min-width: 1200px) {
    .mfp-iframe:hover .media-gallery__item-video__icon:before,

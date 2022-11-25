@@ -1325,7 +1325,13 @@
  }
 
  .media-gallery--grid-layout .media-gallery__item {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
+ }
+
+ @media (min-width: 768px) {
+  .media-gallery--grid-layout .media-gallery__item {
+    margin-bottom: 60px;
+   }
  }
  
  @media (min-width: 1200px) {

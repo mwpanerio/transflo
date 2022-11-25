@@ -1,5 +1,5 @@
 <?php if(have_rows('statistics_item')): ?>
-<div class="counter-block counter-block--<?php echo get_field('background_type'); ?>">
+<div class="counter-block counter-block--<?php echo get_field('background_type'); ?> bg-white section-padding">
     <div class="container">           
         <div class="counter-block__upper">
             <?php if($subheading = get_field('subheading')): ?>

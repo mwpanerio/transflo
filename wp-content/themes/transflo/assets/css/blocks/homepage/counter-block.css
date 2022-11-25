@@ -99,8 +99,8 @@
 
 @media (min-width: 768px) {
     .counter-block {
-        padding-top: 60px;
-        padding-bottom: 60px;
+        padding-top: var(--section-margins);
+        padding-bottom: var(--section-margins);
     }
 
     .counter-item {
@@ -144,8 +144,8 @@
 
 @media (min-width: 1200px) {
     .counter-block {
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding-top: var(--section-margins);
+        padding-bottom: var(--section-margins);
     }
 
     .counter-bar ul {

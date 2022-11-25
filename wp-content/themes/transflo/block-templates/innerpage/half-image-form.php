@@ -1,4 +1,4 @@
-<section class="image-form section-padding">
+<section class="image-form section-padding bg-white">
     <div class="container">
         <div class="half-img-form">
             <div class="half-img-form__image">

@@ -7,6 +7,7 @@ var FX = ( function( FX, $ ) {
         FX.BenefitsSection.init()
         FX.ImageOverlay.init()
         FX.HalfMediaTextAnimation.init()
+        FX.HalfFormTextAnimation.init()
         FX.TeamBlock.init()
         FX.FormBlockAnimation.init()
 	})
@@ -170,7 +171,7 @@ var FX = ( function( FX, $ ) {
 		},
 	}
 
-    FX.HalfMediaTextAnimation = {
+    FX.HalfFormTextAnimation = {
 		init() {
             const $halfImageFormWrap = $('.js-image-form');
             const controller = new ScrollMagic.Controller();

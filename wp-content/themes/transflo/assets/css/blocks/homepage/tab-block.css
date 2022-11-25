@@ -286,7 +286,9 @@
 
 @media (min-width: 1200px) {
     .tab-column img {
-        height: auto;
+        height: 50px;
+        margin: 0 auto;
+        width: auto;
     }
 
     .testimonials__top-content,

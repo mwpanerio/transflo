@@ -5,18 +5,18 @@
                 <div class="form-blocks__inner">
                     <div class="forms-block__locations">
                         <?php echo fx_get_image_tag(get_field('location_image')); ?>
-                        <p class="form-block__text-with-icon">
-                            <i class="icon-location"></i> 
-                            Address: <br>
-                            <?php echo get_field('location_address'); ?> <br>
-                            <a href="https://maps.google.com/maps?q=<?php echo strip_tags(get_field('location_address'))?>">Get Directions</a>
-                        </p>
-                        <p class="form-block__text-with-icon">
-                            <i class="icon-email"></i>
-                            For media inquiries, contact: <br>
-                            <a href="mailto:<?php echo get_field('location_email_address'); ?>"><?php echo get_field('location_email_address'); ?></a>
-                        </p>
                     </div>
+                    <p class="form-block__text-with-icon">
+                        <i class="icon-location"></i> 
+                        Address: <br>
+                        <?php echo get_field('location_address'); ?> <br>
+                        <a href="https://maps.google.com/maps?q=<?php echo strip_tags(get_field('location_address'))?>">Get Directions</a>
+                    </p>
+                    <p class="form-block__text-with-icon">
+                        <i class="icon-email"></i>
+                        For media inquiries, contact: <br>
+                        <a href="mailto:<?php echo get_field('location_email_address'); ?>"><?php echo get_field('location_email_address'); ?></a>
+                    </p>
                 </div>
             </div>
             <div class="forms-block__row__item col-xxs-12 col-sm-6 col-md-6 col-lg-3">

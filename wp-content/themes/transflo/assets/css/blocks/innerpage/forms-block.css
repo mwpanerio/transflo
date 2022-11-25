@@ -3,6 +3,25 @@
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     height: 100%;
+    position: relative;
+    transform: translate(0, 50px);
+    opacity: 0;
+}
+
+.form-blocks__inner > * {
+    position: relative;
+    transform: translate(0, 50px);
+    opacity: 0;
+}
+
+@media (min-width: 1200px) {
+    .form-blocks__inner {
+        transform: translate(-50px, 0);
+    }
+
+    .form-blocks__inner > * {
+        transform: translate(-50px, 0);
+    }
 }
 
 .form-blocks__inner .btn {

@@ -8,6 +8,7 @@ var FX = ( function( FX, $ ) {
         FX.ImageOverlay.init()
         FX.HalfMediaTextAnimation.init()
         FX.TeamBlock.init()
+        FX.FormBlockAnimation.init()
 	})
 
 	FX.InnerpageBlockAnimation = {
@@ -224,6 +225,37 @@ var FX = ( function( FX, $ ) {
                     triggerHook: 0.85
                 })
                 .setTween(teamBlockWrapTimeline)
+                .addTo(controller);
+            })
+		},
+	}
+
+    FX.FormBlockAnimation = {
+		init() {
+            const $formBlockWrap = $('.form-blocks__inner');
+            const controller = new ScrollMagic.Controller();
+
+            $formBlockWrap.each(function() {
+                const $this = $(this);
+                const $formBlockItemChildren = $this.find(' > *');
+
+                const formBlockWrapTimeline = new TimelineMax();
+                    formBlockWrapTimeline
+                        .to($this, 1.2, {
+                            opacity: 1,
+                            'transform' : 'translate(0, 0)',
+                            ease: Power4.easeInOut
+                        })
+                        .staggerTo($formBlockItemChildren, 0.45, {
+                            opacity: 1,
+                            'transform' : 'translate(0, 0)'
+                        }, 0.115, '-=1')
+
+                new ScrollMagic.Scene({
+                    triggerElement: $this[0],
+                    triggerHook: 0.85
+                })
+                .setTween(formBlockWrapTimeline)
                 .addTo(controller);
             })
 		},

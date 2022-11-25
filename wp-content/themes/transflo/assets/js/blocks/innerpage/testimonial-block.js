@@ -7,7 +7,6 @@ var FX = ( function( FX, $ ) {
 	FX.TestimonialBlock = {
 
 		init() {
-			console.log('naruto');
             $(".js-testimonial-post:hidden").slice(0, 9).slideDown();
 
             const  $total = $('.js-testimonial-post').length;

@@ -109,3 +109,41 @@
             </g>
         </svg>
     </div>
+
+    <div class="image-overlay__popup js-form-popup" id="js-form-popup-0">
+        <div class="image-overlay__popup__container">
+            <div class="image-overlay__popup__inner js-form-popup__inner">
+                <div class="image-overlay__popup__close js-form-popup-close">
+                    <span></span>
+                </div>
+                <h3 class="image-overlay__popup__title"><?php echo get_sub_field('form_title')?></h3>
+                <?php echo apply_shortcodes('[contact-form-7 id="28943" title="Pricing Form"]'); ?>
+            </div>
+        </div>
+    </div>
+
+
+    <?php 
+
+        $cf7_args = array(
+            'post_type' => 'wpcf7_contact_form',
+            'numberposts' => -1
+        );
+
+        $cf7_posts = new WP_Query($cf7_args);
+
+        while($cf7_posts->have_posts()): $cf7_posts->the_post(); setup_postdata($cf7_posts);
+    ?>
+
+    <div class="image-overlay__popup js-form-popup" id="js-form-popup-<?php echo get_the_ID(); ?>">
+        <div class="image-overlay__popup__container">
+            <div class="image-overlay__popup__inner js-form-popup__inner">
+                <div class="image-overlay__popup__close js-form-popup-close">
+                    <span></span>
+                </div>
+                <h3 class="image-overlay__popup__title"><?php echo get_the_title(); ?></h3>
+                <?php echo apply_shortcodes('[contact-form-7 id="' . get_the_ID() . '"]'); ?>
+            </div>
+        </div>
+    </div>
+    <?php wp_reset_postdata(); endwhile;?>

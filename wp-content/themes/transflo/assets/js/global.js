@@ -539,6 +539,16 @@ var FX = ( function( FX, $ ) {
 			const $formDemoButton = $('.js-form-popup-button');
 			const $formDemoClose = $('.js-form-popup-close');
 
+			$('body').on('click', 'a[href^="#"]', function(e) {
+				e.preventDefault();
+				const $this = $(this);
+				const $href = $this.attr('href');
+				const $targetElement = $($href)
+
+				$this.toggleClass('is-active');
+				$targetElement.stop().fadeIn();
+		   });
+
 			$formDemoButton.on('click', function(e) {
 				e.preventDefault();
 				const $this = $(this);

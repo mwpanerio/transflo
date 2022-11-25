@@ -1867,6 +1867,99 @@ body:after {
     transform: scale(0.8);
 }
 
+/*Overlay Popup for Form*/
+
+.image-overlay__popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    z-index: 9999;
+}
+
+.image-overlay__popup__container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-overlay__popup__inner {
+    padding: 30px;
+    background-color: var(--color-white);
+    border-radius: 20px;
+    max-width: 872px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.image-overlay__popup__close {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 20px 0 20px;
+    background-color: var(--color-tertiary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.image-overlay__popup__close > span {
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: relative;
+}
+
+.image-overlay__popup__close > span:before,
+.image-overlay__popup__close > span:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-white);
+    transition: -webkit-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.image-overlay__popup__close > span:before {
+    -webkit-transform: translateY(-50%) rotate(45deg);
+            transform: translateY(-50%) rotate(45deg);
+}
+
+.image-overlay__popup__close > span:after {
+    -webkit-transform: translateY(-50%) rotate(-45deg);
+            transform: translateY(-50%) rotate(-45deg);
+}
+
+@media (min-width: 1024px) {
+    .image-overlay__popup__close:hover > span:before,
+    .image-overlay__popup__close:hover > span:after {
+        -webkit-transform: translateY(-50%) rotate(0deg);
+                transform: translateY(-50%) rotate(0deg);
+    }
+}
+
+.image-overlay__popup__title {
+    text-align: center;
+    padding-bottom: 0;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
 /* start styles for animating any elements in header */
     /* .page-header .nav-primary .ubermenu>ul>li {} */
 /* end of styles for animation any elements in header */

@@ -64,17 +64,6 @@
                                     </p>
                                 </div>
                             </a>
-                            <div class="form-block__demo__modal" id="js-form-demo-<?php echo $form_count; ?>">
-                                <div class="form-block__demo__modal__container">
-                                    <div class="form-block__demo__modal__inner">
-                                        <div class="form-block__demo__modal__close">
-                                            <span></span>
-                                        </div>
-                                        <h3 class="form-block__demo__modal__title"><?php echo get_sub_field('title')?></h3>
-                                        <?php echo apply_shortcodes(get_sub_field('form_shortcode')); ?>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <?php $form_count++; endwhile; ?>
                     </div>
@@ -97,4 +86,18 @@
             <?php endwhile; ?>
         </div>
     </div>
+
+    <?php $form_modal_count = 0; while(have_rows('demo_list')): the_row(); ?>
+    <div class="form-block__demo__modal" id="js-form-demo-<?php echo $form_modal_count; ?>">
+        <div class="form-block__demo__modal__container">
+            <div class="form-block__demo__modal__inner">
+                <div class="form-block__demo__modal__close">
+                    <span></span>
+                </div>
+                <h3 class="form-block__demo__modal__title"><?php echo get_sub_field('title')?></h3>
+                <?php echo apply_shortcodes(get_sub_field('form_shortcode')); ?>
+            </div>
+        </div>
+    </div>
+    <?php $form_modal_count++; endwhile; ?>
 </section>

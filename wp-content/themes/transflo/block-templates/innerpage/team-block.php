@@ -27,31 +27,34 @@
                         </div>
                     </div>
                 </article>
-                <div class="team-block__modal js-team-modal" id="js-team-modal-<?php echo $count; ?>">
-                    <div class="container">
-                        <div class="team-block__modal__inner">
-                            <div class="team-block__modal__close js-team-modal-close">
-                                <span></span>
-                            </div>
-                            <div class="team-block__modal__image">
-                                <?php echo fx_get_image_tag(get_sub_field('image')); ?>
-                            </div>
-                            <div class="team-block__modal__content">
-                                <div class="team-block__modal__content__inner">
-                                    <h3 class="h4"><?php echo get_sub_field('name'); ?></h3>
-                                    <strong><?php echo get_sub_field('job_title'); ?></strong>
-                                    <?php if($description = get_sub_field('description')): ?>
-                                    <div class="team-block__modal__description">
-                                        <?php echo $description; ?>
-                                    </div>
-                                    <?php endif; ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </li>
             <?php $count++; endwhile; ?>
         </ul>
     </div>
+
+    <?php $modal_count = 0; while(have_rows('teams')): the_row(); ?>
+    <div class="team-block__modal js-team-modal" id="js-team-modal-<?php echo $modal_count; ?>">
+        <div class="container">
+            <div class="team-block__modal__inner">
+                <div class="team-block__modal__close js-team-modal-close">
+                    <span></span>
+                </div>
+                <div class="team-block__modal__image">
+                    <?php echo fx_get_image_tag(get_sub_field('image')); ?>
+                </div>
+                <div class="team-block__modal__content">
+                    <div class="team-block__modal__content__inner">
+                        <h3 class="h4"><?php echo get_sub_field('name'); ?></h3>
+                        <strong><?php echo get_sub_field('job_title'); ?></strong>
+                        <?php if($description = get_sub_field('description')): ?>
+                        <div class="team-block__modal__description">
+                            <?php echo $description; ?>
+                        </div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php $modal_count++; endwhile; ?>
 </section>

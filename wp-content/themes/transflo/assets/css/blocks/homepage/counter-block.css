@@ -154,12 +154,12 @@
 
     .counter-bar ul li {
         padding: 30px;
-        min-width: 33.333%;
+        min-width: 25%;
         flex: 1;
         margin-bottom: 0;
     }
 
-    .counter-bar ul li:nth-child(3n) {
+    .counter-bar ul li:nth-child(4n) {
         border-right: 0;
     }
     

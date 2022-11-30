@@ -21,7 +21,7 @@
     width: 100%;
     background: var(--color-white);
     z-index: 9999;
-    padding: 8px 0;
+    padding:  0 0 8px;
     border-bottom: 1px solid rgba(141, 153, 174, 0.3);
     border-top: 3px solid #2474BB;
 }
@@ -218,6 +218,90 @@ img.logo {
 
 .header-right {
     float: right;
+    position: relative;
+}
+
+.page-header__upper {
+    position: relative;
+    top: 0;
+    right: 0;
+    padding: 15px 0 10px;
+    background-color: var(--color-offwhite);
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    .page-header__upper {
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .page-header__upper {
+        margin-bottom: 0;
+    }
+}
+
+.header__upper ul,
+.header__upper ul li {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    line-height: 1;
+}
+
+@media (max-width: 767px) {
+    .header__upper ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+}
+
+.header__upper ul li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.header__upper ul li:before {
+    display: none;
+}
+
+.header__upper ul li:not(:last-child) {
+    margin-right: 20px;
+}
+
+.header__upper ul li a {
+    box-shadow: none;
+    font-size: 15px;
+    position: relative;
+}
+
+.header__upper ul li a:before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--color-primary);
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out
+}
+
+.header__upper ul li a:hover {
+    box-shadow: none;
+}
+
+@media (min-width: 1200px) {
+    .header__upper ul li a:hover:before {
+        transform-origin: left;
+        transform: scaleX(1);
+    }
 }
 
 .js-search-toggle i {
@@ -341,7 +425,7 @@ img.logo {
 @media (min-width: 768px) {
     .page-header {
         position: fixed;
-        padding: 18px 0;
+        padding: 0 0 18px;
         border-top: 4px solid #2474BB;
     }
     
@@ -1041,7 +1125,7 @@ body:after {
 
  @media (min-width: 768px) {
     .masthead {
-        margin-top: 80px;
+        margin-top: 140px;
     }
 
     .right-image {
@@ -1061,7 +1145,7 @@ body:after {
 
  @media (min-width: 1200px) {
     .masthead {
-        margin-top: 108px;
+        margin-top: 148px;
     }
 
     .left-text-right-image,

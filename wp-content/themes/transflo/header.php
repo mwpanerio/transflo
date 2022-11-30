@@ -55,6 +55,21 @@
     <?php endif; ?>
 
     <header class="page-header">
+
+        <div class="page-header__upper">
+            <div class="container">
+                <div class="header__upper">
+                    <?php
+                        // Output the footer navigation
+                        wp_nav_menu(
+                            [
+                                'menu'           => 'Header Upper - Quick Links',
+                            ]
+                        );
+                    ?>
+                </div>
+            </div>
+        </div>
         <div class="container clearfix">
             <div class="logo">
                 <a href="<?php echo esc_url( $home_url ); ?>">
@@ -62,7 +77,7 @@
                 </a>
             </div>
             <div class="header-right">
-                <div class="header-btn hidden-xs-down"><a href="<?php echo get_the_permalink(23); ?>" class="btn btn--contact btn-tertiary">Contact Us</a></div>
+                <div class="header-btn hidden-xs-down"><a href="<?php echo get_the_permalink(23); ?>" class="btn btn--contact btn-tertiary">Contact Sales</a></div>
                 <div class="js-search-toggle"><i class="icon-search"></i> <span>Search</span></div>
                 <div class="toggle-menu hidden-xs-down hidden-lg">
                     <span>
@@ -80,7 +95,7 @@
             <div class="container">
                 <div class="fixed-nav-wrap">
                     <div class="fixed-btn">
-                        <a href="<?php echo get_the_permalink(23); ?>" class="btn btn--contact btn-tertiary">Contact Us</a>
+                        <a href="<?php echo get_the_permalink(23); ?>" class="btn btn--contact btn-tertiary">Contact Sales</a>
                     </div>
                     <div class="toggle-menu">
                         <span>

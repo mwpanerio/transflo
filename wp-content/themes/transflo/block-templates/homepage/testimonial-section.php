@@ -68,7 +68,7 @@
                     <?php while(have_rows('first_stats')): the_row(); ?>
                     <li>
                         <div class="counter-bttn">
-                            <h2>><span class="odometer" id="odometer3" data-count="<?php echo get_sub_field('number_of_fleets'); ?>">00000</span></h2>
+                            <h2><span class="odometer" id="odometer3" data-count="<?php echo get_sub_field('number_of_fleets'); ?>">00000</span>+</h2>
                             <p><?php echo get_sub_field('label'); ?></p>
                         </div>
                     </li>

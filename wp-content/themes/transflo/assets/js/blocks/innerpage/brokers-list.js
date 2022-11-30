@@ -40,6 +40,7 @@ var FX = ( function( FX, $ ) {
                 }
             });
 		},
+
         brokersListFilter() {
             let qsRegex;
             let buttonFilter;
@@ -91,6 +92,28 @@ var FX = ( function( FX, $ ) {
                     $('.total-result').text($total);
                 }, 500)
 
+            }
+
+            // use value of search field to filter
+            var $quicksearch = $('#search-by-name').keyup( debounce( function() {
+                qsRegex = new RegExp( $quicksearch.val(), 'gi' );
+                $container.isotope();
+                loadMore(initShow);
+            }, 200 ) );
+
+            // debounce so filtering doesn't happen every millisecond
+            function debounce( fn, threshold ) {
+                var timeout;
+                threshold = threshold || 100;
+                return function debounced() {
+                    clearTimeout( timeout );
+                    var args = arguments;
+                    var _this = this;
+                    function delayed() {
+                        fn.apply( _this, args );
+                    }
+                    timeout = setTimeout( delayed, threshold );
+                };
             }
 
             $("#load-more").on("click", function(e){

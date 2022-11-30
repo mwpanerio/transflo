@@ -1367,10 +1367,22 @@
    z-index: 2;
  }
 
+ .media-gallery__item {
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
  .media-gallery__item-link {
   border-radius: 20px;
   overflow: hidden;
  }
+
+ @media (min-width: 1200px) {
+	.media-gallery__item:hover {
+		transform: scale(1.05);
+	}
+}
 
  .media-gallery__item-title {
   color: var(--color-white);
@@ -1420,8 +1432,17 @@
   margin-bottom: 0;
   border-radius: 0 0 20px 20px;
   width: 100%;
+  margin-right: 0;
  }
  
+ @media (min-width: 1200px) {
+  .media-gallery--with-button .btn:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    box-shadow: none;
+  }
+ }
+
  @-webkit-keyframes pulse {
    0% {
        opacity: 0;

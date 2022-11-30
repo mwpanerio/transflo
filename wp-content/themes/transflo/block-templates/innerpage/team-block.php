@@ -13,7 +13,10 @@
             <?php endif; ?>
         </div>
         <?php endif; ?>
-        <ul class="team-block__list">
+        <?php
+            $team_item_per_row = (int)get_field('team_item_per_row');
+        ?>
+        <ul class="team-block__list team-block__list--<?php echo $team_item_per_row; ?>">
             <?php $count = 0; while(have_rows('teams')): the_row(); ?>
             <li class="team-block__item">
                 <article class="team-block__card js-team-card" data-modal-target="#js-team-modal-<?php echo $count; ?>">

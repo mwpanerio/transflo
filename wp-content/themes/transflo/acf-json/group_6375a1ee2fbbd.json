@@ -85,6 +85,33 @@
             "delay": 0
         },
         {
+            "key": "field_6387529d909f7",
+            "label": "Team Item Per Row",
+            "name": "team_item_per_row",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
             "key": "field_6375a21136685",
             "label": "Teams",
             "name": "teams",
@@ -205,5 +232,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1668654712
+    "modified": 1669812924
 }

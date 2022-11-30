@@ -23,7 +23,9 @@
             <?php while(have_rows('step_item')): the_row(); ?>
             <div class="masthead__tiles__col js-masthead-tiles">
                 <div class="masthead__tiles__image">
-                    <span></span>
+                    <span>
+                        <i class="icon-logomark"></i>
+                    </span>
                     <?php echo fx_get_image_tag(get_sub_field('image'), 'object-fit'); ?>
                     <div class="masthead__tiles__info">
                         <h4><?php echo get_sub_field('title'); ?></h4>

@@ -123,6 +123,17 @@ var FX = ( function( FX, $ ) {
                 loadMore(counter);
             });
 
+            $('#filter-by-state').on('change', function() {
+                const $this = $(this);
+
+                qsRegex = new RegExp( $('#search-by-name').val(), 'gi' );
+                buttonFilter = $this.val();
+                $container.isotope();
+
+                loadMore(initShow);
+
+            })
+
             $('.brokers-list__upper__form').submit(function(e) {
                 e.preventDefault();
 

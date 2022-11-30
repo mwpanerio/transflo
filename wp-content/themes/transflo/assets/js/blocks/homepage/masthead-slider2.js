@@ -134,6 +134,14 @@ var FX = ( function( FX, $ ) {
 					direction = Math.round((Math.atan2(y, x) * (180 / Math.PI) + 180) / 90  + 3) % 4;
 				return direction;
 			}
+
+			$('#js-video-play').on('click', function() {
+				const $this = $(this);
+				const player = new Vimeo.Player($('.masthead__image iframe'));
+
+				$this.fadeOut();
+				player.play();
+			})
  
 		},
 

@@ -50,7 +50,7 @@ var FX = ( function( FX, $ ) {
 
 			$('.js-tab-menu').slick({
 				infinite: true,
-				slidesToShow: 3,
+				slidesToShow: 5,
 				slidesToScroll: 1,				
 				dots: false,
 				arrows: false,

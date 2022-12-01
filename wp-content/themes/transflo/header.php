@@ -28,6 +28,14 @@
                 </div>
             <?php endfor; ?>
         </div>
+        <div class="loader__slice">
+            <div class="loader__slice__line loader__slice__line--left">
+                <span></span>
+            </div>
+            <div class="loader__slice__line loader__slice__line--right">
+                <span></span>
+            </div>
+        </div>
         <div class="loader__container container">
             <div class="loader__squares">
                 <span></span>

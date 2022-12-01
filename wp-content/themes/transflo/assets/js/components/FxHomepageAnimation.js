@@ -56,22 +56,28 @@ var FX = ( function( FX, $ ) {
                             opacity: 0,
                             ease: Power4.easeOut
                         }, -0.1)
-                        .to(".loader__boxes", {
-                            duration: 0.8,
-                            scale: 0, 
-                            opacity: 0,
-                            ease: "power4.easeInOut",
+                        .to('.loader__slice__line', 0.8, {
+                            'transform' : 'scaleX(1) translateY(-50%)',
+                            opacity: 1,
+                            ease: Power4.easeOut,
+                            onComplete: function() {
+                                setTimeout(function() {
+                                    $('.loader__boxes').hide();
+                                }, 250)
+                            },
+                        }, '-=1')
+                        .to('.loader__slice__line', 0.6, {
+                            height: '100vh',
+                            ease: Power4.easeOut,
+                        }, '-=0.15')
+                        .to('.loader__slice__line', 1, {
+                            'transform' : 'scaleX(0) translateY(-50%)',
+                            opacity: 1,
+                            ease: Power4.easeOut,
                             onComplete: function() {
                                 $('.loader').fadeOut();
                             },
-                            stagger: {
-                                amount: 0.25, 
-                                grid: 'auto', 
-                                axis: null, 
-                                ease: Power4.easeInOut,
-                                from: 'center'
-                            }
-                        }, '-=0.8'), '-=0.85'
+                        }, '-=0.25'), '-=0.85'
                 )
             } else {
                 $loaderTextAnimation.add(
@@ -81,22 +87,44 @@ var FX = ( function( FX, $ ) {
                             opacity: 0,
                             ease: Power4.easeInOut
                         }, -0.05, '-=1')
-                        .to(".loader__boxes:not(.hidden-xs-down)", {
-                            duration: 0.8,
-                            scale: 0, 
-                            opacity: 0,
-                            ease: Power4.easeInOut,
-                            stagger: {
-                                amount: 0.5, 
-                                grid: 'auto', 
-                                axis: null, 
-                                ease: Power4.easeInOut,
-                                from: 'center'
+                        .to('.loader__slice__line', 1, {
+                            'transform' : 'scaleX(1) translateY(-50%)',
+                            opacity: 1,
+                            ease: Power4.easeOut,
+                            onComplete: function() {
+                                setTimeout(function() {
+                                    $('.loader__boxes').hide();
+                                }, 500)
                             },
+                        }, '-=1')
+                        .to('.loader__slice__line', 1, {
+                            height: '100vh',
+                            ease: Power4.easeOut,
+                        }, '-=0.2')
+                        .to('.loader__slice__line', 1, {
+                            'transform' : 'scaleX(0) translateY(-50%)',
+                            opacity: 1,
+                            ease: Power4.easeOut,
                             onComplete: function() {
                                 $('.loader').fadeOut();
                             },
-                        }, '-=0.8'), '-=0.8'
+                        }, '-=0.05'), '-=0.85'
+                        // .to(".loader__boxes:not(.hidden-xs-down)", {
+                        //     duration: 0.8,
+                        //     scale: 0, 
+                        //     opacity: 0,
+                        //     ease: Power4.easeInOut,
+                        //     stagger: {
+                        //         amount: 0.5, 
+                        //         grid: 'auto', 
+                        //         axis: null, 
+                        //         ease: Power4.easeInOut,
+                        //         from: 'center'
+                        //     },
+                        //     onComplete: function() {
+                        //         $('.loader').fadeOut();
+                        //     },
+                        // }, '-=0.8'), '-=0.55'
                 )
             }
 
@@ -111,7 +139,7 @@ var FX = ( function( FX, $ ) {
                         'transform' : 'translate(0, 0)',
                         'opacity': 1,
                         ease: Power4.easeOut
-                    }, '-=1.45'), '-=0.5'
+                    }, '-=1.45'), '-=0.35'
             )
 
             $('.counter-block').each(function() {

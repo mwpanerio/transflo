@@ -694,6 +694,27 @@
                     "maxlength": ""
                 }
             ]
+        },
+        {
+            "key": "field_638827a9a0998",
+            "label": "Show Animation After How Many Visits?",
+            "name": "show_animation_after_how_many_visits",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
         }
     ],
     "location": [
@@ -714,5 +735,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1669854210
+    "modified": 1669867478
 }

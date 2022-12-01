@@ -12,13 +12,15 @@
 
     <?php wp_body_open(); ?>
 
+    <input type="hidden" id="js-loading-mask-session" value="<?php echo get_field('show_animation_after_how_many_visits', 'option'); ?>">
+
     <?php
         $logo_id    = fx_get_client_logo_image_id(); 
         $home_url   = get_home_url();
     ?>
 
     <?php if(is_front_page()): ?>
-    <div class="loader">
+    <div class="loader" style="display: none;">
         <div class="loader__background js-loader-background">
             <?php for($i = 0; $i <= 15; $i++): ?>
                 <div>

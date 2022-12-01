@@ -492,18 +492,19 @@ var FX = ( function( FX, $ ) {
 				}, 0.15);
 
 			new TimelineMax()
-				.to(".right-image__squares .right-image__squares__item", {
-					duration: 0.8,
-					scale: 0, 
-					ease: "power4.easeInOut",
-					stagger: {
-						amount: 0.5, 
-						grid: 'auto', 
-						axis: null, 
-						ease: Power4.easeInOut,
-						from: 'center'
-					}
-				});
+				.to(".right-image-wrapper", 0.6, {
+					'transform': 'scaleX(1)',
+					ease: Power4.easeInOUt
+				})
+				.to(".right-image__squares", 0.6, {
+					'transform': 'scaleX(0)',
+					ease: Power4.easeInOUt
+				})
+				.to(".right-image img", 0.6, {
+					'transform': 'scale(1)',
+					'opacity' : 1,
+					ease: Power4.easeInOUt
+				}, '-=0.45')
 		}
 	}
 

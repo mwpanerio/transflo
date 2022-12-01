@@ -34,20 +34,18 @@
                 <span></span>
             </div>
             <div class="loader__text js-loader-text-parent">
+                <?php if(have_rows('text_to_display', 'option')): ?>
                 <div class="loader__text__inner js-loader-text-inner">
+                    <?php while(have_rows('text_to_display', 'option')): the_row(); ?>
                     <div class="loader__text__item js-loader-text">
-                        FASTER
+                        <?php echo get_sub_field('text'); ?>
                     </div>
-                    <div class="loader__text__item js-loader-text">
-                        SMARTER
-                    </div>
-                    <div class="loader__text__item js-loader-text">
-                        EFFICIENT
-                    </div>
+                    <?php endwhile; ?>
                     <div class="loader__text__item js-loader-text js-loader-text-logo">
                         <?php echo fx_get_image_tag( 29426 ); ?>
                     </div>
                 </div>
+                <?php endif; ?>
             </div>
         </div>
     </div>

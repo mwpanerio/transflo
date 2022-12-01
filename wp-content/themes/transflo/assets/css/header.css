@@ -241,6 +241,10 @@ img.logo {
     .page-header__upper {
         margin-bottom: 0;
     }
+
+    .header__upper {
+        max-width: calc(100% - 280px);
+    }
 }
 
 .header__upper ul,
